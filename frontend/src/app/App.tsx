@@ -264,7 +264,9 @@ export default function App() {
                     <div className="title no-overflow">{s.title} <span className="artist">— {s.artist}</span></div>
                     <div className="sub">{s.year || '—'} · {s.primary_style_family || '—'} {s.is_editorial_anchor ? '· Familiar starting point' : ''}</div>
                   </div>
-                  <button aria-label={`Add ${s.title} by ${s.artist} to My List`} disabled={appState.myList.includes(s.recording_mbid)} onClick={()=>addToList(s.recording_mbid)} className="add-btn">Add</button>
+                  {(() => { const isAdded = appState.myList.includes(s.recording_mbid); return (
+                    <button aria-label={isAdded ? `${s.title} by ${s.artist} is in My List` : `Add ${s.title} by ${s.artist} to My List`} disabled={isAdded} onClick={()=>addToList(s.recording_mbid)} className={`add-btn${isAdded ? ' add-btn--added' : ''}`}><span aria-hidden="true">{isAdded ? '✓' : '+'}</span></button>
+                  )})()}
                 </div>
               ))}
               {!loadingSongs && songs.length===0 && <p style={{padding:12}} className="muted">No matches — try a different search or clear filters.</p>}
