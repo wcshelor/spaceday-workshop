@@ -1,0 +1,3684 @@
+{
+  "version": "prompts-v1",
+  "created": "2026-10-21",
+  "provenance": "Editorial curation for workshop; covers rhythm, vocals, instruments, texture, dynamics, production, mood, atmosphere. No song/artist names, no demographic stereotypes. Reviewed for contradictions.",
+  "prompts": [
+    {
+      "id": "rhy-001",
+      "text": "steady four-on-the-floor beat, danceable",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "dance"
+      ],
+      "paraphrase_group": "four-on-floor"
+    },
+    {
+      "id": "rhy-002",
+      "text": "syncopated funk groove with off-beat guitar",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "groove"
+      ],
+      "paraphrase_group": "syncopated-funk"
+    },
+    {
+      "id": "rhy-003",
+      "text": "slow waltz feel, swaying tempo",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "tempo"
+      ],
+      "paraphrase_group": "waltz"
+    },
+    {
+      "id": "rhy-004",
+      "text": "fast double-time drums, energetic",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "energy"
+      ],
+      "paraphrase_group": "fast-drums"
+    },
+    {
+      "id": "rhy-005",
+      "text": "laid-back half-time groove, relaxed drums",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "tempo"
+      ],
+      "paraphrase_group": "half-time"
+    },
+    {
+      "id": "rhy-006",
+      "text": "driving motorik beat, repetitive and hypnotic",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "repetition"
+      ],
+      "paraphrase_group": "motorik"
+    },
+    {
+      "id": "rhy-007",
+      "text": "bouncy swing rhythm, jazzy timing",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "jazz"
+      ],
+      "paraphrase_group": "swing"
+    },
+    {
+      "id": "rhy-008",
+      "text": "complex polyrhythms, interlocking percussion",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "percussion"
+      ],
+      "paraphrase_group": "polyrhythm"
+    },
+    {
+      "id": "rhy-009",
+      "text": "minimal beat, sparse clicks and snaps",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "minimal"
+      ],
+      "paraphrase_group": "minimal-beat"
+    },
+    {
+      "id": "rhy-010",
+      "text": "shuffle groove, loose and rolling",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "groove"
+      ],
+      "paraphrase_group": "shuffle"
+    },
+    {
+      "id": "rhy-011",
+      "text": "steady mid-tempo pulse, walking pace",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "tempo"
+      ],
+      "paraphrase_group": "mid-tempo"
+    },
+    {
+      "id": "rhy-012",
+      "text": "breakbeat, chopped drums with vinyl crackle",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "breakbeat"
+      ],
+      "paraphrase_group": "breakbeat"
+    },
+    {
+      "id": "voc-001",
+      "text": "intimate close-miked vocals, soft and breathy",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "intimacy"
+      ],
+      "paraphrase_group": "intimate-vocals"
+    },
+    {
+      "id": "voc-002",
+      "text": "powerful belting voice, full and soaring",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "power"
+      ],
+      "paraphrase_group": "belting"
+    },
+    {
+      "id": "voc-003",
+      "text": "distant and washed-out vocals, heavily reverberated",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "production"
+      ],
+      "paraphrase_group": "distant-vocals"
+    },
+    {
+      "id": "voc-004",
+      "text": "no vocals, instrumental music",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "instrumental"
+      ],
+      "paraphrase_group": "instrumental"
+    },
+    {
+      "id": "voc-005",
+      "text": "choir of layered background vocals, lush harmonies",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "harmony"
+      ],
+      "paraphrase_group": "choir"
+    },
+    {
+      "id": "voc-006",
+      "text": "spoken word, rhythmic speech over music",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "speech"
+      ],
+      "paraphrase_group": "spoken"
+    },
+    {
+      "id": "voc-007",
+      "text": "call-and-response vocals, trading lines",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "interaction"
+      ],
+      "paraphrase_group": "call-response"
+    },
+    {
+      "id": "voc-008",
+      "text": "falsetto vocals, high and airy",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "register"
+      ],
+      "paraphrase_group": "falsetto"
+    },
+    {
+      "id": "voc-009",
+      "text": "gritty raspy vocals, raw and unpolished",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "timbre"
+      ],
+      "paraphrase_group": "raspy"
+    },
+    {
+      "id": "voc-010",
+      "text": "auto-tuned vocal effect, synthetic sheen",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "production"
+      ],
+      "paraphrase_group": "autotune"
+    },
+    {
+      "id": "ins-001",
+      "text": "warm acoustic guitar, fingerpicked",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "guitar"
+      ],
+      "paraphrase_group": "acoustic-guitar"
+    },
+    {
+      "id": "ins-002",
+      "text": "distorted electric guitar riffs, crunchy",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "guitar"
+      ],
+      "paraphrase_group": "distorted-guitar"
+    },
+    {
+      "id": "ins-003",
+      "text": "pulsing synthesizer arpeggio, bright and repetitive",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "synth"
+      ],
+      "paraphrase_group": "arp-synth"
+    },
+    {
+      "id": "ins-004",
+      "text": "lush string section, cinematic violins",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "strings"
+      ],
+      "paraphrase_group": "strings"
+    },
+    {
+      "id": "ins-005",
+      "text": "upright bass, woody and resonant",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "bass"
+      ],
+      "paraphrase_group": "upright-bass"
+    },
+    {
+      "id": "ins-006",
+      "text": "heavy distorted bass synth, rumbling low end",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "bass"
+      ],
+      "paraphrase_group": "bass-synth"
+    },
+    {
+      "id": "ins-007",
+      "text": "bright brass horns, punchy and festive",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "brass"
+      ],
+      "paraphrase_group": "brass"
+    },
+    {
+      "id": "ins-008",
+      "text": "piano, gentle and intimate",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "piano"
+      ],
+      "paraphrase_group": "piano-gentle"
+    },
+    {
+      "id": "ins-009",
+      "text": "harpsichord or organ, baroque texture",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "keys"
+      ],
+      "paraphrase_group": "organ"
+    },
+    {
+      "id": "ins-010",
+      "text": "hand percussion, congas and shakers",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "percussion"
+      ],
+      "paraphrase_group": "hand-perc"
+    },
+    {
+      "id": "ins-011",
+      "text": "saxophone solo, smoky and expressive",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "sax"
+      ],
+      "paraphrase_group": "sax"
+    },
+    {
+      "id": "ins-012",
+      "text": "electronic drum machine, crisp and precise",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "drums"
+      ],
+      "paraphrase_group": "drum-machine"
+    },
+    {
+      "id": "tex-001",
+      "text": "warm analog tape hiss, vintage lo-fi texture",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "lo-fi"
+      ],
+      "paraphrase_group": "tape-hiss"
+    },
+    {
+      "id": "tex-002",
+      "text": "crisp and clean production, polished studio sound",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "production"
+      ],
+      "paraphrase_group": "clean-production"
+    },
+    {
+      "id": "tex-003",
+      "text": "dense wall of sound, layered and saturated",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "density"
+      ],
+      "paraphrase_group": "wall-of-sound"
+    },
+    {
+      "id": "tex-004",
+      "text": "sparse and airy, lots of silence between sounds",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "space"
+      ],
+      "paraphrase_group": "sparse"
+    },
+    {
+      "id": "tex-005",
+      "text": "grainy distorted texture, overdriven and fuzzy",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "distortion"
+      ],
+      "paraphrase_group": "grainy"
+    },
+    {
+      "id": "tex-006",
+      "text": "shimmering reverb, cavernous and echoing",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "reverb"
+      ],
+      "paraphrase_group": "shimmer-reverb"
+    },
+    {
+      "id": "tex-007",
+      "text": "dry and close, intimate room sound",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "room"
+      ],
+      "paraphrase_group": "dry"
+    },
+    {
+      "id": "tex-008",
+      "text": "glitchy stutter edits, chopped and rearranged",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "editing"
+      ],
+      "paraphrase_group": "glitch"
+    },
+    {
+      "id": "dyn-001",
+      "text": "quiet and delicate, barely above a whisper",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "quiet"
+      ],
+      "paraphrase_group": "quiet"
+    },
+    {
+      "id": "dyn-002",
+      "text": "loud and powerful, full dynamic impact",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "loud"
+      ],
+      "paraphrase_group": "loud"
+    },
+    {
+      "id": "dyn-003",
+      "text": "gradual build, slowly rising intensity",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "build"
+      ],
+      "paraphrase_group": "build"
+    },
+    {
+      "id": "dyn-004",
+      "text": "sudden drop, stripped back after a dense section",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "contrast"
+      ],
+      "paraphrase_group": "drop"
+    },
+    {
+      "id": "dyn-005",
+      "text": "steady consistent level, no large changes",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "steady"
+      ],
+      "paraphrase_group": "steady-dynamics"
+    },
+    {
+      "id": "prod-001",
+      "text": "heavily compressed, punchy and upfront",
+      "category": "production",
+      "facets": [
+        "production",
+        "compression"
+      ],
+      "paraphrase_group": "compressed"
+    },
+    {
+      "id": "prod-002",
+      "text": "wide stereo image, sounds spread left and right",
+      "category": "production",
+      "facets": [
+        "production",
+        "stereo"
+      ],
+      "paraphrase_group": "wide-stereo"
+    },
+    {
+      "id": "prod-003",
+      "text": "mono and centered, narrow and direct",
+      "category": "production",
+      "facets": [
+        "production",
+        "mono"
+      ],
+      "paraphrase_group": "mono"
+    },
+    {
+      "id": "prod-004",
+      "text": "dub-style echo and delay, spacious repeats",
+      "category": "production",
+      "facets": [
+        "production",
+        "delay"
+      ],
+      "paraphrase_group": "dub-delay"
+    },
+    {
+      "id": "mood-001",
+      "text": "melancholic and wistful, bittersweet mood",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "sad"
+      ],
+      "paraphrase_group": "melancholic"
+    },
+    {
+      "id": "mood-002",
+      "text": "joyful and uplifting, bright and celebratory",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "happy"
+      ],
+      "paraphrase_group": "joyful"
+    },
+    {
+      "id": "mood-003",
+      "text": "tense and anxious, uneasy atmosphere",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "tension"
+      ],
+      "paraphrase_group": "tense"
+    },
+    {
+      "id": "mood-004",
+      "text": "calm and meditative, peaceful and still",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "calm"
+      ],
+      "paraphrase_group": "calm"
+    },
+    {
+      "id": "mood-005",
+      "text": "playful and quirky, lighthearted and whimsical",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "playful"
+      ],
+      "paraphrase_group": "playful"
+    },
+    {
+      "id": "mood-006",
+      "text": "dark and brooding, shadowy and intense",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "dark"
+      ],
+      "paraphrase_group": "dark"
+    },
+    {
+      "id": "mood-007",
+      "text": "romantic and tender, warm and intimate",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "romantic"
+      ],
+      "paraphrase_group": "romantic"
+    },
+    {
+      "id": "mood-008",
+      "text": "nostalgic, reminiscent of a past era",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "nostalgia"
+      ],
+      "paraphrase_group": "nostalgic"
+    },
+    {
+      "id": "atm-001",
+      "text": "late-night city vibe, neon lights and quiet streets",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "city"
+      ],
+      "paraphrase_group": "late-night-city"
+    },
+    {
+      "id": "atm-002",
+      "text": "summer festival, open air and crowd energy",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "festival"
+      ],
+      "paraphrase_group": "festival"
+    },
+    {
+      "id": "atm-003",
+      "text": "rainy afternoon, cozy indoor listening",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "weather"
+      ],
+      "paraphrase_group": "rainy"
+    },
+    {
+      "id": "atm-004",
+      "text": "space and cosmos, floating weightless",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "space"
+      ],
+      "paraphrase_group": "space"
+    },
+    {
+      "id": "atm-005",
+      "text": "underground club, dark room with strobe lights",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "club"
+      ],
+      "paraphrase_group": "club"
+    },
+    {
+      "id": "atm-006",
+      "text": "desert road, wide open horizon",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "desert"
+      ],
+      "paraphrase_group": "desert"
+    },
+    {
+      "id": "combo-001",
+      "text": "slow tempo with intimate vocals and sparse piano",
+      "category": "combo",
+      "facets": [
+        "rhythm",
+        "vocals",
+        "instruments"
+      ],
+      "paraphrase_group": "slow-intimate-piano"
+    },
+    {
+      "id": "combo-002",
+      "text": "fast energetic drums with bright synths and uplifting mood",
+      "category": "combo",
+      "facets": [
+        "rhythm",
+        "instruments",
+        "mood"
+      ],
+      "paraphrase_group": "fast-energetic-bright"
+    },
+    {
+      "id": "combo-003",
+      "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+      "category": "combo",
+      "facets": [
+        "texture",
+        "instruments",
+        "mood"
+      ],
+      "paraphrase_group": "lofi-warm-nostalgic"
+    },
+    {
+      "id": "combo-004",
+      "text": "heavily reverberated vocals over wide stereo pads, dreamy",
+      "category": "combo",
+      "facets": [
+        "vocals",
+        "production",
+        "mood"
+      ],
+      "paraphrase_group": "reverbed-dreamy"
+    },
+    {
+      "id": "combo-005",
+      "text": "sparse minimal beat with dry close sound and tense atmosphere",
+      "category": "combo",
+      "facets": [
+        "rhythm",
+        "texture",
+        "mood"
+      ],
+      "paraphrase_group": "sparse-tense"
+    },
+    {
+      "id": "combo-006",
+      "text": "dense wall of distorted guitars, loud and powerful",
+      "category": "combo",
+      "facets": [
+        "texture",
+        "instruments",
+        "dynamics"
+      ],
+      "paraphrase_group": "dense-loud-guitar"
+    },
+    {
+      "id": "gen-072",
+      "text": "hurried groove with minimal and spacious (0)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-073",
+      "text": "swinging march with heavy downbeats (1)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-074",
+      "text": "rough groove with heavy downbeats (2)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-075",
+      "text": "sparse shuffle with repetitive and hypnotic (3)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-076",
+      "text": "hazy rhythm with off-beat accents (4)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-077",
+      "text": "warm beat with repetitive and hypnotic (5)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-078",
+      "text": "warm shuffle with loose and rolling (6)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-079",
+      "text": "warm waltz with loose and rolling (7)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-080",
+      "text": "swinging waltz with loose and rolling (8)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-081",
+      "text": "smooth rhythm with heavy downbeats (9)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-082",
+      "text": "warm shuffle with off-beat accents (10)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-083",
+      "text": "dry groove with layered percussion (11)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-084",
+      "text": "steady waltz with loose and rolling (12)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-085",
+      "text": "dry motorik with heavy downbeats (13)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-086",
+      "text": "sparse motorik with repetitive and hypnotic (14)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-087",
+      "text": "smooth shuffle with subtle ghost notes (15)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-088",
+      "text": "dense waltz with layered percussion (16)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-089",
+      "text": "syncopated waltz with off-beat accents (17)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-090",
+      "text": "driving shuffle with layered percussion (18)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-091",
+      "text": "warm march with repetitive and hypnotic (19)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-092",
+      "text": "floating motorik with subtle ghost notes (20)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-093",
+      "text": "crisp waltz with loose and rolling (21)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-094",
+      "text": "rough waltz with loose and rolling (22)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-095",
+      "text": "driving swing with layered percussion (23)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-096",
+      "text": "hazy waltz with repetitive and hypnotic (24)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-097",
+      "text": "driving pulse with loose and rolling (25)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-098",
+      "text": "bright march with layered percussion (26)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-099",
+      "text": "rough waltz with subtle ghost notes (27)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-100",
+      "text": "dense shuffle with layered percussion (28)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-101",
+      "text": "laid-back waltz with layered percussion (29)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-102",
+      "text": "floating beat with loose and rolling (30)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-103",
+      "text": "laid-back motorik with tight and precise (31)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-104",
+      "text": "laid-back flow with repetitive and hypnotic (32)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-105",
+      "text": "dark beat with heavy downbeats (33)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-106",
+      "text": "hazy rhythm with minimal and spacious (34)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-107",
+      "text": "floating pulse with layered percussion (35)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-108",
+      "text": "dark pulse with tight and precise (36)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-109",
+      "text": "driving pulse with minimal and spacious (37)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-110",
+      "text": "syncopated swing with heavy downbeats (38)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-111",
+      "text": "soft beat with minimal and spacious (39)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-112",
+      "text": "wet shuffle with loose and rolling (40)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-113",
+      "text": "soft flow with loose and rolling (41)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-114",
+      "text": "warm rhythm with repetitive and hypnotic (42)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-115",
+      "text": "gentle beat with tight and precise (43)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-116",
+      "text": "driving shuffle with loose and rolling (44)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-117",
+      "text": "syncopated rhythm with repetitive and hypnotic (45)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-118",
+      "text": "hurried swing with subtle ghost notes (46)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-119",
+      "text": "dry pulse with loose and rolling (47)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-120",
+      "text": "dry groove with off-beat accents (48)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-121",
+      "text": "dry pulse with subtle ghost notes (49)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-122",
+      "text": "gentle beat with repetitive and hypnotic (50)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-123",
+      "text": "hurried march with tight and precise (51)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-124",
+      "text": "bright shuffle with loose and rolling (52)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-125",
+      "text": "soft rhythm with subtle ghost notes (53)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-126",
+      "text": "swinging groove with subtle ghost notes (54)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-127",
+      "text": "driving march with repetitive and hypnotic (55)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-128",
+      "text": "floating shuffle with minimal and spacious (56)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-129",
+      "text": "crisp rhythm with layered percussion (57)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-130",
+      "text": "wet shuffle with loose and rolling (58)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-131",
+      "text": "soft shuffle with layered percussion (59)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-132",
+      "text": "swinging waltz with loose and rolling (60)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-133",
+      "text": "bright groove with tight and precise (61)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-134",
+      "text": "crisp waltz with loose and rolling (62)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-135",
+      "text": "wet motorik with minimal and spacious (63)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-136",
+      "text": "wet swing with off-beat accents (64)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-137",
+      "text": "smooth motorik with heavy downbeats (65)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-138",
+      "text": "hurried waltz with off-beat accents (66)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-139",
+      "text": "bright shuffle with off-beat accents (67)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-140",
+      "text": "gentle pulse with layered percussion (68)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-141",
+      "text": "floating motorik with subtle ghost notes (69)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-142",
+      "text": "hurried waltz with loose and rolling (70)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-143",
+      "text": "hazy swing with minimal and spacious (71)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-144",
+      "text": "soft march with minimal and spacious (72)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-145",
+      "text": "bright flow with repetitive and hypnotic (73)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-146",
+      "text": "dark shuffle with off-beat accents (74)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-147",
+      "text": "rough rhythm with subtle ghost notes (75)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-148",
+      "text": "soft march with tight and precise (76)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-149",
+      "text": "crisp groove with subtle ghost notes (77)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-150",
+      "text": "laid-back flow with minimal and spacious (78)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-151",
+      "text": "wet groove with loose and rolling (79)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-152",
+      "text": "bright beat with repetitive and hypnotic (80)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-153",
+      "text": "floating swing with heavy downbeats (81)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-154",
+      "text": "wet shuffle with off-beat accents (82)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-155",
+      "text": "wet motorik with heavy downbeats (83)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-156",
+      "text": "hazy rhythm with heavy downbeats (84)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-157",
+      "text": "hazy pulse with loose and rolling (85)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-158",
+      "text": "rough rhythm with layered percussion (86)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-159",
+      "text": "hazy groove with heavy downbeats (87)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-160",
+      "text": "hurried swing with loose and rolling (88)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-161",
+      "text": "dry beat with layered percussion (89)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-162",
+      "text": "wet motorik with minimal and spacious (90)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-163",
+      "text": "wet groove with off-beat accents (91)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-164",
+      "text": "smooth beat with loose and rolling (92)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-165",
+      "text": "dark flow with off-beat accents (93)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-166",
+      "text": "warm beat with minimal and spacious (94)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-167",
+      "text": "swinging march with tight and precise (95)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-168",
+      "text": "driving swing with off-beat accents (96)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-169",
+      "text": "crisp pulse with tight and precise (97)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-170",
+      "text": "wet flow with off-beat accents (98)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-171",
+      "text": "floating flow with tight and precise (99)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-172",
+      "text": "gentle waltz with repetitive and hypnotic (100)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-173",
+      "text": "floating waltz with loose and rolling (101)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-174",
+      "text": "dry shuffle with tight and precise (102)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-175",
+      "text": "smooth flow with off-beat accents (103)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-176",
+      "text": "steady waltz with minimal and spacious (104)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-177",
+      "text": "syncopated waltz with heavy downbeats (105)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-178",
+      "text": "sparse swing with tight and precise (106)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-179",
+      "text": "swinging beat with subtle ghost notes (107)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-180",
+      "text": "bright swing with tight and precise (108)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-181",
+      "text": "gentle flow with minimal and spacious (109)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-182",
+      "text": "hurried shuffle with tight and precise (110)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-183",
+      "text": "smooth march with repetitive and hypnotic (111)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-184",
+      "text": "driving swing with heavy downbeats (112)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-185",
+      "text": "smooth swing with heavy downbeats (113)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-186",
+      "text": "smooth shuffle with layered percussion (114)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-187",
+      "text": "floating flow with loose and rolling (115)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-188",
+      "text": "dark waltz with layered percussion (116)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-189",
+      "text": "driving rhythm with minimal and spacious (117)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-190",
+      "text": "dry waltz with layered percussion (118)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-191",
+      "text": "syncopated motorik with off-beat accents (119)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-192",
+      "text": "floating waltz with subtle ghost notes (120)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-193",
+      "text": "gentle flow with subtle ghost notes (121)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-194",
+      "text": "hurried beat with heavy downbeats (122)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-195",
+      "text": "dense shuffle with tight and precise (123)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-196",
+      "text": "bright waltz with off-beat accents (124)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-197",
+      "text": "soft flow with off-beat accents (125)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-198",
+      "text": "floating groove with heavy downbeats (126)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-199",
+      "text": "sparse shuffle with subtle ghost notes (127)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-200",
+      "text": "wet march with tight and precise (128)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-201",
+      "text": "rough groove with subtle ghost notes (129)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-202",
+      "text": "steady groove with minimal and spacious (130)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-203",
+      "text": "smooth shuffle with repetitive and hypnotic (131)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-204",
+      "text": "driving march with repetitive and hypnotic (132)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-205",
+      "text": "floating rhythm with minimal and spacious (133)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-206",
+      "text": "crisp flow with tight and precise (134)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-207",
+      "text": "rough flow with minimal and spacious (135)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-208",
+      "text": "syncopated pulse with layered percussion (136)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-209",
+      "text": "steady groove with loose and rolling (137)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-210",
+      "text": "rough flow with off-beat accents (138)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-211",
+      "text": "soft motorik with repetitive and hypnotic (139)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-212",
+      "text": "dry pulse with off-beat accents (140)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-213",
+      "text": "dense motorik with minimal and spacious (141)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-214",
+      "text": "driving swing with layered percussion (142)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-215",
+      "text": "soft march with heavy downbeats (143)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-216",
+      "text": "dry waltz with subtle ghost notes (144)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-217",
+      "text": "hurried march with off-beat accents (145)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-218",
+      "text": "sparse rhythm with repetitive and hypnotic (146)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-219",
+      "text": "floating waltz with loose and rolling (147)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-220",
+      "text": "floating waltz with subtle ghost notes (148)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-221",
+      "text": "crisp march with loose and rolling (149)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-222",
+      "text": "driving beat with subtle ghost notes (150)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-223",
+      "text": "sparse swing with off-beat accents (151)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-224",
+      "text": "smooth flow with repetitive and hypnotic (152)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-225",
+      "text": "gentle shuffle with minimal and spacious (153)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-226",
+      "text": "dark motorik with repetitive and hypnotic (154)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-227",
+      "text": "hazy shuffle with minimal and spacious (155)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-228",
+      "text": "syncopated flow with heavy downbeats (156)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-229",
+      "text": "syncopated waltz with repetitive and hypnotic (157)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-230",
+      "text": "driving groove with subtle ghost notes (158)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-231",
+      "text": "dense groove with heavy downbeats (159)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-232",
+      "text": "crisp waltz with tight and precise (160)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-233",
+      "text": "sparse flow with minimal and spacious (161)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-234",
+      "text": "driving rhythm with loose and rolling (162)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-235",
+      "text": "hazy groove with off-beat accents (163)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-236",
+      "text": "dense march with repetitive and hypnotic (164)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-237",
+      "text": "dry waltz with minimal and spacious (165)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-238",
+      "text": "floating rhythm with subtle ghost notes (166)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-239",
+      "text": "sparse pulse with heavy downbeats (167)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-240",
+      "text": "floating swing with loose and rolling (168)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-241",
+      "text": "floating rhythm with repetitive and hypnotic (169)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-242",
+      "text": "wet shuffle with loose and rolling (170)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-243",
+      "text": "rough groove with tight and precise (171)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-244",
+      "text": "hurried pulse with minimal and spacious (172)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-245",
+      "text": "driving pulse with tight and precise (173)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-246",
+      "text": "syncopated swing with minimal and spacious (174)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-247",
+      "text": "smooth groove with loose and rolling (175)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-248",
+      "text": "dark groove with loose and rolling (176)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-249",
+      "text": "wet march with off-beat accents (177)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-250",
+      "text": "bright beat with repetitive and hypnotic (178)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-251",
+      "text": "bright march with heavy downbeats (179)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-252",
+      "text": "hazy groove with tight and precise (180)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-253",
+      "text": "smooth shuffle with loose and rolling (181)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-254",
+      "text": "syncopated shuffle with tight and precise (182)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-255",
+      "text": "smooth flow with heavy downbeats (183)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-256",
+      "text": "hurried shuffle with loose and rolling (184)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-257",
+      "text": "hazy swing with heavy downbeats (185)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-258",
+      "text": "rough groove with repetitive and hypnotic (186)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-259",
+      "text": "warm march with layered percussion (187)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-260",
+      "text": "hurried flow with loose and rolling (188)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-261",
+      "text": "crisp pulse with repetitive and hypnotic (189)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-262",
+      "text": "sparse pulse with repetitive and hypnotic (190)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-263",
+      "text": "hazy pulse with off-beat accents (191)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-264",
+      "text": "dry beat with repetitive and hypnotic (192)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-265",
+      "text": "bright waltz with tight and precise (193)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-266",
+      "text": "hazy groove with subtle ghost notes (194)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-267",
+      "text": "rough beat with heavy downbeats (195)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-268",
+      "text": "hazy rhythm with heavy downbeats (196)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-269",
+      "text": "wet flow with minimal and spacious (197)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-270",
+      "text": "smooth beat with tight and precise (198)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-271",
+      "text": "steady motorik with repetitive and hypnotic (199)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-272",
+      "text": "laid-back shuffle with loose and rolling (200)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-273",
+      "text": "steady groove with minimal and spacious (201)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-274",
+      "text": "hazy pulse with off-beat accents (202)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-275",
+      "text": "bright rhythm with subtle ghost notes (203)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-276",
+      "text": "bright groove with heavy downbeats (204)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-277",
+      "text": "dense groove with layered percussion (205)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-278",
+      "text": "gentle waltz with repetitive and hypnotic (206)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-279",
+      "text": "gentle shuffle with heavy downbeats (207)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-280",
+      "text": "driving flow with off-beat accents (208)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-281",
+      "text": "wet groove with minimal and spacious (209)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-282",
+      "text": "sparse beat with minimal and spacious (210)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-283",
+      "text": "gentle flow with subtle ghost notes (211)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-284",
+      "text": "dry groove with subtle ghost notes (212)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-285",
+      "text": "driving waltz with loose and rolling (213)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-286",
+      "text": "wet waltz with subtle ghost notes (214)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-287",
+      "text": "soft pulse with heavy downbeats (215)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-288",
+      "text": "laid-back motorik with repetitive and hypnotic (216)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-289",
+      "text": "crisp rhythm with layered percussion (217)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-290",
+      "text": "driving swing with off-beat accents (218)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-291",
+      "text": "dense pulse with off-beat accents (219)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-292",
+      "text": "dry waltz with layered percussion (220)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-293",
+      "text": "dry swing with layered percussion (221)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-294",
+      "text": "wet waltz with repetitive and hypnotic (222)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-295",
+      "text": "soft pulse with layered percussion (223)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-296",
+      "text": "wet motorik with off-beat accents (224)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-297",
+      "text": "hazy march with heavy downbeats (225)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-298",
+      "text": "sparse groove with repetitive and hypnotic (226)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-299",
+      "text": "bright waltz with heavy downbeats (227)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-300",
+      "text": "smooth motorik with layered percussion (228)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-301",
+      "text": "dense shuffle with minimal and spacious (229)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-302",
+      "text": "floating swing with tight and precise (230)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-303",
+      "text": "gentle flow with loose and rolling (231)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-304",
+      "text": "soft pulse with subtle ghost notes (232)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-305",
+      "text": "soft waltz with minimal and spacious (233)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-306",
+      "text": "rough flow with off-beat accents (234)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-307",
+      "text": "dark groove with loose and rolling (235)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-308",
+      "text": "driving shuffle with repetitive and hypnotic (236)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-309",
+      "text": "swinging flow with loose and rolling (237)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-310",
+      "text": "floating march with loose and rolling (238)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-311",
+      "text": "syncopated swing with loose and rolling (239)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-312",
+      "text": "dark flow with subtle ghost notes (240)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-313",
+      "text": "warm waltz with subtle ghost notes (241)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-314",
+      "text": "swinging groove with subtle ghost notes (242)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-315",
+      "text": "hurried motorik with subtle ghost notes (243)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-316",
+      "text": "dense march with repetitive and hypnotic (244)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-317",
+      "text": "dry beat with off-beat accents (245)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-318",
+      "text": "driving swing with minimal and spacious (246)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-319",
+      "text": "steady waltz with subtle ghost notes (247)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-320",
+      "text": "syncopated flow with tight and precise (248)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-321",
+      "text": "syncopated motorik with tight and precise (249)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-322",
+      "text": "crisp flow with repetitive and hypnotic (250)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-323",
+      "text": "hurried beat with layered percussion (251)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-324",
+      "text": "sparse flow with repetitive and hypnotic (252)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-325",
+      "text": "dark beat with subtle ghost notes (253)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-326",
+      "text": "syncopated flow with layered percussion (254)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-327",
+      "text": "wet shuffle with heavy downbeats (255)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-328",
+      "text": "swinging swing with tight and precise (256)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-329",
+      "text": "gentle beat with tight and precise (257)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-330",
+      "text": "dense pulse with minimal and spacious (258)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-331",
+      "text": "hazy waltz with minimal and spacious (259)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-332",
+      "text": "hazy shuffle with layered percussion (260)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-333",
+      "text": "rough march with subtle ghost notes (261)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-334",
+      "text": "dark groove with tight and precise (262)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-335",
+      "text": "gentle rhythm with repetitive and hypnotic (263)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-336",
+      "text": "hazy pulse with heavy downbeats (264)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-337",
+      "text": "sparse pulse with repetitive and hypnotic (265)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-338",
+      "text": "steady motorik with repetitive and hypnotic (266)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-339",
+      "text": "rough waltz with subtle ghost notes (267)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-340",
+      "text": "bright groove with subtle ghost notes (268)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-341",
+      "text": "hazy flow with tight and precise (269)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-342",
+      "text": "bright rhythm with off-beat accents (270)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-343",
+      "text": "soft march with minimal and spacious (271)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-344",
+      "text": "swinging shuffle with off-beat accents (272)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-345",
+      "text": "soft pulse with subtle ghost notes (273)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-346",
+      "text": "crisp waltz with minimal and spacious (274)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-347",
+      "text": "laid-back flow with heavy downbeats (275)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-348",
+      "text": "rough motorik with layered percussion (276)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-349",
+      "text": "soft beat with layered percussion (277)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-350",
+      "text": "bright waltz with heavy downbeats (278)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-28"
+    },
+    {
+      "id": "gen-351",
+      "text": "soft rhythm with minimal and spacious (279)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-29"
+    },
+    {
+      "id": "gen-352",
+      "text": "smooth shuffle with tight and precise (280)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-30"
+    },
+    {
+      "id": "gen-353",
+      "text": "hazy rhythm with subtle ghost notes (281)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-31"
+    },
+    {
+      "id": "gen-354",
+      "text": "floating beat with tight and precise (282)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-32"
+    },
+    {
+      "id": "gen-355",
+      "text": "hazy flow with heavy downbeats (283)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-33"
+    },
+    {
+      "id": "gen-356",
+      "text": "hazy march with loose and rolling (284)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-34"
+    },
+    {
+      "id": "gen-357",
+      "text": "dense motorik with heavy downbeats (285)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-35"
+    },
+    {
+      "id": "gen-358",
+      "text": "wet pulse with tight and precise (286)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-36"
+    },
+    {
+      "id": "gen-359",
+      "text": "laid-back pulse with repetitive and hypnotic (287)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-37"
+    },
+    {
+      "id": "gen-360",
+      "text": "wet waltz with tight and precise (288)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-38"
+    },
+    {
+      "id": "gen-361",
+      "text": "wet motorik with heavy downbeats (289)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-39"
+    },
+    {
+      "id": "gen-362",
+      "text": "wet groove with tight and precise (290)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-40"
+    },
+    {
+      "id": "gen-363",
+      "text": "hazy rhythm with off-beat accents (291)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-41"
+    },
+    {
+      "id": "gen-364",
+      "text": "bright motorik with tight and precise (292)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-42"
+    },
+    {
+      "id": "gen-365",
+      "text": "smooth motorik with loose and rolling (293)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-43"
+    },
+    {
+      "id": "gen-366",
+      "text": "hurried flow with subtle ghost notes (294)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-44"
+    },
+    {
+      "id": "gen-367",
+      "text": "warm beat with minimal and spacious (295)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-45"
+    },
+    {
+      "id": "gen-368",
+      "text": "dark rhythm with minimal and spacious (296)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-46"
+    },
+    {
+      "id": "gen-369",
+      "text": "hazy motorik with subtle ghost notes (297)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-47"
+    },
+    {
+      "id": "gen-370",
+      "text": "soft swing with layered percussion (298)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-48"
+    },
+    {
+      "id": "gen-371",
+      "text": "soft flow with tight and precise (299)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-49"
+    },
+    {
+      "id": "gen-372",
+      "text": "dense groove with off-beat accents (300)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-0"
+    },
+    {
+      "id": "gen-373",
+      "text": "dry swing with loose and rolling (301)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-1"
+    },
+    {
+      "id": "gen-374",
+      "text": "driving beat with layered percussion (302)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-2"
+    },
+    {
+      "id": "gen-375",
+      "text": "dark pulse with subtle ghost notes (303)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-3"
+    },
+    {
+      "id": "gen-376",
+      "text": "smooth groove with layered percussion (304)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-4"
+    },
+    {
+      "id": "gen-377",
+      "text": "warm waltz with layered percussion (305)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-5"
+    },
+    {
+      "id": "gen-378",
+      "text": "dense pulse with minimal and spacious (306)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-6"
+    },
+    {
+      "id": "gen-379",
+      "text": "dark motorik with heavy downbeats (307)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-7"
+    },
+    {
+      "id": "gen-380",
+      "text": "laid-back shuffle with minimal and spacious (308)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-8"
+    },
+    {
+      "id": "gen-381",
+      "text": "dry waltz with tight and precise (309)",
+      "category": "texture",
+      "facets": [
+        "texture"
+      ],
+      "paraphrase_group": "gen-group-9"
+    },
+    {
+      "id": "gen-382",
+      "text": "floating waltz with off-beat accents (310)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-10"
+    },
+    {
+      "id": "gen-383",
+      "text": "smooth rhythm with subtle ghost notes (311)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-11"
+    },
+    {
+      "id": "gen-384",
+      "text": "laid-back beat with minimal and spacious (312)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-12"
+    },
+    {
+      "id": "gen-385",
+      "text": "hazy waltz with minimal and spacious (313)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-13"
+    },
+    {
+      "id": "gen-386",
+      "text": "gentle shuffle with off-beat accents (314)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-14"
+    },
+    {
+      "id": "gen-387",
+      "text": "dark waltz with layered percussion (315)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-15"
+    },
+    {
+      "id": "gen-388",
+      "text": "laid-back waltz with repetitive and hypnotic (316)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-16"
+    },
+    {
+      "id": "gen-389",
+      "text": "syncopated pulse with tight and precise (317)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-17"
+    },
+    {
+      "id": "gen-390",
+      "text": "hurried pulse with loose and rolling (318)",
+      "category": "vocals",
+      "facets": [
+        "vocals"
+      ],
+      "paraphrase_group": "gen-group-18"
+    },
+    {
+      "id": "gen-391",
+      "text": "wet swing with minimal and spacious (319)",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere"
+      ],
+      "paraphrase_group": "gen-group-19"
+    },
+    {
+      "id": "gen-392",
+      "text": "gentle shuffle with heavy downbeats (320)",
+      "category": "instruments",
+      "facets": [
+        "instruments"
+      ],
+      "paraphrase_group": "gen-group-20"
+    },
+    {
+      "id": "gen-393",
+      "text": "soft motorik with tight and precise (321)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-21"
+    },
+    {
+      "id": "gen-394",
+      "text": "dry motorik with repetitive and hypnotic (322)",
+      "category": "dynamics",
+      "facets": [
+        "dynamics"
+      ],
+      "paraphrase_group": "gen-group-22"
+    },
+    {
+      "id": "gen-395",
+      "text": "warm pulse with subtle ghost notes (323)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-23"
+    },
+    {
+      "id": "gen-396",
+      "text": "soft march with repetitive and hypnotic (324)",
+      "category": "combo",
+      "facets": [
+        "combo"
+      ],
+      "paraphrase_group": "gen-group-24"
+    },
+    {
+      "id": "gen-397",
+      "text": "floating shuffle with minimal and spacious (325)",
+      "category": "mood",
+      "facets": [
+        "mood"
+      ],
+      "paraphrase_group": "gen-group-25"
+    },
+    {
+      "id": "gen-398",
+      "text": "steady shuffle with heavy downbeats (326)",
+      "category": "production",
+      "facets": [
+        "production"
+      ],
+      "paraphrase_group": "gen-group-26"
+    },
+    {
+      "id": "gen-399",
+      "text": "soft march with repetitive and hypnotic (327)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-27"
+    },
+    {
+      "id": "gen-400",
+      "text": "bright groove with tight and precise (328)",
+      "category": "rhythm",
+      "facets": [
+        "rhythm"
+      ],
+      "paraphrase_group": "gen-group-28"
+    }
+  ]
+}

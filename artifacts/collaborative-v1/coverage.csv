@@ -1,0 +1,1501 @@
+recording_mbid,title,artist,distinct_positive_listeners,training_listeners,supported
+a502f559-f70c-4e0d-a5e5-e0cc319d0bd7,Dancing Queen,ABBA,0,0,False
+e9759a5a-5efc-4030-8168-f08790ae4ddc,All I Need,Air feat. Beth Hirsch,0,0,False
+833769db-6c5b-4a08-82ff-4fb0ab6ab1dc,Cherry Blossom Girl,Air,0,0,False
+f3fb6ec6-46b2-412d-9ab3-956c1a5cf89f,Kelly Watch the Stars,Air,0,0,False
+856d081d-320b-4b6b-8dac-4427e308296d,Avril 14th,Aphex Twin,57,50,True
+7c22ff37-4987-42b3-9810-68d9360882d2,Come to Daddy (Pappy mix),Aphex Twin,36,36,True
+35217349-1915-483c-9aad-544dddebd930,Digeridoo,Aphex Twin,21,21,True
+a28c3364-008d-4563-8f17-425ce60719ac,Flim,Aphex Twin,74,70,True
+6e2ca4ec-eda1-4ce4-8d65-1d9366ba8079,Windowlicker,Aphex Twin,88,85,True
+e5e5e3c9-8515-4abf-aebb-7529b4e9aa0b,Xtal,Aphex Twin,102,98,True
+9c7b8b53-5a9d-4f36-9d9b-5b89b08f12b5,Fly Me to the Moon,Astrud Gilberto,0,0,False
+d69d16b5-ff4e-4b5f-ba5e-49f28072f75b,Intergalactic,Beastie Boys,21,21,True
+b218b076-2ac7-476f-a749-ff0a774f10b1,Devils Haircut,Beck,31,31,True
+9d9e92f9-695e-4fca-af9d-0ecda1c6de43,Loser,Beck,88,86,True
+aa9135c4-0499-4d75-9caf-4e2025caf388,The New Pollution,Beck,2,0,False
+469402af-ea47-430f-9f85-69cd5c8deba1,Where It’s At,Beck,44,44,True
+fd52bd8b-b07f-45f1-a8f0-2dedaca14d35,Stayin’ Alive,Bee Gees,0,0,False
+7f527f79-3303-4f30-add1-3b58b65181d9,All Is Full of Love,Björk,19,19,True
+8b189d0c-8a13-4813-8882-3e648938ef2d,Army of Me,Björk,66,58,True
+8ddbc4f1-f3db-47f1-b727-b4ceaf98cef8,Bachelorette,Björk,39,36,True
+724efad4-d577-476a-86c2-1da15842271b,Big Time Sensuality,Björk,37,37,True
+b37ac7fc-4866-497b-b6cb-7fc643cf40fe,Hidden Place,Björk,32,31,True
+65bf94b8-6d5d-4254-aa5f-a939b1794303,Hyper‐Ballad,Björk,46,43,True
+9ecfdb63-70ff-409d-aff6-bbb4e9e4ae06,Girls & Boys,Blur,46,45,True
+ad8f8af7-28f6-4ec6-b68e-77305b38ab7b,Buffalo Soldier,Bob Marley & The Wailers,0,0,False
+13ef609a-ceb6-44c5-b1cd-6ed05b8948cf,Could You Be Loved,Bob Marley & The Wailers,0,0,False
+1ece1d78-2ad4-4276-bf1c-a7fb66be6408,Is This Love,Bob Marley & The Wailers,0,0,False
+755ea925-c364-4e59-b21f-8d0f4f73f821,Jamming,Bob Marley & The Wailers,0,0,False
+44f78249-8f06-42b4-adb7-31573a463e30,Redemption Song,Bob Marley & The Wailers,0,0,False
+33b9b9fd-15a1-4e1f-a10a-3d15df5e58f0,Three Little Birds,Bob Marley & The Wailers,0,0,False
+f8fc1e12-9d6f-4d3a-9602-9ef4a6262026,Here Comes My Baby,Cat Stevens,0,0,False
+cd9e36c8-99f1-47f4-93b4-c48f69c8dbaf,The Wind,Cat Stevens,0,0,False
+1f04f12c-3264-4239-908e-794f308d4ece,Cherry-Coloured Funk,Cocteau Twins,0,0,False
+e1c1ba62-8df8-46cd-8610-3f3e7a897e79,Heaven or Las Vegas,Cocteau Twins,0,0,False
+9ae0996b-6e92-443b-8382-bb59314b6f98,Machine Gun,Commodores,0,0,False
+96334783-24a2-445b-bf43-1623262af116,Nightshift,Commodores,0,0,False
+494c7af6-b4ec-4897-b4c7-4663099377e6,Bad Moon Rising,Creedence Clearwater Revival,0,0,False
+fc801bed-c483-4792-9da6-a5e19fcc16da,I Put a Spell on You,Creedence Clearwater Revival,0,0,False
+7813d6e5-fe21-4cd0-8f8b-82b7c15662ae,Around the World,Daft Punk,42,40,True
+4cde50af-2c78-4202-b8d0-30c1d916db97,Da Funk,Daft Punk,68,65,True
+15f16efc-8762-4151-95ab-c12d06268640,Digital Love,Daft Punk,86,85,True
+4e4a5947-a6e5-4091-9b42-f7e9ba387c1b,Doin’ It Right,Daft Punk feat. Panda Bear,66,64,True
+833f00e1-781f-4edd-90e4-e52712618862,Get Lucky,Daft Punk feat. Pharrell Williams & Nile Rodgers,177,171,True
+f1a6a40f-78f5-4918-968d-f64363bae94c,"Harder, Better, Faster, Stronger",Daft Punk,93,86,True
+3d625288-6616-490a-a1a5-4c73ddabad18,China Girl,David Bowie,27,27,True
+04c5d4a8-b6b7-4421-81ab-e5efb52d9197,Fame,David Bowie,29,29,True
+10bec6e6-8044-43bb-a85b-34537c4b3557,Fashion,David Bowie,6,5,True
+b615c13e-e745-477e-8fba-1c22e7f11166,Golden Years,David Bowie,47,47,True
+c0f27bed-7986-4c88-a9c6-1d16ebc9817b,Moonage Daydream,David Bowie,37,36,True
+6b2a7ad3-7bee-43ca-9c5c-689c3c43dea1,It’s No Good,Depeche Mode,41,40,True
+7977f60b-726e-4c8a-9c97-95e9d2e7faa5,Just Can’t Get Enough,Depeche Mode,41,41,True
+9c4df280-0f3d-4db3-a9e9-1d36022aadf2,Never Let Me Down Again,Depeche Mode,6,6,True
+695d0c34-e5da-4f0a-b27c-67ae9ae0e8f4,Personal Jesus,Depeche Mode,85,82,True
+8897f48f-7e5e-44ad-b814-325dc32edd4a,Policy of Truth,Depeche Mode,58,58,True
+06ff8b7e-a9a1-4804-8cc1-49b731bce172,Precious,Depeche Mode,25,24,True
+e27f8017-f9ce-4b70-8ccc-7c48041f09fb,I Feel Love,Donna Summer,0,0,False
+df0f4548-1c5c-4c85-bab7-5ff3ffac52a6,Season of the Witch,Donovan,0,0,False
+47da814e-c620-41b9-9ed3-098d6261b74b,Son of a Preacher Man,Dusty Springfield,0,0,False
+3028090e-cc36-4786-92bb-b3a940db4f7e,Boogie Wonderland,"Earth, Wind & Fire with The Emotions",0,0,False
+7b02a5c7-0d6e-494b-b533-ec67e774536b,Let’s Groove,"Earth, Wind & Fire",0,0,False
+661d35c3-6ade-4367-af96-6c2898149906,September,"Earth, Wind & Fire",0,0,False
+7d418f2a-d819-479b-8ab1-656a9efaa3e1,Shining Star,"Earth, Wind & Fire",0,0,False
+569afd8d-a705-432d-848c-7f1f7627c57a,Sing a Song,"Earth, Wind & Fire",0,0,False
+0fcde54e-8c7a-42d1-a29a-6221543fceb3,Chains of Love,Erasure,0,0,False
+2d5f9e58-261d-46f8-927c-7d9c98755341,Chorus,Erasure,0,0,False
+8d933ea4-15e0-4534-a3cd-649403b8c4b2,Sometimes,Erasure,0,0,False
+c81a809c-10d0-4fa7-9171-2ce8635ce87c,At Last,Etta James,0,0,False
+2882d6ff-df7b-4bae-b8b7-5139eb247be0,Gangster Trippin’,Fatboy Slim,0,0,False
+a171fdda-8146-43be-aea9-95370448f1be,"Right Here, Right Now",Fatboy Slim,0,0,False
+31a0eae0-8af8-4512-9f0f-4d1bf35f2c14,Sunset (Bird of Prey),Fatboy Slim,0,0,False
+4d287271-9f99-432d-9ef3-d83dce243658,Weapon of Choice,Fatboy Slim feat. Bootsy Collins,0,0,False
+3745f053-68e3-4171-8487-a5e922406469,Big Love,Fleetwood Mac,21,19,True
+bf9f470e-50ce-4540-92bb-d129fcaaaee3,Little Lies,Fleetwood Mac,52,50,True
+063964f7-35c3-467f-b30c-cb7303d866b9,Cars,Gary Numan,0,0,False
+24e1b547-f340-41c5-8446-eb374cae66da,Carpet Crawlers,Genesis,0,0,False
+29baf55a-d929-4a39-a136-c76267b8a089,Invisible Touch,Genesis,0,0,False
+e895d988-0285-4dc4-9e91-2a782a955e79,Land of Confusion,Genesis,0,0,False
+56ef9602-e098-44d9-9bd7-8193713bb2ee,Careless Whisper,George Michael,0,0,False
+85bb9bbd-0e9a-4a20-a373-ab98f5a494ef,Faith,George Michael,0,0,False
+b766a7b6-5b8f-4805-ae83-420231c0ec76,19-2000,Gorillaz,35,34,True
+318a1c51-5910-4823-bda1-09ea6d84648a,Clint Eastwood,Gorillaz,2,0,False
+a44db450-2b09-4eca-936f-a939ad56ae16,Rhinestone Eyes,Gorillaz,38,37,True
+8cd9dcd7-dc3e-44de-b4fa-6a7220ea55b0,Tomorrow Comes Today,Gorillaz,23,23,True
+ed23dfd5-2b52-4c38-8118-9924eeaf0025,A Taste of Honey,Herb Alpert’s Tijuana Brass,0,0,False
+5f231710-2468-4a9e-90a0-9e8cd38b60b0,White Rabbit,Jefferson Airplane,0,0,False
+25d8de5e-3662-4ffd-8dea-511a696ac3e7,Hurt,Johnny Cash,178,163,True
+2afa76b8-7857-40dc-97a8-2c6f457becb4,Love Will Tear Us Apart,Joy Division,90,89,True
+6f78de43-5c10-4a81-8095-cb0e70e45ca6,The Model,Kraftwerk,0,0,False
+722b0851-8793-4df7-9aff-835cd3770a8c,All My Friends,LCD Soundsystem,0,0,False
+3f85e09e-8bf1-4479-866d-75576dfbead6,Daft Punk Is Playing at My House,LCD Soundsystem,0,0,False
+2351cd90-50cc-4862-bba0-6fa8b807b4e3,Dance Yrself Clean,LCD Soundsystem,0,0,False
+9465afb3-adb5-49a1-81f6-df750771601b,I Can Change,LCD Soundsystem,0,0,False
+bcb9b956-fe5f-4c84-a58f-aa88c6ec2dfe,Someone Great,LCD Soundsystem,0,0,False
+889ecf78-6d1b-4694-9bc7-2d17aff60628,Kim & Jessie,M83,18,18,True
+e83bc6ba-eff9-412c-8c11-5153672f25e7,Midnight City,M83,75,69,True
+94948d51-e9a7-4f53-9e01-1743534ef6a0,Outro,M83,28,27,True
+9bfa18fd-2dbc-44f9-8048-d86f39dc354c,Wait,M83,51,49,True
+02760fd0-4d6e-4d82-921f-1013f31909eb,We Own the Sky,M83,11,11,True
+987a88ef-6f47-479c-a0ad-1a17aa85e8ed,Electric Feel,MGMT,48,47,True
+c741a7ef-dd33-4c79-a4d4-8745d9675620,Kids,MGMT,114,112,True
+24436eea-e79f-4592-b7f8-3e9bfe01f483,Time to Pretend,MGMT,80,77,True
+8e74dd9d-e5a3-4acd-918a-c36a0f8cda84,Angel,Massive Attack,111,105,True
+b350a371-25ea-410d-8c3e-c138503a7cee,Paradise Circus,Massive Attack,31,29,True
+9e599661-19a1-4941-958b-5d66e0da5c79,Protection,Massive Attack,28,27,True
+02011500-814c-461c-b3a6-f24fe68ee5a1,Risingson,Massive Attack,11,11,True
+823de184-19a6-4420-80b4-265afa81999c,Safe From Harm,Massive Attack,11,11,True
+f3bba4cd-8018-468b-902e-bc8f029593e5,Teardrop,Massive Attack,180,164,True
+f980fc14-e29b-481d-ad3a-5ed9b4ab6340,Billie Jean,Michael Jackson,191,184,True
+40a43f5e-d4f4-4253-a42d-364d47208c64,Human Nature,Michael Jackson,36,36,True
+aa3b3741-daed-411e-9753-d73fd8d69cce,Off the Wall,Michael Jackson,26,26,True
+687971bf-d15c-4e63-8067-e9518fbe21bc,Rock With You,Michael Jackson,1,0,False
+2460a241-6ff4-49f1-80f9-36051534e9ae,Wanna Be Startin’ Somethin’,Michael Jackson,62,62,True
+45864691-1ce9-46d2-bc36-1bb606640b10,Extreme Ways,Moby,46,44,True
+b2d6930a-63aa-449a-b3a8-d1c54a54f4ae,Natural Blues,Moby,24,24,True
+bc0d9b99-6743-4401-ab60-f8499f5e7ff0,Porcelain,Moby,76,74,True
+bb7dcc7a-0b4e-413f-89a3-c3e4ba2d7ff3,We Are All Made of Stars,Moby,12,12,True
+4a234158-148e-44bb-961b-ce9302027269,Why Does My Heart Feel So Bad?,Moby,55,54,True
+0afb7c13-a984-4be6-b500-3bd2ebd5e21b,Age of Consent,New Order,0,0,False
+d14faa3e-36e5-4d8e-94f2-2548d1b59be9,Bizarre Love Triangle,New Order,0,0,False
+9aa2be7b-8fb0-4187-bce4-9bb4e84815fc,Blue Monday,New Order,0,0,False
+c9559300-7946-4f93-ac03-7fb37d068d8d,Temptation,New Order,0,0,False
+578af626-6010-4c2c-bb1a-f51624f21393,True Faith,New Order,0,0,False
+13dd61c7-ce73-4e97-9f0c-9f0e53144411,Closer,Nine Inch Nails,83,78,True
+55cd2583-89a3-4273-9d3d-c049e4ef94cb,Head Like a Hole,Nine Inch Nails,35,31,True
+ab7805a8-c161-403d-92bf-a92c8b8e17dc,Hurt,Nine Inch Nails,68,66,True
+8a15bbc9-e742-42ed-8bd9-089e20059922,The Hand That Feeds,Nine Inch Nails,54,51,True
+3fac712c-4196-4865-8c1a-94231a7da309,Lithium,Nirvana,47,46,True
+3aab03c5-beef-49a3-a410-29a009760256,Rape Me,Nirvana,56,54,True
+1b2bbd8a-9149-45ef-8e10-f13eeceef578,Back in Baby’s Arms,Patsy Cline,0,0,False
+682040b8-8e57-4b24-9844-4526d17dd394,Always on My Mind,Pet Shop Boys,0,0,False
+e8ed9c60-c07e-4703-bdda-52b9de49771d,Go West,Pet Shop Boys,0,0,False
+787bb29b-a832-4861-8af0-ff0db92e04f7,It’s a Sin,Pet Shop Boys,0,0,False
+9dc0e882-6346-498d-b390-16408edba7ef,West End Girls,Pet Shop Boys,0,0,False
+05881dee-4691-4bfe-9dd2-2d8eaff98b1f,What Have I Done to Deserve This?,Pet Shop Boys,0,0,False
+4777b119-4892-4cfc-8def-b6ec76a2e0f6,Another Day in Paradise,Phil Collins,0,0,False
+03b5bad2-47c5-45c3-ad34-53135f3ec4cc,In the Air Tonight,Phil Collins,0,0,False
+631c12f0-acee-469c-bfc8-9f0a43ec5902,One More Night,Phil Collins,0,0,False
+17720dfe-9f3f-4761-be56-04f7f269968c,Sussudio,Phil Collins,0,0,False
+4010de72-311f-4868-b955-2940f3da433c,You Can’t Hurry Love,Phil Collins,0,0,False
+bb0d3c16-b684-4a5a-a107-e12bbd4f3041,Goodbye Blue Sky,Pink Floyd,19,18,True
+8a313f74-75fe-40ff-a1a9-0b000216c555,One of These Days,Pink Floyd,38,37,True
+3794be20-3b5c-41e8-99d5-1d5649fe3821,Welcome to the Machine,Pink Floyd,63,61,True
+0bb804ea-1026-4686-8b2c-5115473e5719,Wish You Were Here,Pink Floyd,0,0,False
+f920f155-0864-4e7d-b310-6fe88ddfa8aa,Debaser,Pixies,62,61,True
+cbec6fa8-a950-471d-b92e-f0c39255f488,Here Comes Your Man,Pixies,48,47,True
+d201070b-ff15-49ce-877b-f91032617faf,Where Is My Mind?,Pixies,145,135,True
+4e22d68a-19a2-4fd4-a29f-36bc05fc81fe,All Mine,Portishead,14,13,True
+145f5c43-0ac2-4886-8b09-63d0e92ded5d,Glory Box,Portishead,105,95,True
+a4eaf9db-a183-4b55-8ea0-05a18f18368f,Machine Gun,Portishead,8,7,True
+1234a7ae-2af2-4291-aa84-bd0bafe291a1,Sour Times,Portishead,42,42,True
+a7ed3365-affa-4331-8bd9-1ececaf9ae77,The Rip,Portishead,9,9,True
+9170054a-8a9b-4f33-b31f-4ed58347154a,Wandering Star,Portishead,25,24,True
+715138fa-c498-4fce-883d-f5e1f6e90797,Let’s Go Crazy,Prince and The Revolution,0,0,False
+180bced7-a6a3-472e-bcf2-51ae29b7959e,When Doves Cry,Prince and The Revolution,0,0,False
+135214af-6058-4705-9f17-18d396f36191,Bicycle Race,Queen,44,43,True
+b1a9c0e9-d987-4042-ae91-78d6a3267d69,Bohemian Rhapsody,Queen,195,183,True
+d4009c09-a339-4b89-bc45-d91ab649acb6,Don’t Stop Me Now,Queen,103,100,True
+8f0a2dcc-67f6-4510-bd59-ffd820217832,I Want to Break Free,Queen,12,11,True
+7b3d96c9-3e22-4337-be32-f8a26b816685,Killer Queen,Queen,86,82,True
+3b286fbf-0dc9-45b8-bf4a-5036ac72526d,Somebody to Love,Queen,61,60,True
+60bd9d53-01ff-4562-8058-eb44b3940317,Everything in Its Right Place,Radiohead,89,82,True
+23c3c36b-9449-4484-9040-6ef2125999aa,Exit Music (for a Film),Radiohead,82,80,True
+1e73e7a6-7378-46e5-97a7-2c299c656a29,Fake Plastic Trees,Radiohead,86,85,True
+83cf16bc-01db-4766-9e3e-f3c796639cf2,High and Dry,Radiohead,85,84,True
+1c0377bb-c00b-4bbe-b4b2-615f13324adc,Idioteque,Radiohead,30,30,True
+9e2ad5bc-c6f9-40d2-a36f-3122ee2072a3,Karma Police,Radiohead,157,151,True
+df53e8c6-3665-43fb-8324-a9306cb88c20,Eple,Röyksopp,0,0,False
+04175385-dc10-4c35-9767-4120818d1a09,Happy Up Here,Röyksopp,0,0,False
+af523a46-8a03-40a5-8688-f205034c0b67,Poor Leno,Röyksopp,0,0,False
+81888088-bbbc-4c38-9b84-89651caa86cb,Remind Me,Röyksopp,0,0,False
+9ab4b741-1953-48cd-9cea-8539edaf11bb,What Else Is There?,Röyksopp,0,0,False
+200fe16c-03bb-4ab5-b261-49f04bbe2b42,Who Am I (What’s My Name)?,Snoop Doggy Dogg,0,0,False
+ef4c6855-949e-4e22-b41e-8e0a2d372d5f,Tainted Love,Soft Cell,0,0,False
+8ddd0dbd-88af-4c3d-a4c5-e346bfee2e8d,Corcovado (Quiet Nights of Quiet Stars),Stan Getz / João Gilberto featuring Antônio Carlos Jobim,0,0,False
+fd889e33-a067-498f-bbf8-9ffe305bde16,The Girl From Ipanema,Stan Getz / João Gilberto featuring Antônio Carlos Jobim,0,0,False
+632a2454-b1b5-4483-b85d-4e5c39e8590d,I Just Called to Say I Love You,Stevie Wonder,0,0,False
+23ff17be-769c-4535-97b8-cb4d2ddfbf4f,Superstition,Stevie Wonder,0,0,False
+37c0c12a-da96-4cb6-af68-b6aba7b7b473,Burning Down the House,Talking Heads,50,50,True
+7ce86631-ab98-4814-b2e0-ec13f8a4d658,Once in a Lifetime,Talking Heads,121,115,True
+345b6c01-f0f7-4f91-ad2f-7a272d25d2d9,Road to Nowhere,Talking Heads,29,29,True
+61e70efb-8028-4f9b-9e90-210c69859669,Take Me to the River,Talking Heads,11,11,True
+7dcec16f-7691-4042-9f09-616bac2666e8,This Must Be the Place (Naive Melody),Talking Heads,45,44,True
+b85f7f6d-813a-4ebc-8a1d-5998ab02be9a,Let It Happen,Tame Impala,77,73,True
+78be434c-0908-458f-9693-f16cdebb68ef,The Less I Know the Better,Tame Impala,134,122,True
+e4b347be-ecb2-44ff-aaa8-3d4c517d7ea5,Everybody Wants to Rule the World,Tears for Fears,0,0,False
+233b58de-4ce2-4e15-a36e-485c8a9f8af8,Head Over Heels,Tears for Fears,0,0,False
+8f0cbccd-fb9a-4776-95b2-f445042e325b,Pale Shelter,Tears for Fears,0,0,False
+548f642b-b441-424f-ad35-efb88efd2df4,Shout,Tears for Fears,0,0,False
+c4334400-581d-42cd-88e9-e0e963c57f50,Sowing the Seeds of Love,Tears for Fears,0,0,False
+17c75743-6fc2-4c72-8152-25c5b45dfea7,A Day in the Life,The Beatles,54,52,True
+c1d63906-f64a-4cd1-9873-9f3a9f98883c,A Hard Day’s Night,The Beatles,10,9,True
+be5761a7-d99a-44e8-96a4-904b490f7061,All My Loving,The Beatles,18,18,True
+5098d0a8-d3c3-424e-9367-1f2610724410,All You Need Is Love,The Beatles,20,20,True
+17416564-fb6e-471c-a4ad-0bfc45292cd9,Blackbird,The Beatles,17,17,True
+659b4269-fe81-40e4-86e9-12879c09c9e6,Can’t Buy Me Love,The Beatles,4,0,False
+6db56e37-00ff-4a9f-9ced-7b5b8655447e,Believe,The Chemical Brothers,0,0,False
+0eb9b386-0321-4c73-94c8-62b4fe05aa1d,Block Rockin’ Beats,The Chemical Brothers,0,0,False
+7a7d7fb7-075b-4fdc-8c5e-9b5e03ee00b3,Setting Sun,The Chemical Brothers,0,0,False
+93411521-d7b4-4c87-9bce-a4ba5e6b95fa,Star Guitar,The Chemical Brothers,0,0,False
+8f7f788e-131e-406e-8276-84a0a9f04fa0,London Calling,The Clash,101,98,True
+bc87a2e7-514a-4769-9aab-82db01792414,Rock the Casbah,The Clash,62,62,True
+266272ca-3a00-4364-b974-1aef7f1cc76d,Should I Stay or Should I Go,The Clash,83,80,True
+62468143-e7a5-4d10-ae3c-51078b951f4d,A Forest,The Cure,2,0,False
+fa1cf5a0-b942-46ed-9ca0-3773fb52cbb6,Boys Don’t Cry,The Cure,86,86,True
+a48eff98-ce48-4e17-98b9-ba1f374eea45,Close to Me,The Cure,2,0,False
+29bdeca4-fc09-4fc5-a393-6500472f2b84,Friday I’m in Love,The Cure,66,65,True
+3e0f67ab-ee3f-44d7-8d7f-208b152368b2,In Between Days,The Cure,39,39,True
+c0c78d3e-19fc-4227-bdbb-153814f05527,Just Like Heaven,The Cure,46,43,True
+6939a732-bc36-4ee8-82d2-16e7d5e8e262,People Are Strange,The Doors,88,84,True
+791c68c1-5e44-4ce9-8393-68832477ee3a,The End,The Doors,0,0,False
+560062d0-e122-46be-9d89-0f3b44077fdf,Mr. Brightside,The Killers,159,151,True
+1f6a3ea0-70af-49d4-baf9-af6373c1c921,Don’t Stand So Close to Me,The Police,0,0,False
+3e19df7a-3f9a-4d42-adbf-31867646f602,Every Breath You Take,The Police,0,0,False
+612eacef-bc8a-4797-aa72-5f811e0ffda8,Every Little Thing She Does Is Magic,The Police,0,0,False
+a10f1f4c-0ab5-4bee-8329-a81317fd6aa3,King of Pain,The Police,0,0,False
+b9264011-47c5-4603-b840-7c27b0ccb2b9,Message in a Bottle,The Police,0,0,False
+68aaa830-20c5-4e4a-bc5c-3bfcecc43fde,Roxanne,The Police,0,0,False
+334b90ba-0130-46ba-8e0f-8ffda04a9aa6,Spitfire,The Prodigy,21,21,True
+438f92c5-f479-4a1f-b0b8-e65958c7797d,She’s a Rainbow,The Rolling Stones,22,22,True
+cae8bbec-c2ff-4972-9218-8f90acb07b1b,How Soon Is Now?,The Smiths,56,56,True
+f87a0c54-60ef-4db1-9628-96677504692d,There Is a Light That Never Goes Out,The Smiths,87,85,True
+4cb75bdb-7ecb-4148-bb2e-2a28a05c9582,This Charming Man,The Smiths,0,0,False
+b2d95fa8-e3d5-45f7-b915-a8a4b82f6f67,Dead Leaves and the Dirty Ground,The White Stripes,6,6,True
+e9d46dd9-1b5c-4378-a571-5d18fec0917e,Fell in Love With a Girl,The White Stripes,25,25,True
+1eadd3de-044f-4901-8c0e-3ff4f944e197,Hotel Yorba,The White Stripes,13,13,True
+0dcd21fc-fbd6-415f-a2f3-69c1bad432ab,We’re Going to Be Friends,The White Stripes,19,19,True
+28565ecb-6f65-4f57-ab7f-1846d643c1d7,Crystalised,The xx,0,0,False
+773a1557-a974-4f1e-978e-c240be4c3cb8,Intro,The xx,0,0,False
+4b95b3fb-3c50-4940-b8bf-d39f77a9691f,Islands,The xx,0,0,False
+55e82e79-df88-4454-830b-f50016560101,Shelter,The xx,0,0,False
+57b5c897-cf7d-4a73-b38d-6d5d83c298c8,VCR,The xx,0,0,False
+2afa442d-33bc-46eb-9df2-4fa2b182cb06,Everything She Wants,Wham!,0,0,False
+74a8c3d0-c304-4fc1-b55d-6a48f96b70ff,Still Here,Rival Consoles,0,0,False
+59547e70-fac2-4eca-acd5-bc7d310c570c,Red in Blue,Squarepusher,0,0,False
+5b00d503-8c04-49ba-aaec-13cc918b4f3d,Point of Departure,The Future Sound of London,0,0,False
+f25e30aa-36d6-4f4c-bc9b-ee619e0c2a51,Still Gone,Trent Reznor and Atticus Ross,0,0,False
+97172929-e79d-43d9-92e8-7c0da4f3c5f4,Uritual,Boards of Canada,1,0,False
+19a16f57-ed28-47c3-a885-992bc3a22de8,Skull Crushing,Cliff Martinez,0,0,False
+9462c8a1-4074-40e2-ab91-7d5b895c596c,Through Me,Beach House,0,0,False
+40986d1b-8cd8-4002-8822-8fb42e0feccb,Alight Spiral Snip,Philip Glass,0,0,False
+8320fd3f-7c03-4069-b588-6f5b42ac3e8e,Know the Way (outro),Grimes,7,7,True
+3d1b8700-c23a-41b2-adc8-b96442a2d988,This House,Japanese Breakfast,0,0,False
+e1748d2a-8315-4577-9196-b6a6b96fec3b,Time,Hans Zimmer,40,37,True
+0d71762c-db07-422d-a075-64e06849bf40,Alfonso Muskedunder,Todd Terje,0,0,False
+95aa5dbb-6b9e-494d-9181-ca4203b14a22,A Crime,Sharon Van Etten,0,0,False
+f63d6fa3-3ea8-4647-9d22-0e6b7365125c,Open Eye Signal (Asleep version),Jon Hopkins,0,0,False
+9906e2ed-68e0-4217-a92d-8f532af7caf8,Thru and Thru,Gang Gang Dance,0,0,False
+210d4d6e-8ba9-4e13-9894-cf25196bf606,Quest for Fire (instrumental),Pilotpriest,0,0,False
+33d9c59d-81ad-4f26-ae1c-87e4136d3411,Avant Gardener,Courtney Barnett,0,0,False
+3f56e982-6753-44e5-ba37-422dc1d61401,A Lot of Livin’ to Do,Nancy Wilson,0,0,False
+b4956a8f-a7d8-4242-8a2d-de81be029a7e,Papa,Kyle Dixon & Michael Stein,0,0,False
+6debb2c5-b85c-4dfc-a333-e1339d24d274,Frisco Wave,Shobaleader One,0,0,False
+478065b6-c2d8-4718-b43f-c6bb29165656,Angel,Marianne Faithfull,0,0,False
+466b7c4e-0fcd-4a8f-86c3-a638ad64cd8e,Amnesia,Dead Can Dance,0,0,False
+a4183e42-1098-4afa-8582-1d7ed9f0b971,Perdido,Sarah Vaughan,0,0,False
+e695b54a-d6a5-4481-a5d5-57616123dbcd,Congo,The Orb feat. Lee “Scratch” Perry,0,0,False
+4a674cbe-e474-48c2-92d6-66d45805be91,Nostradamus & Me,Ariel Pink’s Haunted Graffiti,0,0,False
+addeb5a4-e23b-431a-befd-b5249093fe11,Canned Forever,Kettel & Secede,0,0,False
+cf795fa8-a1cc-4371-a00a-c897e5fc394a,Just in Time,Dean Martin with orchestra conducted by Nelson Riddle,0,0,False
+5169e430-e71e-4f50-be02-e73f64ea58b5,Isn’t It True,Hope Sandoval & the Warm Inventions,0,0,False
+58331b45-b233-46c1-bd8f-646a78795c0a,The Third,Gui Boratto,0,0,False
+3a89d7f2-11bf-425a-ad06-509a4b7adad9,I Thought It Was You,Herbie Hancock,0,0,False
+4c552167-2c2b-4cff-865d-8e68017ef126,Grown Up Calls,Toro y Moi,0,0,False
+4f45fc15-168f-4199-b4ae-15b908c6c749,The Fairest of the Seasons,Nico,0,0,False
+263fed60-34b6-478b-9c34-37190e177c7e,Let It Out,Girl Talk,0,0,False
+470584d6-2b9d-45aa-875c-0fc60b5bcde7,Monolithic,Cults,0,0,False
+25a82018-4cf0-46c9-8e40-404a3ee331a0,Invisible Limits,Tangerine Dream,0,0,False
+0a26ceb7-830a-408b-912a-b7564a4c237f,On’n’On (Brodinski remix),Justice,0,0,False
+f2c2920e-6729-4600-a8eb-3f0dd8e4f845,Tzima N’arki,"Eno, Moebius & Roedelius",0,0,False
+8b63aa86-9b13-4153-8ccb-5245daa2ec59,SWLABR,Cream,0,0,False
+cdc2847b-2dfa-450b-846d-815859a441f9,Look at Where We Are,Hot Chip,0,0,False
+2765195d-49de-4c7c-b4bf-d112a95afb92,In the Bag,Nat Adderley Sextet,0,0,False
+a7a2f951-5aa0-4771-9539-88ba52eafc96,They Are Night Zombies!! They Are Neighbors!! They Have Come Back From the Dead!! Ahhhh!,Sufjan Stevens,16,14,True
+51c41cac-e8f3-446b-8c60-ba7de5cd4f7f,Japan,The Lonely Island,0,0,False
+0a120bf9-24d4-4bda-98c5-e5f24416ed4f,A Species Out of Control,Simian Mobile Disco,0,0,False
+84f2690a-d632-4a46-bb67-d271750c1dcc,"Toccata und Fuge D-moll, BWV 565: I. Toccata",Helmut Walcha,0,0,False
+4e52292a-adf1-475c-9746-b9a3fba7bc1d,"Haligh, Haligh, a Lie, Haligh",Bright Eyes,0,0,False
+0abd2099-8e84-4720-bf3e-15590da2af43,8 Ball,Underworld,0,0,False
+6631e51b-75e1-4daa-8f9a-3861840a357d,The Gift,The Velvet Underground,0,0,False
+e161a616-c022-4782-b87c-86c8e846cd05,Boyz,M.I.A.,0,0,False
+37f7d587-ba71-4500-90bb-92e4f223f082,Oblighetto,“Brother” Jack McDuff,0,0,False
+2c1041dc-3f5e-4b38-ac62-a44f9716d52b,Send and Receive (Chachi Jones remix),Tycho,0,0,False
+0c188aed-2444-480d-897e-714ccd19d690,Move Around,Diplo feat. Elephant Man & GTA,0,0,False
+49125a90-91e9-40aa-ba30-46a0fd393860,Just Dropped In (to See What Condition My Condition Was In),The First Edition,0,0,False
+3dd4d5f6-6242-45ea-9de3-ff25ecd13c84,T.N.T. for the Brain,Enigma,0,0,False
+80f4b9e9-25d8-463a-a1af-dbac9a9994c8,See You Next Week,Boris,0,0,False
+67284152-e6a9-4e14-ba6a-962f83de69d9,I Shot the Sheriff,The Wailers,0,0,False
+e3d47a23-a24e-4419-8240-b8f7f0d08d14,The Boy From Ipanema,Peggy Lee,0,0,False
+33035742-da79-48e2-90f5-5cc2defe7176,Straight Sun,Orbital,0,0,False
+756b45f7-2d15-469c-a4a0-b2ff10a8e30d,Landscape With Figure (1922),Max Richter,0,0,False
+629cc731-b118-441d-8248-6eeab0b441d0,Werewolves of London,Warren Zevon,0,0,False
+89428eed-47f7-4fbd-b8ae-ac2afb43086f,Night Sky,CHVRCHES,0,0,False
+5c761f81-80ec-4123-8fee-d41ad814eb44,Suspicious Minds,Elvis Presley,0,0,False
+ce547594-5199-49a2-9cb7-ff39e64a469f,Crazy in Love,Beyoncé feat. Jay-Z,23,22,True
+44b9640b-79de-4233-89a5-c8e2b4556443,Asmarina,Mulatu Astatqé,0,0,False
+e83cad40-14cd-4113-ba09-96eba7977505,Transcendent Blue,Tamaryn,0,0,False
+6414ab45-9289-4a73-9ad0-0e1d1fc0bea9,I’m Not Done,Fever Ray,0,0,False
+635b8fa7-c540-4c07-a71f-4cc8b70d2c07,stillness in woe,Purity Ring,0,0,False
+ff0bf01e-4367-4f22-b316-4005b352d7a9,Satellite of Love,Lou Reed,0,0,False
+79f1cd6a-c46b-4899-98a8-31c0d4e4550c,Mrs. Bartolozzi,Kate Bush,0,0,False
+9cab56c2-c0b2-46d8-9e1f-163823fda032,"Brandenburg Concerto no. 4 in G major, BWV 1049: III. Presto",Wendy Carlos,0,0,False
+3ef72f8c-7a81-408f-852b-d32fc9e31854,I Go to Sleep,Anika,0,0,False
+8fe8a0ce-af5d-4253-9930-d91586d1fa92,"Virtually, Part 1",Soft Machine,0,0,False
+ef111daf-7699-4508-80b3-7b9e7e90adea,This Will Be Our Year (stereo),The Zombies,0,0,False
+4bb3577e-1c98-4a32-b5eb-534df23ffdac,The Bay,Metronomy,0,0,False
+79689c19-9af2-4cab-a780-0fd6bb67cb2c,Desolation Path,Vangelis,0,0,False
+cbcc02d0-c72f-446f-9c6d-9a313b742acc,Children of the Grave,Black Sabbath,38,37,True
+30b4a055-a13f-40b7-a0d4-583b5d327c5e,I Created Disco,Calvin Harris,0,0,False
+b20a1377-ca41-487a-afda-d83d736f93a3,Sometimes Always,The Jesus and Mary Chain,0,0,False
+5735f868-99d3-43fb-b7ca-5f7cd1430ffc,"One Earth, One People, One Love (from Sun Rings)",Kronos Quartet,0,0,False
+b9c74f2d-491c-477c-aba6-00c2182c3884,Sentimental Journey,Juan García Esquivel,0,0,False
+7e923d4e-08f8-4142-ae02-b7b1fe55215c,Hello,Flying Lotus,0,0,False
+e02f2261-6a7a-414f-8bfa-627b505df712,Pink Funeral,Beach House,0,0,False
+d7a44a99-5e9b-4151-b650-65f6cc3d50dd,Bronchus 2,Autechre,0,0,False
+a0e2103a-bf7c-4e1c-bc53-873b40772f5d,We Are Family,Sister Sledge,0,0,False
+9bccee07-11f1-4b24-80f0-00773e62cb30,Port of Call,Beirut,0,0,False
+e43e5b0e-01ae-454f-888e-cff4610ebd6f,À quai,Yann Tiersen,0,0,False
+09d5360a-c33e-47c7-8102-78f4dfa904f3,Darkness,Rage Against the Machine,1,0,False
+533207cf-8fde-41ab-b533-ecba9180eba6,Keep a Watch,Empire of the Sun,0,0,False
+d06a2881-a08d-441e-8b48-429d954f2f23,The Girlfriend of the Whirling Dervish,Martin Denny,0,0,False
+9d4c57fe-ba72-40d5-8bf0-c9c85825bee0,Dirt Off Your Shoulder,Jay‐Z,8,8,True
+71206443-6a45-4180-98f8-6ea413c7f60d,As Young as Yesterday,Korallreven,0,0,False
+5eab7399-0cbd-45ea-b7f8-1b2099e2c40a,Evening Star,Fripp & Eno,0,0,False
+26100ec0-45d6-46ae-8bd2-1ab8ccccab2a,Let Yourself Go (303 mix),808 State,0,0,False
+56a53c82-2aba-4e9b-94d3-eb1c8ee5658e,Takin’ It to the Streets,The Doobie Brothers,0,0,False
+470404f6-b600-4aa4-a991-a352ca44e29c,March of the Meanies,George Martin and His Orchestra,0,0,False
+71b27f17-7168-426c-af84-acad55083a88,風をあつめて,はっぴいえんど,0,0,False
+6b18bbeb-5489-4465-86e9-f11b8a09c7a9,Waiting for the Miracle (edit),Leonard Cohen,0,0,False
+d26ead67-2d38-4b2b-923b-c31fb6440fa6,Magnificent Romeo,Basement Jaxx,0,0,False
+31b5e988-3dda-4614-b808-e98aee48b3c8,Hawaiian War Chant (Ta-Hu-Wa-Hu-Wai),Ella Fitzgerald,0,0,False
+f234dac2-7f22-49eb-98c1-ca1ed9e41d5c,Here We Go,Chiddy Bang feat. Q‐Tip,0,0,False
+8f2859bb-03b6-46d5-8057-20cb95cedd65,Topanga State of Mind,George Clanton and Nick Hexum,0,0,False
+ad590691-4a38-4241-a998-087cac6418c8,The Witch,The Sonics,0,0,False
+f199cc13-4c1f-44d3-afe1-7f78a3d5f82c,So Haunted,Cut Copy,0,0,False
+b713f025-a559-4fc0-a5f1-d92087da948a,Jamn,George & Jonathan,0,0,False
+4b2a71df-5568-4d26-aa80-c15fe841cdf9,You Belong to Me,Bob Dylan,1,0,False
+e68b6786-2ff8-4c17-a442-997dc3f9fdc8,Lake Feet,Black Moth Super Rainbow,0,0,False
+d774aae2-e7c7-449f-b5db-897925d07ffc,Personality Crisis,New York Dolls,0,0,False
+4807e1a1-8766-44e3-9884-e586d7a45ef8,The Day the Niggaz Took Over,Dr. Dre,0,0,False
+c47c0641-3658-4f9b-80f8-50fdfbfe3b56,Phantom Limb,The Shins,0,0,False
+6ce06749-c9c6-4cd0-b016-81eae122dd9e,Summer Wind,Frank Sinatra,0,0,False
+75da0988-9670-4500-9444-776c71f630e1,Real Thing,Pearl Jam & Cypress Hill,3,0,False
+d76057c6-c29c-41f7-b83e-751b4269851d,Bad Romance,Lady Gaga,62,59,True
+eb544f4f-00da-48b8-8c14-a507a7b585b1,Slow Down,Poolside,0,0,False
+271a1e18-0119-42df-a92c-a58a46391a91,Spoon,Can,0,0,False
+019d8b86-6bff-40b8-9de9-2738c34d495f,Behind the Bushes,The Knife,0,0,False
+d0056caf-d1b0-4120-bd72-de9654959a8a,I Love You Mary Jane,Sonic Youth & Cypress Hill,0,0,False
+dd960848-a14d-4b86-910a-7a74b7612398,Wassup,A$AP Rocky,0,0,False
+530c1c02-5e0a-47b4-8360-f7820de0882f,Fire Song,The Brian Jonestown Massacre,0,0,False
+2044e664-0eae-47e5-8301-c267fccf46aa,Something About John Coltrane,Alice Coltrane,0,0,False
+321bdedd-6528-413d-bd13-70715c80f4be,Tighten Up,Archie Bell & the Drells,0,0,False
+545c4b5f-84f8-44cd-91e9-55d3b864670f,I Put a Spell on You,Marilyn Manson,0,0,False
+6734344f-bf2d-40a5-97a4-65652af4c759,Hearts & Daggers,Espers,0,0,False
+19323a63-eb68-4db7-b312-928dd4a7080f,Split (12″ mix edit),KMFDM,0,0,False
+06ea3efb-5cf6-4b80-8afc-74db08529bb8,Another Way,Paul van Dyk,0,0,False
+921cad08-47ba-4e71-9303-de3b868922ea,Umbrella (Seamus Haji & Paul Emanuel remix),Rihanna feat. JAY‐Z,0,0,False
+0d2c3704-3387-46f0-9f85-980f0d90927a,Rabbit Fighter,T. Rex,0,0,False
+485b690d-1efd-493c-80f5-99ede9395906,Come Back Down,HOME,0,0,False
+19815ae3-5234-43de-8e47-af8859b697bc,I Think I’m in Love,Spiritualized,0,0,False
+ea3406f1-679b-4429-b57e-dd21bf5896cb,Invisible Light,Scissor Sisters,0,0,False
+baa92b97-5ae7-483f-9b91-9ff2e7d526bc,You Are the Sunshine of My Life,Bobbi Humphrey,0,0,False
+ea4edd37-b87b-480b-80e5-19a6f701a9cd,Her Eyes Are Underneath the Ground,Antony and the Johnsons,0,0,False
+640f80cd-04da-4873-9555-38fc894d3d1f,Section 5: New York / Punk to Funk / I’m Sick,Sex Pistols / Fatboy Slim / Medicine,0,0,False
+e1b019e9-7ced-4f24-aa86-a14a053ec29b,Amazing and Wonderful,Peaking Lights,0,0,False
+0d58b87f-a3f8-4df4-ace6-7dd7807c3b5c,Nursery Rhyme,Raymond Scott,0,0,False
+ac7c2ed5-782e-423a-b02a-5ff5002e0cfe,Sex 'N' Money (club mix),Paul Oakenfold,0,0,False
+44e21ff7-bffa-43bb-ab79-61899ec98553,Making Time,The Creation,0,0,False
+a8bee3ec-8710-471f-a928-ca3f49fb47bd,Midnight Train to Georgia,Gladys Knight & the Pips,0,0,False
+22424c28-9822-4b21-8293-4d20026750d0,No Name #4,Elliott Smith,0,0,False
+cf027012-f262-493b-b691-06525a9c511d,Lake Dolores,Dengue Fever,0,0,False
+ce922afc-5fbb-4dfb-ac62-c4fbd443468f,Inner City Life,Goldie,0,0,False
+16f56a5d-7a44-42e6-b0ba-e868813035b9,Light/Sun,Jan Hammer,0,0,False
+5d23e97e-1c70-4f28-9645-bc08adf5e7e2,Rainbow Babe,Laserdisc Visions,0,0,False
+02000b03-7f4a-4c46-9b79-cfcda5996673,Nothin’ in the World Can Stop Me Worryin’ ’Bout That Girl,The Kinks,0,0,False
+4476c815-59b1-46e2-983d-b8e39d091516,Sandy,Caribou,0,0,False
+f6dc04e1-533b-4dd4-8e78-722978cd4dd2,Stranger in a Room,Jamie xx featuring Oliver Sim,0,0,False
+2066cf30-0e2d-4c95-acc4-57d6b9379bde,Overground,Siouxsie and the Banshees,0,0,False
+ba673615-160b-4210-8a99-a23316606272,Three Peaches,Neutral Milk Hotel,0,0,False
+751ecb6b-5768-4362-ae44-2cfbf9000767,Flatline,Scattle,0,0,False
+888c44f7-9db4-4729-a8dd-c3fb0bef8dc5,19/2000 (Jungle Fresh),Spacemonkeyz vs. Gorillaz,0,0,False
+2b03e9e9-0593-448d-898f-9a79c91cec34,Lovely Day,Bill Withers,0,0,False
+3f8b6711-1a1f-46be-bcf9-ffb768d1bf7f,"What Does Your Soul Look Like, Part 1: Blue Sky Revisit",DJ Shadow,0,0,False
+4c09e3e5-9fb7-41c9-8223-67c387841c15,The Spark That Bled,The Flaming Lips,0,0,False
+c114274e-b23c-4798-bdf0-52fe6df2770b,Bourgeois,Phoenix,0,0,False
+8fa34d9a-7bfc-48a0-9035-e92c9fdf6c93,Think Twice,Donald Byrd,0,0,False
+3aefd32c-22a0-4f5e-bc0a-1a8979e62bf0,Ulnastricter,Three Trapped Tigers,0,0,False
+bd9af129-c3f9-4905-b50d-6c803abbf524,Rambling Through the Avenues of Time,Flight of the Conchords,0,0,False
+bd6a4252-4b49-47b8-8cc9-0722c1d8fc93,The Passenger,Iggy Pop,0,0,False
+e137bcd2-b285-4f68-9fca-c7897268bc91,Cherry Pie,Sade,0,0,False
+c59fe859-c0b3-4ff4-ae82-bfbda9447c59,What If,Tosca,0,0,False
+b5d2bbe8-0932-4280-8779-15056c4f25d4,Physics of a Unicycle,cLOUDDEAD,0,0,False
+89b4a0f3-ae68-421d-8c78-c0cd0f23868f,"Symphony no. 9 in D minor, op. 125: II. Molto vivace (abridged)","Berliner Philharmoniker, Ferenc Fricsay",0,0,False
+c3c1c90c-d61d-42f8-a60d-e5232f54f9d8,Heme,Cloudland Canyon,0,0,False
+5695e9b4-e37d-4794-a047-2fef95bcc989,Happy Lovers at Last United,Morrissey,0,0,False
+67f80f32-4ae5-4477-9b63-915380739e4d,Make Me Smile (Come Up and See Me),Steve Harley & Cockney Rebel,0,0,False
+09c55802-964e-41de-bce1-362b259ea6f8,Let Go,Little Dragon,0,0,False
+a07cccd1-b3a5-4e2c-8327-a5bff0d616c9,2 Pints of Rasa,Sultans of Ping F.C.,0,0,False
+4ae4382a-ed85-4720-9acc-63b0144d0012,Airglow Fires,Lone,0,0,False
+c6740cce-2578-4479-9213-101fc8780766,"Équinoxe, Part 3",Jean Michel Jarre,0,0,False
+66ba2858-2b81-4266-a556-2f12b9f0acf7,Mr. Ghost Goes to Town,The John Buzon Trio,0,0,False
+5bbed654-7193-421a-aafc-835cfed8f385,never give up,mc chris feat. Andrew W.K.,0,0,False
+9d175e3c-9461-4dcf-8808-a9e4b71593c0,wonder 2,My Bloody Valentine,0,0,False
+bc4a1c32-737b-4cc9-88c4-893e4a5476c3,Elq Milq,The Octopus Project & Black Moth Super Rainbow,0,0,False
+96353967-c92d-417c-b619-b3fa8fb6c026,Bullet Proof,Morcheeba,0,0,False
+2fb8c627-4368-4b29-ba35-18bcc808e27a,New York Groove,Ace Frehley,0,0,False
+9fbed4dd-8709-420c-bedd-c202335db9b4,First Blood,Kavinsky feat. Tyson,0,0,False
+ed9deda5-d2d0-468f-b333-59c9edcfab5d,That’s Where It’s At,Sam Cooke,0,0,False
+0ce710f7-667b-416d-9610-5f4342ff0520,China,Tori Amos,0,0,False
+7aa3af75-2641-460a-98d0-d88badf91a6b,Prelude,Bonobo,0,0,False
+f993fa46-a147-4c76-9403-f2376892e8e8,Torch,Pinback,0,0,False
+0205c3f1-e10c-442c-83fd-82d35b744e86,Einstein on the Beach: Act Four: Scene 1: Building,"The Philip Glass Ensemble, Michael Riesman",0,0,False
+239e517c-03e8-4291-9478-66c2cc936f0c,Zero,The Smashing Pumpkins,40,39,True
+d1a32306-9f0f-48d8-99f8-d1673a417503,LIFE,HEALTH,0,0,False
+89872f35-d1ea-4c60-9393-b8ea6f376b31,High and Dry,Jamie Cullum,0,0,False
+1a751145-8b72-401c-a1c4-d18a31c76e3d,History of a Boring Town,Less Than Jake,0,0,False
+0e8f88ca-b48a-4537-9ff0-b89ba0fc8a68,128 Harps,Four Tet,0,0,False
+96ce0ed7-389c-47de-a270-18424456b1bc,Wasp in the Lotus,The Dandy Warhols,0,0,False
+75c52d44-4f0e-4dd6-b6bb-8aef1af4c082,Virginia Plain,Roxy Music,0,0,False
+3a4e71d3-f47b-47ad-8df6-c84d9cc08141,Syndir Guðs (opinberun frelsarans),Sigur Rós,0,0,False
+1b969bf6-ed82-4538-b62e-c9aaaf527075,Yesterday’s Entertainment,Pye Corner Audio,0,0,False
+3ee454b8-ff72-44a0-8902-0a1a0e82a18c,Reign,UNKLE feat. Ian Brown,0,0,False
+47228c4d-6fe2-4ad3-8bac-d2bf744b330c,Glorafin,Lisa Gerrard,0,0,False
+0e9b7e3b-2912-4592-b335-2e7e8b3189a3,Sweet Jane,Cowboy Junkies,0,0,False
+e94e4013-4236-4106-be51-1f37437936b6,Be Sweet,Japanese Breakfast,0,0,False
+21b64619-0819-4217-a47b-06e68b147277,Resolution of One,Guards,0,0,False
+29df82be-e1ba-41bd-b0b6-548b23cc585f,The Time Warp,"Richard O’Brien, Little Nell, Patricia Quinn, Charles Gray",0,0,False
+ae3d851e-ff57-44ae-ba58-5e619bbd9c9b,Give It Away,Zero 7,0,0,False
+01554358-b789-4028-96cd-f6dec97cc379,Ooh La La,Faces,0,0,False
+63bbd43a-8e73-41db-a70d-684de05d2274,Call Me Irresponsible,Bobby Darin,0,0,False
+1a38bdc5-ec0f-45a6-970d-a7939343862d,Modern Man,Arcade Fire,6,6,True
+c1b68059-28be-4975-b8d6-f696b033dd65,Yesterday’s Men (harmonica version),Madness,0,0,False
+d07aed7e-d7c3-46fa-b91a-9cc36c7c33c9,Lovesick Teenagers,Bear in Heaven,0,0,False
+d6f75ce3-0f3d-490f-9bb9-129f7f353f41,Hell Is Round the Corner,Tricky,0,0,False
+79fa8b26-4df8-454d-8d33-3c06082290a6,Radio,Towa Tei with Yukihiro Takahashi & Tina Tamashiro,0,0,False
+efd82a19-be84-4e2a-a6c3-d656fd1ef143,Tick,Yeah Yeah Yeahs,0,0,False
+a195d6cf-0cae-4e35-9472-6efdcf103312,Here’s to You,Ennio Morricone with Joan Baez,0,0,False
+612fbd4a-18d4-40af-87c5-0abf0ee32b48,バレエ,YELLOW MAGIC ORCHESTRA,0,0,False
+1b7f58a8-30be-44a8-bfcd-d27058a45f31,Song for a Blue Guitar,Red House Painters,0,0,False
+f95caaa2-d4a2-4cf6-84c0-ca0dae663a3e,Gomper,The Rolling Stones,0,0,False
+c52ee3e4-cead-47ec-95b9-c4eda51b994f,High Noon,Kruder & Dorfmeister,0,0,False
+03d413aa-9666-4f7f-b406-99778e06e1af,Saké (Electricity remix),Jupiter,0,0,False
+6a67a82a-9f3c-4670-915f-af94c11cb527,Letter Never Sent,R.E.M.,0,0,False
+ca99547e-aa81-4d37-8b1d-e3599e3f0465,Tijuana Sauerkraut,Herb Alpert & the Tijuana Brass,0,0,False
+46b826ea-e107-4454-99ac-0aceeb04e995,Title Music from A Clockwork Orange (from Purcell’s “Music for the Funeral of Queen Mary”),"Rachel Elkind, Wendy Carlos",0,0,False
+ed6e2164-d610-40df-b9a0-467c1d2108b7,Beautiful Skin,Goodie Mob,0,0,False
+a8e6d4d4-310f-4ecc-8ba7-3c6e58a2bd48,Hairy Candy,TOBACCO,0,0,False
+62299451-7964-4e45-838f-84bdaaf95aab,Breaker 1,Interpol,0,0,False
+5698b33c-eada-493e-ba34-636acc149cf8,More Than a Feeling,Boston,0,0,False
+349c2acb-3711-4c9f-8723-3b340b9eafb7,At the River,Groove Armada,0,0,False
+de66e45e-f793-4408-96b8-7731ecc025ce,Moody,ESG,0,0,False
+ed729176-61a9-432c-9111-702c8cde15f1,Rudy Foolish,Matt Sweeney / Bonnie 'Prince' Billy,0,0,False
+523d97c7-04ef-4fca-a442-222a8fc24b34,Money Rain Down,Big Black Delta,0,0,False
+b3108307-c999-46e2-b689-ca73090e7fa4,Ballad of Sister Sue,Slowdive,0,0,False
+4c1c7e1b-51d2-49ad-a700-eaa887e92209,Oh My Love,Riz Ortolani feat. Katyna Ranieri,0,0,False
+b3a44916-daa2-4dc5-b9e2-1889bb58d142,Photograph,Astrud Gilberto,0,0,False
+9149a8b8-18aa-4dbb-b856-84c044a885de,Shaolin Satellite,Thievery Corporation,0,0,False
+b4d65109-86e0-49ae-8bef-5887a4473fec,Nightmare on My Street,D.J. Jazzy Jeff & the Fresh Prince,0,0,False
+8cd682d8-926c-4174-8efe-0ea80072d355,Lovers’ Carvings,Bibio,0,0,False
+aabca64f-b2a7-4bfa-ad0b-76c62913df67,Can’t Help Falling in Love,Elvis Presley with The Jordanaires,0,0,False
+882ce25d-51b9-4fe5-bbdf-16e661df0822,Gangnam Style (강남스타일),PSY,0,0,False
+55cfb83f-adc1-4730-a71b-90b369fd3f84,Pumped Up Kicks,Foster the People,0,0,False
+e24c2cbd-5796-4feb-b29a-89fa5b026bb3,Interstellar Space Exploration,Antoni Maiovvi,0,0,False
+648fbb1e-af64-4aa9-a46b-8eefa443e87d,Turkish Song of the Damned,The Pogues,0,0,False
+93468b6e-ea82-4feb-8ee6-944e60acdfce,William Tell: Overture (abridged),"Orchestra del Teatro dell’Opera di Roma, Tullio Serafin",0,0,False
+b3e264f9-a608-4268-ae8c-1d0ee26ef22c,We Are the Boyz,Pulp,0,0,False
+b15c9330-b463-4d64-8310-09526b5a2ac3,The Edge,David McCallum,0,0,False
+f50d957d-3ede-4799-8d73-f77f24fc3ea2,Mona Vegas,Starfucker,0,0,False
+1aea1980-37a8-41b2-bb78-526c94bb428d,Carry On Wayward Son,Kansas,0,0,False
+b754f112-ab7e-4a34-a475-accd8ac85203,Wow,Snow Patrol,0,0,False
+6aad2d1d-dc8a-4d50-bc61-f4513fd4441a,Concierto para Quinteto,Astor Piazzolla y su Quinteto Tango Nuevo,0,0,False
+63026c60-e046-42a6-98ab-0ec96d1a99c2,What I Got (reprise),Sublime,0,0,False
+48bdc28e-8b00-48f6-9048-1643fd561891,Singin’ in the Rain,Gene Kelly,0,0,False
+9e65152a-e1ee-4305-869c-c52c500713b2,Sulliday,A.R. Kane,0,0,False
+f440c86b-d164-4c9d-9129-1a3dffe3ba41,Welcome to Japan,The Strokes,13,13,True
+c74476ab-9ae1-4ce7-9cb3-e6d8905c5f82,No Surprises,Shawn Lee,0,0,False
+c0a4fea9-fe59-4ccf-9711-182bf149da1f,Sugar Water (acoustic),Cibo Matto,0,0,False
+616db1bd-a786-4f8c-87a3-6f733a6b564e,Good Idea,Siriusmo,0,0,False
+456d62bf-543c-4843-9eff-f0eb1a271a96,Possibilities,Weezer,2,0,False
+d22d9245-79c4-429b-ab8c-71c99eda0b02,Overture to the Sun,Terry Tucker,0,0,False
+a645e041-2249-41bb-a863-c0647e4b4a9d,It’s So Easy,Guns N’ Roses,16,16,True
+ea1f5bd0-0c56-41ad-951b-9144858ea87a,Kitten Moon,Fluke,0,0,False
+65d5166d-d7c5-484d-a6f3-8737d0f34e2f,Van Tango,Franz Ferdinand,0,0,False
+d46967e3-0170-4b4f-b8b3-9d14a17e67e5,Romani,Shining,0,0,False
+dba69c24-33b1-49c0-b52f-e7b0180ed67a,No Diggity,Blackstreet featuring Dr. Dre,0,0,False
+4e888f11-8595-4012-af4b-094978401c5a,Graveyard,Butthole Surfers,0,0,False
+6c4c5d54-ea80-444a-839b-0d55ea49d407,Nautilus,Anna Meredith,0,0,False
+5df4d3e4-ef04-4126-9e05-e3309f08131f,Augustine,Patrick Wolf,0,0,False
+afd9a800-1021-43a9-b97d-ccc50200ef2b,Savage Sexteen,My Life With the Thrill Kill Kult,0,0,False
+290c4ffa-c9ad-48d2-8f59-1a8b5f408af0,Beyond the Wheel,Soundgarden,0,0,False
+d2c54562-3d8d-4f85-ab4e-d4d5b8fa64d3,High Rise,S U R V I V E,0,0,False
+6a8cee63-284b-47b2-9140-713c78c54e80,Friendship,Tenacious D,0,0,False
+ff888609-4331-47b6-8f27-90f5b47ece65,Dirty Dream Number Two,Belle & Sebastian,0,0,False
+9ddc6016-86df-4f36-84c1-fbaf5c365dba,Avalanche (Slow),Zola Jesus,0,0,False
+d9e05028-b92c-4477-9280-51bc43adaee8,Violent Youth,Crystal Castles,0,0,False
+f827b4ae-4573-4fe7-ba5a-aeeca572fec5,Holy Diver,Dio,0,0,False
+5a6d98a8-fe47-4fca-b041-d163faf482e8,Cut Your Hair,Pavement,0,0,False
+7c80a034-2399-4585-8944-9cb137a069f1,Binary Shuffle,Binary Star,0,0,False
+bab3b4a1-c2f4-4552-b33f-b004ec56a8e8,Theme de Yoyo,The Cinematic Orchestra,0,0,False
+ae88669b-d377-4b5c-9cbe-f9e0706a56ed,Super Freak,Rick James,0,0,False
+c5eda435-990b-47e8-920d-bd93921f1532,You and Your Sister,This Mortal Coil,0,0,False
+fcd8428e-7c69-4da3-a923-83afdd3fc1d8,Gossipo Perpetuo,Jean‐Jacques Perrey,0,0,False
+743d1de6-3556-417c-b34d-f76464b21c7e,When I Grow Up,Garbage,0,0,False
+578ccb6e-9604-4537-aba0-d2d148e840b0,DDD,Machinedrum,0,0,False
+e2ba531e-e952-46f8-9fb9-532fde00da77,Under Your Spell,Desire,0,0,False
+9c2d8a0b-e1fc-466c-9cd0-45fe506fd87f,Spiritwalker,The Cult,0,0,False
+88f90223-3a05-49a0-8d5d-29eb9717b535,Walking After You,Foo Fighters,2,0,False
+c92f405d-b2e2-416f-9d0f-edb8d5671241,Notre Dame,Harmonia,0,0,False
+b2ecbd75-98f6-41a9-84e2-40dbaecae88a,No Lookin’ Back,Michael McDonald,0,0,False
+0d5d8448-d35a-4e69-b605-aa8fbc64631c,I Was Her Horse,múm,0,0,False
+bb90bdaa-8a08-4f95-bd60-b5ddadb5b48a,Heaven’s Blade,Coil,0,0,False
+2fb9bc6b-d4da-497e-ad3f-fabf12fe72cf,Fade Into You,Mazzy Star,0,0,False
+76a0d6cd-f0d4-4286-9548-ac92758f900d,Falling,Julee Cruise,0,0,False
+24814e28-cb37-4dc5-8598-37a90a5a995a,In Effect,Beans,0,0,False
+499e5323-8f00-40a5-a354-2d0b2af55d1e,Once Twice Melody,Beach House,0,0,False
+a1eea207-acf9-42ae-9afd-0a41c71fb905,A Lie,Grouper,0,0,False
+9170cbb7-e8ab-42f1-b88d-1ea51f70d2ea,Cool in the Pool,Holger Czukay,0,0,False
+7110899e-e982-4726-8e7c-eeea8ed54d9a,20th Century Boy,Placebo,0,0,False
+03f99283-5fa0-4c3d-a54c-e285c760b147,Baby’s on Fire,Brian Eno,0,0,False
+0a5ac482-6e1e-4ba4-a8f3-74577a1653d2,Toho,YELLE,0,0,False
+0a30c378-6138-48d2-af65-c176c0a2ab1d,Yah Mo B There,James Ingram with Michael McDonald,0,0,False
+c71f5199-e16a-4c6c-98b7-9a941a4a6542,Werewolf,Cat Power,0,0,False
+130cf35e-0912-45dc-9af6-78def87e5fce,The Big Sleep in Search of Hades,Tangerine Dream,0,0,False
+d3df7cf1-314e-436d-8cf3-ec45e78f5baf,Fender Bender,Kid Koala,0,0,False
+5109320b-e2e2-48d3-a0ae-bd198aadffa7,Take It Easy My Brother Charlie,カヒミ・カリィ,0,0,False
+6757218f-affb-4301-8b4f-d00cd92e5991,It Was a Pleasure Then,Nico,0,0,False
+8e8f45ba-4712-406c-a13c-98e8c03f2835,The Final Countdown,Europe,0,0,False
+d671c978-03f6-400d-abab-d588983f7fdf,Miami Showdown,Digitalism,0,0,False
+1cb9a189-c618-436b-87ec-c9026ee2c306,Heimatklänge,Kraftwerk,0,0,False
+bb813b35-90f7-4d96-b883-7957bbdc4943,Playin Ya Self,James Ferraro,0,0,False
+89d0eb37-a7c9-4e68-b72e-a60970296b65,Freedom Now (Break edit),Purple Flash Orchestra,0,0,False
+48a465ce-d211-40db-ae43-b73347ae7a66,Lady,Kenny Rogers,0,0,False
+7efa4709-26b8-42aa-9e1f-c89f4b3eee0f,Judgment Night,Biohazard & Onyx,0,0,False
+280c46ed-abd6-41db-abcb-167bcb2be7eb,Tragedial,John Talabot,0,0,False
+63486bab-2d65-4065-91d1-f3bfdcd7bef6,Blue Monday,Nouvelle Vague,0,0,False
+c7070224-9860-4851-b5df-999222c0aec7,White Light/White Heat,The Velvet Underground,0,0,False
+49c50d68-7717-4351-a15b-c874bc8d2bea,Supa Wyde Laces,Mix Master Mike,0,0,False
+863b8ff7-4768-4e48-af7c-47c0c14216f0,Olympic Fanfare and Theme,"Boston Pops Orchestra, John Williams",0,0,False
+85e5eea4-423b-411f-8145-70fc0a075421,Thirsty,The Orb feat. Lee “Scratch” Perry,0,0,False
+6434d6fb-36e5-42db-a526-1f86c9766a36,United Nations etc. etc.,Meat Beat Manifesto,0,0,False
+db5ec5db-2086-4394-9950-619a2740fa06,Chemical Marriage,Mr. Bungle,0,0,False
+a53f42d0-e5d3-44f9-b98a-9eae822688d6,Certified,Calvin Harris,0,0,False
+06191b20-c93b-4d44-9368-14f5b1f5b9b3,Dark and Lonely Waters,The Future Sound of London,0,0,False
+46b116d3-0b5b-4b8b-b0e7-f73642209acb,Hey Dude,Kula Shaker,0,0,False
+8277cc78-b007-4e44-88c4-b1bc42211577,Walking & Falling,Laurie Anderson,0,0,False
+e6f3d5de-f286-4998-ac87-53e64d4ec1f3,I Looked at You,The Doors,7,7,True
+2c074a33-1869-470f-9dc9-a9bda95e3449,Nonstop Disco Powerpack,Beastie Boys,6,6,True
+9fc313fc-d213-42f9-984f-4405ccf74e23,Me gustas cuando callas,Brazilian Girls,0,0,False
+4c94a238-7349-43a4-b5e8-38d0e240c559,Let Yourself Go (D50 mix),808 State,0,0,False
+e6fe45bb-3385-4e2e-9bb6-a0d1f53e0c5b,Butterfly Potion,Foetus Inc.,0,0,False
+65f2499e-a39a-4c70-89b2-5d5fabb909ee,Floe ('87 remix),Philip Glass,0,0,False
+c8b63306-1feb-43df-9576-c309076e217e,Let It Happen,Lindstrøm & Solale,0,0,False
+4f937728-29ac-4951-9e74-39955c2bb5ac,Nasty Girl,Vanity 6,0,0,False
+6e134914-0365-4d7b-ab81-9cbc48b021f6,If Winter Ends,Bright Eyes,0,0,False
+994febf8-69a2-4836-b7f9-0b88c0b73454,Seraphim,Simian Mobile Disco,0,0,False
+2d5ae8c3-0db6-4354-a8ce-e530a58fd2b9,Tales of Brave Ulysses,Cream,0,0,False
+00711790-eb18-4581-a31c-17049c8312fc,And I Was a Boy From School,Hot Chip,0,0,False
+08334e90-7939-4a07-9dfb-b24416b14bc3,The Book! / Obituaries,Danny Elfman,0,0,False
+9460b4f9-5eb8-494a-8c58-d9033c12c20d,Doggy Dogg World,Snoop Doggy Dogg featuring Tha Dogg Pound and The Dramatics,0,0,False
+725c2f03-01e4-4d20-8eb9-3bd8edb86b19,Mambo Numerique,Señor Coconut and His Orchestra feat. Towa Tei & Marina,0,0,False
+fa605ba9-808d-4c00-883c-8aa0be76b2e3,(I’m Not Your) Stepping Stone,Sex Pistols,0,0,False
+887f6d95-2b0b-41a7-b2c4-16d26433d613,Hey Nineteen,Steely Dan,0,0,False
+025c4072-c5ec-4167-8b3e-9fa8cd4ad32f,New Lands,Justice,0,0,False
+f1e25f61-2e16-4404-8874-8bd2af1e5d69,Hundredaire,Hey Willpower,0,0,False
+4731e93d-be8c-48bf-b41b-758b2045a89e,Slippin’ Into Darkness (Armand van Helden dub remix),War,0,0,False
+a9e1c5e2-7bf0-47b5-9881-6d4a853ce518,Epigram,Tycho,0,0,False
+60887f36-9611-4569-9865-45de21fe3948,No Love Lost,Joy Division,5,5,True
+4c3c8ab6-0936-40b2-aa4e-01c158a00e33,Wicked Little Town (Hedwig version),Stephen Trask,0,0,False
+d6a2eee8-1942-4dc9-8bf2-22e0ffadf4da,Night of the Swallow,Kate Bush,0,0,False
+09954456-8e95-4f97-839f-bfc0acdb0f40,Pleidean Communication,A Positive Life,0,0,False
+d3d07d49-3f93-44a1-871f-565735c95f28,Wallace,Hans Zimmer & Benjamin Wallfisch,0,0,False
+dd06d41f-6f36-451c-8557-7913a0ba6322,Day,Jaga Jazzist,0,0,False
+7851923e-a910-44f3-9ed9-5e3d52bb84da,Just Another Victim,Helmet & House of Pain,0,0,False
+9410ed07-4d9e-4fe5-a8cc-54fdac315069,Hong Kong Garden,Siouxsie and the Banshees,0,0,False
+b931f0e6-fc1a-4f0f-9804-d2d202e81721,Gemini,Boards of Canada,8,8,True
+d08ca382-4a74-479c-9098-996e3b8f8e5e,Rhythm of the Night,DeBarge,0,0,False
+696248d5-d231-4d43-9710-7b39ce96ccac,Red Cave,Yeasayer,0,0,False
+ceebc420-86de-4f53-bd0e-c8ef83dc9133,Deep Arch,Underworld,0,0,False
+d9997905-de72-4b2d-9cc9-92d3077df2e5,Sing This All Together (See What Happens),The Rolling Stones,0,0,False
+63118903-4acf-4053-b682-a79f22fdc41b,Shot By Both Sides,Magazine,0,0,False
+59252151-ff08-4028-b716-4236bfa1403f,Just Saying,Jamie xx,0,0,False
+3ea37674-91c5-4f22-9f3b-f2858c2674e5,Love Theme,Vangelis,0,0,False
+205af25c-a536-49f3-86ea-f8b64a4fd945,Having a Party,Lee “Scratch” Perry,0,0,False
+2334fe76-9894-43d9-9e79-1a059caa1746,"Danzón ""Daulena""",¡Cubanismo!,0,0,False
+1dfeabf6-7810-45b9-aef9-233b896b6478,Open Eye Signal (George Fitzgerald remix),Jon Hopkins,0,0,False
+fe35fcb2-05bd-4399-b9b0-352be6b28dc3,Hanging Around,The Stranglers,0,0,False
+8fb44f6d-df64-4bc7-90d4-a034860a94a8,Fiskmat,Skruvmejsel,0,0,False
+226a48da-a256-42df-9bd2-7566c155a61e,Big Calm,Morcheeba,0,0,False
+67dc066b-d84e-444c-b250-82917db7281e,Single Ladies (Put a Ring on It),Beyoncé,14,12,True
+6d436fb9-4ec7-4141-9575-739b1e02a52f,Cotton Eye Joe,Rednex,0,0,False
+52975d50-827c-43a9-821d-3d57d81c390b,"Etude in C-sharp minor, op. 2 no. 1: Andante",Vladimir Horowitz,0,0,False
+59428ef7-92bf-4381-95ef-094d0aec57b1,Butters Theme,Diplo feat. Gent & Jawns,0,0,False
+923f5f3a-62e3-4f34-8fdc-4fe0f038bb7d,Ask the Angels,Patti Smith Group,0,0,False
+8581a2e2-a1fc-4491-b068-d8f29b29b06b,Effigy,Creedence Clearwater Revival,0,0,False
+273f2196-15b5-44eb-928c-7fde39d47824,Unreal Square,Squarepusher,0,0,False
+c399d72e-3604-4b59-ad92-3264a97cdad0,Funky Cold Medina,Tone‐Lōc,0,0,False
+2aba5686-2f89-43d7-925b-9d721b11bc54,Crawfish,Herb Alpert & the Tijuana Brass,0,0,False
+d37a8c06-56ff-4701-bb75-4a39250ca2e4,Smell of Desire,Enigma,0,0,False
+ba51e383-16e3-4774-94bd-02de11ca8ec3,Natural’s Not in It,Gang of Four,0,0,False
+a5311025-4551-4d45-8b78-c0b3ab327b42,Forget Me Nots,Patrice Rushen,0,0,False
+4e4ddb82-5c7b-4409-8b04-d5ab8a18809c,Beelzedub,Orbital,0,0,False
+d5d13df5-c315-4f2b-82b4-d2cddd3440b3,Sad Eyes,Bat for Lashes,0,0,False
+d76943eb-d2e4-4f2e-a6ca-ca8bd34fd95a,Dogshit,Skinny Puppy,0,0,False
+69c0f5e1-7e55-4e3a-8875-b7808c7aa8e5,"A Quick One, While He’s Away",The Who,0,0,False
+f151a212-dc8c-41ba-bbd1-4a0a962c8043,Mind Your Own Business,Delta 5,0,0,False
+14a8d503-b515-4301-9e89-016cc0dabad8,Science/Visions,CHVRCHES,0,0,False
+4942cea8-a4b6-4f3a-8ba4-64a7af39dbb2,Coconut,Fever Ray,0,0,False
+eff2a39f-fa77-4c6f-8907-2f01e244947a,Ebony samba,Stan Getz & Luiz Bonfá,0,0,False
+3b067a22-579b-4850-9ea7-e7f7cfa5b161,Trinklied,Einstürzende Neubauten,0,0,False
+67669245-928b-4493-bd52-3864c361a0d1,Paper Planes (Blaqstarr remix),M.I.A. feat. Rye Rye & Afrikan Boy,0,0,False
+6aa99c61-35db-4a39-a5a4-f8a8ed076a18,Bus to Beelzebub,Soul Coughing,0,0,False
+8e7e59b4-ae49-4b90-9597-83e4ec0cf635,Eight,Grimes,7,7,True
+59fc4d11-418a-49e3-a388-9cdafe13d7b4,Sadie,Joanna Newsom,0,0,False
+e31f8a1e-3fb6-4799-860e-8ce0e3e07200,Pas si simple,Yann Tiersen,0,0,False
+e013ffcb-935a-4e59-9625-5711661ba9c0,Happy Station,Fun Fun,0,0,False
+91952613-ae75-4681-a458-db6812542a72,Kaili,Caribou,0,0,False
+b895e437-a233-4f69-ab04-e482417a5c46,Posing in Bondage,Japanese Breakfast,0,0,False
+4afbca5d-b44b-4593-adc8-9e8226323261,Meditation,Astrud Gilberto,0,0,False
+a07d406f-d430-46a1-b233-6eb457f51f76,Building Steam With a Grain of Salt,DJ Shadow,0,0,False
+10798386-0a44-4fa7-82d7-0932aef03c4a,Forgetting,"The Roches, Linda Ronstadt, Kronos Quartet, The Philip Glass Ensemble, Michael Riesman",0,0,False
+99320680-659b-43c2-a2f0-9d25c601a89e,Memphis Bells,The Prodigy,8,8,True
+35b2fa7a-f775-4773-9f1a-3e9fb888c3bc,Sea of Holes,George Martin and His Orchestra,0,0,False
+a0ca1389-80fe-47d7-aa76-c0cd1486a503,Sleepy Dinosaur,Flying Lotus,0,0,False
+1d4d4463-69fe-44e9-bb9c-87f5ca4c211a,Real Love,Mary J. Blige,0,0,False
+caaf2052-7fa0-402b-8a93-7a95b6386bfc,Jorge Regula,The Moldy Peaches,0,0,False
+be8a4025-164b-458d-a0ef-5e6a54a597d3,El Toro,Bonobo,0,0,False
+708c27de-1cd3-438d-9b48-7ce7606ee63a,Delight,Maethelvin,0,0,False
+12e47c3b-d64c-4b17-ae38-d88ab28b910f,Kathleen’s Song,Ray Lynch,0,0,False
+6cd08db5-471e-43f7-a0f0-7b578c6faa90,Sister Christian,Night Ranger,0,0,False
+ffd8128f-81f5-49d0-b905-1cf4532382b3,UNKLE (Main Title Theme),UNKLE,0,0,False
+a9d5e6ed-0300-4284-85fc-a5c4e246e670,Alabama Song (Whisky Bar),The Doors,28,28,True
+0a8c5827-4c52-41e2-bed8-788c9f4c6588,Love Is in the Air (Fran mix),John Paul Young,0,0,False
+ebc2fc14-0fc6-4e16-800e-e0bd9d5e7ac3,Always Where I Need to Be,The Kooks,0,0,False
+ea46c11c-7c49-436f-850e-f5cc490d8c64,Let the Right One Slip In (long mix),Morrissey,0,0,False
+7cf5a830-d903-46db-9140-bd4b050e9e1f,Yègellé tezeta,Mulatu Astatqé,0,0,False
+c01b97c3-bc4c-440b-af37-4eaa71a3d4d6,Hush Boy,Basement Jaxx,0,0,False
+1a01e99c-3198-485f-ae56-fb321ac42898,The Humpty Dance,Digital Underground,0,0,False
+5aa873f5-9cfa-4e8c-b2f3-cdd31e86bc3d,Zebra,Oneohtrix Point Never,0,0,False
+5a461427-fc53-4fc0-ad4f-87570a90ccca,Further,Autechre,0,0,False
+65bb1475-97f0-4117-b807-f3a7fad1828f,Don’t Let the Sun Go Down on Me,Roger Daltrey,0,0,False
+d60e16a1-56c8-40db-b13e-ffa444af4b51,Midnight Runner,Cut Copy,0,0,False
+1a57cc6e-9049-48cc-9ae5-d335c99bdf74,The Living End (John Peel session 3rd February 1985),The Jesus and Mary Chain,0,0,False
+13573aa0-9fb2-45f9-a915-70eba3613b4a,Last Days,Max Richter,0,0,False
+045375e1-f9ed-42fd-83d7-bd536acd4b64,Vertigogo (Opening Theme),Combustible Edison,0,0,False
+69913e33-154a-405a-9fc7-f2ce09496b55,Klapp Klapp,Little Dragon,0,0,False
+19625191-47ff-48e4-8466-0a673e6174a4,Carolyn’s Fingers,Cocteau Twins,0,0,False
+a05966c4-aaf8-4508-ba23-3193b5067fc0,Dub Yalil,Natacha Atlas,0,0,False
+7b4942c7-2ed9-4260-a252-6c57c7178e46,In Limbo,Sa-Ra feat. The Sa-Ra All Stars,0,0,False
+034de75e-051c-4e4d-9097-6264029f084a,Must Try Harder,Frank Turner,0,0,False
+d2fa726d-169c-477d-ada5-9d9f5b26829d,Chloroform,Phoenix,0,0,False
+5e313861-1c5f-40a7-895e-0ff5f57b9063,Domine ad adjuvandum (from the 1610 Vespers),Wendy Carlos,0,0,False
+f4c0b9bc-2d40-4421-a0fe-fb0b9ee41b3d,Fish Heads,Barnes & Barnes,0,0,False
+6f6f0478-61dd-45c2-a093-13041b9a40f9,Girls’ Night Out,The Knife,0,0,False
+66d653ea-94bc-4f6f-beb2-3d24ca768d2e,You Don’t,Tricky,0,0,False
+6f1d09c1-563c-447c-a09d-235287e95ba5,Apathy’s Last Kiss (Siamese sessions rough mix),Smashing Pumpkins,0,0,False
+f262c39f-54e3-4356-b742-9a2499b86f0d,The Music Box,Raymond Scott,0,0,False
+f5faf9cd-b903-4067-a0af-12982471ba85,Turning Japanese,The Vapors,0,0,False
+aee5f1d1-5c05-4d5b-a7a8-79ee4bc2c506,Cause I’m a Man,Tame Impala,32,32,True
+0acf15ba-836b-4f04-81f1-5662f6968ec9,The Big Easy,Jake Slazenger,0,0,False
+cfd9b26c-eb51-48a6-8f70-7559bff1ba7f,The Power Is On,The Go! Team,0,0,False
+332144d1-d64d-49a7-8b91-970850fcd879,Leit af lífi (Recycled by Plasmic),Sigur Rós,0,0,False
+f4363fa8-d738-409e-a9f9-e58826c74388,O Death,Ralph Stanley,0,0,False
+2312aa57-02ff-481c-afba-4ae0f7fa3ca0,We Used to Wait,Arcade Fire,27,26,True
+3bf60dfe-2ccb-458e-ad76-01395ecafdcd,Novocaine for the Soul,The Moog Cookbook,0,0,False
+a1466f00-a848-4d93-90af-cc9026ff03ec,Oh Yoko!,John Lennon,0,0,False
+efb26657-f4f7-4a9c-86ca-5e5bc3aea3dd,Are You Ready for Freddy,Fat Boys,0,0,False
+77396334-3b07-4101-bfa9-dfb6d091fda4,Sueisfine,My Bloody Valentine,0,0,False
+34dce63b-5070-40e4-a4bc-4365d7fc7b6b,Heatwave,Tosca,0,0,False
+9fdc07f2-b7ff-48fc-9db9-6fc1bf0e7d54,Rock This Town,Stray Cats,0,0,False
+e03aac58-dd43-45ff-87a7-99ef62a28ea4,Evil Twin,Modeselektor feat. Otto von Schirach,0,0,False
+f4c0eb73-368b-43d3-89e1-9a8fa866dff7,Little Sister,Nico,0,0,False
+069305dd-4a6d-42c5-b9c6-407016207c59,Night People (New York club mix),Guy Dalton,0,0,False
+ce98ce7d-59ba-42d3-a3f0-982b743be146,Pierre,Carole King,0,0,False
+7259ace8-f34b-4f2f-ba84-6c84d4859539,Gnossienne no. 6,Pascal Rogé,0,0,False
+08542e81-9fd5-406b-95e5-a2d2f2c0d6e4,The Origin of Love,Rufus Wainwright,0,0,False
+a0ef1ca0-55e1-48b3-a893-4c15e18b5b6d,Misnomer,Four Tet,0,0,False
+125dee6b-7a9c-486a-9b84-7843702266ec,My Desire,Interpol,0,0,False
+efe08d16-aeae-4d6c-ab33-f0e718501d75,Destination Moon,Dinah Washington,0,0,False
+58e98e0b-6e6b-464e-ba96-d64f85334526,The Proxy,Rjd2,0,0,False
+ae83f573-b206-4cd8-ac30-546943791b80,Good Day Today,David Lynch,0,0,False
+afaabc7d-ca81-42d0-a829-31092886913f,Pretty Persuasion,R.E.M.,7,7,True
+3c4eac8e-71a1-4d38-913e-a4c1b6791334,Boogie Woogie,Kruder & Dorfmeister,0,0,False
+0bc262e0-9fed-4e3d-8815-a81dc41c2af2,Lady Godiva’s Operation,The Velvet Underground,0,0,False
+3077e80a-36ae-4c70-934c-7f6672917691,Ur Soul and Mine,Gil Scott‐Heron and Jamie xx,0,0,False
+492485e0-1699-467b-a5aa-3fe7a6db8e27,Not for Nothing,Dub Trio,0,0,False
+9faf903b-cadb-47ac-ad69-5d7d0f95c1d3,Silver Rocket,Sonic Youth,0,0,False
+d9ed7d40-5c4e-4365-9568-ee1e0a125dcb,Blazer,Project Sandro,0,0,False
+87ad3e39-c724-475e-ab43-c902327ab081,Movin’ Thru Your System,Jark Prongo,0,0,False
+474b430a-183b-4639-9031-683f649a5c2c,I See You Baby (Fatboy Slim remix),Groove Armada feat. Gram’ma Funk,0,0,False
+02f5cc61-ef58-4c1e-b4a1-e682ff22791b,Radiant City,Robin Guthrie & Harold Budd,0,0,False
+f20315a2-653e-40ba-845a-2191150ae622,Salvation Barmy,MC Paul Barman,0,0,False
+3b10b1c1-35cb-4def-aa42-7ad416b12dc1,J’ai 30 ans,Katerine,0,0,False
+0064ee08-1005-47a2-88a6-5eb867619215,Tire in the Face,Dane Cook,0,0,False
+f58d4fc6-3007-477d-b280-8fda6f6c025e,Alors on danse (Stromae vs. Dance All Stars),DJs From Mars,0,0,False
+478515e1-b0bc-411d-90d9-9076940c0017,Juárez,Tori Amos,0,0,False
+1ddb287c-3d02-4cd1-b4a0-dc516c4538c5,Knowledge & Dust,Kevin Braheny,0,0,False
+bb4de9d3-ad86-47c1-a844-ef042804f646,Sunshine,Jay‐Z,1,0,False
+e89bd229-521a-4d81-b27a-ab4ec9e16cab,Waves,Slowdive,0,0,False
+053da898-b7d7-483d-a253-7b07873844cb,Second Chance,Junior Boys,0,0,False
+440b52be-e760-4710-9c5f-b20267767c5b,Go On Do It (radio version),Victor,0,0,False
+77a80e37-fb2b-4425-8053-21fbee258502,Cindy Tells Me,Brian Eno,0,0,False
+940b8625-6329-4835-b3e8-69d34ff4bbe3,"Night, Part Three: Minstrels",George Winston,0,0,False
+7f65d430-6636-4a6a-902d-3c84a7248407,I Have Seen,Zero 7,0,0,False
+dfff6351-8ae2-4659-8d43-1c0a6b0d1761,Suicide Kiss,A.R. Kane,0,0,False
+f7ef1496-aecb-4281-a32c-f828e4401e8a,I Spy,Pulp,0,0,False
+111fbb45-10cd-4409-a7a3-cedd256394bf,Harnser,Nathan Fake,0,0,False
+b0a61c51-dd1d-454a-9a2b-75c7ba4bf592,Kung Fu Fighting,Tom Jones featuring Ruby,0,0,False
+ae0a09df-d1d3-45e6-85b0-315c0411beb3,Walk a Thin Line,Fleetwood Mac,0,0,False
+c456a131-0ff5-4708-b4dc-9a87b246b2d5,Laugh/Love/Fuck,The Coup,0,0,False
+6e3999a2-72aa-49f5-9577-e266c6b43995,BATTLE AGAINST CLOWN,芸能山城組,0,0,False
+0c68288f-e18b-481f-9625-20c1bc4a8f7f,Apple of Sodom,Marilyn Manson,0,0,False
+54e891f4-4e13-4e1d-88f5-3e9815b6d53c,Needy Girl,Chromeo,0,0,False
+8635111d-dee8-42e1-a452-190da110ddeb,Trans‐Europe Express,Kraftwerk,0,0,False
+a88f7957-be0b-4240-8c33-0b3015ce2af4,Royal Lounge,Ceephax Acid Crew,0,0,False
+e303e9fe-6eb4-4b46-bbf3-705b4c47d687,Megazine,Shobaleader One,0,0,False
+9d971967-4346-4548-a1bd-9d23dbd897d6,The Boy With the Arab Strap,Belle & Sebastian,0,0,False
+d8ed3f32-44f4-4d00-b62f-dd9234667f6d,A Summer Song,Chad & Jeremy,0,0,False
+383d328c-e0fc-467e-8505-dadb302d159a,The Canyon’s Embrace,Steve Roach & Michael Stearns,0,0,False
+7d3e1420-63d6-477c-a7bc-a38a1e4c1a33,Upgrade (A Brymar College Course),Deltron 3030,0,0,False
+cf368df2-1497-42b5-8fea-eab8c5708b14,It Had Better Be Tonight,Lena Horne,0,0,False
+824ec953-d221-4488-8c11-aff83ee7646e,Is This It,The Strokes,39,38,True
+34a16164-1b0d-4c83-8ae7-e9ef46693d9d,Ash/Black Veil,Apparat,0,0,False
+f33ac46c-b50d-415c-bd93-a17c20a52066,3 A.M. at the Border of the Marsh From Okefenokee,Tangerine Dream,0,0,False
+79bc8ed1-233c-415d-a073-cafd95e51ceb,Led Zeppelin - Stairway to Heaven,kalocin,0,0,False
+3c709321-f4a4-4b6b-9eb8-5b6477507719,World Invaders,Pluton & Humanoids,0,0,False
+5d7e41b2-ec4b-44dd-b25a-a576d7a08adb,The World Has Turned and Left Me Here,Weezer,46,45,True
+22a6ea7d-67f6-457a-8187-ec3006bc417d,Some Velvet Morning,Nancy Sinatra & Lee Hazlewood,0,0,False
+1d80711b-5150-4e99-bfcd-7da43a7d8383,Human Cannonball,Butthole Surfers,0,0,False
+c8b67cdb-cb24-4df3-930f-7f7e30143c3a,Tomorrow Untrodden,The Flashbulb,0,0,False
+298cf969-2aaf-47e2-a644-aca5856048e7,Vidapura,Human Movement,0,0,False
+3454537f-5721-42d9-b734-25df3b1c0b28,Gleaming Auction,Snow Patrol,0,0,False
+4cf97afc-56f4-4009-a423-ebc6ebfda335,Algebra of Darkness,Harold Budd,0,0,False
+110320bf-2590-467a-9f2b-7c069079df3b,Bosha Nova,Mr. Electric Triangle,0,0,False
+218f77e9-86c8-4b14-8334-06b3f60ee462,Melting Bas,μ‐Ziq,0,0,False
+90e7619c-233f-48f0-8aff-fefad1335b39,Lazer Theme,Major Lazer feat. Future Trouble,0,0,False
+6b9a509f-6907-4a6e-9345-2f12da09ba4b,With or Without You,U2,44,42,True
+5eb06ba4-d9bb-4e8a-a00d-05a0ba1de513,Mystic Lady,T. Rex,0,0,False
+c8ecea4a-b955-416d-866b-c218a73fa588,Alive,Pearl Jam,70,69,True
+40180075-f067-4403-ac34-dabadef83422,Disco Train (Morgan Geist Caboose mix),Dance Reaction,0,0,False
+cf7e5aaf-7b59-4736-a3d1-becc2cc1450d,I Dream (Tilt’s Resurrection mix),Tilt,0,0,False
+3e44a36f-5c97-44c4-9d62-a180e36fc65f,Only in My Dreams,Ariel Pink’s Haunted Graffiti,0,0,False
+aaa069d3-bd53-4521-9cbc-38dda30739d8,Hysteric,Yeah Yeah Yeahs,0,0,False
+6b8aa695-0419-4f71-8991-638494e61bda,Send Me a Postcard,Shocking Blue,0,0,False
+03aa294f-aa9b-4702-9809-02275c7b3889,still as stone in a watery fane.,Telefon Tel Aviv,0,0,False
+4b459356-827a-4d20-a311-fcbbcc8dda92,Pacific,Zodiac,0,0,False
+37ab15b9-7430-434b-ace4-462b2aa1fe85,Minute by Minute,The Doobie Brothers,0,0,False
+d66b428b-f982-4b91-b713-a44e9ad975a8,The Difference in the Shades,Bright Eyes,0,0,False
+79b99214-4eca-4a16-a8a5-589943976d74,Don’t Start,Franz Ferdinand,0,0,False
+47eccf17-38e9-433d-9dbb-ce418642ac3f,The Chain,Breeder,0,0,False
+d656e897-a199-4b8b-941e-82edd4fb56be,"Get Up, Stand Up",The Wailers,0,0,False
+e86bc574-1329-485f-a361-74fe7975e15e,My Own Way,Duran Duran,0,0,False
+86df11f8-fd4b-4000-98dd-5efa7b70f4a6,dmx acid test,AFX,0,0,False
+a9dace7d-b861-4502-9923-9bb59b6ef742,Tank! (TV edit),シートベルツ,0,0,False
+ce26bf7e-050c-48ba-aa34-a604810547f7,The Origin of Love,Neil Patrick Harris & Lena Hall,0,0,False
+1da1200a-aac9-4e90-9053-f0e81024b9af,Spit on a Stranger,Pavement,0,0,False
+c0c2de43-a2fc-45ea-84ca-7873d57fb330,Love Today,MIKA,0,0,False
+d864b2b4-cba1-4622-b2a4-bff5e6e343ea,Love Is the Drug,Roxy Music,0,0,False
+dd8c8e7a-1589-4f25-b485-dc7a4ccf8781,Liquid Lady,Hope Sandoval & the Warm Inventions,0,0,False
+3bf4cbea-f963-4d75-bac5-351a29c60575,The Painter’s Link,Kate Bush,0,0,False
+087f4e3c-6ce5-4686-aae8-84cb2c6e6270,Emotion,ATB,0,0,False
+bf8e28bb-b4ef-4b9a-bc64-8f58dd4ff5dd,Sweet Dreams (Are Made of This),Eurythmics,0,0,False
+86931288-08a0-409c-bc4f-bc3f62128e90,Leaders of Men,Joy Division,0,0,False
+947dd198-511d-44e8-99bc-f369930bcb66,Recalling All Active Agents,William S. Burroughs,0,0,False
+f9415596-7232-4cec-b3b5-009c4b457d1b,The Veil,Ben Lukas Boysen,0,0,False
+6f5dbcb9-287b-4082-a830-3cf0e6aface9,#1 Crush,Garbage,0,0,False
+10b095db-bb26-4a1e-8746-ed0880566de6,Anorak Christmas,Sally Shapiro,0,0,False
+a9a5046c-fc60-419b-9b10-c5867be71df1,"Virtually, Part 2",Soft Machine,0,0,False
+65c76da6-ecb0-424d-b913-f8dca8aefe42,The Lantern,The Rolling Stones,1,0,False
+522afeb2-eb41-41a9-b1aa-0c5d5c7bc9ca,Soaking Bodies in Dub,Torture,0,0,False
+17e1064f-a6a8-44be-9d41-d4d0f1ba765b,Could Heaven Ever Be Like This,Idris Muhammad,0,0,False
+5ae56635-a32c-4301-9944-7f38f9b0025e,Up the Down Escalator,The Chameleons,0,0,False
+f25f59e7-f53f-4a76-90da-bb501cb9d820,You,Boris,0,0,False
+72512497-2218-484e-b5b4-c0d6b50c539f,God Save the Queen,Sex Pistols,0,0,False
+89b6c6f8-5a19-4944-a690-9e373e138723,Labyrinth,Michael Stearns,0,0,False
+4db4ef21-519c-4e10-a45b-55fa39c60da8,Going Round,Herbert & Dani Siciliano,0,0,False
+577e8315-dff4-428a-a676-bccf2e2d15bf,In Tatters,Daedelus with Kelela Mizanekristos,0,0,False
+f008c2fc-8e44-4871-9c56-98befa91d0b2,Love Potion No. 9,Herb Alpert’s Tijuana Brass,0,0,False
+fc4df577-131b-4b88-b468-37a1b9a69570,Rock Your Body,Justin Timberlake,0,0,False
+1e47f7c3-de88-4e81-b14f-8b31ee9879a5,Tick of the Clock,Chromatics,0,0,False
+e88a49c9-2a7e-4f7d-9e56-90f0890ea71e,It’s Been a Long Time,The New Birth,0,0,False
+e401d636-45fa-4aa0-90e5-0d9b0e825528,Jukebox Capriccio,Christian Marclay,0,0,False
+f5d77157-e41e-4710-8593-a9f55a54fed2,Tanz mit mir,Deutsch Amerikanische Freundschaft,0,0,False
+bae5656a-3ceb-4ab3-ae5c-41d53be45d88,By Your Side,Love Spirals Downwards,0,0,False
+04c1263e-ff58-40e1-b89b-731e88b606ed,Doralice,Stan Getz / João Gilberto featuring Antônio Carlos Jobim,0,0,False
+4e652c71-c9e1-455e-83fc-f453b0a56f75,Sunspray,Blackbird Blackbird,0,0,False
+e11c75bc-3042-46e6-bb83-50fdb271ca77,Invisible Sun,Sting and Aswad,0,0,False
+dd7426e7-e1d9-4530-aaa8-9b23f26686f2,Do It Now (Cosmos Deep dub),Dubtribe Sound System,0,0,False
+be5c5aa0-d52d-45e5-a444-82f48fd39d0f,Sycamore,Negativland,0,0,False
+1d1504f2-9f84-4c93-8356-85c014c4537a,Lucifer Sam,Pink Floyd,15,14,True
+f09de555-6fe6-4297-a1cb-9f779921f495,Ignition (remix),R. Kelly,0,0,False
+4fa310f4-cec5-4e31-b8e9-f7365775c13a,Another Go Around,Beach House,0,0,False
+88a7899c-7899-4d98-8a08-1feb2b741a55,For All My Niggaz & Bitches,Tha Dogg Pound featuring The Lady of Rage,0,0,False
+81f58abc-d1cf-478b-881d-90e63c5d7f50,ECCOと悪寒ダイビング,Macintosh Plus,0,0,False
+6306f0d4-8bff-4a6b-914b-e179757d6748,Our Darkness (remix),Anne Clark,0,0,False
+01f59ab3-288b-4640-9634-2f31933c8266,Berimbau,Astrud Gilberto,0,0,False
+e3012e6a-7f3d-4c8f-92ba-859ecd503abc,Tears in the Rain,Zomby,0,0,False
+8da21661-3520-434a-9e9c-4a218d83ddb2,No Name #1,Elliott Smith,0,0,False
+d5cdea0b-bf2b-4e67-9d47-d46edc42004e,Arpeggiare,Steve Hauschildt,0,0,False
+70904169-8b55-4291-8043-54b3bbce0efb,it.,Genesis,0,0,False
+f9257ceb-f8a0-4fe4-87d5-15a36b550f52,Baja Imperial,Plastic Mode,0,0,False
+4faf8118-8b15-4e7e-979e-c43a13eca4e0,The Fashion Party,The Neon Judgement,0,0,False
+cdcdb4d6-6c6f-4b31-8342-1927be4b57dd,Phobic Sea,Autumn’s Grey Solace,0,0,False
+bb3b7461-ffe8-4d36-aa7a-8671579d0f5e,Anomaly (Calling Your Name) (Albion mix),Libra presents Taylor,0,0,False
+2267fea2-e288-4fad-8eed-2bb3ad56fb05,What You Know,T.I.,0,0,False
+248fea9b-fa9d-4713-a8d1-2d46afcecb28,Here He Comes,Brian Eno,0,0,False
+78d23b85-8757-4645-bdec-86372dc2d105,Falling Through a Field,Black Moth Super Rainbow,0,0,False
+28066060-770f-4d83-ba23-3c7a524126ff,Power Play,Eddie and the Tide,0,0,False
+1f4d19eb-8562-4a97-8fbf-e520f978c770,Proper Spirit,Small Black,0,0,False
+707223b6-f076-4e49-b643-7efd72de001d,Stopover Bombay,Alice Coltrane,0,0,False
+10050515-9838-425c-b25b-48dcfe20b7b5,"Two‐Headed Boy, Pt. Two",Neutral Milk Hotel,0,0,False
+2ecfe7f1-5010-49d4-8013-c44dc9693399,The Agency Group,Alvvays,0,0,False
+9898e317-c7f3-46f3-acca-fad4a3d270ba,Cameras and Rocks,Doctor Rockit,0,0,False
+3b40bcd9-9448-44bb-b11c-395278462ff0,Save Me a Place,Fleetwood Mac,2,0,False
+e4742a2c-5c5d-4519-b8aa-4e879e4d23d1,Margherita (Hot edit),Margueritas,0,0,False
+7d936be7-bae3-42b4-b5e1-43df9385a0ad,One From the Slum,Cranes,0,0,False
+312cdc22-4eb8-4c73-8970-2d10f4c22264,Missing Link,Dinosaur Jr. & Del the Funky Homosapien,0,0,False
+7c8c80ae-dd46-4f72-87d5-70b03b15f26c,Bird Flower Jig,Frog Pocket,0,0,False
+f8e4429f-2af4-4ba9-8f82-63dce59935e4,Lost in the Shadows (The Lost Boys),Lou Gramm,0,0,False
+20124ee2-f83e-4dc1-bfa3-8f7066485354,Chagrin,Mouse on Mars,0,0,False
+29b8871f-b18d-4706-a9dd-af1eb43ab6d2,Goodnight Goodnight,Spiritualized,0,0,False
+7481a8e1-536b-41cf-a017-690994192060,Oranges,Is Tropical,0,0,False
+819dc4c7-9a23-4e5c-b39f-b1b34bd097de,Turn It Down,Orb,0,0,False
+ca758251-2553-4e00-8914-14751de89e2c,Hanging on the Telephone,Blondie,0,0,False
+b7be571e-5b7b-47f9-8f2b-63e9819d7870,Fuglar,KUKL,0,0,False
+faa94476-e5fb-4159-8837-2d7669e072db,River of Sorrow,Antony and the Johnsons,0,0,False
+1381eabf-839b-4755-940c-3733d4ac373c,Racist Drone,Tim Hecker & Daniel Lopatin,0,0,False
+f8645472-9536-4e18-bb6e-3e3be7f0c695,Disco Special,Discothèque,0,0,False
+85c5ae70-8abf-436e-9167-fd30d68a2950,Energy (extended mix),A Guy Called Gerald,0,0,False
+51b512e2-89dd-44b6-a581-5eb13f2bc000,Chess Piece Face,They Might Be Giants,0,0,False
+9ec74b45-2eb7-416e-ae70-bd06849d1e08,Her and the Sea,Ulrich Schnauss,0,0,False
+448acf7a-18f9-40c0-8eef-a6a52ce05f7c,Snootie Little Cutie,Bobby Troup,0,0,False
+31bfea26-0d56-4c74-94f5-926cf0566680,Get 'em High,Kanye West,0,0,False
+efb4757f-32ac-4149-87a0-1999f2f84b7d,Mother’s Lament,Cream,0,0,False
+3ca38c58-811f-4353-a1d2-b3971a9a1305,Wait for Me,Daryl Hall & John Oates,0,0,False
+700b5bca-f8a0-4a3b-b260-1751016dc30b,The Moment,Tame Impala,38,38,True
+c5500e0d-c6bb-493f-90ec-70859e5889f1,Laying Down the Law,INXS and Jimmy Barnes,0,0,False
+691c05b0-c68a-4482-bb32-fdcd4e8ec7fb,I Exhale,Underworld,0,0,False
+80548d27-8d66-4f65-9b8b-21a66c709c26,"Petrov, Yelyena, and Me",Flight of the Conchords,0,0,False
+00409f00-fff6-47bf-96de-c2a26d3b94b6,Starfish and Coffee,Prince,0,0,False
+d9dd30c3-a10f-4c79-bcf5-f93dd9dc8239,Seeds,TV on the Radio,0,0,False
+bb6f3fc3-36eb-4695-bdda-34b125a55664,The Rose and the Cross,Jean‐Jacques Perrey,0,0,False
+ad64c06e-b644-4d9c-b4b7-88b0bcd09bbb,We Have Arrived (Aphex Twin TTQ mix),Mescalinum United,0,0,False
+74dae63f-d261-413a-b74f-8b1f24adf4d2,Sea of Monsters,George Martin and His Orchestra,0,0,False
+76fef164-6157-46f0-b888-5be044f10a40,OK,Beastie Boys,4,0,False
+cb234d3d-518c-45c9-be62-e080f59596c1,Strangers in the Night,Wayne Newton,0,0,False
+c3ef0f1e-e552-4234-8d06-d5611832d179,The Right Thing to Do,Carly Simon,0,0,False
+8cdffce0-f8bd-45c9-b8b8-17fc3dd3781f,Electric Counterpoint: I. Fast,Pat Metheny,0,0,False
+fd583e6e-f5a5-42a8-9ada-fd3fa4627875,Alien Days,MGMT,11,10,True
+be7c2801-4576-49df-975f-f770e101a31a,Peter Pan,Patrick Wolf,0,0,False
+0169b0df-2aad-4daa-b059-00a05c6b6624,Just to Be Close to You,Commodores,0,0,False
+ed88b348-20ea-41ef-9fce-df6654027404,Metal on Metal,Kraftwerk,0,0,False
+26349106-50a2-432f-8fe6-1c6eed090a62,Jane Says,Jane’s Addiction,0,0,False
+38111484-6cea-418e-be31-4b8a4043637a,Monza (Rauf und runter),Harmonia,0,0,False
+be41a277-2203-4fcd-a2dd-9f5b7d79761f,Every Other Freckle,alt‐J,0,0,False
+d685584a-1d63-46ca-bfaa-71589fcfdd2b,Estelle,A Man Called Adam,0,0,False
+0915ace0-eec7-4ea6-829b-90484b400b09,In Another Land,The Rolling Stones,2,0,False
+452d06e6-d783-4fda-aacd-4cb2c5bb897e,Whoop That Trick,Djay,0,0,False
+dca3f70d-6d62-4b1d-a23a-ae162be06147,1990’s Theme,Journey,0,0,False
+3f194ade-0f84-46c4-bc6a-3495a9ba1282,Civilization,Justice,0,0,False
+03740b94-749d-4d82-9293-f0bf12992f9a,Summer Breeze,Seals & Crofts,0,0,False
+7f0d1ee1-7491-49de-b935-dfe8b2d97630,The Wind That Shakes the Barley (radio),Dead Can Dance,0,0,False
+d3e2384f-db61-4cff-8fc9-4c009044298a,Wasted,The Brian Jonestown Massacre,0,0,False
+5421e058-15c6-45d6-ac35-42b6e27a05c8,Leaving Arcadia,Ochre,0,0,False
+11f3cae1-933e-499b-978f-fed717ec4e34,Deepville,808 State,0,0,False
+78c5482b-a933-4847-bb52-8a8bd696cd71,Manshortage (Eli-173 edit),Eurofunk,0,0,False
+f25bd2b8-8578-45c9-b437-20d12770cd27,Dream About Me,The Depreciation Guild,0,0,False
+ec72e70f-4d28-450b-b931-6904944544c5,Evensong,Fripp & Eno,0,0,False
+a5836945-0ac9-46b0-838b-a3c8f677c57d,4.2,Supersilent,0,0,False
+36025788-7a07-4550-beba-76939c657c8f,"Équinoxe, Part 6",Jean Michel Jarre,0,0,False
+87d71e0d-5d13-454b-b380-9ff8047d1606,Night and Day,Hot Chip,0,0,False
+16f87171-af0c-460b-971b-93a9fbdcaaad,Credit Card Baby,Wham!,0,0,False
+52589590-83bf-44db-a42a-20b1d66d20d0,Luchini aka This Is It,Camp Lo,0,0,False
+9f4aa7d0-ccfc-426d-bb25-ce93d1c819a7,“En Gallop”,Joanna Newsom,0,0,False
+9ec533c1-f484-4ea2-a0be-8c3425959ec6,Blues From a Gun,The Jesus and Mary Chain,0,0,False
+cf8803a8-c3bb-42d2-9ecf-28e80bc335a6,Self-Pity,Peter Bjorn and John,0,0,False
+3486742d-dbfc-4135-9298-c3b9cd093436,Evangeline,Cocteau Twins,0,0,False
+6e3b92d4-7ae4-4a12-91f6-9434d21e3d8b,Einstein on the Beach: Knee Play 4,"The Philip Glass Ensemble, Michael Riesman",0,0,False
+f4973c58-7fd7-4f1c-a9ec-e89744cc9bdf,Collider,Jon Hopkins,0,0,False
+f3cf830c-b496-4a13-a4d6-f6dd3428839a,Rip Cord,Tipper,0,0,False
+edc6a668-bf21-440d-9caa-fca9bac699a2,Hairdresser on Fire,Morrissey,0,0,False
+2d755fdc-771a-41fa-961a-79282143b9ed,Cheree,Suicide,0,0,False
+cb0fced8-dddf-47db-bbce-20778783fe27,Lodi Dodi,Snoop Doggy Dogg,0,0,False
+997a45c6-a449-441a-9629-2ed782fc34c4,Babydoll,Cat Power,0,0,False
+468172a7-a9b4-4d0e-b7e6-55a2749a6eda,The Dust Settles,The Future Sound of London,0,0,False
+521d92ec-e66a-4126-aed8-ec39c3114162,Wives and Lovers,Vic Damone,0,0,False
+aac85b05-e735-4df0-9a7b-25f9e677c240,You Never Should,My Bloody Valentine,0,0,False
+81c1e462-2ca3-41f4-98c2-363ff7001f9d,Vegas,Calvin Harris,0,0,False
+656aff2f-f35c-4eb9-a25a-493d1499b6a8,Terminal,Com Truise,0,0,False
+f8b975d0-5a6f-4f9c-a401-5292cde93594,Interference,Simian Mobile Disco,0,0,False
+cbf19b72-f8c6-495a-aa5c-fba28ddf6c9b,Sni Bong,Dengue Fever,0,0,False
+24592d49-e9df-4b17-b7ef-688b77bb280d,Rock Lobster,The B‐52s,0,0,False
+4c60831c-398c-4640-b4d2-55227a8468f8,Happy House,Siouxsie and the Banshees,0,0,False
+2475d69a-347f-42d9-bff2-55f0e4e84d16,Sequent C’,Tangerine Dream,0,0,False
+de5fb7da-8ea5-4a7f-86e2-5c24687f9f80,Living Room,Broadcast,0,0,False
+b1fe5ba7-92db-4688-b8ea-2905edc6ba7d,Set It Off,Diplo feat. Lazerdisk Party Sex,0,0,False
+aa68780d-d412-45b4-b41c-85c2be0ab11c,Abrasion,Bibio,0,0,False
+1fb7a6f5-6f93-4b4a-a5c6-a21c82750499,Midnight Swinger,Mel Tormé,0,0,False
+09f03130-4b30-46d8-a2cd-81f8ef9bb97b,Paper Planes,M.I.A.,0,0,False
+8fd41273-acd3-4c55-b94b-888f48526a54,Second Guessing,R.E.M.,1,0,False
+3a6e43f0-e2e2-441d-8aea-b75cdeb616ee,Raise Me Up,Hercules and Love Affair,0,0,False
+83002522-b1b1-4ecc-945a-1d63c6fa4d8f,Making Plans for Nigel,XTC,0,0,False
+a33d117c-fde1-4a3f-9b37-b18104d9a1a7,Metamorphosis: Three,Philip Glass,0,0,False
+bf1c34a9-d9b4-4a76-943c-0a55b6579e52,Melanine,Tycho,0,0,False
+aa59ece3-8290-417d-ac6f-fb40eb867411,I Won’t Give Up,Deee‐Lite,0,0,False
+bcf1ae3f-dcfd-4526-9e99-b102a7859afe,Krautwerk,Cloudland Canyon,0,0,False
+4670cfcd-f13c-4be2-81c3-6f39d8876af7,Janie Jones,The Clash,7,7,True
+db571671-ddb0-44f3-9e1d-221a6a884b07,These Days,Nico,0,0,False
+dd79a937-6700-49a2-90d0-8ee44a381127,The Rest Is Noise,Jamie xx,0,0,False
+16c9ffa9-c329-4063-952f-896002d4d7de,Emotions of Paradise,Miro,0,0,False
+d55f3806-b6fb-46dc-91fa-d26556ad7712,I Still Believe,Tim Cappello,0,0,False
+e740ce8d-9622-456d-a3b3-218385d4c0a3,Tether,CHVRCHES,0,0,False
+65db8463-2716-46e4-98ba-ee9450ce54e6,Shoop,Salt‐N‐Pepa,0,0,False
+a35b6693-ad73-4caf-9c0d-bb7065fc5d4a,Novelty,Joy Division,3,0,False
+88ad5e5e-521e-499f-9201-4114d7feb6c4,Running to Stand Still,U2,11,11,True
+f48070b5-5ee6-4ded-8ea2-bcb643ee8889,Approaching Pavonis Mons by Balloon (Utopia Planitia),The Flaming Lips,0,0,False
+f71045cf-9fb2-4735-bacf-a629321987f6,All the Best Memories Are Hers,Hans Zimmer & Benjamin Wallfisch,0,0,False
+5077241b-6437-4ad6-b1b7-91438659a9c4,Lilywhite Lilith,Genesis,0,0,False
+ee1fe56b-ba75-4383-82dc-29fd457c0f7e,To the Shock of Miss Louise,Thomas Newman,0,0,False
+04813602-5158-4cf6-8fde-a5a5a4cbb0e5,I Wish I Had Duck Feet,Orbital,0,0,False
+414b0f1d-9cd7-4aea-bcf8-8d4c1ceda02b,Only Someone Running,Matt Sweeney / Bonnie 'Prince' Billy,0,0,False
+eba6fb32-8fe7-4fa8-9c6d-b05ecae5fe27,Holidays in the Sun,Sex Pistols,0,0,False
+a418e1a3-7b53-4b6f-a32c-8a9ce81b77e5,Lemon Tree,Herb Alpert’s Tijuana Brass,0,0,False
+1894d5d0-5a09-4b89-b035-c832a0c89b36,Emergency Room,Ford & Lopatin,0,0,False
+a58476cf-58dd-4864-88c1-9b3fe534efdb,Notorious,Duran Duran,0,0,False
+4c0a4f78-31c7-4f80-9654-68a8e03dd66a,Smack That,Akon feat. Eminem,0,0,False
+898fccf9-c28a-4650-bdd6-b44bcd17cf64,Blue Stream,Sneaky Alien,0,0,False
+57c573a7-1f9f-42fb-99db-6ad1dd96046c,Ti amo,Phoenix,0,0,False
+fd88480e-c9c2-496b-9a8a-e54e2c274c9b,"Sonata in D major, L. 465/K. 96",Wendy Carlos,0,0,False
+fa953bf0-432d-4a29-842d-7217e68e74af,The Paw Paw Negro Blowtorch,Brian Eno,0,0,False
+f08ed35d-af38-4764-b9ff-6d7392e372a9,The Legend of the Last of the Outlaw Truckers a.k.a. the Ballad of Sheriff Shorty,The Dandy Warhols,0,0,False
+41076241-a089-4eda-8e69-f47073a2922f,Shin Triad (Wagonchrist Mix),Squarepusher,0,0,False
+7aa375a2-c020-4cad-9f1e-13aa2e6927cf,Where Did Our Love Go?,Soft Cell,0,0,False
+6eba0e4b-3cb4-4011-b747-2460163fa548,Daughter,Espers,0,0,False
+38f5b670-6131-4f8b-9cb8-763c9323a6df,Suburban War,Arcade Fire,25,25,True
+a50ef2c3-12e8-497e-8fd9-0784b4daec11,Platform,Freaky Chakra,0,0,False
+cc2955ad-6799-436e-9d04-19ffbdc81f1d,Crickets Sing for Anamaria,Astrud Gilberto,0,0,False
+dd7b7db5-07be-4e35-b96a-f54358428614,Cry Little Sister (theme from “The Lost Boys”),Gerard McMann,0,0,False
+97b38cc6-4579-4473-bb13-7ec138e33c07,What Makes You Think You’re the One,Fleetwood Mac,4,0,False
+95f7c539-474a-4e06-9b14-6e7f911f3d9b,Just the Thought,Prefuse 73 feat. Masta Killa & GZA,0,0,False
+3fe4531d-c538-40aa-ab0b-fb5eb3cda5e9,Sick Times,Boards of Canada,2,0,False
+0635738d-b33a-4044-b319-168b3a50439d,Doe,The Breeders,0,0,False
+90982229-060f-4088-95d9-4509d9d4311d,Ventura Highway,America,0,0,False
+05064411-8470-4573-8dd3-cb5df02474b4,Spybreak!,Propellerheads,0,0,False
+9a00c490-3197-4ebd-81b2-9cdc48468e56,Something Vague,Bright Eyes,0,0,False
+6cd2b4cd-0e86-4c0a-a143-b3494e45918e,Tic Toc,Raymond Scott,0,0,False
+1dcba05c-d98a-499b-baee-6d1c0e032d15,**Transmission 2,DJ Shadow,0,0,False
+e34711a4-72e7-4d6d-a6d5-214c8cf0549d,Streets of London,Anti-Nowhere League,0,0,False
+17543eb3-b968-473f-8834-78f86ea25497,Ride a White Swan,T. Rex,0,0,False
+54dd7a03-8413-48b9-b00a-1d436a924369,Triangle Walks,Fever Ray,0,0,False
+17c344bb-53f5-4f74-8f15-4bd96f026fa4,You make me cool,Masayoshi Furukawa,0,0,False
+b039d56f-3d15-4bc5-a74c-f114c65e1a44,Black Sands,Bonobo,0,0,False
+b532ef62-42ba-44ea-9a9c-47321968126f,Here Comes the Rain Again,Eurythmics,0,0,False
+617dc924-0221-491d-872a-76c25d73c918,Cameltoe,Fannypack,0,0,False
+e2a5e995-eede-435b-99a9-35cec013ab49,Soma (instrumental mix),Smashing Pumpkins,1,0,False
+320012dd-436f-472c-8bd1-00f892d1bbca,"One More Kiss, Dear",Vangelis,0,0,False
+422283d8-a32b-43e3-b872-4b76b47528e9,Citadel,The Rolling Stones,1,0,False
+21f2008e-c9fb-4eec-9455-73c00374c975,Seal Jubilee,Bat for Lashes,0,0,False
+6d373762-c838-4a8a-b512-3bcc9c920135,Crystal Wrists,Peter Murphy,0,0,False
+bffad605-7412-4e0d-8dfb-3fdbef5b5e18,Julia Brightly,Caribou,0,0,False
+0b828fc0-c914-4302-879a-109476a65122,Feelings on a Screen,Bochum Welt,0,0,False
+93f552c3-4e79-42b1-b02e-92c9034074ec,Life in a Day,Simple Minds,0,0,False
+9972057a-2101-4b4e-b896-26d8986d46a5,Nero’s Nocturne,Chilly Gonzales,0,0,False
+8852a2ee-cdf3-4832-aeab-047fae00661b,Rock'N Roll Station,Jac Berrocal,0,0,False
+deefebea-7eee-48c3-8aee-8a2786acb408,Get Up Get Off,The Prodigy,7,6,True
+ec724812-25d7-4d73-bbdf-74d9d83ffd0c,Sunset,Beach House,0,0,False
+9d66b0b1-eebe-469b-95ac-b5c3879e4a07,Take It Back,Cream,0,0,False
+6ff9a1cf-a4cc-4e76-a5cc-01db6a7eefc8,Pink Cloud,Little Dragon,0,0,False
+d15d5772-4b80-457e-9d1e-9f9240b44c1e,Swerve,Lil Boosie & Webbie,0,0,False
+50d02a57-cae1-47d1-b325-5c00d0d4fcd0,You Could’ve Been a Lady,Hot Chocolate,0,0,False
+63261bb1-192b-497e-82ce-efb60de77f0d,Age of Loneliness,Enigma,0,0,False
+4e843cd8-92ac-4105-b2ab-ea6b4e56f3c3,Dear Plastic,The Sugarcubes,0,0,False
+fbebebd3-a043-4963-816f-7a48b7c1031d,Feed Me,Tricky,0,0,False
+408161ae-1ccc-4c8c-9203-950dce45c67a,Wait for the Summer,Yeasayer,0,0,False
+6f8ae645-87b7-4082-9ee7-1defa2a5e8d0,Here She Comes Now,The Velvet Underground,0,0,False
+440a98cf-d0fd-4156-8f48-29742f2e348b,Hey U,Basement Jaxx,0,0,False
+14a2d45e-01d1-41bd-b791-98ed6ea4dc7d,Varúð,Sigur Rós,0,0,False
+6e33056b-2a34-4ed0-b49c-f7a8ae2c5bcc,Mr. Blue Sky,Electric Light Orchestra,0,0,False
+b317b495-8b2c-46aa-8e9b-feed0c9e0667,Praying for Time,George Michael,0,0,False
+44c6f303-8369-401e-a8bb-782f3ff6f443,It,Prince,0,0,False
+fed07838-b118-4c66-8781-aa3f82a30202,In a Landscape,William Orbit,0,0,False
+24aa691c-e116-40d0-ba61-84d254742837,North Beach,George Duke,0,0,False
+c506c581-d3b1-4037-be31-2d22dbbc7270,"Same Town, New Story",Interpol,0,0,False
+132e14d3-8b86-44cd-b45c-447f553f7137,Vampires,Atmosphere,0,0,False
+788fd29c-3c7d-48ef-b087-2a96d0ed6490,Babylon Sisters,Steely Dan,0,0,False
+63ff8dab-8abe-48fb-b0c0-864514e45c3e,Happiness Happening,Lost Witness,0,0,False
+b1d2962a-11ac-4430-be05-72c33c993bd3,Meixner,Tosca,0,0,False
+3496765f-bc66-4290-83e6-62b4cc7777ec,Subbing for Eden,Pinback,0,0,False
+de1182b0-36cb-47ae-864c-0ba9ad30f6f7,Let’s Go,The Cars,0,0,False
+3d4e73ea-56a2-46a9-a5c9-4fe7c0a214e1,Christmas Song,Grimes feat. Jay Worthy,0,0,False
+19a07892-30f3-4102-80e8-e2a516910609,L’Autre Valse d’Amélie,Yann Tiersen,0,0,False
+19e4b015-b51c-4be8-83da-8d6654715b72,Yellow Submarine in Pepperland,George Martin and His Orchestra,0,0,False
+b4b4191c-6e41-46c4-b864-7560e2e334ed,Children (dream version),Robert Miles,0,0,False
+169b89a1-e7ee-4718-ab40-0208883cd263,In Memory Capsule,Cut Copy,0,0,False
+1061bc8f-c65d-4445-954e-43bb2c1ba70e,Antonin Artaud,Bauhaus,0,0,False
+d8c55884-86c7-4409-9c4f-225ce001d384,Arbenita (11 Years),Max Richter,0,0,False
+a9b21cb7-02d9-4860-8daf-8dd72432425a,Video Killed the Radio Star,Buggles,0,0,False
+11266411-2cee-4f8d-b8da-10ee43231d6c,Lady (You Bring Me Up),Commodores,0,0,False
+ff61c7a8-46e5-4c9a-8e1f-efad2053ac2b,Everything in Its Right Place,Osunlade feat. Erro,0,0,False
+59feedf2-8212-4352-80c9-820b00bd36ce,Two Thousand and Seventeen,Four Tet,0,0,False
+4201eadc-0808-4b93-a838-e4959d0ea191,Endless Season,Ken Ishii,0,0,False
+cb2ce5fe-c35f-4d6c-a3d2-ac6099435cbb,Man Up,Trillville,0,0,False
+497497d2-633b-42ca-a3f4-45dedf4e8892,You’re Crazy,Guns N’ Roses,16,16,True
+d0c234bd-cfdc-4f73-a19f-67c4be0dc071,The Man Who Sold the World,David Bowie,36,34,True
+02041273-38f6-478f-a809-2a1cc37d0740,She’s Your Cocaine,Tori Amos,0,0,False
+82b7aef0-7d58-4863-a6af-19e783eba12c,Lazy Confessions,The Moldy Peaches,0,0,False
+f13666b3-082a-4a3b-90c4-1b9b5aac3112,push pull,Purity Ring,0,0,False
+c3635e4e-6ea8-484a-a809-31b49adee0ac,This Is Halloween,The Citizens of Halloween,0,0,False
+341b2c14-86ef-4ed9-b347-0da4bddb9588,UFO,ESG,0,0,False
+db4c9220-df76-4b42-b6f5-8bf52cc80f77,Heartbeats,The Knife,0,0,False
+af1d7448-08b0-42e7-a879-8a756f81a4e3,Bloodstain,UNKLE feat. Alice Temple,0,0,False
+b522c2d7-d815-48b9-be1c-9b2787de1322,She Rides the Waves,Pale Saints,0,0,False
+c2a40b92-a195-4569-82ed-03d3a397932f,Baila Bolero (Bolero dance mix),Fun Fun,0,0,False
+d68bbb96-9f50-4a55-9a65-18d720290306,If,Pink Floyd,5,0,False
+41f2b5a0-9b75-423d-af6b-ca19545b4522,The Three W's,The Matthew Herbert Big Band,0,0,False
+bc13136d-bd19-4a09-afee-c574ba3245ea,Altichyre,Autechre,0,0,False
+32604708-58f9-4867-8f30-665b98bc441e,Friction,Morcheeba,0,0,False
+8f3bb719-ed33-4d2a-8e3c-4400d7c8bfed,Love Will Keep Us Together,Captain & Tennille,0,0,False
+219e8b04-a99d-497a-9ce7-bb466f8d3421,Gangsta Nation,Westside Connection featuring Nate Dogg,0,0,False
+b38d2b16-4e21-4239-90c8-191fb99ea3a4,Cello,Slowdive,0,0,False
+8b33c65e-9fc0-4f5d-a039-a03df72cf955,Can't Get Enough (Robbie's Filtered Monster Anthem),Soulsearcher,0,0,False
+de7df7aa-9313-498c-982b-515403cdaf75,I Want More,Can,0,0,False
+b0ad92ca-c1ab-4587-bf8e-8ec2337fd61a,Skin Tight,Scissor Sisters,0,0,False
+cc4cb927-c7d9-4fc4-ab63-a6640607db3a,Underwear,Pulp,0,0,False
+1bb39f07-054b-4820-9219-d0a5e0939e8e,Branches,Chrome Canyon,0,0,False
+98d6b9d5-b549-49da-974e-9245b9b6c452,Le Jazz et le gin,Coralie Clément,0,0,False
+2abe5e28-f2ce-44c1-b4c0-2ff917691782,Upright Kangaroo,Mike & Rich,0,0,False
+6d48ec1b-ae2a-43f5-8fd6-809160a9d077,Life Is Shit,The Dead Milkmen,0,0,False
+9cbbdb07-8942-48c9-b80e-568149744453,Disciples,Tame Impala,21,21,True
+3d685f57-2ea7-46dc-9c09-40a037dd0748,Everything’s Not You (Quivver’s Space mix),Stoneproof,0,0,False
+f54f33b5-ec27-467d-88e1-900e3dbc0bb6,Softpretty,Doss,0,0,False
+d8089ed7-eccc-4753-b70f-728f318f3b64,Like I Love You,Justin Timberlake feat. Clipse,0,0,False
+a74c7eb7-9161-4dbf-8cf7-c287d4c2e80a,Limbo,Yellow Magic Orchestra,0,0,False
+341bd742-207a-4869-8d90-50469cd6862d,Bull in the Heather,Sonic Youth,0,0,False
+254c95dd-71e2-4a38-8267-bdbe046c5ace,Brownsville Turnaround on the Tex-Mex Border,The KLF,0,0,False
+e568ac72-3642-4bdd-a4d8-d8234b8b9532,Auntie's Lock / Infinitium,Flying Lotus feat. Laura Darlington,0,0,False
+e9352481-add9-4f70-8f07-38b94451555b,Sick to Death,Atari Teenage Riot,0,0,False
+b1bab3f5-b84a-4e4e-9f8f-694ae7ac7b30,Rip It Up,Orange Juice,0,0,False
+aa9d3f9e-54f1-4619-a5da-b0ef20de4deb,Sundome,Battles feat. Yamantaka Eye,0,0,False
+b6e03582-c00c-4991-8923-bb495187b55a,Love Souvenir,Calvin Harris,0,0,False
+c15c2edc-a10d-4c80-a0ce-f8bde77672b9,After School Special,Mr. Bungle,0,0,False
+c826a072-edae-4542-b7d7-1012f0cb6907,Radeln (Sascha Funke remix),Thomas Fehlmann,0,0,False
+1ab79466-00b5-46b0-be2a-c2d395003bf9,Vaporize,Broken Bells,0,0,False
+599fa13f-68f9-4334-996a-2923b8ca2aca,Quino – phec,Polygon Window,0,0,False
+babb1d60-7f4f-4d9b-b4cf-b99546b6d7c7,Eulogy to Lenny Bruce,Nico,0,0,False
+a7bef53d-199f-451c-9471-e2a1dd657197,戦場,マクロスMACROSS 82-99,0,0,False
+652ae31c-7e64-46dc-ad7e-705e5e4c2bf4,You’re All I Have,Snow Patrol,0,0,False
+f7a5b361-4442-439f-a529-2585942cd089,22 Going on 23,Butthole Surfers,0,0,False
+b18bd6dd-08f8-464a-bf8c-51f9634d4790,Lost in the Parade,Michael McDonald,0,0,False
+732f1c7a-aa43-4a52-ac73-7b91ae21b0c7,Subliminate (original mix),Dos Deviants,0,0,False
+5a0ce238-9ccc-463e-8f3a-9b4f74d32cab,Desafinado,Herb Alpert & the Tijuana Brass,0,0,False
+c62e8b5e-64ac-4feb-96da-7211e96fd583,Tractor,The Gasman,0,0,False
+3db9f20b-e88a-4e9b-8156-262f7220767e,A Space Boy Dream,Belle & Sebastian,0,0,False
+61630ff2-b63f-4d50-9a0a-bef5d0dcbfe2,Tribute,Tenacious D,0,0,False
+05d51d77-cb19-4ed8-920f-34fde91c2ab4,220 s3d,Bogdan Raczynski,0,0,False
+38eeeeab-5b1c-457b-98db-3c40fa684e26,Half‐Gifts,Cocteau Twins,0,0,False
+c8ab467c-aa40-4e8f-942f-ab419dab4182,Runaway,Yeah Yeah Yeahs,0,0,False
+9b55c190-8590-4a9e-8ba2-1cf3855829f6,Communicore,Jacob 2-2,0,0,False
+1f47837b-43f5-4bcc-9344-a3f4a1a0bb13,Stir It Up,The Wailers,0,0,False
+c8468fb3-145d-4deb-9c6f-34f6294d930f,Ending of an Era,Midnight Juggernauts,0,0,False
+481a78d2-0524-45c9-b094-29d1ed750ff7,Disorder,Slayer & Ice‐T,0,0,False
+707121d1-618b-4232-9273-a888155d3bd6,Shy Ronnie 2: Ronnie & Clyde,The Lonely Island feat. Rihanna,6,6,True
+2040fc33-6458-460b-8e00-a6258e1f906c,Safe and Sane,Dub Trio,0,0,False
+92969b64-efd9-4f7d-bea5-c9154e56d8e2,Crab,Weezer,10,10,True
+11d68212-82d0-45e1-b438-20767914b544,In Search of Peter Pan,Kate Bush,0,0,False
+2d09a64e-f2a4-494a-be5e-a9edfd2c45b1,Until We Can’t (Let’s Go),Passion Pit,0,0,False
+388170b3-ae1d-4adb-b116-4e046e0f60e8,Feel Good Hit of the Fall,!!!,0,0,False
+306d01f8-e7bc-436e-9212-e7447ff46440,Elvis Is Everywhere,Mojo Nixon & Skid Roper,0,0,False
+6e89c516-b0b6-4735-a758-38e31855dcb6,Plock,Plone,0,0,False
+d3b09e9d-fcc4-4d51-bf96-daeee774987d,Crazy Ass Shit,Beastie Boys,1,0,False
+5ff3d45a-e76f-4b6f-996b-a8d3d4399686,The Madonna Is With Child,A.R. Kane,0,0,False
+d7fe2aa0-8019-496c-9bb9-f2cfca51951b,What Ever Happened?,The Strokes,17,17,True
+56f3fd13-f754-47bb-91a8-734e030a7384,Pulverturm,Niels van Gogh,0,0,False
+f05920c0-a902-482a-9905-6664d83d7152,So Many Details Remix,Toro y Moi feat. Hodgy Beats,0,0,False
+397345f9-c6c1-47e8-9c75-b5c574c2ea0b,The Waiting Room,Genesis,0,0,False
+00d13e21-23e1-4632-92cd-379324f68748,"No Lies, Just Love",Bright Eyes,0,0,False
+b879954f-57f9-4640-97f4-a6fa84773179,Stay Close,Delorean,0,0,False
+a774565c-67bc-4967-a8b1-6facdb1ed8ee,Supermarket (Super Clemek remix),Clemek feat. Clé,0,0,False
+f982fbd9-894c-4c64-9dd2-85b602742bbb,"All for You, Sophia",Franz Ferdinand,0,0,False
+38e459bc-ab42-4efd-9958-8bcc906031fd,Shiva‐Loka,Alice Coltrane feat. Pharoah Sanders,0,0,False
+dbb491c5-f479-4113-92c2-22da9f9fb044,Alps,Ratatat,0,0,False
+3202a926-53a0-481b-95a2-5dc04c202985,I'm Gonna Get You (Original Remix Version),Bizarre Inc.,0,0,False
+411eba35-99d8-4501-b69b-df89c6dee937,Brown Eyes,Fleetwood Mac,0,0,False
+fe9419ee-3fe1-40d8-acc7-3e010298996f,Strange,Galaxie 500,0,0,False
+332de2c2-926f-4984-9210-ba3d21ae1941,Cock/Ver 10,Alarm Will Sound,0,0,False
+f01f8ce9-a760-46a2-8a54-6c26a921a69f,Like a Baby,Wham!,0,0,False
+ff7743bb-335b-4bbc-81d2-ca3f3e8748d9,Crystal,George & Jonathan,0,0,False
+8948f7a2-ce0e-4693-9a30-db17014d302b,Even in His Youth,Nirvana,2,0,False
+d949ec03-fac9-4cdd-a1fa-9cfa01175260,Is This the Best Spot?,Ariel Pink’s Haunted Graffiti,0,0,False
+4999596b-19de-433b-8caa-1b9f6869aeb7,Midnight Request Line,Skream,0,0,False
+5934c097-0e97-4df4-bbaa-4b2915e82a11,In the Fast Lane,Mitch Murder,0,0,False
+4f7fae0e-22d1-4a6c-8d39-da6202cb31ec,Cloudburst Flight,Tangerine Dream,0,0,False
+6d418e64-c194-47d4-9172-306919a6fc9f,Stupid Girl,Garbage,0,0,False
+00859979-bf97-45c5-875a-1d6f8886c1dd,Rio,Duran Duran,0,0,False
+7adb9528-286f-424f-aa2d-970fbecb5313,Teeth,Soft Machine,0,0,False
+0acdbea5-137e-4150-a612-48b856f34993,Light & Magic,Ladytron,0,0,False
+359f49cb-38b3-425c-b11c-a32cd989bf23,G Funk Intro,Snoop Doggy Dogg,0,0,False
+ba653bd6-03f0-468b-b712-d298193c0c8c,Strange Girl,James Pants,0,0,False
+a80725ab-fd07-4a0d-98b3-7cec51bf478b,A Wonderful Seed,Hope Sandoval & the Warm Inventions,0,0,False
+e225a90b-fef3-4479-964d-95507dd5825a,I Want Candy (Kevin Shields remix),Bow Wow Wow,0,0,False
+9090b87d-6b1d-4005-9ed6-513a8c43d400,Sex Dwarf,Soft Cell,0,0,False
+3aca9517-3366-4d99-a5dd-fa7ec2a3578c,Outside Woman Blues,Cream,0,0,False
+3874f909-701f-4927-aae6-1ee6301f7b2c,The Hall of Mirrors,Kraftwerk,0,0,False
+3db576f7-1b4e-4b59-a5b9-69a49d5a1714,Templeroy,Felt,0,0,False
+74a12d3a-5b8d-47a5-9ad2-14b3560aa089,Tokyo Wonder Land,Boris,0,0,False
+b0aae697-79d8-4c31-8b41-9cad954fffc0,20 Dollar,M.I.A.,0,0,False
+b5b82fb2-4707-4bd3-bb45-99a897a600a1,Green Bird,Gabriela Robin,0,0,False
+7670eb8d-e7c9-4f53-9df4-78bf6002cce2,Cosmic Runner,Solar Bears,0,0,False
+1f140c0d-8596-46ff-bee7-25a8e4ef688f,Dèwèl,Mulatu Astatqé,0,0,False
+176ce892-5deb-457b-b3a2-d947c45ac712,Where the Streets Have No Name,U2,52,51,True
+42659c21-1eda-422c-94ea-d00b5a0235bc,Jaan,Talvin Singh feat. Amar,0,0,False
+3ef09b3b-cc55-467d-aa90-24786f9719e2,Sea of Time,George Martin and His Orchestra,0,0,False
+4e7a1df6-13c5-4529-9014-00542ffe9c09,"Hit the North, Part 1",The Fall,0,0,False
+8d590abc-136e-49ee-b1d7-4d3d2ff369c0,Serpentine Fire,"Earth, Wind & Fire",0,0,False
+0bd61130-9657-425c-91d9-522f3e75e769,True Thrush,Dan Deacon,0,0,False
+b1a7c5e9-4f1f-4a60-8051-795afe278fd5,Beautitude,The Orb,0,0,False
+36ddfe77-26d1-4b69-95c5-0915b9b89b4f,Time After Time (The S.F.E. version),Tara Morice,0,0,False
+ae058531-515e-4ddd-aa4e-b74d98900c6b,Flat 55,Mr Oizo,0,0,False
+d594bd1e-7a8c-4465-8ae8-3c38788a2e0a,Into the Blue,Shobaleader One,0,0,False
+32018a4b-dbcd-46a4-9f2c-18236d4e04a9,World Shut Your Mouth,Julian Cope,0,0,False
+0a713251-87de-48f3-9cdb-94cb03077ac4,Ils s'éloignent,Opera Multi Steel,0,0,False
+6bedf21f-c58e-4821-a45f-c1e91feb903b,Águas da Amazonia: Purus River,Uakti,0,0,False
+ccd44303-9ff8-4415-b306-d1d758bbd0e2,Ladies of the World,Flight of the Conchords,0,0,False
+8d0d321a-caf0-4578-9693-e220b3bf742b,Stay With Me,The Mission,0,0,False
+ce2403f5-a0ff-4099-98fa-eb87a976a74a,Soul to Bare (C. Hornbostel remix),Joi Cardwell,0,0,False
+b34ab174-da7d-4276-9982-81364985a0fe,Ungirthed,Purity Ring,0,0,False
+0000167c-95f5-48eb-b15f-04790e09a765,He Keeps Me Alive (Skatebård remix),Sally Shapiro,0,0,False
+5d0d5d48-5df0-4670-a46c-617ef3d9a447,Imagination (I Want You to Know),Miami Horror,0,0,False
+5ebdad2c-ac20-4a68-936e-9449c7180bab,Somebody Has to Pay,Susie van der Meer,0,0,False
+241050ee-dc81-4040-be6d-6d1b87811640,Unbelievable,EMF,0,0,False
+34bac333-c7d3-4898-8139-1285f35e7d7c,Coconut Grove,The Lovin’ Spoonful,0,0,False
+efa31619-08ae-4127-8a46-5cf15915a652,Main Man,T. Rex,0,0,False
+360d718d-11ca-4aba-943d-0f29977609d4,Satellite,Elliott Smith,0,0,False
+e2e0c0a5-243d-4ca2-9883-43e52ec72d02,Echoes,Washed Out,0,0,False
+2f5b00ea-00dd-4688-b791-b1e590a15ee3,We Can Make It,Purple Flash,0,0,False
+30604224-2620-41a1-a939-474fd1fec53f,I Wanna Be Adored (12″ version),The Stone Roses,0,0,False
+978d36fd-d6a7-40b7-9306-bcb763f4b628,Teotihuacan,Noel Gallagher,0,0,False
+ea7a0a4e-d1dd-42e2-b44d-c7b1a5b1f9f5,Turn the Night On,Tiga,0,0,False
+a8d7415e-c129-47d7-ba01-b4d253af8d6d,One Way or Another,Blondie,0,0,False
+0356ea05-c9b8-4c2f-91a1-c39cda52d8f1,Tomorrow’s (Just Another Day),Madness,0,0,False
+57d91a51-c5b0-4542-957b-3d8659a88244,Brothers,Mux Mool,0,0,False
+3c933124-72de-42cc-b896-42e4f373ed2f,Revolution Rock,The Clash,14,14,True
+9569c8f6-78a3-4e74-b64e-80f3b873cbf4,Mumuki,Astor Piazzolla y su Quinteto Tango Nuevo,0,0,False
+f834ede7-f542-4c8b-8da0-e273eed20c6d,Broken Heart,Spiritualized,0,0,False
+495c2470-06bb-485f-a729-9c7ed93edab9,Loquasto International Film Festival,Mark Mothersbaugh,0,0,False
+1d21cd07-bb63-4f27-b999-809d3b480195,Winter Song,Nico,0,0,False
+dd0b3031-74bc-4615-92d9-1efcf025b8c8,Exercise One,Joy Division,0,0,False
+49a7a19b-5f48-4f4d-8120-8c9dbb1db605,Disco State,808 State,0,0,False
+8e38e604-0a96-4c95-8e9a-4e609d54cddd,Tonight,Le Cassette,0,0,False
+16d8b46c-08b9-41a1-9e13-3d776c99c3f1,Adore,Prince,0,0,False
+eaaf5c69-b3f5-494f-bdb5-5bf0510a5cfc,Rich Girl,Daryl Hall & John Oates,0,0,False
+e1c10611-49e5-4cbd-b177-89c51c919510,Opus 36,Dustin O’Halloran,0,0,False
+7b99bea3-ac33-4c67-b623-69cb8ac444e4,Mad Jack (Jimi Tenor remix),Sweet Exorcist,0,0,False
+07e3952e-11c5-4eb2-94b6-77ae6264f5b1,Pretty Vacant,Sex Pistols,0,0,False
+ff353eca-627d-4e1e-84eb-f4da2fffea70,Ready for the World,How to Dress Well,0,0,False
+af117744-f73a-4513-bddc-eaf662e5766a,Smog in Cities,Black Moth Super Rainbow,0,0,False
+e9376444-d13b-485e-b94f-1b52d40b45d4,Into the Night,Julee Cruise,0,0,False
+6554b3a2-4920-49f0-8572-692174b47663,Oh Comely,Neutral Milk Hotel,0,0,False
+aca88d13-1c42-4cef-89bf-ef7e7c85c32a,"Air on a G String from Orchestral Suite no. 3, BWV 1068",Wendy Carlos,0,0,False
+068a86c1-7826-47dd-9dc3-4385ee748675,Mokeylips,LFO,0,0,False
+9ef2e35e-5506-4560-b5e8-611923a79ba6,Night Swim,Amon Tobin,0,0,False
+a089222c-f0df-4bcd-a27b-332969af0d8f,Haven’t Got Time for the Pain,Carly Simon,0,0,False
+f1637ec5-c147-45e9-89e3-eeb3ef563038,Metamorphosis Five,Philip Glass,0,0,False
+05a40e9f-080d-424b-b8ba-689818b223d5,This Is the Remix,Girl Talk,0,0,False
+be527c84-6f18-43e3-af02-dbd7d618ea24,Crushed,The Brian Jonestown Massacre,0,0,False
+e9d10f56-cdb4-49ec-944e-e975c05bc50b,Many Nights,Beach House,0,0,False
+cd39d6fe-9959-47ae-aa8d-66b129631db3,Rhythm Bandits,Junior Senior,0,0,False
+0d891039-b7b8-47cc-8799-0724962a3034,Midnight City (Man Without Country remix),M83,1,0,False
+69a7315d-7e07-4603-bc86-46711552e61f,Come With Me,ceo,0,0,False
+00dd0b4f-3375-4508-985e-601ab213a6d7,Good Times Roll,The Cars,0,0,False
+92a3e204-6bd9-44b7-83d0-7918ffb7352f,Colours,Calvin Harris,0,0,False
+333b309e-78d6-42b0-9672-3334c9d2d165,The Killing Moon,Echo & the Bunnymen,0,0,False
+580d88bc-50e1-48ae-8355-95b95240311b,Sleepy Time,Raymond Scott,0,0,False
+a8747538-a455-4636-8568-85f4da4c15b2,"It Feels So Good (7"" Breakbeat)",Sonique,0,0,False
+5d0db59f-2049-45c3-ac4f-049c01df9240,Real Love,The Doobie Brothers,0,0,False
+c9f0e0e0-3789-4a78-a91e-03bc0c3ea998,Nangs,Tame Impala,24,23,True
+e1264b65-b8fb-40dd-9e9b-1351a6c4b3dd,Follow Me,Memory Tapes,0,0,False
+b485fc80-bca0-4697-8ec8-737d8a999684,Wolf Song,Patrick Wolf,0,0,False
+8a6dd2dd-d726-4b04-b43e-570bab0f97b8,Empress II,Funk Function,0,0,False
+5286f8b2-e463-49af-bf5f-e77dae6c0cd8,Launderette,Vivien Goldman,0,0,False
+84c109c9-dd40-4506-8686-26c090b0095c,Angel Palace,Air,0,0,False
+e753cdd1-6e64-4879-8a40-c46744a897b7,Welcome to the Jungle,Guns N’ Roses,55,55,True
+e61053bd-f87f-4e21-b716-c62a1cae070d,"Richard Allen George…No, It’s Just Cheez",Less Than Jake,0,0,False
+231ae501-24ef-4616-bd3b-abbcb1845f94,O Pamela,Nouvelle Vague,0,0,False
+6646d5ba-9b4f-4807-9bfd-2e153ff3b40f,Always Been Your Love,Hot Chip,0,0,False
+f3de9a8d-d455-4fa9-a369-21b6110b5b2a,I Believe in You,Talk Talk,0,0,False
+e71953db-2a91-47b4-a9d1-ba666941b651,Head for the Country,John Maus,0,0,False
+5c14d17f-ff70-4b1b-9dbb-94ab12ceea09,NUTBOD (Houseboats of Kashmir mix),Christine Anu & Royce Doherty,0,0,False
+1476f562-1d05-4fd4-ab13-0ab58bf2d2ce,The Book of Right-On,Joanna Newsom,0,0,False
+527117d2-6d8d-4e79-8bb0-49f77ba5e014,"Mothlight, Part 1",Cloudland Canyon,0,0,False
+e1fe41bf-9db1-4d58-b94e-407cd1e48d34,Never,Orbital,0,0,False
+27f0e897-4f1e-4d4b-a9f4-f0957af34160,Third World Man,Steely Dan,0,0,False
+e67e5f2c-3443-4248-99f0-d24d68d75bb2,Telepath,Boards of Canada,6,6,True
+9b136f5f-59b6-427a-90a9-a8af8529c66c,The Twilight Hour,The The,0,0,False
+ccacd3fe-c50d-40cf-a8c0-0a9512af64ac,Gutta Butta,Goodie Mob,0,0,False
+1914dc66-6b6d-4735-8369-a68788fd2947,Music,Slow Magic,0,0,False
+f45fbec5-1d8f-467d-a318-f18efda55c71,Montuno alegre,¡Cubanismo!,0,0,False
+f18a29b5-50f9-4880-b750-f35465bdff40,Pareidolia,Simian Mobile Disco,0,0,False
+af26deef-7529-4278-ad8d-19f6dad2eb80,Deeper Than Love,Antony and the Johnsons,0,0,False
+bf8a0ec2-68b4-4bb1-a07e-37ee55deaf85,Back to the Old House,The Smiths,7,7,True
+9c5f0d7e-169b-43d3-9c8f-175edc841a33,Violaine,Cocteau Twins,0,0,False
+c643c83b-3c95-4172-a066-9d67fd818b03,Blue Condition,Cream,0,0,False
+432f3d6d-eb5e-48dd-9e50-e272d8fe6523,Source of Uncertainty,The Future Sound of London,0,0,False
+604278e6-f033-46ad-8d45-9b642e1f638c,Matthew Unburdened,Clark,0,0,False
+47d65e23-bffb-422e-9c30-d5e1aac7081d,Trust in Me,Siouxsie and the Banshees,0,0,False
+1ccd070b-82a2-4cbf-82f7-6b19c531b4a3,Aquarius / Let the Sunshine In,Helena,0,0,False
+c719d9da-5120-4470-b69a-ff1cf5380f35,Here’s a Little Something for Ya,Beastie Boys,4,0,False
+0cc431e9-c504-4448-84fd-3381da403d9e,Press Play,Jaga Jazzist,0,0,False
+fd19347b-11f6-432e-a72c-af77ca7f1b4f,Memories of Green,Vangelis,0,0,False
+b207dec0-bc5e-4db6-9312-7e80cc5d4754,Maybe Not,Cat Power,0,0,False
+dd1b55a5-8eb1-4611-9f2b-0f3a29be2e93,Pilot,Hans Zimmer & Benjamin Wallfisch,0,0,False
+d506ee3a-7854-44f3-80ef-062e8a65d979,Something About You,Level 42,0,0,False
+7bcd53c7-2b8c-4384-8995-afb48b1b201f,Tap Water,Dengue Fever,0,0,False
+3940d9a6-6f3a-4644-a8b2-f0fc03a3d929,Ed Is Dead,Pixies,2,0,False
+88ea3c0f-edd9-43d1-8d44-5e45a9321c86,Born Slippy .NUXX,Underworld,0,0,False
+a50e22f7-665a-4969-967a-05e4b0250476,Arp #1,Jackson and His Computer Band,0,0,False
+35218095-4d84-47ab-a509-695c5339f95f,Abandon Window,Jon Hopkins,0,0,False
+35f58c5b-8d63-40f5-887b-66b30c32c57e,Travel,Days of Sorrow,0,0,False
+38e75603-657b-4773-9a2e-ea91c2cecb06,Murder Was the Case (DeathAfterVisualizingEternity),Snoop Doggy Dogg featuring Dat Nigga Daz,0,0,False
+3ca2441e-3be2-4392-9132-9b98deef30f3,Goat and Ram,Matt Sweeney / Bonnie 'Prince' Billy,0,0,False
+3628fe4c-d2a2-4b16-b7fd-779852d1e412,Significant Others,Squarepusher,0,0,False
+3ac4d75c-aafa-4be6-ba49-c4dbd38f6a89,You Can Try the Best You Can,Shining,0,0,False
+371b22bf-cf8c-44a1-a5e9-3a8b753e079b,Sexuality,Erasure,0,0,False
+c455b880-3e6e-4ce6-9001-98b848ba134b,Ma Meeshka Mow Skwoz,Mr. Bungle,0,0,False
+5d61faa3-5a01-40ff-8acb-d46f3aa950b5,Hold Tight,Jamie xx,0,0,False
+bea626e0-b9b8-444b-abe4-f996ce5990ea,All We Have Is Now,The Flaming Lips,0,0,False
+ec22ad2c-e2c5-4d73-9cee-a5091950128c,Just Like Honey,The Jesus and Mary Chain,0,0,False
+2ce3f4fa-4cae-4750-a92a-567248b29468,Believe,Franka Potente,0,0,False
+c07396e5-1d0e-4a70-bb52-a0d460c06c32,Lungs,CHVRCHES,0,0,False
+465519c4-acc8-41f6-868a-9fd156239e6e,The Road,Tenacious D,0,0,False
+b9a7e199-effd-4abf-98a2-74f17f1b8974,A Walk,Tycho,0,0,False
+42c6b340-221f-405e-b9b7-66dd05a83a04,Here Come Cowboys,The Psychedelic Furs,0,0,False
+6897b4e6-ea3b-47fc-aa49-a0761b591f0b,Riding,Espers,0,0,False
+6fc265bb-0302-47ae-9090-cadadb35c60e,cigarette in your bed,My Bloody Valentine,0,0,False
+28028734-3703-42f2-9446-8034e90a002a,Charlotte’s Mouth,Seefeel,0,0,False
+17875cdd-b500-41e2-a1e7-134b7521d4ac,Dirty Harry (Schtung Chinese New Year remix),Gorillaz,4,0,False
+0e5d05c8-f89d-4420-99a7-f4e9a0c68fff,On’n’On,Justice,0,0,False
+c5f9e2a7-074b-4d9d-8ed3-87d45a4a9b29,The Millionaire’s Holiday,Combustible Edison,0,0,False
+19243ec8-fa27-4bf2-9da9-ddb8b6d16079,Forever in My Life,Prince,0,0,False
+c84e1179-7828-4300-bc63-dcdd4d14cc7d,Stay the Same,Bonobo feat. Andreya Triana,0,0,False
+85654794-9c98-488b-9bb3-b95e91e4326e,Welcome to the Third World,The Dandy Warhols,0,0,False
+1a939474-18c1-471d-bec3-dfb94e14fa05,New Age,The Velvet Underground,0,0,False
+6ef4f979-9df0-4ed9-beea-d9f82b44dd69,Harborcoat,R.E.M.,5,5,True
+8402b0e5-801e-491e-aee1-233950d79739,Bitter’s End,Paul Kimble & Andy Mackay,0,0,False
+850595c4-89f4-4d3c-924f-0b3f1814a677,Barely Standing,Diplo feat. Datsik & Sabi,0,0,False
+b8a2fade-5bd5-42cf-9e9f-4d361a688f48,I Saw a Light,Bat for Lashes,0,0,False
+e3f89d9e-2273-40b2-ab21-df1945bac355,"I Want Your Sex, Parts 1 & 2",George Michael,0,0,False
+93feaa05-5003-4549-b582-9627f9eb8cea,The Elephant Never Forgets,Jean‐Jacques Perrey,0,0,False
+338c522b-b65b-482f-acec-a073dfe16f21,Santeria,Sublime,0,0,False
+47229072-c58e-481c-8b79-d1cfc73c320c,Kings and Queens,Soft Machine,0,0,False
+d657de42-d9dc-4741-9d9f-1213ad39c996,Such a Little Thing Makes Such a Big Difference,Morrissey,0,0,False
+98e40e17-893d-4760-8a10-0939740561d5,Morphing Thru Time,Enigma,0,0,False
+4b848d7c-eb69-477c-91c5-9062301d94da,Can’t Do Without You,Caribou,0,0,False
+f75e3799-ac19-4281-9440-863a1682ac6a,No Flag,Dub Trio feat. Mike Patton,0,0,False
+bc9a07a2-b07a-48b5-b848-e44149048bed,Unity,DJ Orkidea,0,0,False
+afb7a32d-1c3a-47a8-b106-820a4337bca0,Any Which Way,Scissor Sisters,0,0,False
+f7b9ac1e-e6fe-48cb-8a7b-10ff16d26c32,Freedom,Wham!,0,0,False
+1db26d16-7c8e-450c-981c-75d6b7e3ad9f,St. Elmo’s Fire,Brian Eno,0,0,False
+1f066d3a-3064-4be7-b629-4cf159697e1e,Barnes,Pinback,0,0,False
+d7eebce8-2013-43dd-9ac5-df480fae9b1e,The Butterfly Effect,Four Tet,0,0,False
+61aacb8f-bbaf-49b9-b008-d2f418d460ed,Kiss Off,Violent Femmes,0,0,False
+03be4495-e0a7-4229-a7dd-288ec5191933,Kometenmelodie 2,Kraftwerk,0,0,False
+be8dc1df-3a94-4789-b9d1-a00485f82114,New Hip Hop,Binary Star,0,0,False
+e010c326-a170-4720-ae20-4802f3194e82,Yoyo Waltz,The Cinematic Orchestra,0,0,False
+e6b835df-2cb2-442f-8011-bd79b19d7cd8,Ballrooms of Mars,T. Rex,0,0,False
+1f96d43b-b000-4a44-9779-e21fc3b1e3b1,Jayjay,Tosca,0,0,False
+177d87e3-bd40-412c-9700-7050057f98eb,Save a Prayer,Duran Duran,0,0,False
+61644113-0584-478a-89bb-fa57295218bb,Via Veneto,Phoenix,0,0,False
+be39a5bb-5f5a-4eaa-9650-bf90f23bbc0e,Human Nature,Éric Serra,0,0,False
+a098e3a0-f251-4a67-b6a8-12487b4017fa,You’ll Be Under My Wheels,The Prodigy,17,16,True
+38fcda6e-ef22-4f8b-a797-75284454f8aa,Neon Rocks,Calvin Harris,0,0,False
+44358766-ed6f-4fc4-b455-8bb48c8eaeac,Balloon Man,Robyn Hitchcock and the Egyptians,0,0,False
+b9ddde25-578e-4ac9-b4a1-a4f79d09d022,Cat Rider,Little Dragon,0,0,False
+2d80a071-ca79-4c3e-a3b7-ec039c6d10bc,The Palm of Your Wave,Bibio,0,0,False
+d94f799a-478d-435b-8d85-251b3f2f8ce4,Gare du Nord,Katerine,0,0,False
+8f8cc91f-0bca-4351-90d4-ef334ac0a0cf,Movements of a Visionary,Tangerine Dream,0,0,False
+b5bc5fde-c467-40da-8ac4-e9ece2eb8163,Radio Babylon,Meat Beat Manifesto,0,0,False
+f4610f3a-41a6-4352-b913-af3259943510,Secret Life,Soft Cell,0,0,False
+f4b3d886-81c2-4b2b-96b8-5df6db43ea21,Smoke Bubbles,Basement Jaxx,0,0,False
+a7da2a05-ca00-4762-a2fb-65bbaba76758,Month of May,Arcade Fire,10,10,True
+fc247788-2095-4256-a854-78ef3462e6eb,Get Funky,ESG,0,0,False
+ca75e009-2e31-42a8-a102-66ccb6cb6432,Changeling,DJ Shadow,0,0,False
+e890581c-2c18-40f5-8649-0b907c5efbec,Wind on Wind,Fripp & Eno,0,0,False
+5e4b29b5-4c9f-44eb-b22c-1698da692b09,Mandinka,Sinéad O’Connor,0,0,False
+94dead8b-ce5f-4cf2-90d0-e9426e4d88bb,Feel the Love,Cut Copy,0,0,False
+cc789d0a-8423-45fe-be44-7dc392744592,Journey in Satchidananda,Alice Coltrane,0,0,False
+d77f0e2e-ba44-47f9-b436-621017b2b1c8,Visiting Statue,Grimes,10,10,True
+25fdc229-9357-4c9b-9208-9a98a91df88d,Hold of Death,Lee “Scratch” Perry,0,0,False
+21f37b08-5590-43a5-89c7-c0f350bf40f8,Mexican Radio,Wall of Voodoo,0,0,False
+063d7c17-f4fe-429d-ae95-cc603e10f25c,Now’s the Only Time I Know,Fever Ray,0,0,False
+c17ef9c1-a7fd-4af3-aef1-3323fd985de8,When Doves Cry (extended version),Quindon Tarver,0,0,False
+9514c5e1-a057-4c02-8299-af1f9a3a292f,Quiet (BBC session/bc mix),Smashing Pumpkins,0,0,False
+bc24e5bc-1684-4b05-afbb-ea36df2a90a1,Consumer,Ausgang Verboten,0,0,False
+2f6ce170-021e-4774-b380-a35a18857116,Snowball in Hell,beeswithchainsaws with Luke Hennisch and Joseph Kurzfeld,0,0,False
+03a8ae83-1e7e-4255-b897-c8fb617e74e0,Sur le fil,Yann Tiersen,0,0,False
+e66ea0ae-72e9-4471-a3ab-964b6c25696b,Psycho Killer,Talking Heads,58,57,True
+4f7ca56e-931b-45ab-8303-ea3e081b78a7,Cape Canaveral,Astronaut Wife,0,0,False
+1a2cc4ff-ea95-4ae3-804e-fdb5c480ef97,Hombre,M.I.A.,0,0,False
+103aead4-b2c8-483a-823b-01f728b33056,Harlem Nocturne,Juan García Esquivel,0,0,False
+67f36c47-bcee-485c-913a-bd5fd21a9306,Barely,Trust,0,0,False
+d8f25235-6a0c-4051-9952-03188b3cc51d,The Card Cheat,The Clash,12,12,True
+dbc03870-6bb4-42a3-90c4-b5c4a2ae68d1,Horizon Variations,Max Richter,0,0,False
+3ac1845e-c38c-4bb0-93bd-8011ca15d8d4,Ein Jahr (Es geht voran),Fehlfarben,0,0,False
+009d633c-999f-4d85-8383-d9e6455909b7,Solid Space Business,Attaboy,0,0,False
+ff848faf-4053-42fb-87ba-441b171736c6,Ancient Ways,Interpol,0,0,False
+8aa2a7f7-82ce-4ee0-ba4b-f87b278c7f43,Kekse,Harmonia,0,0,False
+96efa2e3-1425-4320-b3e0-883045db06cb,Forever Broke (Fila Brazillia remix),シートベルツ,0,0,False
+12e22055-2e0a-439b-91af-083de0647425,mc chris is dead,mc chris,0,0,False
+b565e7c8-4143-41fa-abd1-f4490afb2e4a,Ekki múkk,Sigur Rós,0,0,False
+b4a7891d-48c4-4219-8c2f-2eebaa91de0a,Einstein on the Beach: Knee Play 2,"The Philip Glass Ensemble, Michael Riesman",0,0,False
+d459c917-fb0e-47fe-9293-d13f654d1a3c,Dancing With Myself,Billy Idol,0,0,False
+cbe1deb2-b299-4216-a802-450b259c9fc5,Abbaon Fat Tracks,Tricky,0,0,False
+46e37735-a275-4f63-8eb5-61d257e7a29c,Rescued From the Fire,Sinkfield,0,0,False
+482ab438-619d-4f9b-96ee-dcc2a4e05b91,Emma,The Sisters of Mercy,0,0,False
+2d98788d-b10b-40d6-8c9d-2bf9f0979378,The Sea,Morcheeba,0,0,False
+d0c93385-65ca-41c9-8c88-6b339384ab25,"Équinoxe, Part 7",Jean Michel Jarre,0,0,False
+9b8b6e6a-1833-4772-9403-45112dfcf2d1,Crawlersout,Purity Ring,0,0,False
+96b48f8c-cbc6-4243-b4c0-f94d6dc090d4,Invisible,Fischerspooner,0,0,False
+3c7338ac-f397-4d89-9a07-743d002a89e8,Crazy Blue,A.R. Kane,0,0,False
+f2bbc062-2387-41fd-b079-2ecd7e5b3ca6,Interzone,Joy Division,18,18,True
+421e3eb8-60f0-4f0e-ad53-7d6999c8c0df,New Genius (Brother) (Mutant Genius),Spacemonkeyz vs. Gorillaz,3,0,False
+b84d870b-4e93-4421-9068-c41a294f7916,Is You or Is You Ain’t My Baby,Dinah Washington,0,0,False
+ab51e084-66ee-4fb0-a879-7b6557603fc3,Cfern,Autechre,0,0,False
+d194790f-a704-488f-a85f-edc3aa557740,Moonflight (Essential club mix),Green Court,0,0,False
+5fce83ae-558d-4b90-be86-ac20a29f031b,Epic,Faith No More,0,0,False
+59758c37-4b95-4fc7-8f3d-0b8ecf81b7cd,Brainfeeder,Flying Lotus,0,0,False
+46772fd0-ba2e-48dd-ac02-ba6721eb7fb9,Moon Over Greene County (edit),Dan Zanes,0,0,False
+2baf7894-cc9c-44af-9b79-7f5aae012f0b,We Turn It Up,Oh Land,0,0,False
+fa9e47df-f7e7-43ef-b7a8-7aab7c41a23b,Mature Themes,Ariel Pink’s Haunted Graffiti,0,0,False
+7f575e4b-bfdb-4f95-b2ff-d8fdf2d1fea3,Little Computer People,Little Computer People,0,0,False
+f8470dad-d1b4-418f-b2a8-b265c10b96f7,1000 Oceans,Tori Amos,0,0,False
+b42ac751-3e07-47da-9594-4421ade68c8c,Invasion,UNKLE,0,0,False
+254ed390-594e-4a3c-844e-027b29efc688,"Brandenburg Concerto no. 4 in G major, BWV 1049: II. Andante",Wendy Carlos,0,0,False
+b8bcd44d-b698-465f-a3ed-c38ca81418d6,Paradise City,Guns N’ Roses,49,47,True
+a959317e-6154-4852-b55e-cea2e2b8f482,Exotique Bossa Nova / Quiet Village Bossa Nova,Martin Denny,0,0,False
+8f3c4494-d45e-4954-a64c-044bd1532664,Pop Song,cLOUDDEAD,0,0,False
+95ad89be-5346-4425-b829-523c3a1389be,If God Will Send His Angels,U2,1,0,False
+2c3d4007-8b0f-4784-b066-42e73e8e11a5,Hits Me Like a Rock,CSS feat. Bobby Gillespie,0,0,False
+61267686-d9d4-4c68-b08a-ab356ea49cae,Silent Shout,The Knife,0,0,False
+021dc70d-7a03-410a-9eaf-46d992cabb70,Happy Feet (High Heels mix),Jack Hylton & His Orchestra,0,0,False
+2925ff9d-2e34-4945-95c8-321cc312801a,Time Out of Mind,Steely Dan,0,0,False
+3e6b047f-290e-4460-aee7-9f00f059afd2,Maximum Planck,Shobaleader One,0,0,False
+0d7ed8ce-e04e-450b-b3b6-50ab55b84f8e,Keep Fishing,Weezer,7,7,True
+346ab4a2-1d94-4b1e-a688-495e1bae37bb,I Found a Reason,The Velvet Underground,0,0,False
+4700f034-a7fb-4a12-9600-17bd7d982529,T.V. Eye,Wylde Ratttz,0,0,False
+6651608b-55ab-4903-8c29-b8cbc21d99b7,Cruel Summer,Bananarama,0,0,False
+8c11d3c6-e8a1-4a67-bd44-df16476a46f4,札幌地下鉄・・・「ENTERING FLIGHT MUSEUM」,情報デスクVIRTUAL,0,0,False
+7822a77b-7583-4fcd-a438-f1367354175f,Fear of Sleep,The Strokes,9,9,True
+8ca19890-8253-4b14-8b06-5c741e3595ee,Running Two (remix),Operation Phoenix,0,0,False
+6b08e72a-de28-4f3e-a246-635fa799ec25,Behind the Mask,Señor Coconut and His Orchestra,0,0,False
+6da154ec-4b6a-4992-8c72-301dfd1c77d4,Cadillac,T. Rex,0,0,False
+a4424d40-e049-48be-b02e-8612ef0500a4,Temple of Gloom,Kid Koala,0,0,False
+baafe253-9a0f-4491-beae-12ea6c6b5052,Erik’s Song,Slowdive,0,0,False
+328612c3-cfe6-4230-9bc7-aacade1ff657,Animus Vox,The Glitch Mob,0,0,False
+c0cfeea2-528f-4f26-8536-859c224266ee,Shattered Dreams,Johnny Hates Jazz,0,0,False
+2b105e04-ffbd-433a-a1e7-eeb976464153,Fallin’,Teenage Fanclub & De La Soul,0,0,False
+1b5c3255-7519-41dd-8e1a-a4eaaf645299,Les Paul Custom ’86,Boris,0,0,False
+15718ae1-dd1e-4eb7-b360-9eadd12e130f,It’s Beginning to Get to Me,Snow Patrol,0,0,False
+c5659293-1dbd-4416-8031-95a93738e61b,Night Work,Scissor Sisters,0,0,False
+073b2758-b065-4379-81c5-59632ba56c8b,Clarkness,Dave Kane,0,0,False
+607f49fd-de19-486c-9174-2b78e374b1da,The Hiking Song,Hope Sandoval & the Warm Inventions,0,0,False
+7ec8adb5-92b7-45c1-90ea-943125c8bb9c,Absolute Ego Dance,Yellow Magic Orchestra,0,0,False
+1fce51d7-8ba1-4227-9a77-6ca7b9546942,Man,Yeah Yeah Yeahs,0,0,False
+af4d463e-d08b-474f-87bf-bb5d2ca99cca,Casino (Solid State remix),Tommi Eckart,0,0,False
+40a7b6a6-3988-4bcf-8228-ffa81933d5f5,Blackpool Late Eighties,Holden,0,0,False
+0e94d204-7c87-4ef2-8bde-887ce91bf6ec,Cash Flow,Major Lazer feat. Jah Dan,0,0,False
+4e54cf65-75d4-42f3-a725-591530de719c,La Contradiction,Coralie Clément,0,0,False
+f3778398-0f85-4af1-abe1-a8451c4f6e2f,Something Changed,Pulp,0,0,False
+ea9ab002-c6b6-4487-b924-1fbd8b81c7fd,Stella (Nalin & Kane remix),Jam & Spoon,0,0,False
+25dde7ad-fe1d-47a8-8384-a1fe2071057c,Dance Hall Days,Wang Chung,0,0,False
+768a5c7d-49a0-480b-8d09-13dfe93ba4dc,Oh! Centra,Javelin,0,0,False
+364a7031-0aeb-4f9b-ae25-93d269ff6dc3,You Know You’re Right,Nirvana,37,34,True
+37285b72-dc28-4ea6-a54e-9d789e5341c8,I Will Take You Home,Russell Means,0,0,False
+59612f79-6703-4e20-9101-0b7a709bb1b2,Hoping (Herbert mix),Louie Austen,0,0,False
+27089139-92c0-499c-9597-c66c9b11bdfd,You’re So Vain,Carly Simon,0,0,False
+8eaf4ad5-f1ed-4020-a73a-512485d84233,Omamori,Elite Gymnastics,0,0,False
+fe13d1ea-397b-43c0-8ccb-f9a5b4a49163,Halloween,Sonic Youth,0,0,False
+61b924af-e31f-4d80-b52e-c7b50d009a22,Positive Contact,Deltron 3030,0,0,False
+8ab3800a-1179-423d-8ed8-a07f2b24a5a6,Desert Search for Techno Allah,Mr. Bungle,0,0,False
+046e4951-5daa-4bd0-8b6a-5b47b27583c9,Jacqueline,Franz Ferdinand,0,0,False
+ced2c403-f01e-46d4-8637-8fe93dc852d6,It Was Never Meant to Be This Way (Games remix),CFCF,0,0,False
+c7e966af-d864-4cb3-b812-c78c0aa7261c,Five Years,Seu Jorge,0,0,False
+0991e2e0-0de8-4c26-a74f-764f96bcaca9,Valerie,Steve Winwood,0,0,False
+5173c512-3144-4dbe-a80b-ea565a1e51dc,Share of Bitterness (Dos Deviants Twist the Knife mix),Paragliders,0,0,False
+4720a86c-cd44-4354-b851-2d80bcbd9efe,Melody for Color Spectrum,Black Moth Super Rainbow,0,0,False
+2b765410-666a-4c67-ae14-d6905284069d,Simple Things,Belle & Sebastian,0,0,False
+7443c28a-5894-4119-a247-bf46f1240afa,Pencil Pimp,Sepalcure,0,0,False
+0ce88e6d-910e-437b-ba2e-97651d3f893f,Business Time,Flight of the Conchords,0,0,False
+7226ec68-ad2c-4476-abca-ee6ce93bfe0c,Hold Me Right,ESG,0,0,False
+ee1cf806-dee9-4fca-a6ac-a40069f8f02a,It Might as Well Be Spring,Astrud Gilberto,0,0,False
+9dad909a-84ab-4528-bdc0-23375708c180,Sara Smile,Daryl Hall & John Oates,0,0,False
+25f2db8e-f7be-4eeb-8c4d-4f6e52f4885d,I Gave You,Matt Sweeney / Bonnie 'Prince' Billy,0,0,False
+2220be46-7a76-4653-b590-0309cf340eb1,The Calm Before,Experimental Audio Research,0,0,False
+c1f71ead-0d47-487b-bbf0-9152db72a9f5,North Cormorant Obscurity,Rykard,0,0,False
+ddefe4b3-2710-4d0c-96d7-61ff4e994b74,James Bonde,Bonde do Rolê,0,0,False
+b4ce8005-8ae1-45e9-819d-4286b05fe816,Halloween,Dead Kennedys,0,0,False
+ebc348cb-a39c-4327-a213-9920a067f4be,Reinbågan,Todd Terje & Prins Thomas,0,0,False
+30118cb1-7a24-4c0e-ae86-b73917559c76,Rip Her to Shreds,Blondie,0,0,False
+a9187f92-71a9-48e2-89e3-247f1d202616,All of My Thoughts,Spiritualized,0,0,False
+23316180-4147-444f-aca3-68e24f4a9979,DIY,Keep Shelly in Athens,0,0,False
+bbf23c25-00c5-438e-8dcf-ca0fcb318add,No Name #2,Elliott Smith,0,0,False
+7706c0df-183d-45a9-a56d-7896de27f329,Metamorphosis Four,Philip Glass,0,0,False
+8d9c4da0-f615-4606-b12a-d9ec1fcbbd6b,Fuck Her Gently,Tenacious D,0,0,False
+b098999c-6209-40ef-9b0c-98e9a9226c85,Tricky Disco (Plone remix),Tricky Disco,0,0,False
+695cb6b6-b6aa-4845-969c-b6305bde5edd,Masquerade,Clan of Xymox,0,0,False
+377add36-d24f-4482-96e4-48676c5b98cd,Just What I Needed,The Cars,0,0,False
+137e522f-2448-460d-ae63-4875e640b883,Fantasy,DyE,0,0,False
+a5721f85-22fe-48f2-8f1f-06754537e06d,It’s Hard Out Here for a Pimp,Djay feat. Shug,0,0,False
+9a632b93-dadc-402a-837d-edf641d1c71d,State Ritual,808 State,0,0,False
+34a88069-e1fc-4c6f-9719-00223b4a98e3,Os Quindos De Ya Ya,Stanley Black,0,0,False
+b5b5d308-d42a-4a5b-80ae-615d458d4d59,Haunted When the Minutes Drag,Love and Rockets,0,0,False
+5a2c644c-3dda-4c6b-b389-fcaaf8ed17e1,Enchanted,Patrick Wolf,0,0,False
+5e59235c-28f1-48e2-a402-1d27cad626a7,On the Run,Garth Knight,0,0,False
+7518d888-92fe-4cc6-8930-709c945a53cd,Spacegirl (Revisited),The Brian Jonestown Massacre,0,0,False
+d3992de4-04b2-4162-945f-54a77c375eba,Star Black,Freescha,0,0,False
+36b471a0-ac51-420d-a6a6-321ba5ad7240,No Devotion,Revolting Cocks,0,0,False
+a5fc783d-dfab-4b5d-9cf3-95ef72456e1a,Let Me Be Him,Hot Chip,0,0,False
+1edc12ed-b668-4d66-95be-2599913a9882,Thorough Light,Prefuse 73,0,0,False
+0151e339-e8cb-4c70-8584-8f1ef621ed7f,Brazil,Luke Abbott,0,0,False
+e22ec9ef-4eb1-40eb-9ec7-50a9cb6580f4,Communist Daughter,Neutral Milk Hotel,0,0,False
+4746136b-910e-42ff-8d27-70556ac25aaa,Under the Milky Way,The Church,0,0,False
+70cfff0b-5c74-499d-aa37-d5deab085a3e,Under the Tide,CHVRCHES,0,0,False
+0d9a5fc6-ebbe-4077-bc5f-60c0c9e1bc69,Hot One,Shudder to Think,0,0,False
+16441d6a-2936-438c-9bc5-d0a587d370cd,Ricky’s Hand,Fad Gadget,0,0,False
+cea14315-2992-492d-975f-d9aaf3299db6,"Scheiße Schatzi, Auf Wiedersehen",Cloudland Canyon,0,0,False
+dfc12377-5320-4713-81c4-44e838ecf9ef,"Virtually, Part 4",Soft Machine,0,0,False
+047d06c1-c48d-49a3-a3f2-b52707b8cb55,Sprinter,Ducktails,0,0,False
+7a9f5fe1-560f-4f6a-a37d-67af22b3be52,Where Is It Going?,Orbital,0,0,False
+f08bdb08-fc0f-46dc-a2d5-e72e8ba39212,Cavern,Liquid Liquid,0,0,False
+14c44ebb-c3c2-4c6c-abd5-2e05364178c0,Slip Slide Melting,For Love Not Lisa,0,0,False
+2ff1e501-53e4-4ed3-88c9-c41cb5f9632c,Long Burn the Fire,Beastie Boys,3,0,False
+b8841f0f-521e-4ca2-8387-c34fd2d77274,Cassiopeia,Joanna Newsom,0,0,False
+51dc41b9-3d5c-445d-a1e5-c47a10bec01a,Obsession,Animotion,0,0,False
+c0d97ba3-78a4-46ab-8c62-52d0f867dd20,Put Your Hands Together,Simian Mobile Disco,0,0,False
+6b37fa8f-2743-4e0f-aa90-2600030cc417,Escape From Dragon House,Dengue Fever,0,0,False
+b7d7ded3-be01-4c88-a3ab-e26571dc78eb,Channels and Winds,Ravi Shankar and Philip Glass,0,0,False
+d719b00b-bfef-4dc3-9c38-02a38de4ad90,Gathering Dust,Modern English,0,0,False
+c7d7b0bc-5406-41b3-8dc1-0aa10c04d1ca,Future Sick,Neon Indian,0,0,False
+0c346fe6-3784-4a7a-89c7-d7ae1de7888a,No Problem,Diplo feat. Flinch & My Name Is Kay,0,0,False
+ff9eb3a9-375f-4ad5-bba8-77490a2d4a89,Names,Cat Power,0,0,False
+c94541c9-caf0-425d-9fe0-01fd31dd230b,Velvet Spacetime,Carter Burwell,0,0,False
+b734d623-6346-4c1d-b736-72449a973ab3,Empire Song,Killing Joke,0,0,False
+beabf80d-3fc2-46a3-8cc0-0f349368622f,Almost Human,Lauren Daigle,0,0,False
+9d0d4312-7339-4485-834d-0e17459f5e77,Eisbär,Grauzone,0,0,False
+3f4fba43-5706-4c56-be46-39be0dad5044,Mis Amigos,The Dandy Warhols,0,0,False
+4a76da48-f095-4396-a62a-09bc740317fb,Roll the Dice (Fatboy Slim's vocal mix),Lunatic Calm,0,0,False
+b7037334-904b-4f19-87be-2a53d6ed2616,The Devil Is in the Details,The Chemical Brothers,0,0,False
+0296316a-aa12-422b-8954-e0da5f3e31df,Grimly Fiendish,The Damned,0,0,False
+8b2a4b11-fd8c-4f6d-858e-9bfcafc9f03a,Serial Killa,"Snoop Doggy Dogg featuring D.O.C., RBX and Tha Dogg Pound",0,0,False
+b7037a48-8728-487f-bace-b5ff8d21d127,Atrocities,Antony and the Johnsons,0,0,False
+1ce0cddc-d847-44e0-9996-c1e2f14f98a6,Power Ballad,Datassette,0,0,False
+d165438d-c761-4cde-9391-4cf516efe61b,Octogum,Air,0,0,False
+0fce5650-1392-4866-9a9a-8c9d60588f04,Psionic,Mana,0,0,False
+b2b3c64d-bc0d-46f8-ae8d-7c545af4eeec,Caribbean Queen (No More Love on the Run),Billy Ocean,0,0,False
+5327e00a-0cdd-4e82-8b4c-819f2caba91f,Michelangelo ’70,Astor Piazzolla y su Quinteto Tango Nuevo,0,0,False
+caeddd91-2b91-4507-894f-a8f0ac36594e,The Swagga,Gorillaz,1,0,False
+91e2b9c1-acdc-4334-a2a6-210f3989bbc9,Into the Light,jj,0,0,False
+23d4f464-fd5a-4887-9097-23ff7d2a5382,Collapse,Boards of Canada,5,5,True
+8bd0bcbc-308e-403e-a1f5-cbc6069c0d00,Baby Love Child,Pizzicato Five,0,0,False
+72d05954-1be0-4c76-8278-32a882097615,Anything Goes,Guns N’ Roses,2,0,False
+ad703fe6-518d-4fdc-a09d-f9cdd05d4517,Voices,Espers,0,0,False
+05dfeea3-b6d7-469b-a5c9-c373ecf1fb03,Sanctified,Nine Inch Nails,9,8,True
+c2b02e94-7031-483b-aa24-4746caa884cd,True Romance (Gigamesh remix),Citizens!,0,0,False
+70cea944-7b42-44bf-86eb-5f6848ebc089,Click,Little Boots,0,0,False
+6b13a511-464a-41a3-8c15-af174a024e97,Machines of the Subconscious,The Future Sound of London,0,0,False
+75f9a45a-c76c-45dd-a155-dcc96e98383c,Two Tribes,Frankie Goes to Hollywood,0,0,False
+0eb8d63f-33d8-4951-b9fe-57813cd7a24e,Mango Pickle Down River,M.I.A. feat. Wilcannia Mob,0,0,False
+8383aeea-b497-4f00-bf10-305793bc9489,Resurrection,Classified Project,0,0,False
+3725ce95-2158-4565-9c7c-f29f8df3f3a9,I Don’t Feel Like Dancin’,Scissor Sisters,0,0,False
+14b5b122-a8a5-40f0-9d49-45098668a593,Sea Breezes,Siouxsie and the Banshees,0,0,False
+51911980-8f31-476c-9d80-52b3f7443dd9,Breathe This Air (Asleep version),Jon Hopkins feat. Megan James,0,0,False
+97606dc7-b6eb-486e-9e5f-93c8b269650a,Tahiti,Bat for Lashes,0,0,False
+a45c9893-306f-4546-88a8-3d0d25666871,Encounters,bl00dwave,0,0,False
+dd1c0b35-004e-4ad2-891f-fbfd4188e422,"You Just Haven’t Earned It Yet, Baby",The Smiths,11,11,True
+bd96a679-8b8f-4b4c-91d1-520c1479ba45,Cheesy (Amen mix),Plug,0,0,False
+ad0c1ad1-6541-4036-adbe-c4faf5716a0e,Aileron,Boris,0,0,False
+d9f96478-a818-4382-a777-b455877f30dc,The Promise,When in Rome,0,0,False
+2bc7c948-08b2-4657-bcb7-bf714b5e3de1,The Badge,Pantera,0,0,False
+3b1f5b8b-8ad6-4606-bc77-b61c396fb639,Hanging On,Active Child,0,0,False
+bef9dc6e-49d0-41e5-95f7-73fe9babf7b3,I Bleed,Pixies,4,0,False
+cfa764e3-53f9-406b-ad45-428e343cf49f,I’m Free (William Orbit mix),Morgan King,0,0,False
+07be2ae5-0139-4048-b20b-192815b8cf22,Human Fly,Nouvelle Vague,0,0,False
+e946a8a4-8fb2-4d55-9b7e-46fe3b6f15ce,Water Music: Allegro deciso,Wendy Carlos,0,0,False
+3008dab5-ac88-466a-9902-91b9d3a54b29,Nothing Much to Lose,My Bloody Valentine,0,0,False
+745d280f-bdef-420a-b163-93906beb859d,Jupiter Rising,ADR,0,0,False
+f70e039d-0b88-4e9d-bfd4-1ccf72e5b25f,I Ran (So Far Away),A Flock of Seagulls,0,0,False
+730900b9-f8e9-47fd-a80f-2b37b94aa1e0,Punk to Funk,Fatboy Slim,0,0,False
+b3e56383-de79-4b9e-806e-d32543b115df,Demon Woman,Flight of the Conchords,0,0,False
+fa51bdd1-5d1d-487e-a8b3-3ab1c4d639a8,Hold Me Upsetter,The Orb feat. Lee “Scratch” Perry,0,0,False
+c0540412-b0d4-41db-a58e-8192facec399,My Little Underground,The Jesus and Mary Chain,0,0,False
+951dbfa8-c64e-4765-b4f7-75957e5a1ba0,Cubanismo llegó,¡Cubanismo!,0,0,False
+15362740-8136-4519-8d38-d797ec0f2e1a,A Perfect Twist (vocal),Mike Patton,0,0,False
+96ed9a18-7845-47bd-b29a-0b3ea3fc7abd,Pearl’s Girl (14996 version),Underworld,0,0,False
+8061e759-48ed-415c-bdc6-90dcdfdbacf8,Sheen,Xeno & Oaklander,0,0,False
+f65e267e-1357-4d7b-bd58-60821183a5b5,Drama!,Erasure,0,0,False
+68b4215d-137b-43a4-8e3b-04be41d5adbd,Drive‐Thru,Tenacious D,0,0,False
+09d9dc79-acfc-4fd4-b5e3-884786211fb3,Everyday Is Like Sunday,Morrissey,0,0,False
+48fef3d0-9bf6-4c7c-92bc-8fb8c9a77472,Golgotha Tenement Blues,Machines of Loving Grace,0,0,False
+94e94611-9639-45f6-b708-aeae58b7463e,Her Eyes Were Green,Hans Zimmer & Benjamin Wallfisch,0,0,False
+d0f266c8-b3fb-43dc-92a1-fd05a1a8484b,Girls (Rex the Dog mix),The Prodigy,2,0,False
+a301661f-521a-4990-984f-a0a9e64f91a4,"Virtually, Part 3",Soft Machine,0,0,False
+04fdda10-868d-4e59-b989-cd0e83407061,Camera,R.E.M.,0,0,False

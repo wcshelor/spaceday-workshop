@@ -1,0 +1,149 @@
+{
+  "version": "scoring-v1",
+  "dataset_hash": "e755bbd1cc5512d4",
+  "dataset_snapshot": "2026-10-18T05:12:18Z",
+  "pipeline_version": "laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32",
+  "config_path": "config/scoring-v1.json",
+  "config_sha256": "56fde13b8c25eeca59c6461e4148d630e7572cf50dd868f40965632415d47053",
+  "clip": 4.0,
+  "rhythm": {
+    "features": [
+      "rhythm.bpm",
+      "rhythm.onset_rate",
+      "rhythm.danceability"
+    ],
+    "transforms": {
+      "rhythm.bpm": "log2",
+      "rhythm.onset_rate": "log1p",
+      "rhythm.danceability": "log1p"
+    },
+    "medians": {
+      "log2_bpm": {
+        "median": 6.936505355419307,
+        "iqr": 0.40885131542006903
+      },
+      "log1p_onset": {
+        "median": 1.5483061401925304,
+        "iqr": 0.32227613926182586
+      },
+      "log1p_dance": {
+        "median": 0.772250214680203,
+        "iqr": 0.12582605077141507
+      }
+    },
+    "group_weights": {
+      "log2_bpm": 0.3333333333,
+      "log1p_onset": 0.3333333333,
+      "log1p_dance": 0.3333333333
+    },
+    "feature_order": [
+      "log2_bpm",
+      "log1p_onset",
+      "log1p_dance"
+    ],
+    "dropped_dimensions": []
+  },
+  "texture": {
+    "mfcc_exclude_0": true,
+    "coefficient_count": 12,
+    "medians": {
+      "mfcc": [
+        {
+          "median": 134.1344680785,
+          "iqr": 53.735809325999995,
+          "index": 1
+        },
+        {
+          "median": 2.234772086145,
+          "iqr": 28.8031635284,
+          "index": 2
+        },
+        {
+          "median": 23.49555015565,
+          "iqr": 17.628333091800002,
+          "index": 3
+        },
+        {
+          "median": 4.059319496155,
+          "iqr": 13.137522935909999,
+          "index": 4
+        },
+        {
+          "median": 7.921186923980001,
+          "iqr": 12.3599796295,
+          "index": 5
+        },
+        {
+          "median": 1.13531124592,
+          "iqr": 8.88646769523,
+          "index": 6
+        },
+        {
+          "median": 4.149698257444999,
+          "iqr": 8.377540662883002,
+          "index": 7
+        },
+        {
+          "median": -0.6172209680080001,
+          "iqr": 7.05933117867,
+          "index": 8
+        },
+        {
+          "median": 2.0735234022149998,
+          "iqr": 6.48086214065,
+          "index": 9
+        },
+        {
+          "median": -0.7255595326425,
+          "iqr": 5.28488445282,
+          "index": 10
+        },
+        {
+          "median": 0.233926668763,
+          "iqr": 5.23774290085,
+          "index": 11
+        },
+        {
+          "median": -0.643682986498,
+          "iqr": 5.17782402039,
+          "index": 12
+        }
+      ],
+      "spectral": {
+        "centroid": {
+          "median": 7.1084493711185335,
+          "iqr": 0.5920474724225988,
+          "transform": "log_floor_1e-6"
+        },
+        "rolloff": {
+          "median": 7.444181168767484,
+          "iqr": 0.8158075404156335,
+          "transform": "log_floor_1e-6"
+        },
+        "flux": {
+          "median": -2.4601902038400842,
+          "iqr": 0.365228544629582,
+          "transform": "log_floor_1e-6"
+        },
+        "zcr": {
+          "median": 0.06431546392009652,
+          "iqr": 0.04441189989899031,
+          "transform": "log1p"
+        }
+      }
+    },
+    "group_weights": {
+      "timbral": 0.5,
+      "spectral": 0.5
+    },
+    "spectral_floor": 1e-06,
+    "feature_order": [
+      "mfcc_1..12",
+      "centroid",
+      "rolloff",
+      "flux",
+      "zcr"
+    ]
+  },
+  "notes": "Robust (median/IQR) scaling on full frozen collection; clip \u00b14; no per-filter refit; missing required input fails."
+}

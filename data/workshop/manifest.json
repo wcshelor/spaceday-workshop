@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "source_snapshot": "2026-10-18T05:12:18Z",
+  "pipeline_version": "laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32",
+  "embedding_format": {
+    "file": "clap_embeddings.f32",
+    "dtype": "float32",
+    "byte_order": "little",
+    "shape": [
+      1500,
+      512
+    ],
+    "row_order": "songs.json embedding_index"
+  },
+  "selection": {
+    "target": 1500,
+    "artist_cap": 6,
+    "year_range": [
+      1960,
+      2022
+    ],
+    "method": "deterministic editorial anchors and genre/decade/familiarity balancing"
+  },
+  "statistics": {
+    "songs": 1500,
+    "artists": 785,
+    "highlevel_available": 1499,
+    "styles": {
+      "pop_smooth": 142,
+      "electronic_experimental": 197,
+      "electronic_dance": 185,
+      "jazz_blues": 97,
+      "hiphop_reggae": 99,
+      "indie_alternative": 219,
+      "funk_soul_rnb": 89,
+      "country_folk_acoustic": 96,
+      "classic_rock": 117,
+      "psychedelic": 85,
+      "ambient_instrumental": 174
+    },
+    "decades": {
+      "1970": 178,
+      "1990": 314,
+      "2000": 332,
+      "1960": 94,
+      "1980": 260,
+      "2010": 311,
+      "2020": 11
+    },
+    "familiarity_bands": {
+      "recognisable_anchor": 232,
+      "discovery_candidate": 823,
+      "established_artist_deeper_cut": 445
+    },
+    "max_tracks_per_artist": 6,
+    "candidate_count": 2250,
+    "candidates_with_usable_acousticbrainz": 2195
+  },
+  "files": {
+    "songs.csv": {
+      "bytes": 543744,
+      "sha256": "f4285cb630b76717f24afbb7d353c4723ebc741d529851d0ed50ea189bd36eed"
+    },
+    "features.json": {
+      "bytes": 18785896,
+      "sha256": "d9b0ae84d12106286fed60f66da6c30a0a81d364f037af96f17a62740f9d493c"
+    },
+    "songs.json": {
+      "bytes": 3076114,
+      "sha256": "61c3aacb32b4429cdab37739f61bbe91622bf0b1eefa39cce2c91149ced0c645"
+    },
+    "ATTRIBUTION.md": {
+      "bytes": 1428,
+      "sha256": "cfbb26ed151b50e7abe318a8e4f71e77616628e618693bde9a0ae7194fc859a5"
+    },
+    "clap_embeddings.f32": {
+      "bytes": 3072000,
+      "sha256": "d6f0341bd2366e37de9906498542d811d59f45ee3c40808d279f0baf0acda5b9"
+    },
+    "clap_embeddings.json.gz": {
+      "bytes": 3739447,
+      "sha256": "ee479c0f6c1742ae1d76fb7cbf06017239f8c31573387a740e0524d8b4b10e76"
+    }
+  }
+}

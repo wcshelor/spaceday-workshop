@@ -1,0 +1,41 @@
+{
+  "version": "scoring-v1",
+  "dataset_snapshot": "2026-10-18T05:12:18Z",
+  "pipeline_version": "laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32",
+  "methods": ["rhythm-v1", "texture-v1", "clap-v1"],
+  "rhythm": {
+    "features": [
+      "rhythm.bpm",
+      "rhythm.onset_rate",
+      "rhythm.danceability"
+    ],
+    "transforms": {
+      "rhythm.bpm": "log2",
+      "rhythm.onset_rate": "log1p",
+      "rhythm.danceability": "log1p"
+    },
+    "group_weights": {
+      "log2_bpm": 0.3333333333,
+      "log1p_onset": 0.3333333333,
+      "log1p_dance": 0.3333333333
+    },
+    "clip": 4.0
+  },
+  "texture": {
+    "mfcc_exclude_0": true,
+    "spectral_floor": 1e-6,
+    "group_weights": {
+      "timbral": 0.5,
+      "spectral": 0.5
+    },
+    "clip": 4.0
+  },
+  "calibration": {
+    "seed_counts": [1, 2, 3, 4, 5],
+    "samples_per_count": 512,
+    "random_seed": 20261018
+  },
+  "preferences": {
+    "strength": 0.05
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "language-v1",
+  "prompt_version": "prompts-v1",
+  "prompt_count": 400,
+  "prompt_bank_sha256": "06b91c29e2f776852a5a590e0d2e2f79a4003dfe6bcd0237f66adb82d9d5def6",
+  "placeholder": true,
+  "encoder_id": "fake-placeholder",
+  "pipeline_version": "laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32",
+  "note": "Placeholder until ONNX encoder provisioned. Do not claim language experiment is finished."
+}

@@ -1,0 +1,53 @@
+__pycache__/
+*.py[cod]
+*.part
+.DS_Store
+
+# Local settings and credentials; keep the shareable configuration template.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.ssh/
+
+# Dependencies, environments, and generated package metadata.
+node_modules/
+.venv/
+venv/
+*.egg-info/
+build/
+
+# Rebuilt by Render from source and the committed package lockfile.
+/frontend/dist/
+*.tsbuildinfo
+
+# Local test, coverage, and benchmark output.
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage/
+htmlcov/
+playwright-report/
+test-results/
+/benchmark_report*.json
+*.log
+
+# Offline collection/build inputs; deployment uses data/workshop instead.
+/data/catalogue/
+/data/validation.json
+/data/sources/**
+!/data/sources/**/
+!/data/sources/**/README.md
+!/data/sources/**/COPYING
+!/data/sources/**/*.sha256
+
+# Optional live-inference weights are not part of this deployment.
+/artifacts/language-v1/*.onnx
+/artifacts/language-v1/*.pt
+/artifacts/language-v1/*.bin
+
+# Keep data/workshop, artifacts, content, config, tests, and lockfiles tracked.

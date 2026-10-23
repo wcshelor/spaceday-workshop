@@ -1,0 +1,31 @@
+__pycache__
+*.pyc
+*.part
+.DS_Store
+.git
+.gitignore
+data/sources
+data/catalogue
+data/validation.json
+frontend/node_modules
+frontend/dist
+backend/tests
+frontend/tests
+frontend/e2e
+.artifacts/*/raw
+.env
+*.log
+.pytest_cache
+.mypy_cache
+.coverage
+.venv
+venv
+*.onnx
+*.pt
+*.bin
+cache
+# large unused model weights (provisioned separately for live mode only)
+artifacts/language-v1/*.onnx
+artifacts/language-v1/*.pt
+artifacts/language-v1/*.bin
+# Keep frontend source for reproducible Docker build (removed frontend/src ignore)
