@@ -144,9 +144,8 @@ test('responsive layouts, listening survey, keyboard carousel and optional CLAP 
   await page.getByText('Optional: explore CLAP with words',{exact:true}).click();
   await expect(page.getByRole('button',{name:'fits',exact:true}).first()).toBeVisible();
   await page.getByRole('button',{name:'fits',exact:true}).first().click();
-  await page.getByLabel('Your description',{exact:true}).fill('a new sound');
-  await page.getByRole('button',{name:'Search with your description',exact:true}).click();
-  await expect(page.getByText(/Live search isn’t available/)).toBeVisible();
+  await expect(page.getByLabel('Your description',{exact:true})).toHaveCount(0);
+  await expect(page.getByRole('button',{name:'Search with your description',exact:true})).toHaveCount(0);
   await noOverflow(page);
   await step(page,'Notes & export');
   const download=page.waitForEvent('download');

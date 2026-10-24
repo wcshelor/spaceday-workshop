@@ -40,6 +40,9 @@ class DataStore:
         self.scoring_artifacts = None
         self.calibration = None
         self.language_bank = None
+        self.prompt_embeddings = None
+        self.language_meta = None
+        self.description_error = "Description embeddings are not installed"
         self.collaborative = None
 
     def load(self):
@@ -191,8 +194,35 @@ class DataStore:
                     self.language_bank = data
                 else:
                     self.language_bank = data
+                self._load_prompt_embeddings(bank)
                 return
         raise FileNotFoundError("prompt bank missing")
+
+    def _load_prompt_embeddings(self, bank_path):
+        """Fail closed for unavailable or incompatible optional description artifacts."""
+        try:
+            meta = json.loads((self.language_dir / "meta.json").read_text())
+            raw = (self.language_dir / "prompt_embeddings.f32").read_bytes()
+            if meta.get("placeholder") is not False:
+                raise ValueError("Description embeddings are placeholders")
+            if meta.get("pipeline_version") != self.pipeline_version:
+                raise ValueError("Description encoder pipeline mismatch")
+            if meta.get("prompt_bank_sha256") != hashlib.sha256(bank_path.read_bytes()).hexdigest():
+                raise ValueError("Description bank checksum mismatch")
+            if meta.get("embeddings_sha256") != hashlib.sha256(raw).hexdigest():
+                raise ValueError("Description embeddings checksum mismatch")
+            if meta.get("prompt_count") != len(self.language_bank):
+                raise ValueError("Description count mismatch")
+            mat = np.frombuffer(raw, dtype="<f4").reshape(len(self.language_bank), 512)
+            if not np.isfinite(mat).all() or not np.allclose(np.linalg.norm(mat, axis=1), 1, atol=1e-3):
+                raise ValueError("Invalid description vectors")
+            if len({p["id"] for p in self.language_bank}) != len(self.language_bank):
+                raise ValueError("Duplicate description IDs")
+            self.prompt_embeddings, self.language_meta = mat, meta
+            self.description_error = None
+        except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
+            self.prompt_embeddings = None
+            self.description_error = str(exc)
 
     def bootstrap_payload(self):
         return {
@@ -202,7 +232,9 @@ class DataStore:
             "scoring_version": (self.scoring_artifacts or {}).get("version", "scoring-v1"),
             "calibration_version": (self.calibration or {}).get("version", "calibration-v1"),
             "language_status": self._lang_status(),
-            "language_encoder": (self.scoring_artifacts or {}).get("encoder_id") if self.scoring_artifacts else None,
+            "language_encoder": (self.language_meta or {}).get("encoder_id"),
+            "live_text_search_status": "retired",
+            "description_categories": sorted({p.get("category", "") for p in (self.language_bank or [])}),
             "supported_methods": ["rhythm-v1", "texture-v1", "clap-v1"] + (["collaborative-v1"] if self.collaborative else []),
             "collaborative": ({"supported_count": len(self.collaborative.index),
                                "supported_ids": list(self.collaborative.index),
@@ -226,12 +258,7 @@ class DataStore:
         }
 
     def _lang_status(self):
-        from .config import settings
-        mode = settings.language_mode
-        if mode == "disabled":
-            return "disabled"
-        # if bank present, prepared, if live encoder also, live
-        return mode
+        return "prepared" if self.prompt_embeddings is not None else "unavailable"
 
     # --- Catalogue ---
     def _public_song(self, rec: dict) -> dict:
@@ -402,26 +429,25 @@ class DataStore:
     def describe(self, req):
         if req.recording_mbid not in self.uuid_to_index:
             raise KeyError(f"unknown recording {req.recording_mbid}")
-        if not self.language_bank:
-            return {"recording_mbid": req.recording_mbid, "matches": [], "note": "prepared descriptions not yet encoded; bank missing"}
-        matches = self.language_bank
-        if req.categories:
-            matches = [m for m in matches if m.get("category") in req.categories]
-        # Deterministic diversification: one per paraphrase_group initially
-        seen_groups = set()
-        diversified = []
-        for m in matches:
-            pg = m.get("paraphrase_group")
-            if pg and pg in seen_groups:
-                continue
-            diversified.append(m)
-            if pg:
-                seen_groups.add(pg)
-            if len(diversified) >= req.limit * 2:
-                break
-        # If too few distinct, relax and return more
-        if len(diversified) < req.limit:
-            diversified = matches[: req.limit]
-        else:
-            diversified = diversified[: req.limit]
-        return {"recording_mbid": req.recording_mbid, "matches": diversified, "note": "Matches from prepared bank (placeholder vectors until ONNX encoder verified); not a unique decoding."}
+        if self.prompt_embeddings is None or self.embeddings is None:
+            raise RuntimeError("Song description matching unavailable: " + str(self.description_error or "audio vectors missing"))
+        audio = self.embeddings[self.uuid_to_index[req.recording_mbid]]
+        scores = self.prompt_embeddings @ audio
+        ranked = sorted(range(len(self.language_bank)), key=lambda i: (-float(scores[i]), self.language_bank[i]["id"]))
+        ranked = [i for i in ranked if not req.categories or self.language_bank[i].get("category") in req.categories]
+        selected, deferred, seen = [], [], set()
+        for i in ranked:
+            group = self.language_bank[i].get("paraphrase_group") or self.language_bank[i]["id"]
+            if group in seen:
+                deferred.append(i)
+            else:
+                selected.append(i)
+                seen.add(group)
+        selected = (selected + deferred)[:req.limit]
+        return {
+            "recording_mbid": req.recording_mbid,
+            "matches": [{**self.language_bank[i], "similarity": float(scores[i])} for i in selected],
+            "encoder_id": self.language_meta["encoder_id"],
+            "prompt_version": self.language_meta["prompt_version"],
+            "note": "Prepared descriptions ranked by CLAP audio–text cosine similarity, with paraphrase diversity. These are possible matches, not a unique decoding or confidence percentages.",
+        }

@@ -1,5 +1,11 @@
 # Implementation Status
 
+> Update, 24 October 2026: song-to-description matching now uses real prepared
+> CLAP text vectors for 71 curated phrases (`prompts-v2`). Live free-form text
+> search is retired from today's demo, with its code preserved. The historical
+> live-encoder plan below is superseded for this demo; see
+> [current description matching](DESCRIPTION_MATCHING.md).
+
 Last updated: 2026-10-23
 
 ## Added: miniature collaborative model (2026-10-23)

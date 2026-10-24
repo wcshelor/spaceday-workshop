@@ -9,18 +9,18 @@ Release and data IDs:
 - Pipeline: `laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32`
 - Scoring: `scoring-v1` (config `config/scoring-v1.json` sha256 `56fde13b...`)
 - Calibration: `calibration-v1` (check `artifacts/scoring-v1/calibration.json` checksums)
-- Prompt bank: `prompts-v1` (400 entries, `06b91c29...`)
-- Language status: `disabled` (live pending ONNX) — app shows prepared examples
+- Prompt bank: `prompts-v2` (71 curated entries; checksums in `artifacts/language-v1/meta.json`)
+- Language status: `prepared` — real offline song-to-description matches; live text search retired
 
 ## Advance Check (day before)
 
 - [ ] `GET /health/ready` returns 200 with expected IDs
 - [ ] Browse catalogue, add 1 seed, generate per method (4 checks; Listener patterns uses supported songs)
-- [ ] `POST /api/text-search` — expect 503 when disabled (prepared flow) or real results when live
-- [ ] `GET /api/examples` returns 2+ prepared searches
+- [ ] Open CLAP → Optional: explore CLAP with words; switch songs and verify ranked descriptions
+- [ ] Filter descriptions by category and record a Fits/Partly/Misses judgment
 - [ ] External listening search (YouTube/Spotify) opens with `noopener`
 - [ ] Note export (JSON + Markdown) contains seeds, queries, results, notes
-- [ ] Model warmup (if live) — first text query <5s, subsequent <1s due to cache
+- [ ] No live-search form is shown; no encoder warmup is needed
 
 ## Check Before Each Cohort (15 min before)
 
@@ -38,7 +38,7 @@ Release and data IDs:
 |8–16| Explore song recommendations, listen to 2–3 results | Results | After Generate, show title/artist/percentage only; click I’ve Listened to reveal metadata/evidence. Optional Like/Connection reaction before reveal |
 |16–21| Discuss in groups of 3–4 | Reflection prompts | What stayed similar: rhythm/voice/instruments/mood/production? Surprises? |
 |21–25| Introduce audio–language embeddings | Describe and discover | Show Matching descriptions for selected song; explain prepared bank origin; category filter does not retrain |
-|25–35| Inspect descriptions, write query, listen, revise one aspect | Text search | Describe what you like, retrieve, change 1 word (intimate→distant), compare retained vs new results (history) |
+|25–35| Inspect matched descriptions, listen, switch category/song | Matching descriptions | Judge Fits/Partly/Misses, explain a mismatch, compare two songs; no live text search |
 |35–42| Compare discoveries in same groups | Comparison | Compare two runs (controlled: same seeds/filter, different method) vs cross-modal (song vs text) |
 |42–45| Share surprises, close | Export | Copy/download notes for discussion; students keep own session |
 
@@ -76,9 +76,9 @@ participant satisfaction. Full audit: `artifacts/collaborative-v1/README.md`.
 - Which method helped you discover something you liked, and why?
 - For language: what did the model appear to understand? What did it miss?
 
-## Prepared Fallback Activities (if live encoder down or network hiccup)
+## Prepared Fallback Activities (if network listening is interrupted)
 
-- Use **prepared examples** (“warm acoustic guitar…”, “fast energetic drums…”) — they work without live encoding
+- Explore song-to-description matches — prepared text vectors work without live encoding
 - Compare description category filtering (vocals vs rhythm) on same song
 - Controlled method comparison (keep seeds same, change rhythm→texture→clap)
 

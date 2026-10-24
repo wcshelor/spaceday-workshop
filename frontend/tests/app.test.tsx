@@ -124,15 +124,14 @@ describe('Shared song listening workshop',()=>{
     await waitFor(()=>expect(api.postRecommendations).toHaveBeenCalledTimes(2))
     expect(screen.getByLabelText(/Listening note for Result 1/)).toHaveValue('Same pulse')
   })
-  it('retains description matching as an optional CLAP experiment and reports unavailable text search',async()=>{
+  it('retains description matching as an optional CLAP experiment without the retired live text search',async()=>{
     render(<App/>);await chooseTwo();step('CLAP sound')
     fireEvent.click(screen.getByText('Optional: explore CLAP with words'))
     expect((await screen.findAllByRole('button',{name:'fits'}))[0]).toBeInTheDocument()
     fireEvent.click(screen.getAllByRole('button',{name:'fits'})[0])
     expect(screen.getAllByRole('button',{name:'fits'})[0]).toHaveAttribute('aria-pressed','true')
-    fireEvent.change(screen.getByLabelText('Your description'),{target:{value:'test'}})
-    fireEvent.click(screen.getByRole('button',{name:'Search with your description',exact:true}))
-    expect(await screen.findByText(/Live search isn’t available/)).toBeInTheDocument()
+    expect(screen.queryByLabelText('Your description')).not.toBeInTheDocument()
+    expect(screen.queryByRole('button',{name:'Search with your description',exact:true})).not.toBeInTheDocument()
     step('Notes & export');expect(screen.getByRole('button',{name:'Download Markdown'})).toBeEnabled()
   })
   it('does not label older multi-seed runs as a controlled current comparison',async()=>{

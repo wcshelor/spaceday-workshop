@@ -1,10 +1,17 @@
 {
   "version": "language-v1",
-  "prompt_version": "prompts-v1",
-  "prompt_count": 400,
-  "prompt_bank_sha256": "06b91c29e2f776852a5a590e0d2e2f79a4003dfe6bcd0237f66adb82d9d5def6",
-  "placeholder": true,
-  "encoder_id": "fake-placeholder",
+  "prompt_version": "prompts-v2",
+  "prompt_count": 71,
+  "placeholder": false,
+  "prompt_bank_sha256": "b1784dcb3af932bc7da18c03d02cfc7084189c6ce68fd89ee25307fee5fca63d",
+  "embeddings_sha256": "a542f56150af7ff8a10d4434da2f7649c56de7bd624636f2d42b6db98107de7e",
   "pipeline_version": "laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32",
-  "note": "Placeholder until ONNX encoder provisioned. Do not claim language experiment is finished."
+  "encoder_id": "laion/clap-htsat-unfused@8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+  "checkpoint_revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+  "max_length": 77,
+  "normalization": "L2",
+  "dimensions": 512,
+  "torch_version": "2.14.1",
+  "transformers_version": "5.20.2",
+  "note": "Real paired pretrained CLAP text vectors. Offline song-to-description retrieval only; live text search retired. Upstream audio checkpoint hash is not independently established by its pipeline name."
 }

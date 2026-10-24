@@ -13,6 +13,9 @@ OUT = ROOT / "artifacts" / "language-v1"
 OUT.mkdir(parents=True, exist_ok=True)
 
 def main():
+    existing = OUT / "meta.json"
+    if existing.exists() and json.loads(existing.read_text()).get("placeholder") is False:
+        sys.exit("Retired builder: real description artifacts already exist. Use build_description_artifacts.py; refusing to overwrite them.")
     prompts = json.loads(CONTENT.read_text())
     bank = prompts["prompts"] if isinstance(prompts, dict) and "prompts" in prompts else prompts
     print(f"Prompt bank {len(bank)} entries, version {prompts.get('version','unknown')}")

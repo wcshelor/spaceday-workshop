@@ -71,12 +71,8 @@ def health_ready():
 
 
 def _language_status() -> str:
-    mode = settings.language_mode
-    if mode == "disabled":
-        return "disabled"
-    # If enabled but artifacts missing, report prepared vs live
-    # For now return mode
-    return mode
+    ds = STATE.get("data_store")
+    return ds._lang_status() if ds is not None else "unavailable"
 
 
 @app.get("/api/bootstrap")

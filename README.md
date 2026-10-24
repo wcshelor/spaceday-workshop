@@ -6,7 +6,7 @@ ListenBrainz song loves; switching to it shows supported songs and enables a
 shared candidate pool for fair comparisons. See
 [model, coverage and evaluation](artifacts/collaborative-v1/README.md).
 
-One hosted browser app for two independent 45-minute workshops (University of Osnabrück, 15–20 adults per cohort). Students browse 1500 curated recordings (1960–2022), pick familiar seeds, compare recommendations, listen externally, reveal supporting information, and discuss reactions. A second tab supports CLAP description matching and student-written text-to-music retrieval (prepared bank + live text encoder when provisioned).
+One hosted browser app for two independent 45-minute workshops (University of Osnabrück, 15–20 adults per cohort). Students browse 1500 curated recordings (1960–2022), pick familiar seeds, compare recommendations, listen externally, reveal supporting information, and discuss reactions. An optional CLAP activity matches songs to 71 curated descriptions using real precomputed text vectors. Live free-form text search is retired from today’s demo; its code is preserved. See [description matching](docs/DESCRIPTION_MATCHING.md).
 
 - [Product design](DESIGN.md)
 - [Implementation plan](IMPLEMENTATION_PLAN.md)
@@ -14,6 +14,8 @@ One hosted browser app for two independent 45-minute workshops (University of Os
 - [Decisions](docs/DECISIONS.md)
 - [API](docs/API.md)
 - [Model setup](docs/MODEL_SETUP.md)
+- [Works cited, data provenance, and model methods](docs/WORKS_CITED_AND_METHODS.md)
+- [Presentation draft, intuition guide, and quiz bank](docs/PRESENTATION_DRAFT.md)
 - [Listening pilot](docs/PILOT.md)
 - [Deployment](docs/DEPLOYMENT.md)
 - [Workshop runbook](docs/WORKSHOP_RUNBOOK.md)
@@ -32,8 +34,8 @@ similarity reactions, and an optional explanation reveal. The optional taste
 survey personalizes reflection prompts without changing rankings. Working sets,
 experiments, survey answers and notes stay on the device and can be exported.
 Phone layouts stack the activity; laptop layouts place the method and listening
-panels alongside each other. Text/description exploration is an optional CLAP
-extension; live text retrieval still depends on server capability.
+panels alongside each other. Song-to-description matching is an optional CLAP extension using prepared
+text vectors. Live text retrieval is retired from this demo.
 
 ## Install, Configure, Run, Test
 
@@ -59,14 +61,14 @@ cp .env.example .env
 # Edit .env if needed; defaults work for local dev:
 # SPACEDAY_DATA_DIR=./data/workshop
 # SPACEDAY_SCORING_ARTIFACT=./artifacts/scoring-v1
-# SPACEDAY_LANGUAGE_MODE=disabled  # set to live after verify_language_encoder.py passes
+# SPACEDAY_LANGUAGE_MODE=disabled  # live search retired; prepared descriptions work offline
 ```
 
 ### Generate / Verify Scoring Artifacts (once, after data freeze)
 ```sh
 /Users/campshelor/miniconda3/bin/python scripts/build_app_artifacts.py   # writes artifacts/scoring-v1/meta.json + calibration.json
-/Users/campshelor/miniconda3/bin/python scripts/build_language_artifacts.py  # writes placeholder or real ONNX artifacts
-/Users/campshelor/miniconda3/bin/python scripts/verify_language_encoder.py   # BLOCKED until ONNX weights provisioned; logs precise blocker
+# Real description vectors are checked in; no encoder needed at runtime.
+# To rebuild offline, see docs/DESCRIPTION_MATCHING.md.
 ```
 
 ### Run (development, two servers with proxy)
@@ -90,8 +92,6 @@ npm --prefix frontend run build
 ```sh
 docker build -t spaceday-workshop:rc .
 docker run --rm -p 8000:8000 spaceday-workshop:rc
-# with live ONNX (after provisioning)
-docker run --rm -p 8000:8000 -v $(pwd)/artifacts/language-v1:/app/artifacts/language-v1:ro -e SPACEDAY_LANGUAGE_MODE=live spaceday-workshop:rc
 ```
 
 ### Test
@@ -128,7 +128,7 @@ curl -s http://127.0.0.1:8000/api/bootstrap | jq
 - `frontend/src/{app,api,state,components}`
 - `data/workshop/` frozen collection (29 MB, excluded from image: `data/sources`, `data/catalogue`)
 - `artifacts/scoring-v1/` versioned scoring + calibration
-- `config/scoring-v1.json` and `content/prompts-v1.json` (400 prompts, `artifacts/language-v1` placeholder)
+- `config/scoring-v1.json` and `content/prompts-v1.json` (71 curated prompts, version `prompts-v2`; real text vectors in `artifacts/language-v1`)
 
 ### Licences
 - Clapback vectors: CC0; MusicBrainz core CC0 + tags CC BY-NC-SA 3.0; AcousticBrainz CC0 — see `data/workshop/ATTRIBUTION.md`

@@ -29,6 +29,8 @@ def descriptions(req: DescriptionMatchRequest):
         raise HTTPException(status_code=503, detail="Data not ready")
     try:
         return ds.describe(req)
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
     except KeyError as e:
         raise HTTPException(status_code=404, detail=str(e))
     except ValueError as e:
