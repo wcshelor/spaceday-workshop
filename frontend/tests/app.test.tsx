@@ -1,6 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor, within } from '@testing-library/react'
 import App from '../src/app/App'
+import * as api from '../src/api/client'
+import { loadState, saveState } from '../src/state/storage'
 
 // Mock API client with deterministic fixtures
 vi.mock('../src/api/client', () => ({
@@ -42,146 +44,108 @@ vi.mock('../src/api/client', () => ({
   getExamples: vi.fn(()=> Promise.resolve({version:'prompts-v1', items:[{id:'ex1', query:'warm acoustic guitar', category:'texture'}]})),
 }))
 
-describe('App mobile-first staged flow', ()=>{
-  beforeEach(()=> { localStorage.clear(); vi.clearAllMocks() })
+const go = (name:string)=>fireEvent.click(screen.getByRole('button',{name:`${name}`,exact:true}))
+const step = (label:string)=>fireEvent.click(screen.getByRole('button',{name:label,exact:true}))
+async function chooseTwo() {
+  const add=await screen.findAllByRole('button',{name:/^Add /})
+  fireEvent.click(add[0]);fireEvent.click(add[1])
+}
+async function generate() {
+  await waitFor(()=>expect(screen.getByRole('button',{name:'Find 5 recommendations'})).toBeEnabled())
+  fireEvent.click(screen.getByRole('button',{name:'Find 5 recommendations'}))
+  await screen.findByRole('heading',{name:/Result 1 With Long Title/})
+}
 
-  it('Choose → generate → move between results → react → reveal, per result/run', async ()=>{
-    render(<App />)
-    // Wait for catalogue
-    expect(await screen.findByText(/Search for a familiar song/)).toBeInTheDocument()
-    // Add first song
-    const addBtns = await screen.findAllByRole('button', {name:/Add /})
-    expect(addBtns[0]).toHaveAccessibleName(/Add Song One/)
-    fireEvent.click(addBtns[0])
-    // Should appear in My List (chip + catalogue both have title, so check at least one)
-    expect((await screen.findAllByText(/Song One With Very Long Title/)).length).toBeGreaterThanOrEqual(1)
-    // Go to Listen stage
-    fireEvent.click(screen.getByRole('tab', {name:/Listen/}))
-    expect(await screen.findByText(/Choose a method and generate/)).toBeInTheDocument()
-    // Generate
-    const genBtn = screen.getByRole('button', {name:/Generate 5 recommendations/})
-    expect(genBtn).toBeEnabled()
-    fireEvent.click(genBtn)
-    // Wait for carousel
-    const resultTitle = await screen.findByText(/Result 1 With Long Title/)
-    expect(resultTitle).toBeInTheDocument()
-    expect(screen.getByText(/1 \/ 5/)).toBeInTheDocument()
-    // Move next
-    const nextBtn = screen.getByRole('button', {name:/Next recommendation/})
-    expect(nextBtn).toHaveAccessibleName(/Next/)
-    fireEvent.click(nextBtn)
-    expect(await screen.findByText(/Result 2 With Long Title/)).toBeInTheDocument()
-    expect(screen.getByText(/2 \/ 5/)).toBeInTheDocument()
-    // Previous
-    fireEvent.click(screen.getByRole('button', {name:/Previous recommendation/}))
-    expect(await screen.findByText(/Result 1 With Long Title/)).toBeInTheDocument()
-    // React before reveal
-    const likeSelect = screen.getByLabelText(/Enjoyment for Result 1/)
-    fireEvent.change(likeSelect, {target:{value:'like'}})
-    // Reveal
-    const listenedBtn = screen.getByRole('button', {name:/I’ve listened/})
-    fireEvent.click(listenedBtn)
-    await waitFor(()=> expect(screen.getByText(/Evidence/)).toBeInTheDocument(), {timeout: 3000})
-    // Ensure reaction persisted per result: go next and back, still revealed?
-    fireEvent.click(nextBtn)
-    fireEvent.click(screen.getByRole('button', {name:/Previous recommendation/}))
-    await waitFor(()=> expect(screen.getByText(/Evidence/)).toBeInTheDocument())
+describe('Shared song listening workshop',()=>{
+  beforeEach(()=>{localStorage.clear();vi.clearAllMocks()})
+  it('carries one active seed and the same pool through all methods; keeps reactions scoped to method',async()=>{
+    render(<App/>);await chooseTwo()
+    step('Musical features');await generate()
+    expect(api.postRecommendations).toHaveBeenLastCalledWith({seed_ids:['id1'],method:'rhythm-v1',limit:5,candidate_filter:{collaborative_only:true}})
+    fireEvent.change(screen.getByLabelText(/Enjoyment for/),{target:{value:'like'}})
+    fireEvent.click(screen.getByRole('button',{name:'Reveal how this system matched it'}))
+    await screen.findByRole('heading',{name:'Why this recommendation?'})
+    expect(api.postExplanations).toHaveBeenLastCalledWith(expect.objectContaining({method:'rhythm-v1',seed_ids:['id1']}))
+    step('Listener patterns');await generate()
+    expect(api.postRecommendations).toHaveBeenLastCalledWith(expect.objectContaining({seed_ids:['id1'],method:'collaborative-v1',candidate_filter:{collaborative_only:true}}))
+    expect(screen.getByLabelText(/Enjoyment for/)).toHaveValue('')
+    expect(screen.queryByRole('heading',{name:'Why this recommendation?'})).not.toBeInTheDocument()
+    step('CLAP sound');await generate()
+    expect(api.postRecommendations).toHaveBeenLastCalledWith(expect.objectContaining({seed_ids:['id1'],method:'clap-v1',candidate_filter:{collaborative_only:true}}))
+    step('Musical features')
+    expect(screen.getByLabelText(/Enjoyment for/)).toHaveValue('like')
+    expect(screen.getByRole('heading',{name:'Why this recommendation?'})).toBeInTheDocument()
+    step('Compare')
+    expect(screen.getAllByText(/Result 1 With Long Title/)).toHaveLength(3)
   })
-
-  it('Switching methods preserves My List and previous runs', async ()=>{
-    render(<App />)
-    const addBtns = await screen.findAllByRole('button', {name:/Add /})
-    fireEvent.click(addBtns[0])
-    fireEvent.click(screen.getByRole('tab', {name:/Listen/}))
-    fireEvent.click(screen.getByRole('button', {name:/Generate 5 recommendations/}))
-    await screen.findByText(/Result 1 With Long Title/)
-    // Switch method
-    const methodSelect = screen.getByLabelText(/Recommendation method/)
-    fireEvent.change(methodSelect, {target:{value:'rhythm-v1'}})
-    fireEvent.click(screen.getByRole('button', {name:/Generate 5 recommendations/}))
-    await screen.findByText(/Result 1 With Long Title/)
-    // My List still there
-    fireEvent.click(screen.getByRole('tab', {name:/Choose/}))
-    expect((await screen.findAllByText(/Song One With Very Long Title/)).length).toBeGreaterThanOrEqual(1)
-    // Compare should show 2 runs
-    fireEvent.click(screen.getByRole('tab', {name:/Compare/}))
-    expect(await screen.findByText(/Preserve setup/)).toBeInTheDocument()
-    expect((await screen.findAllByText(/clap-v1/)).length).toBeGreaterThanOrEqual(1)
-    expect((await screen.findAllByText(/rhythm-v1/)).length).toBeGreaterThanOrEqual(1)
+  it('changing active song hides other seed results and restores them when returning',async()=>{
+    render(<App/>);await chooseTwo();step('Musical features');await generate()
+    fireEvent.change(screen.getByLabelText('Active starting song'),{target:{value:'id2'}})
+    expect(screen.queryByRole('heading',{name:/Result 1/})).not.toBeInTheDocument()
+    await generate()
+    expect(api.postRecommendations).toHaveBeenLastCalledWith(expect.objectContaining({seed_ids:['id2']}))
+    fireEvent.change(screen.getByLabelText('Active starting song'),{target:{value:'id1'}})
+    expect(screen.getByRole('heading',{name:/Result 1/})).toBeInTheDocument()
   })
-
-  it('Revisiting stages and refresh preserves state', async ()=>{
-    const { unmount } = render(<App />)
-    const addBtns = await screen.findAllByRole('button', {name:/Add /})
-    fireEvent.click(addBtns[0])
-    fireEvent.click(screen.getByRole('tab', {name:/Listen/}))
-    fireEvent.click(screen.getByRole('button', {name:/Generate 5 recommendations/}))
-    await screen.findByText(/Result 1 With Long Title/)
-    // Go to Describe then back
-    fireEvent.click(screen.getByRole('tab', {name:/Describe/}))
-    expect(await screen.findByText(/Matching descriptions/)).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('tab', {name:/Listen/}))
-    expect(await screen.findByText(/Result 1 With Long Title/)).toBeInTheDocument()
-    // Simulate refresh by remounting (loadState should restore)
-    unmount()
-    render(<App />)
-    expect((await screen.findAllByText(/Song One With Very Long Title/)).length).toBeGreaterThanOrEqual(1)
+  it('unsupported song is kept in the set, blocks only listener generation, and is never substituted',async()=>{
+    render(<App/>);const add=await screen.findAllByRole('button',{name:/^Add /});fireEvent.click(add[2]);step('Listener patterns')
+    expect(screen.getByRole('button',{name:'Find 5 recommendations'})).toBeDisabled()
+    expect(screen.getByText(/We won’t substitute/)).toBeInTheDocument()
+    expect(api.postRecommendations).not.toHaveBeenCalled()
+    step('CLAP sound');await generate()
+    expect(api.postRecommendations).toHaveBeenLastCalledWith(expect.objectContaining({seed_ids:['id3']}))
   })
-
-  it('Description and prepared-example flow and notes export', async ()=>{
-    render(<App />)
-    // Add to My List to have song for descriptions
-    const addBtns = await screen.findAllByRole('button', {name:/Add /})
-    fireEvent.click(addBtns[0])
-    fireEvent.click(screen.getByRole('tab', {name:/Describe/}))
-    const songSelect = await screen.findByLabelText(/Choose song for descriptions/)
-    fireEvent.change(songSelect, {target:{value:'id1'}})
-    const warmMatches = await screen.findAllByText(/warm acoustic guitar/)
-    expect(warmMatches.length).toBeGreaterThanOrEqual(1)
-    // Judge - there are two fits buttons, pick first
-    const fitsBtns = screen.getAllByRole('button', {name:'fits'})
-    fireEvent.click(fitsBtns[0])
-    expect(fitsBtns[0]).toHaveAttribute('aria-pressed','true')
-    // Prepared examples visible and distinguishable
-    expect(screen.getByText(/Try without live retrieval/)).toBeInTheDocument()
-    expect((await screen.findAllByText(/warm acoustic guitar/)).length).toBeGreaterThanOrEqual(2)
-    // Text search unavailable handling
-    const searchInput = screen.getByLabelText(/Your description/)
-    fireEvent.change(searchInput, {target:{value:'test query'}})
-    fireEvent.click(screen.getByRole('button', {name:/Search/}))
+  it('survey supplies listening prompts without adding ranking preferences',async()=>{
+    render(<App/>);await chooseTwo()
+    fireEvent.change(screen.getByLabelText('What draws you into a song?'),{target:{value:'Rhythm'}})
+    fireEvent.change(screen.getByLabelText('Artists or genres you usually enjoy'),{target:{value:'Soul'}})
+    step('Musical features');expect(screen.getByText(/Your lens:/)).toHaveTextContent('rhythm');await generate()
+    expect(vi.mocked(api.postRecommendations).mock.calls[0][0]).not.toHaveProperty('preferences')
+    step('Compare');expect(screen.getByText(/Your usual listening: Soul/)).toBeInTheDocument()
+  })
+  it('catalogue checkmark removes songs and updates the active seed; selection survives filters and refresh',async()=>{
+    const {unmount}=render(<App/>);await chooseTwo()
+    const remove=screen.getByRole('button',{name:/Remove Song One.*by Artist One.*from working set/})
+    expect(remove).toHaveTextContent('✓');expect(remove).toBeEnabled();fireEvent.click(remove)
+    expect(screen.getByLabelText('Active starting song')).toHaveValue('id2')
+    expect(screen.getByRole('button',{name:/Add Song One/})).toHaveTextContent('+')
+    fireEvent.change(screen.getByLabelText('Search title or artist'),{target:{value:'Two'}})
+    await waitFor(()=>expect(screen.getByRole('button',{name:/Remove Song Two by Artist Two/})).toHaveTextContent('✓'))
+    await waitFor(()=>expect(JSON.parse(localStorage.getItem('spaceday-workshop:v1') || '{}').activeSeedId).toBe('id2'))
+    unmount();render(<App/>);await screen.findByRole('button',{name:/Remove Song Two by Artist Two/})
+    expect(screen.getByLabelText('Active starting song')).toHaveValue('id2')
+  })
+  it('keeps per-result notes while navigating and retains reactions after deterministic regeneration',async()=>{
+    render(<App/>);await chooseTwo();step('Musical features');await generate()
+    fireEvent.change(screen.getByLabelText(/Listening note for Result 1/),{target:{value:'Same pulse'}})
+    go('Next recommendation');expect(screen.getByLabelText(/Listening note for Result 2/)).toHaveValue('')
+    go('Previous recommendation');expect(screen.getByLabelText(/Listening note for Result 1/)).toHaveValue('Same pulse')
+    go('Refresh recommendations')
+    await waitFor(()=>expect(api.postRecommendations).toHaveBeenCalledTimes(2))
+    expect(screen.getByLabelText(/Listening note for Result 1/)).toHaveValue('Same pulse')
+  })
+  it('retains description matching as an optional CLAP experiment and reports unavailable text search',async()=>{
+    render(<App/>);await chooseTwo();step('CLAP sound')
+    fireEvent.click(screen.getByText('Optional: explore CLAP with words'))
+    expect((await screen.findAllByRole('button',{name:'fits'}))[0]).toBeInTheDocument()
+    fireEvent.click(screen.getAllByRole('button',{name:'fits'})[0])
+    expect(screen.getAllByRole('button',{name:'fits'})[0]).toHaveAttribute('aria-pressed','true')
+    fireEvent.change(screen.getByLabelText('Your description'),{target:{value:'test'}})
+    fireEvent.click(screen.getByRole('button',{name:'Search with your description',exact:true}))
     expect(await screen.findByText(/Live search isn’t available/)).toBeInTheDocument()
-    // Notes export
-    fireEvent.click(screen.getByRole('tab', {name:/Notes/}))
-    expect(await screen.findByText(/Your reflections/)).toBeInTheDocument()
-    expect(screen.getByRole('button', {name:/Download JSON/})).toBeEnabled()
-    expect(screen.getByRole('button', {name:/Download Markdown/})).toBeEnabled()
+    step('Notes & export');expect(screen.getByRole('button',{name:'Download Markdown'})).toBeEnabled()
   })
-
-  it('Empty selection, loading, API failure, unsupported collaborative seeds', async ()=>{
-    render(<App />)
-    // Initially on Choose, Add buttons should be accessible
-    const addBtns = await screen.findAllByRole('button', {name:/Add /})
-    expect(addBtns[0]).toHaveAccessibleName(/Add Song One/)
-    fireEvent.click(screen.getByRole('tab', {name:/Listen/}))
-    // Empty My List -> Generate should be disabled
-    const genBtn = screen.getByRole('button', {name:/Generate 5 recommendations/})
-    expect(genBtn).toBeDisabled()
-    expect(screen.getByLabelText(/Recommendation method/)).toBeInTheDocument()
-    // Keyboard accessible: stage tabs are tablist with role=tab
-    const chooseTab = screen.getByRole('tab', {name:/Choose/})
-    expect(chooseTab).toBeInTheDocument()
-    chooseTab.focus()
-    expect(document.activeElement).toBe(chooseTab)
+  it('does not label older multi-seed runs as a controlled current comparison',async()=>{
+    const initial=loadState();initial.myList=['id1','id2'];initial.activeSeedId='id1';initial.activeStage='compare'
+    initial.runs=[{run_id:'old',method:'clap-v1',seeds:['id1','id2'],candidate_filter:{collaborative_only:true},preferences:null,results:[{recording_mbid:'oldresult',title:'Old recommendation'}],created_at:new Date().toISOString(),reactions:{},notes:'',dataset_id:'test123'}]
+    saveState(initial);render(<App/>);await screen.findByText(/same candidate pool/)
+    expect(screen.queryByText('Old recommendation')).not.toBeInTheDocument()
+    step('Notes & export');expect(screen.getByText(/Saved experiments · 1/)).toBeInTheDocument()
   })
-
-  it('Phone and laptop layouts without horizontal overflow', async ()=>{
-    render(<App />)
-    const appShell = document.querySelector('.app-shell') as HTMLElement
-    expect(appShell).toBeInTheDocument()
-    const html = document.documentElement
-    expect(html.scrollWidth <= html.clientWidth + 5 || html.clientWidth===0).toBeTruthy()
-    const stageNav = document.querySelector('.stage-nav') as HTMLElement
-    expect(stageNav).toBeInTheDocument()
-    expect((await screen.findAllByText(/Song One With Very Long Title/)).length).toBeGreaterThanOrEqual(1)
+  it('shows recommendation failures and allows retry',async()=>{
+    vi.mocked(api.postRecommendations).mockRejectedValueOnce(new Error('Server unavailable'))
+    render(<App/>);await chooseTwo();step('Musical features')
+    go('Find 5 recommendations');expect(await screen.findByRole('alert')).toHaveTextContent('Server unavailable')
+    await generate()
   })
 })

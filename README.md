@@ -19,6 +19,22 @@ One hosted browser app for two independent 45-minute workshops (University of Os
 - [Workshop runbook](docs/WORKSHOP_RUNBOOK.md)
 - Data: `data/workshop/songs.json` (authoritative), `songs.csv`, `features.json`, `clap_embeddings.f32` (3,072,000 bytes, `laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32`), `manifest.json`
 
+## Guided listening flow
+
+Choose up to five familiar songs, then carry one active starting song through
+**Musical features → Listener patterns → CLAP sound → Compare**. Rhythm and texture
+are two explicit feature formulas within the first step. When the listener model
+is available, all methods use its supported candidate pool for a controlled
+comparison; unsupported starting songs are flagged without substitution.
+
+Each method invites prediction, external listening, separate enjoyment and
+similarity reactions, and an optional explanation reveal. The optional taste
+survey personalizes reflection prompts without changing rankings. Working sets,
+experiments, survey answers and notes stay on the device and can be exported.
+Phone layouts stack the activity; laptop layouts place the method and listening
+panels alongside each other. Text/description exploration is an optional CLAP
+extension; live text retrieval still depends on server capability.
+
 ## Install, Configure, Run, Test
 
 ### Prerequisites

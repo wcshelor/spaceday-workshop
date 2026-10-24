@@ -1,715 +1,264 @@
-import { useEffect, useState, useRef, useMemo } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as api from '../api/client'
-import { loadState, debouncedSave, exportJSON, exportMarkdown, AppState, RunSnapshot, WorkshopStage } from '../state/storage'
+import { loadState, debouncedSave, saveState, exportJSON, exportMarkdown, RunSnapshot, WorkshopStage } from '../state/storage'
+import { STAGES, METHODS, Method, methodForStage, matchesSetup } from './workshop'
+import LanguageLab from './LanguageLab'
 
-function describeCandidatePool(filter: any) {
-  if (!filter) return 'full collection'
-  const parts = [filter?.collaborative_only ? 'shared listener-model catalogue' : null, filter?.style_family, filter?.year_min && `from ${filter.year_min}`, filter?.year_max && `through ${filter.year_max}`].filter(Boolean)
-  return parts.length ? parts.join(' · ') : 'full collection'
+function ListenLinks({song}: {song:any}) {
+  const query = encodeURIComponent(`${song.artist} ${song.title}`)
+  return <div className="listen-links">
+    <a className="primary-link" href={song.youtube_search_url || `https://www.youtube.com/results?search_query=${query}`} target="_blank" rel="noopener noreferrer">Listen on YouTube ↗</a>
+    <a href={song.spotify_search_url || `https://open.spotify.com/search/${query}`} target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+  </div>
 }
 
-const STAGES: {id: WorkshopStage, label: string, sub: string}[] = [
-  {id:'choose', label:'Choose', sub:'Pick one you know'},
-  {id:'listen', label:'Listen', sub:'Generate & listen'},
-  {id:'reflect', label:'Reflect', sub:'Reveal & react'},
-  {id:'compare', label:'Compare', sub:'Methods & runs'},
-  {id:'describe', label:'Describe', sub:'Words → music'},
-  {id:'notes', label:'Notes', sub:'Export & save'},
-]
+function Evidence({run, result, seedName}: {run:RunSnapshot; result:any; seedName:string}) {
+  const [evidence, setEvidence] = useState<any>(null)
+  const [error, setError] = useState(false)
+  const [attempt, setAttempt] = useState(0)
+  useEffect(()=> {
+    let cancelled = false
+    setEvidence(null); setError(false)
+    api.postExplanations({seed_ids:run.seeds, method:run.method, result_id:result.recording_mbid, candidate_filter:run.candidate_filter, preferences:run.preferences})
+      .then(data=>{if(!cancelled) setEvidence(data)})
+      .catch(()=>{if(!cancelled) setError(true)})
+    return ()=>{cancelled=true}
+  }, [run.run_id, result.recording_mbid, attempt])
+  const method = METHODS[run.method as Method]
+  const seedValues = evidence?.detail?.seed_values?.[run.seeds[0]]
+  const candidateValues = evidence?.detail?.candidate_values
+  return <div className="evidence" aria-live="polite">
+    <h3>Why this recommendation?</h3>
+    <p>{method?.explain}</p>
+    {error ? <p role="alert">The scoring evidence could not load. <button className="btn-soft" onClick={()=>setAttempt(a=>a+1)}>Retry explanation</button></p> : !evidence ? <p className="muted">Loading scoring evidence…</p> : <>
+      {seedValues && candidateValues && <div className="table-scroll"><table><caption>Measured rhythm of {seedName} and this recommendation</caption><thead><tr><th>Measurement</th><th>Starting song</th><th>Recommendation</th></tr></thead><tbody>
+        {Object.entries(candidateValues).map(([key,value])=><tr key={key}><th>{({'rhythm.bpm':'Tempo (BPM)', 'rhythm.onset_rate':'Onset rate', 'rhythm.danceability':'Danceability'} as Record<string,string>)[key] || key}</th><td>{Number(seedValues[key]).toFixed(2)}</td><td>{Number(value).toFixed(2)}</td></tr>)}
+      </tbody></table></div>}
+      {run.method === 'collaborative-v1' && typeof evidence.detail?.result_positive_listeners === 'number' && <p>This recording has {evidence.detail.result_positive_listeners} positive listener signals in the training data. This count alone does not explain the recommendation.</p>}
+      <p className="help">Reference percentile: {result.match_percentile}%. This describes computed similarity relative to reference comparisons, not your chance of liking the song.</p>
+      <details><summary>Inspect scoring details</summary><pre>{JSON.stringify(evidence,null,2)}</pre></details>
+    </>}
+    <p className="muted">What might it miss? {method?.miss}</p>
+    <p><strong>Does that explanation fit what you heard?</strong> A mismatch is useful too.</p>
+  </div>
+}
 
 export default function App() {
+  const [state, setState] = useState(loadState)
   const [bootstrap, setBootstrap] = useState<any>(null)
-  const [health, setHealth] = useState('checking')
-  const [appState, setAppState] = useState<AppState>(()=>loadState())
+  const [bootstrapError, setBootstrapError] = useState(false)
   const [songs, setSongs] = useState<any[]>([])
-  const [total, setTotal] = useState(0)
-  const [loadingSongs, setLoadingSongs] = useState(false)
-  const [songError, setSongError] = useState<string| null>(null)
-  const [selectedMethod, setSelectedMethod] = useState<'rhythm-v1'|'texture-v1'|'clap-v1'|'collaborative-v1'>('clap-v1')
-  const [sharedPool, setSharedPool] = useState(false)
-  const [candidateStyle, setCandidateStyle] = useState('')
-  const [candidateYearMin, setCandidateYearMin] = useState('')
-  const [candidateYearMax, setCandidateYearMax] = useState('')
-  const [recError, setRecError] = useState<string|null>(null)
-  const [recLoading, setRecLoading] = useState(false)
-  const [explanations, setExplanations] = useState<Record<string, any>>({})
-  const [compareIds, setCompareIds] = useState<string[]>([])
-  const [langSong, setLangSong] = useState<string | null>(null)
-  const [descCat, setDescCat] = useState<string>('')
-  const [descMatches, setDescMatches] = useState<any[]>([])
-  const [descLoading, setDescLoading] = useState(false)
-  const [textQuery, setTextQuery] = useState('')
-  const [textResults, setTextResults] = useState<any[]>([])
-  const [textError, setTextError] = useState<string|null>(null)
-  const [examples, setExamples] = useState<any[]>([])
-  const requestIdRef = useRef(0)
   const [songCache, setSongCache] = useState<Record<string,any>>({})
+  const [total, setTotal] = useState(0)
+  const [offset, setOffset] = useState(0)
+  const [loadingSongs, setLoadingSongs] = useState(false)
+  const [songError, setSongError] = useState('')
+  const [supportedOnly, setSupportedOnly] = useState(true)
+  const [recError, setRecError] = useState('')
+  const [generating, setGenerating] = useState(false)
+  const [resultIndex, setResultIndex] = useState(0)
+  const [predictionDraft, setPredictionDraft] = useState<Record<string,string>>({})
+  const songRequest = useRef(0)
+  const sessionGeneration = useRef(0)
+  const navRef = useRef<HTMLElement>(null)
+  const stage = state.activeStage
+  const seed = state.myList.includes(state.activeSeedId || '') ? state.activeSeedId : state.myList[0] || null
+  const method = methodForStage(stage, state.featureMethod)
+  const sharedPool = !!bootstrap?.supported_methods?.includes('collaborative-v1') && !!bootstrap?.collaborative?.supported_ids?.length
+  const seedSupported = !!seed && !!bootstrap?.collaborative?.supported_ids?.includes(seed)
+  const selectedSong = seed ? songCache[seed] : null
+  const setupRuns = state.runs.filter(r=>matchesSetup(r, seed, sharedPool, bootstrap?.dataset_id || null))
+  const run = method ? [...setupRuns].reverse().find(r=>r.method === method) : undefined
+  const currentIndex = Math.min(resultIndex, Math.max(0,(run?.results.length || 1)-1))
+  const result = run?.results[currentIndex]
+  const reaction = result && run ? run.reactions[result.recording_mbid] || {revealed:false} : {revealed:false, like:'', connection:'', note:''}
+  const methodInfo = method ? METHODS[method] : null
+  const methodUnavailable = !!method && !!bootstrap && !bootstrap.supported_methods?.includes(method)
+  const listenerBlocked = method === 'collaborative-v1' && !seedSupported
+  const predictionKey = `${seed}:${method}`
 
-  const activeStage: WorkshopStage = appState.activeStage || 'choose'
-  const setStage = (s: WorkshopStage) => setAppState(prev => ({...prev, activeStage: s}))
-
-  // bootstrap and health
+  const fetchBootstrap = ()=>{
+    setBootstrapError(false)
+    api.getBootstrap().then(b=>{setBootstrap(b); setState(s=>({...s,dataset_id:b.dataset_id}))}).catch(()=>setBootstrapError(true))
+  }
+  useEffect(fetchBootstrap, [])
   useEffect(()=>{
-    fetch('/health/live').then(r=>r.json()).then(j=>setHealth(j.status)).catch(()=>setHealth('offline'))
-    api.getBootstrap().then(b=>{
-      setBootstrap(b)
-      setAppState(s=>({...s, dataset_id: b.dataset_id}))
-      if (b.supported_methods?.includes('collaborative-v1')) {
-        // keep selectedMethod as is, no auto switch
-      }
-    }).catch(()=>{})
-    api.getExamples().then(e=> setExamples(e.items || [])).catch(()=>{})
-  }, [])
-
-  // persist
-  useEffect(()=>{ debouncedSave(appState) }, [appState])
-
-  // song cache
-  useEffect(()=>{ setSongCache(prev=>({...prev, ...Object.fromEntries(songs.map(s=>[s.recording_mbid,s]))})) }, [songs])
+    debouncedSave(state)
+    const flush = ()=>saveState(state)
+    window.addEventListener('pagehide',flush)
+    return ()=>window.removeEventListener('pagehide',flush)
+  },[state])
   useEffect(()=>{
-    if (!appState.myList.length) return
-    let cancelled=false
-    api.searchSongs({ids: appState.myList.join(','), limit: 5} as any).then(res=>{
-      if (!cancelled) setSongCache(prev=>({...prev, ...Object.fromEntries(res.items.map((s:any)=>[s.recording_mbid,s]))}))
+    const nav = navRef.current
+    const button = nav?.querySelector<HTMLElement>('[aria-current="step"]')
+    if(nav && button) nav.scrollTo?.({left:button.offsetLeft - nav.offsetLeft,behavior:'auto'})
+    setRecError(''); setResultIndex(0)
+  },[stage, seed, method])
+  useEffect(()=>{
+    if(!state.myList.length) return
+    let cancelled = false
+    api.searchSongs({ids:state.myList.join(','),limit:5}).then(res=>{
+      if(!cancelled) setSongCache(c=>({...Object.fromEntries(res.items.map((s:any)=>[s.recording_mbid,s])),...c}))
     }).catch(()=>{})
     return ()=>{cancelled=true}
-  }, [appState.myList])
+  },[state.myList])
 
-  const myListResolved = useMemo(()=> appState.myList.map(id=> songCache[id] || {recording_mbid:id, title: id.slice(0,8), artist: 'loading', year: null}), [appState.myList, songCache])
-
-  // fetch songs
-  const fetchSongs = async (offset=0)=>{
-    setLoadingSongs(true); setSongError(null)
-    const reqId = ++requestIdRef.current
+  const fetchSongs = async (nextOffset=0)=>{
+    const request = ++songRequest.current
+    setLoadingSongs(true); setSongError('')
+    const {q,style,year_min,year_max} = state.browseFilters
+    if(year_min && year_max && Number(year_min)>Number(year_max)) {
+      setSongError('The starting year must be before the ending year.'); setLoadingSongs(false); return
+    }
     try {
-      const params: any = {offset, limit: 30}
-      if (selectedMethod === 'collaborative-v1') params.collaborative_only = 'true'
-      if (appState.browseFilters.q) params.q = appState.browseFilters.q
-      if (appState.browseFilters.style) params.style = appState.browseFilters.style
-      if (appState.browseFilters.year_min) params.year_min = appState.browseFilters.year_min
-      if (appState.browseFilters.year_max) params.year_max = appState.browseFilters.year_max
-      if (appState.browseFilters.year_min && appState.browseFilters.year_max && Number(appState.browseFilters.year_min) > Number(appState.browseFilters.year_max)) {
-        setSongError('Invalid year range — check min and max')
-        setLoadingSongs(false); return
-      }
-      const res = await api.searchSongs(params)
-      if (reqId !== requestIdRef.current) return
-      setSongs(res.items); setTotal(res.total)
-    } catch(e:any){ setSongError(e.message) } finally { setLoadingSongs(false) }
+      const response = await api.searchSongs({offset:nextOffset,limit:30,...(q?{q}:{}),...(style?{style}:{}),...(year_min?{year_min}:{}),...(year_max?{year_max}:{}),...(supportedOnly && sharedPool?{collaborative_only:'true'}:{})})
+      if(request!==songRequest.current) return
+      setSongs(response.items); setTotal(response.total); setOffset(nextOffset)
+      setSongCache(c=>({...c,...Object.fromEntries(response.items.map((s:any)=>[s.recording_mbid,s]))}))
+    } catch { if(request===songRequest.current) setSongError('The song catalogue could not load. Try again.') }
+    finally { if(request===songRequest.current) setLoadingSongs(false) }
   }
-  useEffect(()=>{ fetchSongs(0) }, [appState.browseFilters, selectedMethod])
-
-  const addToList = (mbid:string)=>{
-    if (appState.myList.includes(mbid)) return
-    if (appState.myList.length>=5) { setRecError('My List holds up to 5 songs — remove one first'); return}
-    setAppState(s=>({...s, myList: [...s.myList, mbid]}))
-    setRecError(null)
+  useEffect(()=>{if(!bootstrap) return; fetchSongs(); return ()=>{songRequest.current++}},[state.browseFilters, supportedOnly, sharedPool, bootstrap])
+  const setStage = (activeStage:WorkshopStage)=>setState(s=>({...s,activeStage}))
+  const toggleSong = (id:string)=>{
+    setState(s=>{
+      const removing=s.myList.includes(id)
+      if(!removing && s.myList.length>=5) return s
+      const myList=removing?s.myList.filter(x=>x!==id):[...s.myList,id]
+      return {...s,myList,activeSeedId:myList.includes(s.activeSeedId || '')?s.activeSeedId:myList[0] || null}
+    })
   }
-  const removeFromList = (mbid:string)=> setAppState(s=>({...s, myList: s.myList.filter(id=>id!==mbid)}))
-
-  const latestRun = useMemo(()=>{
-    if (appState.activeRunId) return appState.runs.find(r=>r.run_id===appState.activeRunId) || appState.runs[appState.runs.length-1] || null
-    return appState.runs[appState.runs.length-1] || null
-  }, [appState.runs, appState.activeRunId])
-  const activeResultIndex = Math.min(appState.activeResultIndex || 0, Math.max(0, (latestRun?.results?.length || 1)-1))
-  const setActiveResult = (idx:number) => setAppState(s=>({...s, activeResultIndex: idx}))
-  const setActiveRun = (id:string) => setAppState(s=>({...s, activeRunId: id, activeResultIndex: 0}))
-
   const generate = async ()=>{
-    if (appState.myList.length===0) { setRecError('Choose at least one song first — start with one you know'); return}
-    if (selectedMethod === 'collaborative-v1' && bootstrap?.collaborative?.supported_ids && appState.myList.some(id=>!bootstrap.collaborative.supported_ids.includes(id))) {
-      setRecError('Remove songs marked “No listener model” — collaborative needs supported songs only.'); return
-    }
-    setRecLoading(true); setRecError(null)
-    const pref:any={}; let hasPref=false
-    if (appState.preferencesDraft.instrumental==='instrumental') { pref.instrumental=1; hasPref=true}
-    else if (appState.preferencesDraft.instrumental==='vocal') { pref.instrumental=-1; hasPref=true}
-    if (appState.preferencesDraft.acoustic_electronic==='acoustic') { pref.acoustic_electronic=-1; hasPref=true}
-    else if (appState.preferencesDraft.acoustic_electronic==='electronic') { pref.acoustic_electronic=1; hasPref=true}
-    const body:any={seed_ids: appState.myList, method: selectedMethod, limit:5}
-    if (candidateStyle || candidateYearMin || candidateYearMax || sharedPool || selectedMethod==='collaborative-v1') {
-      body.candidate_filter={}
-      if(candidateStyle) body.candidate_filter.style_family=candidateStyle
-      if(candidateYearMin) body.candidate_filter.year_min=Number(candidateYearMin)
-      if(candidateYearMax) body.candidate_filter.year_max=Number(candidateYearMax)
-      if(sharedPool || selectedMethod==='collaborative-v1') body.candidate_filter.collaborative_only=true
-      if(candidateYearMin && candidateYearMax && Number(candidateYearMin)>Number(candidateYearMax)){ setRecError('Invalid candidate year range'); setRecLoading(false); return}
-      if(Object.keys(body.candidate_filter).length===0) delete body.candidate_filter
-    }
-    if(hasPref) body.preferences=pref
-    try{
-      const res = await api.postRecommendations(body)
-      const snapshot: RunSnapshot = {
-        run_id: res.run_id, method: res.method, seeds: res.seed_ids_canonical, candidate_filter: res.candidate_filter, preferences: res.preferences_applied,
-        results: res.results, created_at: new Date().toISOString(), reactions: {}, notes: '', dataset_id: res.dataset_id,
-        scoring_version: res.scoring_version, calibration_version: res.calibration_version,
-      }
-      let newRuns = [...appState.runs, snapshot]
-      if(newRuns.length>20){ // alert but not blocking
-        newRuns=newRuns.slice(-20)
-      }
-      setAppState(s=>({...s, runs: newRuns, activeRunId: snapshot.run_id, activeResultIndex: 0, activeStage: 'listen'}))
-      // ensure listen stage visible
-    }catch(e:any){ setRecError(e.message)} finally{ setRecLoading(false)}
+    if(!seed || !method || !bootstrap || listenerBlocked || methodUnavailable || generating) return
+    const generation = sessionGeneration.current
+    setGenerating(true); setRecError('')
+    try {
+      const response = await api.postRecommendations({seed_ids:[seed],method,limit:5,...(sharedPool?{candidate_filter:{collaborative_only:true}}:{})})
+      if(generation!==sessionGeneration.current) return
+      const snapshot:RunSnapshot={run_id:response.run_id,method:response.method,seeds:response.seed_ids_canonical,candidate_filter:response.candidate_filter,preferences:response.preferences_applied,results:response.results,created_at:new Date().toISOString(),reactions:{},notes:'',dataset_id:response.dataset_id,scoring_version:response.scoring_version,calibration_version:response.calibration_version,prediction:predictionDraft[predictionKey] || ''}
+      setState(s=>{
+        // Deterministic run IDs may repeat: keep existing reflections on regeneration.
+        const previous=s.runs.find(r=>r.run_id===snapshot.run_id)
+        return {...s,runs:[...s.runs.filter(r=>r.run_id!==snapshot.run_id),previous || snapshot].slice(-20)}
+      })
+      setResultIndex(0)
+    } catch(e:any) {if(generation===sessionGeneration.current) setRecError(e.message || 'Recommendations could not load. Please try again.')}
+    finally {if(generation===sessionGeneration.current) setGenerating(false)}
   }
-
-  const reveal = async (runId:string, resultId:string)=>{
-    const run = appState.runs.find(r=>r.run_id===runId); if(!run) return
-    setAppState(s=>({...s, runs: s.runs.map(r=> r.run_id===runId ? {...r, reactions: {...r.reactions, [resultId]: {...(r.reactions[resultId]||{}), revealed:true}}} : r)}))
-    try{ const exp = await api.postExplanations({seed_ids: run.seeds, method: run.method, result_id: resultId, candidate_filter: run.candidate_filter, preferences: run.preferences}); setExplanations(e=>({...e, [resultId]: exp})) }catch{}
+  const updateReaction = (field:string,value:string|boolean)=>{
+    if(!run || !result) return
+    setState(s=>({...s,runs:s.runs.map(r=>r.run_id===run.run_id?{...r,reactions:{...r.reactions,[result.recording_mbid]:{...(r.reactions[result.recording_mbid] || {revealed:false}),[field]:value}}}:r)}))
   }
-  const updateReaction = (runId:string, mbid:string, field:string, value:string)=>{
-    setAppState(s=>({...s, runs: s.runs.map(r=> r.run_id===runId ? {...r, reactions: {...r.reactions, [mbid]: {...(r.reactions[mbid]||{revealed:false}), [field]: value}}} : r)}))
+  const download = (format:'json'|'md')=>{
+    const blob=new Blob([format==='json'?exportJSON(state):exportMarkdown(state)],{type:format==='json'?'application/json':'text/markdown'})
+    const url=URL.createObjectURL(blob); const link=document.createElement('a')
+    link.href=url; link.download=`workshop-export.${format}`; link.click(); URL.revokeObjectURL(url)
   }
-
-  const fetchDescriptions = async ()=>{
-    if(!langSong) return
-    setDescLoading(true)
-    try{ const res = await api.postDescriptions({recording_mbid: langSong, categories: descCat? [descCat] : undefined, limit:8}); setDescMatches(res.matches || []) }catch{ setDescMatches([])} finally{ setDescLoading(false)}
+  const reset = ()=>{
+    if(!confirm('Start a new session? Export first if you want to keep your songs and reflections.')) return
+    sessionGeneration.current++; setGenerating(false); setRecError(''); setPredictionDraft({})
+    localStorage.removeItem('spaceday-workshop:v1')
+    const fresh=loadState(); saveState(fresh); debouncedSave(fresh); setState(fresh)
   }
-  useEffect(()=>{ if(langSong) fetchDescriptions() }, [langSong, descCat])
+  const stageIndex=STAGES.findIndex(s=>s.id===stage)
+  const focus=state.tasteSurvey.focus
 
-  const doTextSearch = async (q?:string)=>{
-    const query = q ?? textQuery
-    if(!query.trim()) { setTextError('Enter a description first'); return}
-    if(query.trim().length>500){ setTextError('Query too long — keep under 500 characters'); return}
-    setTextError(null)
-    try{
-      const res = await api.postTextSearch({query: query.trim(), limit:5})
-      setTextResults(res.results || [])
-      setAppState(s=>({...s, textHistory: [...s.textHistory, {query, results: res.results, at: new Date().toISOString()}].slice(-20)}))
-      setAppState(s=>({...s, activeStage: 'describe'}))
-    }catch(e:any){
-      if(e.message.includes('unavailable') || e.message.includes('disabled') || e.message.includes('503')){
-        setTextError('Live search isn’t available — showing prepared examples below')
-      } else setTextError(e.message)
-    }
-  }
-
-  const handleNewSession = ()=>{
-    if(confirm('Start a new session? This clears local reflections. Consider exporting first.')){
-      localStorage.removeItem('spaceday-workshop:v1')
-      const fresh = {...loadState(), dataset_id: bootstrap?.dataset_id||null, myList:[], runs:[], textHistory:[], descriptionJudgments:{}, notes:'', activeStage: 'choose' as WorkshopStage, activeRunId: null, activeResultIndex: 0}
-      // use direct save to avoid debounce race
-      localStorage.setItem('spaceday-workshop:v1', JSON.stringify(fresh))
-      setAppState(fresh)
-    }
-  }
-
-  const compareRuns = compareIds.map(id=> appState.runs.find(r=>r.run_id===id)).filter(Boolean) as RunSnapshot[]
-
-  // keyboard handler for carousel
-  const onCarouselKey = (e: React.KeyboardEvent)=>{
-    if(!latestRun) return
-    if(e.key==='ArrowLeft') { e.preventDefault(); setActiveResult(Math.max(0, activeResultIndex-1)) }
-    if(e.key==='ArrowRight') { e.preventDefault(); setActiveResult(Math.min(latestRun.results.length-1, activeResultIndex+1)) }
-  }
-
-  return (
-    <div className="app-shell">
-      <header className="app-header">
-        <div className="brand">
-          <h1>Music Recommendation Workshop</h1>
-          <p>Choose a familiar song → listen → reflect. Your work stays on this device.</p>
-        </div>
-        <div className="header-actions">
-          <span className="health-badge" aria-live="polite">health: {health} · {bootstrap?.dataset_id ? bootstrap.dataset_id.slice(0,6) : '…'}</span>
-          <button className="btn-ghost" onClick={handleNewSession}>Start new session</button>
-          <button className="btn-ghost" onClick={()=>{const j=exportJSON(appState); const blob=new Blob([j],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='workshop-export.json'; a.click(); URL.revokeObjectURL(url)}}>Export JSON</button>
-          <button className="btn-ghost" onClick={()=>{const md=exportMarkdown(appState); const blob=new Blob([md],{type:'text/markdown'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='workshop-export.md'; a.click(); URL.revokeObjectURL(url)}}>Export Markdown</button>
-        </div>
-      </header>
-
-      <nav className="stage-nav" aria-label="Workshop stages">
-        <div className="stage-list" role="tablist">
-          {STAGES.map(s=>(
-            <button key={s.id} role="tab" aria-selected={activeStage===s.id} aria-current={activeStage===s.id ? 'step' : undefined} className="stage-btn" onClick={()=>setStage(s.id)}>
-              <span className="stage-num" aria-hidden>{STAGES.indexOf(s)+1}</span>
-              <span className="stage-label">{s.label}</span>
-              <span className="stage-sub">{s.sub}</span>
-            </button>
-          ))}
-        </div>
-      </nav>
-
-      {/* CHOOSE */}
-      {activeStage==='choose' && (
-        <div className="main-grid" style={{marginTop:12}}>
-          <section className="panel" aria-labelledby="choose-heading">
-            <div className="eyebrow">Step 1 · Choose</div>
-            <h2 id="choose-heading">Search for a familiar song</h2>
-            <p className="muted">Start with one you know. You can add up to 5. Filters are secondary — they only change browsing.</p>
-            <div className="search-row" style={{marginTop:8}}>
-              <input className="input" aria-label="Search title or artist" placeholder="Search title or artist (e.g., ABBA)" value={appState.browseFilters.q} onChange={e=> setAppState(s=>({...s, browseFilters:{...s.browseFilters, q:e.target.value}}))} />
-              <button className="btn-soft" style={{minWidth:84}} onClick={()=>fetchSongs(0)}>Search</button>
-            </div>
-            <div className="filters" style={{marginTop:10}}>
-              <label className="field"><span className="muted" style={{fontSize:12}}>Style (browsing only)</span>
-                <select className="select" aria-label="Filter by style" value={appState.browseFilters.style} onChange={e=> setAppState(s=>({...s, browseFilters:{...s.browseFilters, style:e.target.value}}))}>
-                  <option value="">All styles</option>
-                  {bootstrap?.filter_vocab?.style_families?.map((s:string)=> <option key={s} value={s}>{s}</option>)}
-                </select>
-              </label>
-              <label className="field"><span className="muted" style={{fontSize:12}}>Year min</span><input className="input" aria-label="Year min" placeholder="1960" type="number" inputMode="numeric" value={appState.browseFilters.year_min} onChange={e=> setAppState(s=>({...s, browseFilters:{...s.browseFilters, year_min:e.target.value}}))} /></label>
-              <label className="field"><span className="muted" style={{fontSize:12}}>Year max</span><input className="input" aria-label="Year max" placeholder="2022" type="number" inputMode="numeric" value={appState.browseFilters.year_max} onChange={e=> setAppState(s=>({...s, browseFilters:{...s.browseFilters, year_max:e.target.value}}))} /></label>
-              <button className="btn-ghost" onClick={()=>setAppState(s=>({...s, browseFilters:{q:'',style:'',year_min:'',year_max:''}}))} style={{alignSelf:'end'}}>Clear</button>
-            </div>
-            {selectedMethod==='collaborative-v1' && <p role="status" className="help">Showing the {bootstrap?.collaborative?.supported_count || 0} songs with enough listener feedback. This model learns shared tastes, not audio.</p>}
-            {songError && <p role="alert" style={{color:'#ff6b6b', fontSize:13, margin:'8px 0 0'}}>{songError}</p>}
-            <div className="catalogue-list" style={{marginTop:12, maxHeight: 380, overflowY:'auto'}}>
-              {loadingSongs && <p style={{padding:12}} className="muted">Loading…</p>}
-              {!loadingSongs && songs.map(s=>(
-                <div key={s.recording_mbid} className="catalogue-item">
-                  <div className="meta">
-                    <div className="title no-overflow">{s.title} <span className="artist">— {s.artist}</span></div>
-                    <div className="sub">{s.year || '—'} · {s.primary_style_family || '—'} {s.is_editorial_anchor ? '· Familiar starting point' : ''}</div>
-                  </div>
-                  {(() => { const isAdded = appState.myList.includes(s.recording_mbid); return (
-                    <button aria-label={isAdded ? `${s.title} by ${s.artist} is in My List` : `Add ${s.title} by ${s.artist} to My List`} disabled={isAdded} onClick={()=>addToList(s.recording_mbid)} className={`add-btn${isAdded ? ' add-btn--added' : ''}`}><span aria-hidden="true">{isAdded ? '✓' : '+'}</span></button>
-                  )})()}
-                </div>
-              ))}
-              {!loadingSongs && songs.length===0 && <p style={{padding:12}} className="muted">No matches — try a different search or clear filters.</p>}
-            </div>
-            <p className="muted" style={{fontSize:12, marginTop:6}}>Showing {songs.length} of {total}</p>
-          </section>
-
-          <div className="stack">
-            <section className="panel" aria-labelledby="mylist-heading">
-              <div className="eyebrow">Your selection</div>
-              <h2 id="mylist-heading">My List · {appState.myList.length}/5</h2>
-              <p className="muted" style={{fontSize:12}}>Your picks stay even when filters change. Remove is easy.</p>
-              {myListResolved.length===0 ? <p className="muted">No songs yet — add one above.</p> : (
-                <div className="chip-list" style={{marginTop:8}}>
-                  {myListResolved.map(r=>(
-                    <span key={r.recording_mbid} className="chip">
-                      <span>{r.title} — {r.artist}{selectedMethod==='collaborative-v1' && bootstrap?.collaborative?.supported_ids && !bootstrap.collaborative.supported_ids.includes(r.recording_mbid) && <em style={{marginLeft:6, color:'#ffb86b', fontStyle:'normal', fontSize:11}}>No listener model</em>}</span>
-                      <button aria-label={`Remove ${r.title}`} onClick={()=>removeFromList(r.recording_mbid)}>×</button>
-                    </span>
-                  ))}
-                </div>
-              )}
-              <div style={{display:'flex', gap:8, marginTop:12}}>
-                <button className="btn-soft" onClick={()=>setStage('listen')} disabled={appState.myList.length===0} style={{flex:1}}>Continue → Listen</button>
-              </div>
-            </section>
-
-            <section className="panel">
-              <h3>How this works</h3>
-              <p className="muted" style={{fontSize:13}}>You’ll pick a method, generate 5, then focus on one at a time. Keep genre/year and evidence hidden until you’ve listened.</p>
-              <p className="help">Match score = how strong the computed similarity is vs reference comparisons — not the chance you’ll like it.</p>
-            </section>
+  return <div className="app-shell">
+    <header className="app-header">
+      <div className="brand"><div className="eyebrow">SpaceDay · A listening experiment</div><h1>Same song. Different ways to discover.</h1><p>What does each system notice—and what do you notice with your ears?</p></div>
+      <button className="btn-ghost" onClick={reset}>Start new session</button>
+    </header>
+    {bootstrapError && <p role="alert" className="notice">The workshop could not connect. <button className="btn-soft" onClick={fetchBootstrap}>Retry connection</button></p>}
+    <nav className="stage-nav" aria-label="Workshop steps" ref={navRef}><div className="stage-list">
+      {STAGES.map((s,i)=><button key={s.id} className="stage-btn" aria-label={s.label} aria-current={stage===s.id?'step':undefined} onClick={()=>setStage(s.id)}><span className="stage-num" aria-hidden="true">{i+1}</span><span><span className="stage-label">{s.label}</span><span className="stage-sub">{s.sub}</span></span></button>)}
+    </div></nav>
+    {state.myList.length>0 && <section className="working-set panel" aria-label="Your working set">
+      <div><div className="eyebrow">Your working set · {state.myList.length}/5</div><p className="muted">One active starting song, carried across all three systems.</p></div>
+      <label className="field"><span>Active starting song</span><select className="select" value={seed || ''} onChange={e=>setState(s=>({...s,activeSeedId:e.target.value}))}>
+        {state.myList.map(id=><option key={id} value={id}>{songCache[id]?`${songCache[id].title} — ${songCache[id].artist}`:'Loading song…'}</option>)}
+      </select></label>
+      <p className="help">Changing the song starts a new comparison. Previous results and reflections stay saved.</p>
+      {selectedSong && <ListenLinks song={selectedSong}/>}
+      {bootstrap && !seedSupported && <p className="notice">This song has no listener-model coverage. Keep it for musical features and CLAP, or choose another from your set to compare all three.</p>}
+    </section>}
+    <main id="workshop-content">
+      {stage==='choose' && <div className="main-grid">
+        <section className="panel" aria-labelledby="choose-heading">
+          <div className="eyebrow">Step 1 · Your songs</div><h2 id="choose-heading">Choose your starting songs</h2>
+          <p>Pick 3–5 songs you know, or start with just one. You’ll explore one at a time across three recommendation systems.</p>
+          <label className="field"><span>Search title or artist</span><input className="input" placeholder="Try an artist or a familiar song" value={state.browseFilters.q} onChange={e=>setState(s=>({...s,browseFilters:{...s.browseFilters,q:e.target.value}}))}/></label>
+          {sharedPool && <label className="field-row"><input type="checkbox" checked={supportedOnly} onChange={e=>setSupportedOnly(e.target.checked)}/>Show songs that work with all three systems ({bootstrap.collaborative.supported_count})</label>}
+          <details><summary>Browse by style or year</summary><div className="filters">
+            <label className="field"><span>Style</span><select className="select" value={state.browseFilters.style} onChange={e=>setState(s=>({...s,browseFilters:{...s.browseFilters,style:e.target.value}}))}><option value="">All styles</option>{bootstrap?.filter_vocab?.style_families?.map((style:string)=><option key={style} value={style}>{style}</option>)}</select></label>
+            {(['year_min','year_max'] as const).map((key,i)=><label className="field" key={key}><span>{i===0?'From year':'Through year'}</span><input className="input" type="number" inputMode="numeric" value={state.browseFilters[key]} onChange={e=>setState(s=>({...s,browseFilters:{...s.browseFilters,[key]:e.target.value}}))}/></label>)}
+            <button className="btn-ghost" onClick={()=>setState(s=>({...s,browseFilters:{q:'',style:'',year_min:'',year_max:''}}))}>Clear filters</button>
+          </div></details>
+          {songError && <p role="alert">{songError} <button className="btn-soft" onClick={()=>fetchSongs()}>Retry catalogue</button></p>}
+          <div className="catalogue-list" aria-busy={loadingSongs}>
+            {loadingSongs?<p className="muted">Loading songs…</p>:songs.map(song=>{const added=state.myList.includes(song.recording_mbid); return <div key={song.recording_mbid} className="catalogue-item">
+              <div className="meta"><div className="title">{song.title}</div><div className="artist">{song.artist}</div><div className="sub">{song.year} · {song.primary_style_family}{bootstrap?.collaborative?.supported_ids?.includes(song.recording_mbid)?' · Works with all three':sharedPool?' · No listener model':''}</div></div>
+              <button className={`add-btn${added?' add-btn--added':''}`} disabled={!added && state.myList.length>=5} aria-label={`${added?'Remove':'Add'} ${song.title} by ${song.artist} ${added?'from':'to'} working set`} onClick={()=>toggleSong(song.recording_mbid)}><span aria-hidden="true">{added?'✓':'+'}</span></button>
+            </div>})}
+            {!loadingSongs && !songs.length && !songError && <p>No matches. Try another search or clear the filters.</p>}
           </div>
-        </div>
-      )}
-
-      {/* LISTEN */}
-      {activeStage==='listen' && (
-        <div className="main-grid" style={{marginTop:12}}>
-          <section className="panel" aria-labelledby="listen-heading">
-            <div className="eyebrow">Step 2 · Listen</div>
-            <h2 id="listen-heading">Choose a method and generate</h2>
-            <p className="muted">One clear action: Generate. Keep the same seeds when you want a fair comparison.</p>
-
-            <div className="field" style={{marginTop:10}}>
-              <label className="muted" style={{fontSize:12}}>Recommendation method</label>
-              <select className="select" aria-label="Recommendation method" value={selectedMethod} onChange={e=>{setSelectedMethod(e.target.value as any); if(e.target.value==='collaborative-v1') setSharedPool(true)}}>
-                <option value="clap-v1">Audio–language embeddings (CLAP)</option>
-                <option value="rhythm-v1">Rhythm and movement</option>
-                <option value="texture-v1">Sound and texture</option>
-                {bootstrap?.supported_methods?.includes('collaborative-v1') && <option value="collaborative-v1">Listener patterns (small AI model)</option>}
-              </select>
-              <details style={{marginTop:8}}>
-                <summary>What each method listens to</summary>
-                <div className="muted" style={{fontSize:12}}>
-                  <p><b>Rhythm:</b> tempo/onset/danceability — rhythm/activity similarity.</p>
-                  <p><b>Texture:</b> timbre (MFCC) + spectral — production/texture similarity.</p>
-                  <p><b>CLAP:</b> audio embedding proximity.</p>
-                  <p><b>Listener patterns:</b> shared tastes learned from real loves — 32 factors, no audio (182 supported songs).</p>
-                </div>
-              </details>
-            </div>
-
-            <details style={{marginTop:10}}>
-              <summary>Restrict recommendations (optional)</summary>
-              <div>
-                <p className="muted" style={{fontSize:12}}>Default is full collection (minus your seeds). Use this only when you mean to.</p>
-                {bootstrap?.collaborative && <label className="field-row" style={{marginBottom:8}}><input type="checkbox" checked={sharedPool || selectedMethod==='collaborative-v1'} disabled={selectedMethod==='collaborative-v1'} onChange={e=>setSharedPool(e.target.checked)} /> <span style={{fontSize:13}}>Use shared supported pool for fair comparison ({bootstrap.collaborative.supported_count} songs)</span></label>}
-                <div style={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8}}>
-                  <label className="field"><span className="muted" style={{fontSize:12}}>Style</span>
-                    <select className="select" aria-label="Restrict by style" value={candidateStyle} onChange={e=>setCandidateStyle(e.target.value)}>
-                      <option value="">All styles</option>
-                      {bootstrap?.filter_vocab?.style_families?.map((s:string)=> <option key={s} value={s}>{s}</option>)}
-                    </select>
-                  </label>
-                  <label className="field"><span className="muted" style={{fontSize:12}}>From year</span><input className="input" placeholder="1960" type="number" inputMode="numeric" value={candidateYearMin} onChange={e=>setCandidateYearMin(e.target.value)} /></label>
-                  <label className="field"><span className="muted" style={{fontSize:12}}>Through year</span><input className="input" placeholder="2022" type="number" inputMode="numeric" value={candidateYearMax} onChange={e=>setCandidateYearMax(e.target.value)} /></label>
-                </div>
-                {(candidateStyle||candidateYearMin||candidateYearMax) && <p className="help">Active pool: {describeCandidatePool({style_family: candidateStyle, year_min: candidateYearMin, year_max: candidateYearMax})}</p>}
-              </div>
-            </details>
-
-            <details style={{marginTop:10}}>
-              <summary>Taste nudge (optional, skippable)</summary>
-              <div style={{display:'grid', gap:10}}>
-                <label className="field"><span className="muted" style={{fontSize:12}}>Instrumental vs vocal</span>
-                  <select className="select" value={appState.preferencesDraft.instrumental || ''} onChange={e=> setAppState(s=>({...s, preferencesDraft:{...s.preferencesDraft, instrumental:e.target.value||null}}))}>
-                    <option value="">No nudge</option><option value="instrumental">Prefer instrumental</option><option value="vocal">Prefer vocal</option>
-                  </select>
-                </label>
-                <label className="field"><span className="muted" style={{fontSize:12}}>Acoustic vs electronic</span>
-                  <select className="select" value={appState.preferencesDraft.acoustic_electronic || ''} onChange={e=> setAppState(s=>({...s, preferencesDraft:{...s.preferencesDraft, acoustic_electronic:e.target.value||null}}))}>
-                    <option value="">No nudge</option><option value="acoustic">Prefer acoustic</option><option value="electronic">Prefer electronic</option>
-                  </select>
-                </label>
-                <p className="inline-help">Skipped = exact base order. Nudge reranks by a small bounded amount.</p>
-              </div>
-            </details>
-
-            {recError && <p role="alert" style={{color:'#ff6b6b', fontSize:13, marginTop:10}}>{recError}</p>}
-            {bootstrap && <p className="help">Dataset {bootstrap.dataset_id?.slice(0,8)} · {bootstrap.scoring_version} · Calibration {bootstrap.calibration_version}</p>}
+          <div className="pagination"><span className="muted">{total?`${offset+1}–${Math.min(offset+songs.length,total)} of ${total}`:'0 songs'} · Up to 5 in your set</span><button className="btn-soft" disabled={!offset || loadingSongs} onClick={()=>fetchSongs(Math.max(0,offset-30))}>Previous songs</button><button className="btn-soft" disabled={offset+songs.length>=total || loadingSongs} onClick={()=>fetchSongs(offset+30)}>More songs</button></div>
+        </section>
+        <div className="stack">
+          <section className="panel"><h2>Your working set · {state.myList.length}/5</h2><p className="muted">Choose a starting song above. Your other picks are ready for another experiment.</p>
+            {!state.myList.length?<p>No songs yet—add a familiar one from the catalogue.</p>:state.myList.map(id=><div className="set-item" key={id}><span>{songCache[id]?.title || 'Loading song…'}<small>{songCache[id]?.artist}{seed===id?' · Active starting song':''}</small></span><button className="btn-ghost" aria-label={`Remove ${songCache[id]?.title || 'song'} from working set`} onClick={()=>toggleSong(id)}>Remove</button></div>)}
           </section>
-
-          <section className="panel" aria-labelledby="results-heading">
-            <div className="eyebrow">Your results</div>
-            <h2 id="results-heading">{latestRun ? `Results — ${latestRun.method==='collaborative-v1' ? 'Listener patterns' : latestRun.method}` : 'Results will appear here'}</h2>
-            {!latestRun ? (
-              <p className="muted">Add a song on Choose, then Generate. Your seeds stay when you change methods — that keeps comparisons fair.</p>
-            ) : (
-              <div className="carousel" onKeyDown={onCarouselKey} tabIndex={0} aria-label="Recommendations carousel" aria-roledescription="carousel">
-                <div className="indicator">
-                  <span className="muted" style={{fontSize:12}}>{latestRun.seeds.map(id=> (songCache[id]?.title || id.slice(0,6))).join(', ')} · {describeCandidatePool(latestRun.candidate_filter)}</span>
-                  <span className="muted" style={{fontSize:12}}>{activeResultIndex+1} / {latestRun.results.length}</span>
-                </div>
-                <div className="dots" aria-hidden>
-                  {latestRun.results.map((_:any,i:number)=> <span key={i} className="dot" aria-current={i===activeResultIndex ? 'true' : 'false'} />)}
-                </div>
-
-                {(() => {
-                  const r = latestRun.results[activeResultIndex]
-                  if (!r) return null
-                  const react = latestRun.reactions[r.recording_mbid] || {revealed:false}
-                  const isRevealed = !!react.revealed
-                  return (
-                    <div className="result-card">
-                      <div className="topline">
-                        <div className="song-title no-overflow">{r.title} <span style={{fontWeight:400, color:'var(--muted)'}}>— {r.artist} {r.year ? `· ${r.year}` : ''}</span></div>
-                        <span className="score" aria-label={`Match score ${r.match_percentile} percent`}>{r.match_percentile}%</span>
-                      </div>
-                      <p className="help" style={{margin:'8px 0 0'}}>How strong the computed similarity is vs reference comparisons — not the chance you’ll like it.</p>
-                      {!isRevealed ? (
-                        <p className="muted" style={{fontSize:12, marginTop:6}}>You’ll see genre/year and evidence only after you’ve listened.</p>
-                      ) : (
-                        <p className="muted" style={{fontSize:12, marginTop:6}}>Revealed. External links are searches, not verified exact recordings.</p>
-                      )}
-                      <div className="listen-links">
-                        <a className="primary-link" href={r.youtube_search_url} target="_blank" rel="noopener noreferrer">YouTube search ↗</a>
-                        <a href={r.spotify_search_url} target="_blank" rel="noopener noreferrer">Spotify search ↗</a>
-                      </div>
-                      <div className="reveal-bar">
-                        {!isRevealed ? (
-                          <button className="btn-primary" style={{flex:1}} onClick={()=>reveal(latestRun.run_id, r.recording_mbid)}>I’ve listened</button>
-                        ) : (
-                          <span className="muted" style={{fontSize:12, color:'var(--accent-2)'}}>✓ Marked as listened — self-report, not proof</span>
-                        )}
-                      </div>
-                      {!isRevealed && (
-                        <fieldset style={{marginTop:12, border:'1px solid var(--border)', borderRadius:12, padding:12}}>
-                          <legend style={{fontSize:12, padding:'0 6px'}}>Before reveal — optional</legend>
-                          <div style={{display:'grid', gap:10}}>
-                            <label className="field"><span className="muted" style={{fontSize:12}}>Enjoyment</span>
-                              <select className="select" aria-label={`Enjoyment for ${r.title}`} value={react.like||''} onChange={e=>updateReaction(latestRun.run_id, r.recording_mbid,'like',e.target.value)}>
-                                <option value="">—</option><option value="like">Like</option><option value="unsure">Unsure</option><option value="dislike">Dislike</option>
-                              </select>
-                            </label>
-                            <label className="field"><span className="muted" style={{fontSize:12}}>Connection</span>
-                              <select className="select" aria-label={`Connection for ${r.title}`} value={react.connection||''} onChange={e=>updateReaction(latestRun.run_id, r.recording_mbid,'connection',e.target.value)}>
-                                <option value="">—</option><option value="clear">Clear</option><option value="partly">Partly</option><option value="not">Not clear</option>
-                              </select>
-                            </label>
-                          </div>
-                        </fieldset>
-                      )}
-                      {isRevealed && (
-                        <div style={{marginTop:10, display:'grid', gap:10}}>
-                          <label className="field"><span className="muted" style={{fontSize:12}}>Note — what stayed similar?</span>
-                            <input className="input" aria-label={`Note for ${r.title}`} value={react.note||''} onChange={e=>updateReaction(latestRun.run_id, r.recording_mbid,'note',e.target.value)} placeholder="Rhythm, voice, instruments, mood, production…" />
-                          </label>
-                          {explanations[r.recording_mbid] ? (
-                            <details open>
-                              <summary>Evidence (readable, expand technical)</summary>
-                              <div style={{fontSize:13, lineHeight:1.5}}>
-                                {latestRun.method==='collaborative-v1' ? (
-                                  <>
-                                    <p>This model learned shared tastes from real listeners’ loves. Result: {explanations[r.recording_mbid].detail.result_positive_listeners} listeners. No audio was used — an artist or audience may drive the link.</p>
-                                    <details><summary>Technical</summary><pre>{JSON.stringify(explanations[r.recording_mbid].detail,null,2)}</pre></details>
-                                  </>
-                                ) : (
-                                  <>
-                                    <p>Base score {explanations[r.recording_mbid].base_score?.toFixed(3)} · Per-seed similarities shown below. Similarity is arithmetic — not proof it caused enjoyment.</p>
-                                    <pre>{JSON.stringify(explanations[r.recording_mbid],null,2)}</pre>
-                                  </>
-                                )}
-                              </div>
-                            </details>
-                          ) : <p className="muted" style={{fontSize:12}}>Loading evidence…</p>}
-                        </div>
-                      )}
-                    </div>
-                  )
-                })()}
-
-                <div style={{display:'flex', gap:8}}>
-                  <button className="btn-soft" style={{flex:1}} onClick={()=>setActiveResult(Math.max(0, activeResultIndex-1))} disabled={activeResultIndex===0} aria-label="Previous recommendation">‹ Previous</button>
-                  <button className="btn-soft" style={{flex:1}} onClick={()=>setActiveResult(Math.min((latestRun.results.length-1), activeResultIndex+1))} disabled={activeResultIndex===latestRun.results.length-1} aria-label="Next recommendation">Next ›</button>
-                </div>
-                <p className="inline-help">Tip: Use ← → keys. All 5 remain reachable — this view just focuses you on one at a time.</p>
-                <label className="field"><span className="muted" style={{fontSize:12}}>Run notes</span>
-                  <textarea className="textarea" aria-label="Run notes" value={latestRun.notes} onChange={e=> setAppState(s=>({...s, runs: s.runs.map(r=> r.run_id===latestRun.run_id ? {...r, notes:e.target.value}: r)}))} placeholder="What surprised you?" rows={2} />
-                </label>
-                <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>
-                  <button className="btn-ghost" onClick={()=>setStage('reflect')}>Go to Reflect →</button>
-                  <button className="btn-ghost" onClick={()=>setStage('compare')}>Compare runs</button>
-                </div>
-              </div>
-            )}
+          <section className="panel"><div className="eyebrow">Optional · Your listening lens</div><h2>A little about your taste</h2><p className="muted">Skip any question. These answers personalize your reflection prompts; they do not change the recommendation rankings. Saved on this device.</p>
+            <label className="field"><span>Artists or genres you usually enjoy</span><input className="input" maxLength={300} placeholder="Whatever comes to mind" value={state.tasteSurvey.favorites} onChange={e=>setState(s=>({...s,tasteSurvey:{...s.tasteSurvey,favorites:e.target.value}}))}/></label>
+            <label className="field"><span>What draws you into a song?</span><select className="select" value={focus} onChange={e=>setState(s=>({...s,tasteSurvey:{...s.tasteSurvey,focus:e.target.value}}))}><option value="">No particular focus</option>{['Rhythm','Melody','Voice','Lyrics','Atmosphere','Instrumentation'].map(v=><option key={v}>{v}</option>)}</select></label>
+            <label className="field"><span>What would you like to discover?</span><select className="select" value={state.tasteSurvey.discovery} onChange={e=>setState(s=>({...s,tasteSurvey:{...s.tasteSurvey,discovery:e.target.value}}))}><option value="">Either is welcome</option><option value="familiar">Something familiar</option><option value="unexpected">Something unexpected</option></select></label>
+          </section>
+          <section className="panel"><h3>Three ways to find the next song</h3><p>First, compare musical measurements. Then explore a model trained on listener preferences. Finally, try CLAP’s learned audio representations.</p><p className="muted">Both listener patterns and CLAP use trained models. Their training data and ideas of similarity differ.</p></section>
+        </div>
+      </div>}
+      {method && methodInfo && <>
+        <div className="main-grid method-layout">
+          <section className="panel method-intro"><div className="eyebrow">Step {stageIndex+1} · {stage==='features'?'Explicit feature formulas':'A trained model'}</div><h2>{stage==='features'?'Compare musical features':methodInfo.name}</h2>
+            <p>{methodInfo.intro}</p>
+            {stage==='features' && <fieldset className="method-toggle"><legend>Try a feature formula</legend>{(['rhythm-v1','texture-v1'] as const).map(m=><button key={m} className="btn-soft" aria-pressed={state.featureMethod===m} onClick={()=>setState(s=>({...s,featureMethod:m}))}>{METHODS[m].name}</button>)}</fieldset>}
+            <div className="learning-prompt"><div className="eyebrow">1 · Predict</div><p>{methodInfo.predict}</p><details><summary>Write a prediction (optional)</summary><div><label className="field"><span>Your prediction</span><textarea className="textarea" value={run?.prediction || predictionDraft[predictionKey] || ''} onChange={e=>{const value=e.target.value; setPredictionDraft(p=>({...p,[predictionKey]:value})); if(run) setState(s=>({...s,runs:s.runs.map(r=>r.run_id===run.run_id?{...r,prediction:value}:r)}))}} placeholder="What do you expect this system to find?"/></label></div></details></div>
+            <p className="help">{sharedPool?`All three systems use the same eligible pool of ${bootstrap.collaborative.supported_count} songs, excluding the starting song.`:'Recommendations use the available catalogue, excluding the starting song.'} Your taste survey does not alter the rankings.</p>
+            {!seed && <p className="notice">Choose a starting song in Your songs to begin.</p>}
+            {listenerBlocked && seed && <p className="notice">The listener model needs more feedback than this song has. Choose a supported song from your working set, or return to Your songs and add one. We won’t substitute a different seed.</p>}
+            {methodUnavailable && <p role="status">This method is not available on this server.</p>}
+            {recError && <p role="alert">{recError}</p>}
+            <button className="btn-primary generate-button" onClick={generate} disabled={!seed || !bootstrap || generating || listenerBlocked || methodUnavailable}>{generating?'Finding songs…':run?'Refresh recommendations':'Find 5 recommendations'}</button>
+          </section>
+          <section className="panel results-panel" aria-label="Recommendations">
+            <div className="eyebrow">2 · Listen with your ears</div><h2>{run?'What connects these songs?':'Your listening experiment'}</h2><p>{methodInfo.listen}</p>
+            {focus && <p className="listening-lens">Your lens: <strong>{focus.toLowerCase()}</strong>. Does this recommendation connect in the way you hoped?</p>}
+            {!run?<div className="empty-state"><p>Keep your starting song in mind, then find recommendations from this system.</p><p className="muted">Listen before revealing the score and explanation. There is no correct reaction.</p></div>:!result?<p role="status">No recommendations are available for this setup. Try another starting song.</p>:<div className="carousel" tabIndex={0} aria-label="Recommendations carousel" aria-roledescription="carousel" onKeyDown={e=>{if(e.target!==e.currentTarget) return; if(e.key==='ArrowRight'){e.preventDefault();setResultIndex(i=>Math.min(run.results.length-1,i+1))} if(e.key==='ArrowLeft'){e.preventDefault();setResultIndex(i=>Math.max(0,i-1))}}}>
+              <div className="indicator"><button className="btn-soft" aria-label="Previous recommendation" disabled={currentIndex===0} onClick={()=>setResultIndex(i=>Math.max(0,i-1))}>← Previous</button><span aria-live="polite">{currentIndex+1} / {run.results.length}</span><button className="btn-soft" aria-label="Next recommendation" disabled={currentIndex===run.results.length-1} onClick={()=>setResultIndex(i=>i+1)}>Next →</button></div>
+              <article className="result-card"><h3 className="song-title">{result.title}</h3><p className="artist">{result.artist}</p><ListenLinks song={result}/><p className="inline-help">Links open searches in another tab. Choose the matching recording and return here.</p>
+                <div className="learning-prompt"><div className="eyebrow">3 · Reflect</div><h3>Similarity and enjoyment can differ.</h3><div className="reaction-grid">
+                  <label className="field"><span>Do you want to keep listening?</span><select className="select" aria-label={`Enjoyment for ${result.title}`} value={reaction.like || ''} onChange={e=>updateReaction('like',e.target.value)}><option value="">Your reaction (optional)</option><option value="like">Yes</option><option value="unsure">Unsure</option><option value="dislike">No</option></select></label>
+                  <label className="field"><span>Can you hear a connection?</span><select className="select" aria-label={`Connection for ${result.title}`} value={reaction.connection || ''} onChange={e=>updateReaction('connection',e.target.value)}><option value="">Your reaction (optional)</option><option value="clear">A clear connection</option><option value="partly">Partly</option><option value="not">Hard to connect</option></select></label>
+                </div><label className="field"><span>What did you hear?</span><textarea className="textarea" aria-label={`Listening note for ${result.title}`} value={reaction.note || ''} onChange={e=>updateReaction('note',e.target.value)} placeholder="A similar groove? A different voice? An unexpected connection?"/></label>
+                {!reaction.revealed?<button className="btn-soft" onClick={()=>updateReaction('revealed',true)}>Reveal how this system matched it</button>:<Evidence run={run} result={result} seedName={selectedSong?.title || 'Starting song'}/>}
+                {reaction.revealed && <p className="inline-help">You can revise your reaction after reading the explanation.</p>}
+              </div></article>
+            </div>}
           </section>
         </div>
-      )}
-
-      {/* REFLECT */}
-      {activeStage==='reflect' && (
-        <div className="main-grid" style={{marginTop:12}}>
-          <section className="panel">
-            <div className="eyebrow">Step 3 · Reflect</div>
-            <h2>Reflect on what you heard</h2>
-            {!latestRun ? <p className="muted">Generate results on Listen first.</p> : (
-              <div style={{display:'grid', gap:10}}>
-                {latestRun.results.map(r=>{
-                  const react = latestRun.reactions[r.recording_mbid] || {revealed:false}
-                  return (
-                    <div key={r.recording_mbid} className="result-card" style={{padding:12}}>
-                      <div className="topline"><b className="no-overflow">{r.title} — {r.artist}</b><span className="score">{r.match_percentile}%</span></div>
-                      <div style={{fontSize:12, marginTop:6}} className="muted">{r.year ? `${r.year} · ` : ''}{react.revealed ? 'Revealed' : 'Not yet revealed'}</div>
-                      <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginTop:8}}>
-                        <label className="field"><span className="muted" style={{fontSize:11}}>Enjoyment</span>
-                          <select className="select" value={react.like||''} onChange={e=>updateReaction(latestRun.run_id, r.recording_mbid,'like',e.target.value)} aria-label={`Enjoyment ${r.title}`}>
-                            <option value="">—</option><option value="like">Like</option><option value="unsure">Unsure</option><option value="dislike">Dislike</option>
-                          </select>
-                        </label>
-                        <label className="field"><span className="muted" style={{fontSize:11}}>Connection</span>
-                          <select className="select" value={react.connection||''} onChange={e=>updateReaction(latestRun.run_id, r.recording_mbid,'connection',e.target.value)} aria-label={`Connection ${r.title}`}>
-                            <option value="">—</option><option value="clear">Clear</option><option value="partly">Partly</option><option value="not">Not clear</option>
-                          </select>
-                        </label>
-                      </div>
-                      {react.revealed && <p className="inline-help" style={{marginTop:6}}>✓ Self-report — not proof of listening</p>}
-                    </div>
-                  )
-                })}
-                <div style={{display:'flex', gap:8}}>
-                  <button className="btn-soft" onClick={()=>setStage('listen')}>Back to Listen</button>
-                  <button className="btn-ghost" onClick={()=>setStage('compare')}>Compare</button>
-                </div>
-              </div>
-            )}
-          </section>
-          <section className="panel">
-            <h3>Prompts</h3>
-            <ul className="muted" style={{fontSize:13, paddingLeft:18, margin:0, display:'grid', gap:6}}>
-              <li>What stayed similar — rhythm, voice, instruments, mood, production?</li>
-              <li>Can you hear the connection even if you dislike it?</li>
-              <li>Which result surprised you?</li>
-            </ul>
-            {latestRun && <textarea className="textarea" style={{marginTop:12}} aria-label="Overall reflection" value={latestRun.notes} onChange={e=> setAppState(s=>({...s, runs: s.runs.map(r=> r.run_id===latestRun.run_id ? {...r, notes:e.target.value}: r)}))} placeholder="Overall reflection for this run…" />}
-          </section>
+        {stage==='clap' && <details className="language-extension"><summary>Optional: explore CLAP with words</summary><div><p>Continue beyond the controlled song comparison: try describing sound and judging prepared descriptions.</p><LanguageLab appState={state} setAppState={setState} bootstrap={bootstrap} songs={songs} songCache={songCache} activeSeed={seed}/></div></details>}
+      </>}
+      {stage==='compare' && <section className="panel"><div className="eyebrow">Step 5 · Compare</div><h2>Same starting song. What changed?</h2><p>These cards show results for your current starting song, with the same candidate pool and no taste reranking. Change the active song above to revisit another experiment.</p>
+        <div className="comparison-grid">{(['rhythm-v1','texture-v1','collaborative-v1','clap-v1'] as Method[]).map(m=>{const saved=[...setupRuns].reverse().find(r=>r.method===m);return <section className="result-card" key={m}><h3>{METHODS[m].name}</h3>{!saved?<p className="muted">{m==='collaborative-v1' && !seedSupported?'Your starting song has no listener-model coverage.':'Try this method to add its recommendations.'}</p>:<><ol className="comparison-songs">{saved.results.map(r=><li key={r.recording_mbid}><strong>{r.title}</strong><span>{r.artist}</span><small>{saved.reactions[r.recording_mbid]?.like==='like'?'You wanted to keep listening. ':''}{saved.reactions[r.recording_mbid]?.connection==='clear'?'You heard a clear connection. ':''}{saved.reactions[r.recording_mbid]?.note}</small></li>)}</ol><p className="muted">{saved.notes}</p></>}
+          <button className="btn-soft" onClick={()=>{if(m==='rhythm-v1'||m==='texture-v1')setState(s=>({...s,featureMethod:m,activeStage:'features'}));else setStage(m==='clap-v1'?'clap':'listeners')}}>Explore {METHODS[m].name}</button></section>})}</div>
+        <div className="learning-prompt"><h3>Which system found a close match? Which found something you wanted to hear?</h3><p>Those can be different answers. What did each system seem to notice or miss?</p>{state.tasteSurvey.favorites && <p>Your usual listening: {state.tasteSurvey.favorites}. Did any system take you beyond it?</p>}{state.tasteSurvey.discovery && <p>You hoped for something {state.tasteSurvey.discovery}. Which method came closest to that?</p>}
+          <label className="field"><span>Your takeaways</span><textarea className="textarea" value={state.notes} onChange={e=>setState(s=>({...s,notes:e.target.value}))} placeholder="What did the systems notice—and what did you notice?"/></label>
         </div>
-      )}
-
-      {/* COMPARE */}
-      {activeStage==='compare' && (
-        <div style={{marginTop:12, display:'grid', gap:12}}>
-          <section className="panel">
-            <div className="eyebrow">Step 4 · Compare</div>
-            <h2>Preserve setup, compare methods</h2>
-            <p className="muted">Changing methods keeps your seeds and previous runs. Pick two runs to compare — same seeds/filter/prefs + different method = fair.</p>
-            {appState.runs.length===0 ? <p className="muted">No runs yet — generate on Listen.</p> : (
-              <>
-                <div className="chip-list" aria-label="Choose runs to compare">
-                  {appState.runs.map(r=>(
-                    <label key={r.run_id} className="chip" style={{background: compareIds.includes(r.run_id) ? 'var(--accent-soft)' : 'var(--surface-2)'}}>
-                      <input type="checkbox" checked={compareIds.includes(r.run_id)} onChange={e=> setCompareIds(ids=> e.target.checked ? [...ids, r.run_id].slice(-2) : ids.filter(id=>id!==r.run_id))} aria-label={`Select run ${r.method} ${r.run_id.slice(0,6)}`} /> {r.method} · {r.run_id.slice(0,6)} · {new Date(r.created_at).toLocaleTimeString()}
-                    </label>
-                  ))}
-                </div>
-                {compareRuns.length===2 && (()=>{ const [a,b]=compareRuns; const sameSeeds=JSON.stringify(a.seeds)===JSON.stringify(b.seeds); const sameFilter=JSON.stringify(a.candidate_filter)===JSON.stringify(b.candidate_filter); const samePref=JSON.stringify(a.preferences)===JSON.stringify(b.preferences); const controlled=sameSeeds&&sameFilter&&samePref&&a.method!==b.method; return (
-                  <div className="evidence" style={{marginTop:12}}>
-                    <p style={{marginTop:0}}><b>Controlled:</b> {controlled ? 'Yes — same seeds/filter/prefs, different method' : 'No — inputs differ'}</p>
-                    <p className="muted" style={{fontSize:12}}>Differing: {[!sameSeeds&&'seeds', a.method!==b.method&&'method', !sameFilter&&'filter', !samePref&&'preferences'].filter(Boolean).join(', ')||'none'}</p>
-                    <div className="compare-grid" style={{marginTop:10}}>
-                      {compareRuns.map(r=>(
-                        <div key={r.run_id} className="result-card" onClick={()=>setActiveRun(r.run_id)} role="button" tabIndex={0} onKeyDown={e=> e.key==='Enter' && setActiveRun(r.run_id)} aria-label={`Make ${r.method} active`}>
-                          <div style={{fontWeight:800}}>{r.method} · {r.run_id.slice(0,6)}</div>
-                          <div className="muted" style={{fontSize:12}}>{r.seeds.map(id=>songCache[id]?.title||id.slice(0,6)).join(', ')}</div>
-                          {r.results.slice(0,5).map(res=> <div key={res.recording_mbid} style={{display:'flex', justifyContent:'space-between', gap:8, padding:'6px 0', borderBottom:'1px solid var(--border)', fontSize:13}}><span className="no-overflow">{res.title} — {res.artist}</span><span className="score" style={{fontSize:11, padding:'3px 7px'}}>{res.match_percentile}%</span></div>)}
-                          <p className="inline-help">Tap to make active and revisit on Listen →</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )})()}
-                {appState.runs.length>0 && (
-                  <div style={{marginTop:12, display:'grid', gap:8}}>
-                    {appState.runs.slice(-5).reverse().map(r=>(
-                      <div key={r.run_id} className="panel" style={{padding:10, background:'var(--bg)'}}>
-                        <div style={{display:'flex', justifyContent:'space-between', gap:8, alignItems:'center'}}>
-                          <b>{r.method}</b><span className="muted" style={{fontSize:12}}>{new Date(r.created_at).toLocaleTimeString()}</span>
-                        </div>
-                        <div className="muted" style={{fontSize:12}}>{r.seeds.map(id=>songCache[id]?.title||id.slice(0,6)).join(', ')} · {describeCandidatePool(r.candidate_filter)}</div>
-                        <button className="btn-ghost" style={{marginTop:8, width:'100%'}} onClick={()=>setActiveRun(r.run_id)}>Make active</button>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </>
-            )}
-          </section>
-        </div>
-      )}
-
-      {/* DESCRIBE */}
-      {activeStage==='describe' && (
-        <div className="main-grid" style={{marginTop:12}}>
-          <section className="panel">
-            <div className="eyebrow">Step 5 · Describe</div>
-            <h2>Matching descriptions</h2>
-            <p className="muted" style={{fontSize:12}}>From a prepared bank — not a unique decoding. A mismatch is useful.</p>
-            <div style={{display:'grid', gap:8, marginTop:8}}>
-              <label className="field"><span className="muted" style={{fontSize:12}}>Song</span>
-                <select className="select" aria-label="Choose song for descriptions" value={langSong||''} onChange={e=>setLangSong(e.target.value)}>
-                  <option value="">— Select from My List or catalogue —</option>
-                  {appState.myList.map(id=> { const s=songCache[id]; return <option key={id} value={id}>{s ? `${s.title} — ${s.artist}` : id}</option> })}
-                  {songs.slice(0,30).map(s=> <option key={s.recording_mbid} value={s.recording_mbid}>{s.title} — {s.artist}</option>)}
-                </select>
-              </label>
-              <label className="field"><span className="muted" style={{fontSize:12}}>Category</span>
-                <select className="select" aria-label="Filter descriptions by category" value={descCat} onChange={e=>setDescCat(e.target.value)}>
-                  <option value="">All categories</option>
-                  <option value="rhythm">rhythm</option><option value="vocals">vocals</option><option value="instruments">instruments</option><option value="texture">texture</option><option value="mood">mood</option><option value="atmosphere">atmosphere</option><option value="combo">combo</option>
-                </select>
-              </label>
-            </div>
-            {descLoading && <p className="muted">Loading…</p>}
-            <div style={{marginTop:10, display:'grid', gap:8}}>
-              {descMatches.map(m=>{ const j=appState.descriptionJudgments[m.id]; return (
-                <div key={m.id} className="result-card" style={{padding:10}}>
-                  <div style={{display:'flex', justifyContent:'space-between', gap:8, alignItems:'flex-start'}}>
-                    <span className="no-overflow" style={{fontSize:13, flex:1}}>{m.text}</span>
-                    <span style={{fontSize:11, border:'1px solid var(--border)', padding:'2px 6px', borderRadius:999, color:'var(--muted)', flexShrink:0}}>{m.category}</span>
-                  </div>
-                  <div style={{display:'flex', gap:6, marginTop:8, flexWrap:'wrap'}}>
-                    {(['fits','partly','misses'] as const).map(v=>(
-                      <button key={v} className="btn-ghost" aria-pressed={j?.fit===v} style={{minHeight:36, padding:'0 10px', fontSize:12, background: j?.fit===v ? 'var(--accent)' : 'var(--surface-2)', color: j?.fit===v ? '#0c1220' : 'var(--text)', borderColor: j?.fit===v ? 'var(--accent)' : 'var(--border)'}} onClick={()=> setAppState(s=>({...s, descriptionJudgments:{...s.descriptionJudgments, [m.id]:{fit:v, reason: s.descriptionJudgments[m.id]?.reason}}}))}>{v}</button>
-                    ))}
-                    <input className="input" aria-label={`Reason for ${m.id}`} placeholder="why?" value={j?.reason||''} onChange={e=> setAppState(s=>({...s, descriptionJudgments:{...s.descriptionJudgments, [m.id]:{fit: j?.fit || 'fits', reason:e.target.value}}}))} style={{flex:'1 1 140px', minHeight:36}} />
-                  </div>
-                </div>
-              )})}
-              {langSong && descMatches.length===0 && !descLoading && <p className="muted">No descriptions in this category.</p>}
-            </div>
-
-            <h3 style={{marginTop:18}}>Describe what you like</h3>
-            <p className="muted" style={{fontSize:12}}>Then change one aspect (e.g., intimate → distant) and compare.</p>
-            <div className="search-row" style={{marginTop:8}}>
-              <input className="input" aria-label="Your description" value={textQuery} onChange={e=>setTextQuery(e.target.value)} placeholder="e.g., warm acoustic guitar with soft vocals" />
-              <button className="btn-primary" onClick={()=>doTextSearch()} aria-label="Search with your description">Search</button>
-            </div>
-            {textError && <p role="alert" style={{color:'#ff6b6b', fontSize:12, marginTop:6}}>{textError}</p>}
-            {bootstrap?.language_status==='disabled' && <p className="help">Live search is disabled (see docs/MODEL_SETUP.md). Prepared examples still work.</p>}
-            {bootstrap?.language_status==='prepared' && <p className="help">Prepared mode — example results shown; live retrieval pending ONNX.</p>}
-            <div style={{marginTop:10, display:'grid', gap:8}}>
-              {textResults.map(r=>(
-                <div key={r.recording_mbid} className="result-card" style={{padding:10}}>
-                  <div style={{display:'flex', justifyContent:'space-between', gap:8}}><b className="no-overflow">{r.title} — {r.artist}</b><span className="score">{r.match_percentile}%</span></div>
-                  <div className="listen-links"><a className="primary-link" href={r.youtube_search_url} target="_blank" rel="noopener noreferrer">YouTube search ↗</a><a href={r.spotify_search_url} target="_blank" rel="noopener noreferrer">Spotify search ↗</a></div>
-                </div>
-              ))}
-            </div>
-            <div style={{marginTop:12}}>
-              <h4 style={{margin:'0 0 6px', fontSize:13}}>Query history</h4>
-              {appState.textHistory.length===0 ? <p className="muted" style={{fontSize:12}}>No queries yet.</p> : appState.textHistory.slice(-5).reverse().map((h,i)=>(
-                <div key={i} className="panel" style={{padding:8, background:'var(--bg)', display:'flex', gap:8, alignItems:'center', justifyContent:'space-between'}}>
-                  <span className="no-overflow" style={{fontSize:12}}><b>{h.query}</b> <span className="muted">{new Date(h.at).toLocaleTimeString()}</span></span>
-                  <button className="btn-ghost" style={{minHeight:32, padding:'0 10px', fontSize:11}} onClick={()=>{setTextQuery(h.query); doTextSearch(h.query)}}>Reuse</button>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <aside className="panel">
-            <div className="eyebrow">Prepared examples</div>
-            <h3>Try without live retrieval</h3>
-            <p className="muted" style={{fontSize:12}}>If live search is down, these work. They are <b>prepared</b>, not your query’s results.</p>
-            {examples.map(ex=>(
-              <div key={ex.id} className="result-card" style={{padding:10, background:'var(--bg)', marginTop:8}}>
-                <div className="muted" style={{fontSize:11}}>{ex.category}</div>
-                <div style={{fontSize:13, fontWeight:700}}>{ex.query}</div>
-                <button className="btn-soft" style={{marginTop:8, width:'100%'}} onClick={()=>{setTextQuery(ex.query); doTextSearch(ex.query)}}>Try this example</button>
-              </div>
-            ))}
-            {!examples.length && <p className="muted" style={{fontSize:12}}>No examples.</p>}
-            <p className="inline-help" style={{marginTop:10}}>Capability: {bootstrap?.language_status || 'unknown'} · {bootstrap?.prompt_version || 'prompts-v1'}</p>
-          </aside>
-        </div>
-      )}
-
-      {/* NOTES */}
-      {activeStage==='notes' && (
-        <div className="main-grid" style={{marginTop:12}}>
-          <section className="panel">
-            <div className="eyebrow">Step 6 · Notes</div>
-            <h2>Your reflections</h2>
-            <p className="muted">Saved on this device only. Copy or download for discussion.</p>
-            {appState.runs.length===0 ? <p className="muted">No runs yet — your notes will appear here after you generate.</p> : appState.runs.slice(-3).reverse().map(r=>(
-              <div key={r.run_id} className="result-card" style={{padding:10, background:'var(--bg)', marginTop:8}}>
-                <div style={{fontWeight:800, fontSize:13}}>{r.method} · {new Date(r.created_at).toLocaleString()}</div>
-                <div className="muted" style={{fontSize:12}}>{r.seeds.map(id=>songCache[id]?.title||id.slice(0,6)).join(', ')}</div>
-                <textarea className="textarea" aria-label={`Notes for ${r.run_id}`} value={r.notes} onChange={e=> setAppState(s=>({...s, runs: s.runs.map(x=> x.run_id===r.run_id ? {...x, notes:e.target.value}: x)}))} placeholder="What surprised you for this run?" style={{marginTop:8}} />
-                <div style={{fontSize:12, marginTop:6}} className="muted">Reactions: {Object.entries(r.reactions).filter(([,v])=>v.like||v.connection).map(([id,v])=>`${songCache[id]?.title||id.slice(0,6)} ${v.like||''} ${v.connection||''}`).join(' · ') || 'none yet'}</div>
-              </div>
-            ))}
-            <label className="field" style={{marginTop:12}}><span className="muted" style={{fontSize:12}}>Session notes</span>
-              <textarea className="textarea" aria-label="Session notes" value={appState.notes} onChange={e=> setAppState(s=>({...s, notes:e.target.value}))} placeholder="Overall takeaways…" />
-            </label>
-          </section>
-          <section className="panel">
-            <h3>Export</h3>
-            <p className="muted" style={{fontSize:12}}>Exports keep the same seeds, setup, and reflections you see.</p>
-            <div style={{display:'grid', gap:8, marginTop:8}}>
-              <button className="btn-primary" onClick={()=>{const j=exportJSON(appState); const blob=new Blob([j],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='workshop-export.json'; a.click(); URL.revokeObjectURL(url)}}>Download JSON</button>
-              <button className="btn-soft" onClick={()=>{const md=exportMarkdown(appState); const blob=new Blob([md],{type:'text/markdown'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='workshop-export.md'; a.click(); URL.revokeObjectURL(url)}}>Download Markdown</button>
-            </div>
-            <p className="help">On a shared device, export before “Start new session”.</p>
-            <details style={{marginTop:10}}>
-              <summary>What’s saved?</summary>
-              <div className="muted" style={{fontSize:12}}>My List order, browse filters, candidate pool, preferences draft, runs + per-result reactions/revealed, text history, description judgments, notes, versions. Seed-order permutations keep the same fingerprint.</div>
-            </details>
-          </section>
-        </div>
-      )}
-
-      <div className="bottom-bar" role="toolbar" aria-label="Primary actions">
-        {activeStage==='choose' && <button className="btn-primary primary" disabled={appState.myList.length===0} onClick={()=>setStage('listen')}>Continue to Listen · {appState.myList.length}/5</button>}
-        {activeStage==='listen' && <button className="btn-primary primary" onClick={generate} disabled={recLoading || appState.myList.length===0}>{recLoading? 'Generating…' : 'Generate 5 recommendations'}</button>}
-        {activeStage==='reflect' && <><button className="btn-ghost secondary" onClick={()=>setStage('listen')}>Back to Listen</button><button className="btn-primary primary" onClick={()=>setStage('compare')}>Compare runs</button></>}
-        {activeStage==='compare' && <><button className="btn-ghost secondary" onClick={()=>setStage('reflect')}>Back to Reflect</button><button className="btn-primary primary" onClick={()=>setStage('describe')}>Go to Describe</button></>}
-        {activeStage==='describe' && <><button className="btn-ghost secondary" onClick={()=>setStage('compare')}>Back to Compare</button><button className="btn-primary primary" onClick={()=>setStage('notes')}>To Notes & Export</button></>}
-        {activeStage==='notes' && <><button className="btn-ghost secondary" onClick={()=>setStage('describe')}>Back to Describe</button><button className="btn-primary primary" onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Top</button></>}
-      </div>
-
-      <footer style={{marginTop:18, fontSize:11, color:'var(--muted)', borderTop:'1px solid var(--border)', paddingTop:10, paddingBottom: 8}}>
-        Workshop · Dataset {bootstrap?.dataset_id?.slice(0,8)} · Scoring {bootstrap?.scoring_version} · Language {bootstrap?.language_status} · <span style={{fontSize:11}}>Match % = reference percentile, not enjoyment odds. Links are searches. “I’ve listened” is self-report.</span>
-      </footer>
-    </div>
-  )
+      </section>}
+      {stage==='notes' && <section className="panel"><div className="eyebrow">Step 6 · Keep your discoveries</div><h2>Your reflections</h2><p className="muted">Your working set, survey and reflections stay on this device. Download them before ending a shared-device session.</p><label className="field"><span>Session notes</span><textarea className="textarea" value={state.notes} onChange={e=>setState(s=>({...s,notes:e.target.value}))}/></label><div className="field-row"><button className="btn-primary" onClick={()=>download('md')}>Download Markdown</button><button className="btn-soft" onClick={()=>download('json')}>Download JSON</button></div>
+        <h3>Saved experiments · {state.runs.length}</h3>{!state.runs.length && <p>No experiments yet. Your reflections will appear here after you try a method.</p>}
+        {[...state.runs].reverse().map(r=><details key={r.run_id}><summary>{METHODS[r.method as Method]?.name || r.method} · {r.seeds.map(id=>songCache[id]?.title || id.slice(0,8)).join(', ')} · {new Date(r.created_at).toLocaleTimeString()}</summary><div>{r.prediction && <p>Prediction: {r.prediction}</p>}<label className="field"><span>Experiment reflection</span><textarea className="textarea" value={r.notes} onChange={e=>{const notes=e.target.value;setState(s=>({...s,runs:s.runs.map(x=>x.run_id===r.run_id?{...x,notes}:x)}))}}/></label>{r.results.map(result=>{const reaction=r.reactions[result.recording_mbid];return reaction?<p key={result.recording_mbid}><strong>{result.title}</strong> · Enjoyment: {reaction.like || 'unanswered'} · Connection: {reaction.connection || 'unanswered'}<br/>{reaction.note}</p>:null})}<p className="muted">{matchesSetup(r,seed,sharedPool,bootstrap?.dataset_id || null)?'Matches your current comparison setup.':'Saved from a different setup. Kept for your records.'}</p></div></details>)}
+      </section>}
+    </main>
+    <div className="bottom-bar" role="toolbar" aria-label="Workshop navigation"><span className="muted">Step {stageIndex+1} of {STAGES.length}</span>{stageIndex>0 && <button className="btn-ghost secondary" onClick={()=>setStage(STAGES[stageIndex-1].id)}>Back</button>}{stageIndex<STAGES.length-1 && <button className="btn-primary primary" disabled={stage==='choose' && !seed} onClick={()=>setStage(STAGES[stageIndex+1].id)}>Next: {STAGES[stageIndex+1].label}</button>}</div>
+    <footer>Listen, question, compare. A surprising recommendation can be as useful as a familiar one. Your work is saved on this device.</footer>
+  </div>
 }

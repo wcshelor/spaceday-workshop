@@ -62,153 +62,106 @@ test.beforeEach(async ({ page }) => {
   await mockApi(page);
 });
 
-test('Choose → generate → move between results → react → reveal', async ({ page }) => {
+async function step(page,label) {
+  await page.getByRole('button',{name:label,exact:true}).click();
+}
+async function choose(page) {
   await page.goto('/');
-  await expect(page.getByRole('tab', {name:'Choose'})).toBeVisible();
-  await expect(page.getByText(/Search for a familiar song/)).toBeVisible();
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  // My List chip appears
-  await expect(page.getByText(/Song One With Very Long Title/).first()).toBeVisible();
-  // Continue to Listen
-  await page.getByRole('button', {name:'Continue to Listen'}).click();
-  await expect(page.getByText(/Choose a method and generate/)).toBeVisible();
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await expect(page.getByText('1 / 5')).toBeVisible();
-  await page.getByRole('button', {name:'Next recommendation'}).click();
-  await expect(page.getByText(/Result 2 With Long Title/)).toBeVisible();
-  await expect(page.getByText('2 / 5')).toBeVisible();
-  await page.getByRole('button', {name:'Previous recommendation'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await page.getByLabel(/Enjoyment for Result 1/).selectOption('like');
-  await page.getByRole('button', {name:'I’ve listened'}).click();
-  await expect(page.getByText(/Evidence/)).toBeVisible();
-  // Per result: next not revealed
-  await page.getByRole('button', {name:'Next recommendation'}).click();
-  await expect(page.getByRole('button', {name:'I’ve listened'})).toBeVisible();
-  await page.getByRole('button', {name:'Previous recommendation'}).click();
-  await expect(page.getByText(/Evidence/)).toBeVisible();
+  await page.getByRole('button',{name:/^Add Song One/}).click();
+  await page.getByRole('button',{name:/^Add Song Two/}).click();
+}
+async function generate(page) {
+  await page.getByRole('button',{name:'Find 5 recommendations',exact:true}).click();
+  await expect(page.getByRole('heading',{name:/Result 1 With Long Title/})).toBeVisible();
+}
+async function noOverflow(page) {
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1)).toBeTruthy();
+}
+
+test('same seed and candidate pool across the three steps, with separate reactions',async({page})=>{
+  const requests:any[]=[];
+  page.on('request',r=>{if(r.url().endsWith('/api/recommendations')) requests.push(r.postDataJSON());});
+  await choose(page);
+  await page.getByRole('button',{name:'Next: Musical features'}).click();
+  await generate(page);
+  await page.getByLabel(/Enjoyment for/).selectOption('like');
+  await page.getByRole('button',{name:'Reveal how this system matched it'}).click();
+  await expect(page.getByRole('heading',{name:'Why this recommendation?'})).toBeVisible();
+  await noOverflow(page);
+  await page.getByRole('button',{name:'Next: Listener patterns'}).click();await generate(page);
+  await expect(page.getByLabel(/Enjoyment for/)).toHaveValue('');
+  await page.getByRole('button',{name:'Next: CLAP sound'}).click();await generate(page);
+  expect(requests.map(r=>r.method)).toEqual(['rhythm-v1','collaborative-v1','clap-v1']);
+  for(const r of requests) {expect(r.seed_ids).toEqual(['id1']);expect(r.candidate_filter).toEqual({collaborative_only:true});expect(r.preferences).toBeUndefined();}
+  await step(page,'Musical features');
+  await expect(page.getByLabel(/Enjoyment for/)).toHaveValue('like');
+  await step(page,'Compare');
+  await expect(page.getByText(/Result 1 With Long Title/)).toHaveCount(3);
+  await noOverflow(page);
 });
 
-test('Correct reaction and reveal state per result and run', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  await page.getByRole('button', {name:'Continue to Listen'}).click();
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await page.getByRole('button', {name:'I’ve listened'}).click();
-  await expect(page.getByText(/Evidence/)).toBeVisible();
-  // Generate second run with different method
-  await page.getByLabel(/Recommendation method/).selectOption('rhythm-v1');
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  // New run should not have revealed state from previous
-  await expect(page.getByRole('button', {name:'I’ve listened'})).toBeVisible();
-});
-
-test('Switching methods preserves My List and previous runs', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  await page.getByRole('button', {name:'Continue to Listen'}).click();
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await page.getByLabel(/Recommendation method/).selectOption('rhythm-v1');
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await page.getByRole('tab', {name:'Choose'}).click();
-  await expect(page.getByText(/Song One With Very Long Title/).first()).toBeVisible();
-  await page.getByRole('tab', {name:'Compare'}).click();
-  await expect(page.getByText(/Preserve setup/)).toBeVisible();
-  await expect(page.getByText(/clap-v1/).first()).toBeVisible();
-  await expect(page.getByText(/rhythm-v1/).first()).toBeVisible();
-});
-
-test('Revisiting stages and refresh preserves working state', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  await page.getByRole('button', {name:'Continue to Listen'}).click();
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
-  await page.getByRole('tab', {name:'Describe'}).click();
-  await expect(page.getByText(/Matching descriptions/)).toBeVisible();
-  await page.getByRole('tab', {name:'Listen'}).click();
-  await expect(page.getByText(/Result 1 With Long Title/)).toBeVisible();
+test('active seed changes and refresh preserve experiments without showing stale recommendations',async({page})=>{
+  await choose(page);await step(page,'Musical features');await generate(page);
+  await page.getByLabel(/Listening note for/).fill('A similar pulse');
+  await page.getByLabel('Active starting song').selectOption('id2');
+  await expect(page.getByRole('heading',{name:/Result 1/})).toHaveCount(0);
+  await generate(page);
+  await page.getByLabel('Active starting song').selectOption('id1');
+  await expect(page.getByLabel(/Listening note for/)).toHaveValue('A similar pulse');
+  await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('spaceday-workshop:v1') || '{}').activeSeedId)).toBe('id1');
   await page.reload();
-  await expect(page.getByRole('tab', {name:'Choose'})).toBeVisible();
-  await page.getByRole('tab', {name:'Choose'}).click();
-  await expect(page.getByText(/Song One With Very Long Title/).first()).toBeVisible();
-  await page.reload();
-  await expect(page.getByText(/Song One With Very Long Title/).first()).toBeVisible();
+  await expect(page.getByLabel(/Listening note for/)).toHaveValue('A similar pulse');
 });
 
-test('Description / prepared-example flow and notes export', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  await page.getByRole('tab', {name:'Describe'}).click();
-  await page.getByLabel(/Choose song for descriptions/).selectOption('id1');
-  await expect(page.getByText(/warm acoustic guitar/).first()).toBeVisible();
-  const fitsBtn = page.getByRole('button', {name:'fits'}).first();
-  await fitsBtn.click();
-  await expect(fitsBtn).toHaveAttribute('aria-pressed','true');
-  await expect(page.getByText(/Try without live retrieval/)).toBeVisible();
-  await page.getByLabel(/Your description/).fill('test query');
-  await page.getByRole('button', {name:'Search'}).click();
+test('unsupported songs are explained; selection checkmark removes and changes active song',async({page})=>{
+  await choose(page);
+  await page.getByRole('button',{name:/^Remove Song One.*by Artist One/}).click();
+  await expect(page.getByLabel('Active starting song')).toHaveValue('id2');
+  await page.getByRole('button',{name:/^Add Song Three/}).click();
+  await page.getByLabel('Active starting song').selectOption('id3');
+  await step(page,'Listener patterns');
+  await expect(page.getByRole('button',{name:'Find 5 recommendations'})).toBeDisabled();
+  await expect(page.getByText(/We won’t substitute/)).toBeVisible();
+  await step(page,'CLAP sound');await generate(page);await noOverflow(page);
+});
+
+test('responsive layouts, listening survey, keyboard carousel and optional CLAP activity',async({page},testInfo)=>{
+  await choose(page);
+  await page.getByLabel('What draws you into a song?').selectOption('Rhythm');
+  const initialViewport=page.viewportSize();
+  for(const width of [320,768,1440]) { await page.setViewportSize({width,height:844}); await noOverflow(page); }
+  await page.setViewportSize(initialViewport!);
+  await noOverflow(page);
+  await page.screenshot({path:testInfo.outputPath('choose.png'),fullPage:true});
+  await step(page,'Musical features');await generate(page);
+  await expect(page.getByText(/Your lens:/)).toContainText('rhythm');
+  await page.getByLabel('Recommendations carousel').focus();await page.keyboard.press('ArrowRight');
+  await expect(page.getByText('2 / 5',{exact:true})).toBeVisible();
+  await page.keyboard.press('ArrowLeft');await expect(page.getByText('1 / 5',{exact:true})).toBeVisible();
+  await noOverflow(page);
+  await page.screenshot({path:testInfo.outputPath('features.png'),fullPage:true});
+  await step(page,'CLAP sound');
+  await page.getByText('Optional: explore CLAP with words',{exact:true}).click();
+  await expect(page.getByRole('button',{name:'fits',exact:true}).first()).toBeVisible();
+  await page.getByRole('button',{name:'fits',exact:true}).first().click();
+  await page.getByLabel('Your description',{exact:true}).fill('a new sound');
+  await page.getByRole('button',{name:'Search with your description',exact:true}).click();
   await expect(page.getByText(/Live search isn’t available/)).toBeVisible();
-  await page.getByRole('tab', {name:'Notes'}).click();
-  await expect(page.getByText(/Your reflections/)).toBeVisible();
-  await expect(page.getByRole('button', {name:'Download JSON'})).toBeVisible();
-  await expect(page.getByRole('button', {name:'Download Markdown'})).toBeVisible();
+  await noOverflow(page);
+  await step(page,'Notes & export');
+  const download=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Download Markdown'}).click();
+  expect((await download).suggestedFilename()).toBe('workshop-export.md');
 });
 
-test('Empty selection, loading, API failure, unsupported collaborative seeds', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('tab', {name:'Listen'}).click();
-  const genBtn = page.getByRole('button', {name:'Generate 5 recommendations'});
-  await expect(genBtn).toBeDisabled();
-  await expect(page.getByLabel(/Recommendation method/)).toBeVisible();
-  const chooseTab = page.getByRole('tab', {name:'Choose'});
-  await expect(chooseTab).toBeVisible();
-  await chooseTab.focus();
-  await expect(chooseTab).toBeFocused();
-  // Check accessible names
-  await page.getByRole('tab', {name:'Choose'}).click();
-  const addBtn = page.getByRole('button', {name:/Add Song One/});
-  await expect(addBtn).toHaveAccessibleName(/Add Song One/);
-});
-
-test('Keyboard-accessible controls and accessible names', async ({ page }) => {
-  await page.goto('/');
-  const chooseTab = page.getByRole('tab', {name:'Choose'});
-  await expect(chooseTab).toHaveAttribute('aria-selected','true');
-  await chooseTab.focus();
-  await expect(chooseTab).toBeFocused();
-  await page.getByRole('button', {name:/Add Song One/}).click();
-  await page.getByRole('button', {name:'Continue to Listen'}).click();
-  await page.getByRole('button', {name:'Generate 5 recommendations'}).click();
-  await expect(page.getByRole('button', {name:'Next recommendation'})).toBeVisible();
-  // Focus carousel for keyboard
-  await page.getByLabel(/Recommendations carousel/).focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(page.getByText('2 / 5')).toBeVisible();
-  await page.keyboard.press('ArrowLeft');
-  await expect(page.getByText('1 / 5')).toBeVisible();
-});
-
-test('Phone and laptop layouts without horizontal overflow', async ({ page }) => {
-  await page.goto('/');
-  const noOverflow = await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 2);
-  expect(noOverflow).toBeTruthy();
-  await expect(page.getByText(/Search for a familiar song/)).toBeVisible();
-  const longTitle = page.getByText(/Song One With Very Long Title/).first();
-  await expect(longTitle).toBeVisible();
-  const box = await longTitle.boundingBox();
-  // At 390 viewport, title should wrap and not exceed viewport
-  expect(box.width).toBeLessThan(500);
-});
-
-test('Real-backend integration check (uses actual API)', async ({ page }) => {
+test('real backend accepts one supported seed for all four formulas',async({page})=>{
   await page.unrouteAll({behavior:'wait'});
-  const resp = await page.request.get('/health/ready').catch(()=> null);
-  if (!resp || !resp.ok()) test.skip(true, 'Real backend not available for integration check');
-  else expect(resp.ok()).toBeTruthy();
+  const b=await page.request.get('/api/bootstrap');expect(b.ok()).toBeTruthy();
+  const bootstrap=await b.json();const seed=bootstrap.collaborative.supported_ids[0];
+  for(const method of ['rhythm-v1','texture-v1','collaborative-v1','clap-v1']) {
+    const r=await page.request.post('/api/recommendations',{data:{seed_ids:[seed],method,limit:5,candidate_filter:{collaborative_only:true}}});
+    expect(r.ok()).toBeTruthy();const data=await r.json();expect(data.results).toHaveLength(5);
+    const e=await page.request.post('/api/explanations',{data:{seed_ids:[seed],method,result_id:data.results[0].recording_mbid,candidate_filter:{collaborative_only:true}}});
+    expect(e.ok()).toBeTruthy();
+  }
 });
