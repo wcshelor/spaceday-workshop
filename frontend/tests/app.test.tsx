@@ -39,7 +39,7 @@ vi.mock('../src/api/client', () => ({
   postDescriptions: vi.fn(()=> Promise.resolve({matches:[
     {id:'desc1', text:'warm acoustic guitar', category:'instruments', paraphrase_group:'g1'},
     {id:'desc2', text:'intimate vocals', category:'vocals', paraphrase_group:'g2'},
-  ], note:'test'})),
+  ], note:'test', scoring_version:'description-standardized-v1-test', prompt_version:'prompts-v4'})),
   postTextSearch: vi.fn(()=> Promise.reject(new Error('text search unavailable: encoder disabled'))),
   getExamples: vi.fn(()=> Promise.resolve({version:'prompts-v1', items:[{id:'ex1', query:'warm acoustic guitar', category:'texture'}]})),
 }))
@@ -125,11 +125,15 @@ describe('Shared song listening workshop',()=>{
     expect(screen.getByLabelText(/Listening note for Result 1/)).toHaveValue('Same pulse')
   })
   it('retains description matching as an optional CLAP experiment without the retired live text search',async()=>{
+    const old=loadState();old.descriptionJudgments['id1:desc1']={fit:'misses'};saveState(old)
     render(<App/>);await chooseTwo();step('CLAP sound')
     fireEvent.click(screen.getByText('Optional: explore CLAP with words'))
     expect((await screen.findAllByRole('button',{name:'fits'}))[0]).toBeInTheDocument()
+    expect(screen.getAllByRole('button',{name:'misses'})[0]).toHaveAttribute('aria-pressed','false')
+    expect(screen.getByText(/Chosen for varied listening and discussion/)).toBeInTheDocument()
     fireEvent.click(screen.getAllByRole('button',{name:'fits'})[0])
     expect(screen.getAllByRole('button',{name:'fits'})[0]).toHaveAttribute('aria-pressed','true')
+    await waitFor(()=>expect(JSON.parse(localStorage.getItem('spaceday-workshop:v1') || '{}').descriptionJudgments?.['description-standardized-v1-test:id1:desc1']?.fit).toBe('fits'))
     expect(screen.queryByLabelText('Your description')).not.toBeInTheDocument()
     expect(screen.queryByRole('button',{name:'Search with your description',exact:true})).not.toBeInTheDocument()
     step('Notes & export');expect(screen.getByRole('button',{name:'Download Markdown'})).toBeEnabled()

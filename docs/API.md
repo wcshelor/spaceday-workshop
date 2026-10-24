@@ -121,7 +121,11 @@ Returns per-seed scores, aggregate base_score, group contributions, and notes. F
 Errors: 404 unknown result, 422 unknown method.
 
 ## `POST /api/descriptions`
-Closest prepared descriptions for a selected recording and optional category filter.
+Experimental discussion descriptions for a selected recording and optional category filter.
+The 256-phrase bank includes musical, emotional and atmospheric candidates.
+Ranking uses `description-standardized-v1`: raw CLAP cosine minus the phrase's
+full-catalogue mean, divided by its population standard deviation. The reference
+is always the frozen 1,500-song catalogue, independent of category/candidate filters.
 
 ```json
 {"recording_mbid":"...","categories":["rhythm"],"limit":5}
@@ -129,10 +133,14 @@ Closest prepared descriptions for a selected recording and optional category fil
 
 Returns:
 ```json
-{"recording_mbid":"...","matches":[{"id":"rhy-001","text":"...","category":"rhythm",...}],"note":"Matches from prepared bank; ..."}
+{"recording_mbid":"...","matches":[{"id":"rhy-001","text":"...","category":"rhythm","similarity":0.3,"description_score":1.2}],"scoring_version":"description-standardized-v1-...","reference_dataset_id":"...","prompt_version":"prompts-v4","encoder_id":"...","note":"Experimental discussion method..."}
 ```
 
-Diversified by paraphrase_group (one per group initially).
+Diversified by paraphrase_group (one per group initially), with ID tie-breaking.
+`similarity` retains raw cosine; `description_score` is the standardized ranking
+value. Neither is a probability. Constant-score phrases (std <= 1e-8) are excluded.
+The scoring identity binds method, reference dataset, prompt bank and vectors.
+Unknown recording: 404; unavailable/invalid description artifacts: 503.
 
 ## `POST /api/text-search`
 Encode bounded text query and retrieve audio neighbours. Requires live encoder.

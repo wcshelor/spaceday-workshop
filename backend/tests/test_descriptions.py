@@ -23,12 +23,19 @@ def test_real_bank_is_ranked_for_each_song(ds):
     assert ds.prompt_embeddings is not None, ds.description_error
     assert ds.language_meta["placeholder"] is False
     winners = set()
+    reference = ds.embeddings.astype(np.float64) @ ds.prompt_embeddings.astype(np.float64).T
+    means, stds = reference.mean(axis=0), reference.std(axis=0)
     for row in (0, 100, 300, 700):
         sid = ds.songs[row]["recording_mbid"]
         result = ds.describe(DescriptionMatchRequest(recording_mbid=sid, limit=8))
-        scores = ds.prompt_embeddings @ ds.embeddings[row]
+        raw = reference[row]
+        scores = (raw - means) / stds
         best = sorted(range(len(scores)), key=lambda i: (-float(scores[i]), ds.language_bank[i]["id"]))[0]
         assert result["matches"][0]["id"] == ds.language_bank[best]["id"]
+        assert result["matches"][0]["description_score"] == pytest.approx(scores[best])
+        assert result["matches"][0]["similarity"] == pytest.approx(raw[best])
+        assert result["reference_dataset_id"] == ds.dataset_id
+        assert result["scoring_version"].startswith("description-standardized-v1-")
         assert result == ds.describe(DescriptionMatchRequest(recording_mbid=sid, limit=8))
         assert len({m["paraphrase_group"] for m in result["matches"]}) == 8
         winners.add(result["matches"][0]["id"])
@@ -43,6 +50,30 @@ def test_category_filter_is_applied_before_selection(ds):
     assert ds.describe(DescriptionMatchRequest(recording_mbid=sid, categories=["nonexistent"]))["matches"] == []
     with pytest.raises(KeyError):
         ds.describe(DescriptionMatchRequest(recording_mbid="missing"))
+
+
+def test_expanded_bank_preserves_retirement_record(ds):
+    bank_path = settings.data_dir.parents[1] / "content/prompts-v1.json"
+    bank = json.loads(bank_path.read_text())
+    assert bank["version"] == ds.language_meta["prompt_version"] == "prompts-v4"
+    assert len(ds.language_bank) == ds.language_meta["prompt_count"] == 256
+    active_ids = {p["id"] for p in ds.language_bank}
+    assert len(active_ids) == 256
+    assert len({p["text"].casefold() for p in ds.language_bank}) == 256
+    assert not any(p["id"].startswith("gen-") for p in ds.language_bank)
+    retired = next(p for p in bank["retired_prompts"] if p["id"] == "rhy-002")
+    assert retired["id"] not in active_ids
+    assert retired["observed_first_place_count"] == 801
+    assert retired["observed_catalogue_count"] == 1500
+    assert retired["last_active_version"] == "prompts-v2"
+
+
+@pytest.mark.parametrize("category", ["melody", "harmony", "instruments", "production", "mood", "atmosphere"])
+def test_specific_description_categories_are_available(ds, category):
+    result = ds.describe(DescriptionMatchRequest(
+        recording_mbid=ds.songs[0]["recording_mbid"], categories=[category], limit=8))
+    assert len(result["matches"]) == 8
+    assert all(p["category"] == category for p in result["matches"])
 
 
 @pytest.mark.parametrize("damage", ["placeholder", "pipeline", "bank", "checksum", "shape", "nan", "norm"])
@@ -99,3 +130,37 @@ def test_unavailable_descriptions_return_503_without_affecting_core(monkeypatch)
         assert response.status_code == 503
         assert "unavailable" in response.text
         assert client.post("/api/recommendations", json={"seed_ids": [sid], "method": "clap-v1", "limit": 1}).status_code == 200
+
+
+def test_standardized_score_rewards_specific_lift_over_high_baseline():
+    from backend.app.recommendation.descriptions import standardized_scores
+    # Candidate A has higher raw cosine, but B is more unusual for this song.
+    scores = standardized_scores([0.7, 0.5], [0.65, 0.1], [0.1, 0.2])
+    assert scores.tolist() == pytest.approx([0.5, 2.0])
+    assert int(scores.argmax()) == 1
+
+
+def test_population_reference_and_zero_variance_exclusion():
+    from backend.app.recommendation.descriptions import build_reference, standardized_scores
+    means, stds = build_reference([[1, 0], [0, 1]], [[1, 0], [1, 1]])
+    assert means.tolist() == pytest.approx([0.5, 1])
+    assert stds.tolist() == pytest.approx([0.5, 0])
+    result = standardized_scores([1, 1], means, stds)
+    assert result[0] == 1
+    assert np.isneginf(result[1])
+    with pytest.raises(ValueError, match="No descriptions vary"):
+        build_reference([[1, 0], [1, 0]], [[1, 0]])
+
+
+def test_category_filter_does_not_refit_or_change_description_scores(ds):
+    sid = ds.songs[0]["recording_mbid"]
+    means_before, stds_before = (v.copy() for v in ds.description_reference)
+    all_matches = ds.describe(DescriptionMatchRequest(recording_mbid=sid, limit=20))
+    chosen = all_matches["matches"][0]
+    filtered = ds.describe(DescriptionMatchRequest(recording_mbid=sid, categories=[chosen["category"]], limit=20))
+    same = next(m for m in filtered["matches"] if m["id"] == chosen["id"])
+    assert same["description_score"] == chosen["description_score"]
+    assert same["similarity"] == chosen["similarity"]
+    assert filtered["scoring_version"] == all_matches["scoring_version"]
+    assert np.array_equal(ds.description_reference[0], means_before)
+    assert np.array_equal(ds.description_reference[1], stds_before)

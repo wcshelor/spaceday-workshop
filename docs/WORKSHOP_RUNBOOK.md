@@ -9,7 +9,7 @@ Release and data IDs:
 - Pipeline: `laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32`
 - Scoring: `scoring-v1` (config `config/scoring-v1.json` sha256 `56fde13b...`)
 - Calibration: `calibration-v1` (check `artifacts/scoring-v1/calibration.json` checksums)
-- Prompt bank: `prompts-v2` (71 curated entries; checksums in `artifacts/language-v1/meta.json`)
+- Prompt bank: `prompts-v4` (256 curated entries; checksums in `artifacts/language-v1/meta.json`)
 - Language status: `prepared` — real offline song-to-description matches; live text search retired
 
 ## Advance Check (day before)

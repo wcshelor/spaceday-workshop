@@ -10,6 +10,7 @@ export default function LanguageLab({appState, setAppState, bootstrap, songs, so
   const [descCat, setDescCat] = useState('')
   const [descMatches, setDescMatches] = useState<any[]>([])
   const [descriptionNote, setDescriptionNote] = useState('')
+  const [descriptionVersion, setDescriptionVersion] = useState('')
   const [descLoading, setDescLoading] = useState(false)
   const [descriptionError, setDescriptionError] = useState<string | null>(null)
   useEffect(()=> { setLangSong(activeSeed) }, [activeSeed])
@@ -18,7 +19,7 @@ export default function LanguageLab({appState, setAppState, bootstrap, songs, so
     const request = ++descriptionRequest.current
     if(!langSong) return
     setDescLoading(true); setDescriptionError(null)
-    try{ const res = await api.postDescriptions({recording_mbid: langSong, categories: descCat? [descCat] : undefined, limit:8}); if (request === descriptionRequest.current) { setDescMatches(res.matches || []); setDescriptionNote(res.note || '') } }catch{ if(request === descriptionRequest.current) { setDescMatches([]); setDescriptionNote(''); setDescriptionError('Song description matching is unavailable. Please try again.') } } finally{ if(request === descriptionRequest.current) setDescLoading(false)}
+    try{ const res = await api.postDescriptions({recording_mbid: langSong, categories: descCat? [descCat] : undefined, limit:8}); if (request === descriptionRequest.current) { setDescMatches(res.matches || []); setDescriptionNote(res.note || ''); setDescriptionVersion(res.scoring_version || 'unversioned') } }catch{ if(request === descriptionRequest.current) { setDescMatches([]); setDescriptionNote(''); setDescriptionError('Song description matching is unavailable. Please try again.') } } finally{ if(request === descriptionRequest.current) setDescLoading(false)}
   }
   useEffect(()=>{ setDescMatches([]); setDescriptionNote(''); setDescriptionError(null); setDescLoading(false); if(langSong) fetchDescriptions(); return ()=>{ descriptionRequest.current++ } }, [langSong, descCat])
 
@@ -27,7 +28,8 @@ export default function LanguageLab({appState, setAppState, bootstrap, songs, so
           <section className="panel">
             <div className="eyebrow">Optional CLAP experiment</div>
             <h2>Matching descriptions</h2>
-            <p className="muted" style={{fontSize:12}}>CLAP compares this song with a prepared bank of descriptions. Listen, then judge which phrases fit. A mismatch is useful.</p>
+            <p className="muted" style={{fontSize:12}}>Explore different ways to describe this song. This experimental method favors phrases that match unusually well compared with their usual score across the catalogue. Listen, then judge what fits.</p>
+            <p className="help">Chosen for varied listening and discussion, rather than a claim of greater accuracy. Mood and atmosphere are possible personal associations. Wording still matters, and a match does not verify every detail.</p>
             <div style={{display:'grid', gap:8, marginTop:8}}>
               <label className="field"><span className="muted" style={{fontSize:12}}>Song</span>
                 <select className="select" aria-label="Choose song for descriptions" value={langSong||''} onChange={e=>setLangSong(e.target.value)}>
@@ -47,7 +49,7 @@ export default function LanguageLab({appState, setAppState, bootstrap, songs, so
             {descriptionError && <div role="alert"><p>{descriptionError}</p><button className="btn-soft" onClick={fetchDescriptions}>Retry descriptions</button></div>}
             {descLoading && <p className="muted">Loading…</p>}
             <div style={{marginTop:10, display:'grid', gap:8}}>
-              {descMatches.map(m=>{ const judgmentKey=`${langSong}:${m.id}`; const j=appState.descriptionJudgments[judgmentKey]; return (
+              {descMatches.map(m=>{ const judgmentKey=`${descriptionVersion}:${langSong}:${m.id}`; const j=appState.descriptionJudgments[judgmentKey]; return (
                 <div key={m.id} className="result-card" style={{padding:10}}>
                   <div style={{display:'flex', justifyContent:'space-between', gap:8, alignItems:'flex-start'}}>
                     <span className="no-overflow" style={{fontSize:13, flex:1}}>{m.text}</span>

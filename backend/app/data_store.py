@@ -42,6 +42,8 @@ class DataStore:
         self.language_bank = None
         self.prompt_embeddings = None
         self.language_meta = None
+        self.description_reference = None
+        self.description_scoring_id = None
         self.description_error = "Description embeddings are not installed"
         self.collaborative = None
 
@@ -218,10 +220,18 @@ class DataStore:
                 raise ValueError("Invalid description vectors")
             if len({p["id"] for p in self.language_bank}) != len(self.language_bank):
                 raise ValueError("Duplicate description IDs")
+            from .recommendation.descriptions import build_reference, METHOD
+            self.description_reference = build_reference(self.embeddings, mat)
+            identity = json.dumps({"method": METHOD, "dataset": self.dataset_id,
+                                   "prompts": meta["prompt_bank_sha256"],
+                                   "vectors": meta["embeddings_sha256"]}, sort_keys=True)
+            self.description_scoring_id = METHOD + "-" + hashlib.sha256(identity.encode()).hexdigest()[:12]
             self.prompt_embeddings, self.language_meta = mat, meta
             self.description_error = None
         except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
             self.prompt_embeddings = None
+            self.description_reference = None
+            self.description_scoring_id = None
             self.description_error = str(exc)
 
     def bootstrap_payload(self):
@@ -234,6 +244,7 @@ class DataStore:
             "language_status": self._lang_status(),
             "language_encoder": (self.language_meta or {}).get("encoder_id"),
             "live_text_search_status": "retired",
+            "description_scoring_version": self.description_scoring_id,
             "description_categories": sorted({p.get("category", "") for p in (self.language_bank or [])}),
             "supported_methods": ["rhythm-v1", "texture-v1", "clap-v1"] + (["collaborative-v1"] if self.collaborative else []),
             "collaborative": ({"supported_count": len(self.collaborative.index),
@@ -432,8 +443,11 @@ class DataStore:
         if self.prompt_embeddings is None or self.embeddings is None:
             raise RuntimeError("Song description matching unavailable: " + str(self.description_error or "audio vectors missing"))
         audio = self.embeddings[self.uuid_to_index[req.recording_mbid]]
-        scores = self.prompt_embeddings @ audio
-        ranked = sorted(range(len(self.language_bank)), key=lambda i: (-float(scores[i]), self.language_bank[i]["id"]))
+        from .recommendation.descriptions import standardized_scores
+        raw_scores = np.asarray(self.prompt_embeddings, dtype=np.float64) @ audio.astype(np.float64)
+        scores = standardized_scores(raw_scores, *self.description_reference)
+        ranked = sorted((i for i in range(len(self.language_bank)) if np.isfinite(scores[i])),
+                        key=lambda i: (-float(scores[i]), self.language_bank[i]["id"]))
         ranked = [i for i in ranked if not req.categories or self.language_bank[i].get("category") in req.categories]
         selected, deferred, seen = [], [], set()
         for i in ranked:
@@ -446,8 +460,10 @@ class DataStore:
         selected = (selected + deferred)[:req.limit]
         return {
             "recording_mbid": req.recording_mbid,
-            "matches": [{**self.language_bank[i], "similarity": float(scores[i])} for i in selected],
+            "matches": [{**self.language_bank[i], "similarity": float(raw_scores[i]), "description_score": float(scores[i])} for i in selected],
+            "scoring_version": self.description_scoring_id,
+            "reference_dataset_id": self.dataset_id,
             "encoder_id": self.language_meta["encoder_id"],
             "prompt_version": self.language_meta["prompt_version"],
-            "note": "Prepared descriptions ranked by CLAP audio–text cosine similarity, with paraphrase diversity. These are possible matches, not a unique decoding or confidence percentages.",
+            "note": "Experimental discussion method: phrases ranked by how unusually well they match this song compared with their usual similarity across the full catalogue. Paraphrases are diversified. These are listening invitations, not verified descriptions, emotion predictions or confidence percentages.",
         }

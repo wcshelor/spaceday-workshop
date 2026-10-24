@@ -1,7 +1,7 @@
 {
-  "version": "prompts-v2",
+  "version": "prompts-v4",
   "created": "2026-10-21",
-  "provenance": "Workshop description bank: 71 curated phrases. Numbered template filler removed on 2026-10-24. No song/artist names or demographic stereotypes.",
+  "provenance": "Workshop bank: 200 musical descriptions from prompts-v3 plus 56 emotional/atmospheric listening invitations. Context and mood phrases express possible subjective associations, not verified facts or listener emotion predictions. Retired prompts and their measured coverage remain recorded. No song/artist names or numbered template filler.",
   "prompts": [
     {
       "id": "rhy-001",
@@ -12,16 +12,6 @@
         "dance"
       ],
       "paraphrase_group": "four-on-floor"
-    },
-    {
-      "id": "rhy-002",
-      "text": "syncopated funk groove with off-beat guitar",
-      "category": "rhythm",
-      "facets": [
-        "rhythm",
-        "groove"
-      ],
-      "paraphrase_group": "syncopated-funk"
     },
     {
       "id": "rhy-003",
@@ -718,6 +708,1885 @@
         "dynamics"
       ],
       "paraphrase_group": "dense-loud-guitar"
+    },
+    {
+      "id": "spec-rhythm-kick-snare-backbeat",
+      "text": "Acoustic drums with a snare backbeat on beats two and four.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "kick-snare-backbeat"
+      ],
+      "paraphrase_group": "specific-rhythm-kick-snare-backbeat"
+    },
+    {
+      "id": "spec-rhythm-double-kick",
+      "text": "Rapid double-kick drums underneath heavy guitar riffs.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "double-kick"
+      ],
+      "paraphrase_group": "specific-rhythm-double-kick"
+    },
+    {
+      "id": "spec-rhythm-brush-drums",
+      "text": "Soft brushed snare drums with a gently swinging pulse.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "brush-drums"
+      ],
+      "paraphrase_group": "specific-rhythm-brush-drums"
+    },
+    {
+      "id": "spec-rhythm-rim-click",
+      "text": "A dry rim-click snare keeping a restrained beat.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "rim-click"
+      ],
+      "paraphrase_group": "specific-rhythm-rim-click"
+    },
+    {
+      "id": "spec-rhythm-open-hihat",
+      "text": "A dance beat with an open hi-hat between the kick drums.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "open-hihat"
+      ],
+      "paraphrase_group": "specific-rhythm-open-hihat"
+    },
+    {
+      "id": "spec-rhythm-tambourine-backbeat",
+      "text": "Tambourine shakes accenting a steady snare backbeat.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "tambourine-backbeat"
+      ],
+      "paraphrase_group": "specific-rhythm-tambourine-backbeat"
+    },
+    {
+      "id": "spec-rhythm-clap-backbeat",
+      "text": "Electronic handclaps marking the backbeat.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "clap-backbeat"
+      ],
+      "paraphrase_group": "specific-rhythm-clap-backbeat"
+    },
+    {
+      "id": "spec-rhythm-toms-pattern",
+      "text": "A repeating drum pattern led by deep tom-toms.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "toms-pattern"
+      ],
+      "paraphrase_group": "specific-rhythm-toms-pattern"
+    },
+    {
+      "id": "spec-rhythm-dnb-breaks",
+      "text": "Fast drum-and-bass breakbeats with busy hi-hats.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "dnb-breaks"
+      ],
+      "paraphrase_group": "specific-rhythm-dnb-breaks"
+    },
+    {
+      "id": "spec-rhythm-reggae-one-drop",
+      "text": "A relaxed reggae one-drop beat with bass and drums.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "reggae-one-drop"
+      ],
+      "paraphrase_group": "specific-rhythm-reggae-one-drop"
+    },
+    {
+      "id": "spec-rhythm-ska-upstroke",
+      "text": "Quick ska upstrokes on guitar over a brisk drum beat.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "ska-upstroke"
+      ],
+      "paraphrase_group": "specific-rhythm-ska-upstroke"
+    },
+    {
+      "id": "spec-rhythm-clave-pattern",
+      "text": "A repeating clave pattern with layered Latin percussion.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "clave-pattern"
+      ],
+      "paraphrase_group": "specific-rhythm-clave-pattern"
+    },
+    {
+      "id": "spec-rhythm-bossa-pattern",
+      "text": "A gentle bossa nova rhythm with nylon-string guitar and light percussion.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "bossa-pattern"
+      ],
+      "paraphrase_group": "specific-rhythm-bossa-pattern"
+    },
+    {
+      "id": "spec-rhythm-irregular-meter",
+      "text": "An uneven, lopsided beat with an irregular repeating meter.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "irregular-meter"
+      ],
+      "paraphrase_group": "specific-rhythm-irregular-meter"
+    },
+    {
+      "id": "spec-rhythm-rubato-piano",
+      "text": "Solo piano with flexible timing and pauses between phrases.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "rubato-piano"
+      ],
+      "paraphrase_group": "specific-rhythm-rubato-piano"
+    },
+    {
+      "id": "spec-rhythm-beatless-drone",
+      "text": "A sustained ambient drone with slowly changing tones.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "beatless-drone"
+      ],
+      "paraphrase_group": "specific-rhythm-beatless-drone"
+    },
+    {
+      "id": "spec-rhythm-boom-bap",
+      "text": "A hip-hop boom-bap beat with a heavy kick and sharp snare.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "boom-bap"
+      ],
+      "paraphrase_group": "specific-rhythm-boom-bap"
+    },
+    {
+      "id": "spec-rhythm-trap-hihats",
+      "text": "Rapid trap hi-hat rolls above a slow, heavy bass beat.",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "trap-hihats"
+      ],
+      "paraphrase_group": "specific-rhythm-trap-hihats"
+    },
+    {
+      "id": "spec-vocals-single-lead",
+      "text": "A single lead singer clearly in front of the backing instruments.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "single-lead"
+      ],
+      "paraphrase_group": "specific-vocals-single-lead"
+    },
+    {
+      "id": "spec-vocals-duet-lines",
+      "text": "Two singers taking turns singing the lead melody.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "duet-lines"
+      ],
+      "paraphrase_group": "specific-vocals-duet-lines"
+    },
+    {
+      "id": "spec-vocals-unison-vocals",
+      "text": "Several voices singing the same melody together in unison.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "unison-vocals"
+      ],
+      "paraphrase_group": "specific-vocals-unison-vocals"
+    },
+    {
+      "id": "spec-vocals-a-cappella",
+      "text": "Unaccompanied voices forming an a cappella arrangement.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "a-cappella"
+      ],
+      "paraphrase_group": "specific-vocals-a-cappella"
+    },
+    {
+      "id": "spec-vocals-rap-flow",
+      "text": "Rhythmic rapping with tightly articulated syllables over a beat.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "rap-flow"
+      ],
+      "paraphrase_group": "specific-vocals-rap-flow"
+    },
+    {
+      "id": "spec-vocals-vocal-growl",
+      "text": "Deep growled vocals over distorted guitars and forceful drums.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocal-growl"
+      ],
+      "paraphrase_group": "specific-vocals-vocal-growl"
+    },
+    {
+      "id": "spec-vocals-punk-shout",
+      "text": "Raw shouted vocals over fast punk guitars and drums.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "punk-shout"
+      ],
+      "paraphrase_group": "specific-vocals-punk-shout"
+    },
+    {
+      "id": "spec-vocals-vocal-vibrato",
+      "text": "A sustained singing voice with pronounced vibrato.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocal-vibrato"
+      ],
+      "paraphrase_group": "specific-vocals-vocal-vibrato"
+    },
+    {
+      "id": "spec-vocals-wordless-vocals",
+      "text": "Wordless humming and vowel sounds used as part of the music.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "wordless-vocals"
+      ],
+      "paraphrase_group": "specific-vocals-wordless-vocals"
+    },
+    {
+      "id": "spec-vocals-vocal-harmonies",
+      "text": "A lead melody accompanied by close vocal harmonies.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocal-harmonies"
+      ],
+      "paraphrase_group": "specific-vocals-vocal-harmonies"
+    },
+    {
+      "id": "spec-vocals-vocal-double",
+      "text": "A lead vocal doubled closely by another recording of the same line.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocal-double"
+      ],
+      "paraphrase_group": "specific-vocals-vocal-double"
+    },
+    {
+      "id": "spec-vocals-whispered-lines",
+      "text": "Quiet whispered words over a sparse musical backing.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "whispered-lines"
+      ],
+      "paraphrase_group": "specific-vocals-whispered-lines"
+    },
+    {
+      "id": "spec-vocals-vocal-sample",
+      "text": "Short repeated vocal samples chopped into a rhythmic loop.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocal-sample"
+      ],
+      "paraphrase_group": "specific-vocals-vocal-sample"
+    },
+    {
+      "id": "spec-vocals-vocoder",
+      "text": "A robotic vocoder voice blended with sustained synthesizer chords.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "vocoder"
+      ],
+      "paraphrase_group": "specific-vocals-vocoder"
+    },
+    {
+      "id": "spec-vocals-gospel-response",
+      "text": "An expressive lead singer answered by a gospel-style choir.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "gospel-response"
+      ],
+      "paraphrase_group": "specific-vocals-gospel-response"
+    },
+    {
+      "id": "spec-vocals-operatic-voice",
+      "text": "A resonant operatic singing voice over orchestral accompaniment.",
+      "category": "vocals",
+      "facets": [
+        "vocals",
+        "operatic-voice"
+      ],
+      "paraphrase_group": "specific-vocals-operatic-voice"
+    },
+    {
+      "id": "spec-instruments-acoustic-strum",
+      "text": "Strummed steel-string acoustic guitar with ringing open chords.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "acoustic-strum"
+      ],
+      "paraphrase_group": "specific-instruments-acoustic-strum"
+    },
+    {
+      "id": "spec-instruments-nylon-guitar",
+      "text": "Soft nylon-string classical guitar with individually plucked notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "nylon-guitar"
+      ],
+      "paraphrase_group": "specific-instruments-nylon-guitar"
+    },
+    {
+      "id": "spec-instruments-slide-guitar",
+      "text": "An electric slide guitar bending smoothly between notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "slide-guitar"
+      ],
+      "paraphrase_group": "specific-instruments-slide-guitar"
+    },
+    {
+      "id": "spec-instruments-pedal-steel",
+      "text": "A sustained pedal steel guitar gliding above a country arrangement.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "pedal-steel"
+      ],
+      "paraphrase_group": "specific-instruments-pedal-steel"
+    },
+    {
+      "id": "spec-instruments-clean-electric",
+      "text": "Clean electric guitar notes with a bright ringing tone.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "clean-electric"
+      ],
+      "paraphrase_group": "specific-instruments-clean-electric"
+    },
+    {
+      "id": "spec-instruments-palm-muted",
+      "text": "Palm-muted electric guitar playing short, percussive riffs.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "palm-muted"
+      ],
+      "paraphrase_group": "specific-instruments-palm-muted"
+    },
+    {
+      "id": "spec-instruments-fuzz-guitar",
+      "text": "A thick fuzzy electric guitar tone with sustained distorted notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "fuzz-guitar"
+      ],
+      "paraphrase_group": "specific-instruments-fuzz-guitar"
+    },
+    {
+      "id": "spec-instruments-guitar-feedback",
+      "text": "Sustained electric guitar feedback and squealing high notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "guitar-feedback"
+      ],
+      "paraphrase_group": "specific-instruments-guitar-feedback"
+    },
+    {
+      "id": "spec-instruments-twelve-string",
+      "text": "A chiming twelve-string guitar with closely paired ringing notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "twelve-string"
+      ],
+      "paraphrase_group": "specific-instruments-twelve-string"
+    },
+    {
+      "id": "spec-instruments-banjo-roll",
+      "text": "A banjo playing quick, rolling fingerpicked patterns.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "banjo-roll"
+      ],
+      "paraphrase_group": "specific-instruments-banjo-roll"
+    },
+    {
+      "id": "spec-instruments-mandolin-tremolo",
+      "text": "Bright mandolin notes played with a rapid tremolo.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "mandolin-tremolo"
+      ],
+      "paraphrase_group": "specific-instruments-mandolin-tremolo"
+    },
+    {
+      "id": "spec-instruments-slap-bass",
+      "text": "A slap electric bass with sharp plucked and popped notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "slap-bass"
+      ],
+      "paraphrase_group": "specific-instruments-slap-bass"
+    },
+    {
+      "id": "spec-instruments-fretless-bass",
+      "text": "A smooth fretless electric bass sliding between pitches.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "fretless-bass"
+      ],
+      "paraphrase_group": "specific-instruments-fretless-bass"
+    },
+    {
+      "id": "spec-instruments-walking-bass",
+      "text": "An upright bass playing a steady walking bass line.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "walking-bass"
+      ],
+      "paraphrase_group": "specific-instruments-walking-bass"
+    },
+    {
+      "id": "spec-instruments-bowed-bass",
+      "text": "A low bowed string bass sustaining long resonant tones.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "bowed-bass"
+      ],
+      "paraphrase_group": "specific-instruments-bowed-bass"
+    },
+    {
+      "id": "spec-instruments-sub-bass",
+      "text": "Deep sub-bass pulses beneath a sparse electronic drum pattern.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "sub-bass"
+      ],
+      "paraphrase_group": "specific-instruments-sub-bass"
+    },
+    {
+      "id": "spec-instruments-electric-piano",
+      "text": "A mellow electric piano with bell-like chords and soft tremolo.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "electric-piano"
+      ],
+      "paraphrase_group": "specific-instruments-electric-piano"
+    },
+    {
+      "id": "spec-instruments-hammond-organ",
+      "text": "A Hammond-style organ with swirling sustained chords.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "hammond-organ"
+      ],
+      "paraphrase_group": "specific-instruments-hammond-organ"
+    },
+    {
+      "id": "spec-instruments-harpsichord",
+      "text": "A bright harpsichord playing crisp, plucked keyboard notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "harpsichord"
+      ],
+      "paraphrase_group": "specific-instruments-harpsichord"
+    },
+    {
+      "id": "spec-instruments-accordion",
+      "text": "An accordion playing sustained chords and a lilting melody.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "accordion"
+      ],
+      "paraphrase_group": "specific-instruments-accordion"
+    },
+    {
+      "id": "spec-instruments-vibraphone",
+      "text": "A vibraphone playing soft metallic notes with a wavering sustain.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "vibraphone"
+      ],
+      "paraphrase_group": "specific-instruments-vibraphone"
+    },
+    {
+      "id": "spec-instruments-marimba",
+      "text": "A marimba playing rounded wooden percussion notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "marimba"
+      ],
+      "paraphrase_group": "specific-instruments-marimba"
+    },
+    {
+      "id": "spec-instruments-flute-melody",
+      "text": "A breathy flute melody above a light accompaniment.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "flute-melody"
+      ],
+      "paraphrase_group": "specific-instruments-flute-melody"
+    },
+    {
+      "id": "spec-instruments-clarinet",
+      "text": "A woody clarinet playing a flowing melodic line.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "clarinet"
+      ],
+      "paraphrase_group": "specific-instruments-clarinet"
+    },
+    {
+      "id": "spec-instruments-muted-trumpet",
+      "text": "A muted trumpet playing a soft, nasal melodic solo.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "muted-trumpet"
+      ],
+      "paraphrase_group": "specific-instruments-muted-trumpet"
+    },
+    {
+      "id": "spec-instruments-trombone",
+      "text": "A low brass trombone melody with sliding notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "trombone"
+      ],
+      "paraphrase_group": "specific-instruments-trombone"
+    },
+    {
+      "id": "spec-instruments-cello",
+      "text": "A cello playing a warm bowed melody in a low register.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "cello"
+      ],
+      "paraphrase_group": "specific-instruments-cello"
+    },
+    {
+      "id": "spec-instruments-pizzicato-strings",
+      "text": "An orchestral string section playing short plucked notes.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "pizzicato-strings"
+      ],
+      "paraphrase_group": "specific-instruments-pizzicato-strings"
+    },
+    {
+      "id": "spec-instruments-harp-arpeggio",
+      "text": "A harp playing rippling arpeggios with long ringing decays.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "harp-arpeggio"
+      ],
+      "paraphrase_group": "specific-instruments-harp-arpeggio"
+    },
+    {
+      "id": "spec-instruments-harmonica",
+      "text": "A bending harmonica melody over a blues accompaniment.",
+      "category": "instruments",
+      "facets": [
+        "instruments",
+        "harmonica"
+      ],
+      "paraphrase_group": "specific-instruments-harmonica"
+    },
+    {
+      "id": "spec-texture-guitar-wash",
+      "text": "Layers of distorted guitars merging into a hazy sustained wash.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "guitar-wash"
+      ],
+      "paraphrase_group": "specific-texture-guitar-wash"
+    },
+    {
+      "id": "spec-texture-metallic-percussion",
+      "text": "Bright metallic percussion ringing above the rest of the arrangement.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "metallic-percussion"
+      ],
+      "paraphrase_group": "specific-texture-metallic-percussion"
+    },
+    {
+      "id": "spec-texture-granular-sound",
+      "text": "Tiny chopped sound fragments forming a grainy electronic texture.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "granular-sound"
+      ],
+      "paraphrase_group": "specific-texture-granular-sound"
+    },
+    {
+      "id": "spec-texture-breathy-flute-layer",
+      "text": "Airy flute and breath sounds blended into a soft texture.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "breathy-flute-layer"
+      ],
+      "paraphrase_group": "specific-texture-breathy-flute-layer"
+    },
+    {
+      "id": "spec-texture-brittle-highs",
+      "text": "Brittle, sharp high-frequency sounds with a thin, wiry tone.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "brittle-highs"
+      ],
+      "paraphrase_group": "specific-texture-brittle-highs"
+    },
+    {
+      "id": "spec-texture-rounded-low-end",
+      "text": "A rounded, soft-edged low end with gently sustained bass notes.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "rounded-low-end"
+      ],
+      "paraphrase_group": "specific-texture-rounded-low-end"
+    },
+    {
+      "id": "spec-texture-interlocking-plucks",
+      "text": "Several plucked instruments weaving short interlocking phrases.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "interlocking-plucks"
+      ],
+      "paraphrase_group": "specific-texture-interlocking-plucks"
+    },
+    {
+      "id": "spec-texture-sustained-strings",
+      "text": "A continuous bed of bowed strings beneath a clear lead melody.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "sustained-strings"
+      ],
+      "paraphrase_group": "specific-texture-sustained-strings"
+    },
+    {
+      "id": "spec-texture-acoustic-small-ensemble",
+      "text": "A small acoustic ensemble with clearly separated instrument sounds.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "acoustic-small-ensemble"
+      ],
+      "paraphrase_group": "specific-texture-acoustic-small-ensemble"
+    },
+    {
+      "id": "spec-texture-dense-percussion",
+      "text": "Many overlapping percussion parts creating a dense rattling texture.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "dense-percussion"
+      ],
+      "paraphrase_group": "specific-texture-dense-percussion"
+    },
+    {
+      "id": "spec-texture-digital-clicks",
+      "text": "Tiny digital clicks and crackles around a sparse electronic melody.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "digital-clicks"
+      ],
+      "paraphrase_group": "specific-texture-digital-clicks"
+    },
+    {
+      "id": "spec-texture-filtered-noise",
+      "text": "A moving layer of filtered noise sweeping behind the music.",
+      "category": "texture",
+      "facets": [
+        "texture",
+        "filtered-noise"
+      ],
+      "paraphrase_group": "specific-texture-filtered-noise"
+    },
+    {
+      "id": "spec-dynamics-soft-loud-guitars",
+      "text": "Quiet guitar verses opening into loud distorted choruses.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "soft-loud-guitars"
+      ],
+      "paraphrase_group": "specific-dynamics-soft-loud-guitars"
+    },
+    {
+      "id": "spec-dynamics-orchestral-crescendo",
+      "text": "An orchestral ensemble gradually swelling from soft to loud.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "orchestral-crescendo"
+      ],
+      "paraphrase_group": "specific-dynamics-orchestral-crescendo"
+    },
+    {
+      "id": "spec-dynamics-drum-fill-rise",
+      "text": "A rising drum fill leading into a louder full-band entrance.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "drum-fill-rise"
+      ],
+      "paraphrase_group": "specific-dynamics-drum-fill-rise"
+    },
+    {
+      "id": "spec-dynamics-stop-start",
+      "text": "Short full-band bursts separated by abrupt silent pauses.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "stop-start"
+      ],
+      "paraphrase_group": "specific-dynamics-stop-start"
+    },
+    {
+      "id": "spec-dynamics-gentle-piano-accents",
+      "text": "Soft piano playing with occasional strongly accented notes.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "gentle-piano-accents"
+      ],
+      "paraphrase_group": "specific-dynamics-gentle-piano-accents"
+    },
+    {
+      "id": "spec-dynamics-layered-build",
+      "text": "Instruments entering one by one to build a thicker arrangement.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "layered-build"
+      ],
+      "paraphrase_group": "specific-dynamics-layered-build"
+    },
+    {
+      "id": "spec-dynamics-sudden-band-stop",
+      "text": "The full band stopping suddenly to leave a single exposed voice.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "sudden-band-stop"
+      ],
+      "paraphrase_group": "specific-dynamics-sudden-band-stop"
+    },
+    {
+      "id": "spec-dynamics-percussion-dropout",
+      "text": "The drum part dropping away while the melody continues.",
+      "category": "dynamics",
+      "facets": [
+        "dynamics",
+        "percussion-dropout"
+      ],
+      "paraphrase_group": "specific-dynamics-percussion-dropout"
+    },
+    {
+      "id": "spec-production-slapback-vocal",
+      "text": "A short slapback echo closely following the lead vocal.",
+      "category": "production",
+      "facets": [
+        "production",
+        "slapback-vocal"
+      ],
+      "paraphrase_group": "specific-production-slapback-vocal"
+    },
+    {
+      "id": "spec-production-pingpong-delay",
+      "text": "Repeated echo notes alternating between the left and right channels.",
+      "category": "production",
+      "facets": [
+        "production",
+        "pingpong-delay"
+      ],
+      "paraphrase_group": "specific-production-pingpong-delay"
+    },
+    {
+      "id": "spec-production-spring-reverb",
+      "text": "Electric guitar with a splashy spring-reverb tail.",
+      "category": "production",
+      "facets": [
+        "production",
+        "spring-reverb"
+      ],
+      "paraphrase_group": "specific-production-spring-reverb"
+    },
+    {
+      "id": "spec-production-tape-flutter",
+      "text": "A wavering tape-like pitch effect on sustained musical notes.",
+      "category": "production",
+      "facets": [
+        "production",
+        "tape-flutter"
+      ],
+      "paraphrase_group": "specific-production-tape-flutter"
+    },
+    {
+      "id": "spec-production-sidechain-pump",
+      "text": "Synthesizer chords swelling and ducking around each kick drum.",
+      "category": "production",
+      "facets": [
+        "production",
+        "sidechain-pump"
+      ],
+      "paraphrase_group": "specific-production-sidechain-pump"
+    },
+    {
+      "id": "spec-production-bitcrush",
+      "text": "Crunchy bitcrushed electronic sounds with audible digital distortion.",
+      "category": "production",
+      "facets": [
+        "production",
+        "bitcrush"
+      ],
+      "paraphrase_group": "specific-production-bitcrush"
+    },
+    {
+      "id": "spec-production-gated-snare",
+      "text": "A large snare sound with a reverb tail that cuts off abruptly.",
+      "category": "production",
+      "facets": [
+        "production",
+        "gated-snare"
+      ],
+      "paraphrase_group": "specific-production-gated-snare"
+    },
+    {
+      "id": "spec-production-reverse-swell",
+      "text": "Reversed cymbal-like sounds swelling into the next musical hit.",
+      "category": "production",
+      "facets": [
+        "production",
+        "reverse-swell"
+      ],
+      "paraphrase_group": "specific-production-reverse-swell"
+    },
+    {
+      "id": "spec-production-vocal-radio-filter",
+      "text": "A lead vocal filtered to a narrow, telephone-like sound.",
+      "category": "production",
+      "facets": [
+        "production",
+        "vocal-radio-filter"
+      ],
+      "paraphrase_group": "specific-production-vocal-radio-filter"
+    },
+    {
+      "id": "spec-production-phaser-guitar",
+      "text": "Electric guitar with a slowly sweeping phaser effect.",
+      "category": "production",
+      "facets": [
+        "production",
+        "phaser-guitar"
+      ],
+      "paraphrase_group": "specific-production-phaser-guitar"
+    },
+    {
+      "id": "spec-melody-repeated-piano-motif",
+      "text": "A short piano melody repeating with small variations.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "repeated-piano-motif"
+      ],
+      "paraphrase_group": "specific-melody-repeated-piano-motif"
+    },
+    {
+      "id": "spec-melody-guitar-melody",
+      "text": "A clear electric guitar melody above rhythm guitar and bass.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "guitar-melody"
+      ],
+      "paraphrase_group": "specific-melody-guitar-melody"
+    },
+    {
+      "id": "spec-melody-synth-hook",
+      "text": "A short, bright synthesizer hook repeated over a dance beat.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "synth-hook"
+      ],
+      "paraphrase_group": "specific-melody-synth-hook"
+    },
+    {
+      "id": "spec-melody-descending-line",
+      "text": "A repeated descending melodic line moving toward lower notes.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "descending-line"
+      ],
+      "paraphrase_group": "specific-melody-descending-line"
+    },
+    {
+      "id": "spec-melody-rising-line",
+      "text": "A repeated rising melodic line climbing toward higher notes.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "rising-line"
+      ],
+      "paraphrase_group": "specific-melody-rising-line"
+    },
+    {
+      "id": "spec-melody-long-vocal-phrases",
+      "text": "A singer holding long melodic phrases above a steady accompaniment.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "long-vocal-phrases"
+      ],
+      "paraphrase_group": "specific-melody-long-vocal-phrases"
+    },
+    {
+      "id": "spec-melody-ornamented-voice",
+      "text": "A singing melody decorated with quick runs and turns.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "ornamented-voice"
+      ],
+      "paraphrase_group": "specific-melody-ornamented-voice"
+    },
+    {
+      "id": "spec-melody-blues-solo",
+      "text": "An improvised blues guitar solo with bent and sustained notes.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "blues-solo"
+      ],
+      "paraphrase_group": "specific-melody-blues-solo"
+    },
+    {
+      "id": "spec-melody-bass-melody",
+      "text": "A prominent bass line carrying the main melodic hook.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "bass-melody"
+      ],
+      "paraphrase_group": "specific-melody-bass-melody"
+    },
+    {
+      "id": "spec-melody-call-response-instruments",
+      "text": "Two instruments answering each other with short melodic phrases.",
+      "category": "melody",
+      "facets": [
+        "melody",
+        "call-response-instruments"
+      ],
+      "paraphrase_group": "specific-melody-call-response-instruments"
+    },
+    {
+      "id": "spec-harmony-open-fifths",
+      "text": "Distorted electric guitars moving through open power chords.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "open-fifths"
+      ],
+      "paraphrase_group": "specific-harmony-open-fifths"
+    },
+    {
+      "id": "spec-harmony-jazzy-extensions",
+      "text": "Soft keyboard chords with rich, jazz-like harmonic extensions.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "jazzy-extensions"
+      ],
+      "paraphrase_group": "specific-harmony-jazzy-extensions"
+    },
+    {
+      "id": "spec-harmony-drone-harmony",
+      "text": "A melody unfolding above a single sustained drone note.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "drone-harmony"
+      ],
+      "paraphrase_group": "specific-harmony-drone-harmony"
+    },
+    {
+      "id": "spec-harmony-minor-piano",
+      "text": "A piano-led arrangement with dark minor-key chords.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "minor-piano"
+      ],
+      "paraphrase_group": "specific-harmony-minor-piano"
+    },
+    {
+      "id": "spec-harmony-major-acoustic",
+      "text": "Bright major-key acoustic guitar chords beneath a clear melody.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "major-acoustic"
+      ],
+      "paraphrase_group": "specific-harmony-major-acoustic"
+    },
+    {
+      "id": "spec-harmony-chromatic-strings",
+      "text": "Orchestral strings moving through tense, closely spaced notes.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "chromatic-strings"
+      ],
+      "paraphrase_group": "specific-harmony-chromatic-strings"
+    },
+    {
+      "id": "spec-harmony-gospel-chords",
+      "text": "A warm piano and organ accompaniment with gospel-style chord changes.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "gospel-chords"
+      ],
+      "paraphrase_group": "specific-harmony-gospel-chords"
+    },
+    {
+      "id": "spec-harmony-suspended-guitar",
+      "text": "Ringing suspended guitar chords that delay a sense of resolution.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "suspended-guitar"
+      ],
+      "paraphrase_group": "specific-harmony-suspended-guitar"
+    },
+    {
+      "id": "spec-harmony-choral-harmony",
+      "text": "A choir sustaining several distinct harmony parts together.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "choral-harmony"
+      ],
+      "paraphrase_group": "specific-harmony-choral-harmony"
+    },
+    {
+      "id": "spec-harmony-repeating-chords",
+      "text": "A repeating cycle of four chords supporting the main melody.",
+      "category": "harmony",
+      "facets": [
+        "harmony",
+        "repeating-chords"
+      ],
+      "paraphrase_group": "specific-harmony-repeating-chords"
+    },
+    {
+      "id": "spec-combo-solo-classical-piano",
+      "text": "Solo acoustic piano playing a flowing classical melody.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "solo-classical-piano"
+      ],
+      "paraphrase_group": "specific-combo-solo-classical-piano"
+    },
+    {
+      "id": "spec-combo-piano-bass-brushes",
+      "text": "A jazz trio with piano, walking upright bass and brushed drums.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "piano-bass-brushes"
+      ],
+      "paraphrase_group": "specific-combo-piano-bass-brushes"
+    },
+    {
+      "id": "spec-combo-sax-jazz-band",
+      "text": "A saxophone lead over piano, upright bass and swinging drums.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "sax-jazz-band"
+      ],
+      "paraphrase_group": "specific-combo-sax-jazz-band"
+    },
+    {
+      "id": "spec-combo-string-quartet",
+      "text": "Two violins, viola and cello playing an intimate chamber arrangement.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "string-quartet"
+      ],
+      "paraphrase_group": "specific-combo-string-quartet"
+    },
+    {
+      "id": "spec-combo-acoustic-singer",
+      "text": "A solo singer accompanied by fingerpicked acoustic guitar.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "acoustic-singer"
+      ],
+      "paraphrase_group": "specific-combo-acoustic-singer"
+    },
+    {
+      "id": "spec-combo-country-band",
+      "text": "Country vocals with strummed guitar, pedal steel and a steady rhythm section.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "country-band"
+      ],
+      "paraphrase_group": "specific-combo-country-band"
+    },
+    {
+      "id": "spec-combo-bluegrass-band",
+      "text": "A quick acoustic bluegrass arrangement with banjo, fiddle and mandolin.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "bluegrass-band"
+      ],
+      "paraphrase_group": "specific-combo-bluegrass-band"
+    },
+    {
+      "id": "spec-combo-punk-band",
+      "text": "Fast punk music with shouted vocals, distorted guitar and brisk snare drums.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "punk-band"
+      ],
+      "paraphrase_group": "specific-combo-punk-band"
+    },
+    {
+      "id": "spec-combo-metal-band",
+      "text": "Heavy metal with distorted guitar riffs, forceful drums and rough vocals.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "metal-band"
+      ],
+      "paraphrase_group": "specific-combo-metal-band"
+    },
+    {
+      "id": "spec-combo-shoegaze-band",
+      "text": "Soft vocals partly submerged in layers of hazy distorted guitars.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "shoegaze-band"
+      ],
+      "paraphrase_group": "specific-combo-shoegaze-band"
+    },
+    {
+      "id": "spec-combo-synthpop-band",
+      "text": "Melodic synth-pop vocals over bright keyboard chords and electronic drums.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "synthpop-band"
+      ],
+      "paraphrase_group": "specific-combo-synthpop-band"
+    },
+    {
+      "id": "spec-combo-disco-band",
+      "text": "A disco arrangement with a steady dance beat, bass guitar and sweeping strings.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "disco-band"
+      ],
+      "paraphrase_group": "specific-combo-disco-band"
+    },
+    {
+      "id": "spec-combo-reggae-band",
+      "text": "A reggae arrangement with deep bass, light guitar chords and spacious drums.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "reggae-band"
+      ],
+      "paraphrase_group": "specific-combo-reggae-band"
+    },
+    {
+      "id": "spec-combo-rap-sample-beat",
+      "text": "Rapped vocals over a looping sample, bass line and drum-machine beat.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "rap-sample-beat"
+      ],
+      "paraphrase_group": "specific-combo-rap-sample-beat"
+    },
+    {
+      "id": "spec-combo-ambient-piano",
+      "text": "Sparse piano notes floating above long, slowly changing synthesizer pads.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "ambient-piano"
+      ],
+      "paraphrase_group": "specific-combo-ambient-piano"
+    },
+    {
+      "id": "spec-combo-orchestral-score",
+      "text": "A cinematic orchestral arrangement with swelling strings, brass and timpani.",
+      "category": "combo",
+      "facets": [
+        "combo",
+        "orchestral-score"
+      ],
+      "paraphrase_group": "specific-combo-orchestral-score"
+    },
+    {
+      "id": "evoke-mood-anticipation",
+      "text": "Music with a feeling of quiet anticipation.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "anticipation"
+      ],
+      "paraphrase_group": "evoke-mood-anticipation"
+    },
+    {
+      "id": "evoke-mood-release",
+      "text": "Music with a feeling of emotional release.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "release"
+      ],
+      "paraphrase_group": "evoke-mood-release"
+    },
+    {
+      "id": "evoke-mood-vulnerable",
+      "text": "Music that feels intimate and vulnerable.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "vulnerable"
+      ],
+      "paraphrase_group": "evoke-mood-vulnerable"
+    },
+    {
+      "id": "evoke-mood-detached",
+      "text": "Music that feels distant and emotionally detached.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "detached"
+      ],
+      "paraphrase_group": "evoke-mood-detached"
+    },
+    {
+      "id": "evoke-mood-defiant",
+      "text": "Music that feels defiant and determined.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "defiant"
+      ],
+      "paraphrase_group": "evoke-mood-defiant"
+    },
+    {
+      "id": "evoke-mood-comforting",
+      "text": "Music that feels comforting and reassuring.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "comforting"
+      ],
+      "paraphrase_group": "evoke-mood-comforting"
+    },
+    {
+      "id": "evoke-mood-bittersweet-hope",
+      "text": "Music with a bittersweet feeling of hope after sadness.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "bittersweet-hope"
+      ],
+      "paraphrase_group": "evoke-mood-bittersweet-hope"
+    },
+    {
+      "id": "evoke-mood-yearning",
+      "text": "Music with a feeling of yearning for something out of reach.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "yearning"
+      ],
+      "paraphrase_group": "evoke-mood-yearning"
+    },
+    {
+      "id": "evoke-mood-grief",
+      "text": "Music with a solemn feeling of grief and loss.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "grief"
+      ],
+      "paraphrase_group": "evoke-mood-grief"
+    },
+    {
+      "id": "evoke-mood-euphoria",
+      "text": "Music with a feeling of overwhelming joy and euphoria.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "euphoria"
+      ],
+      "paraphrase_group": "evoke-mood-euphoria"
+    },
+    {
+      "id": "evoke-mood-contentment",
+      "text": "Music with a feeling of quiet contentment.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "contentment"
+      ],
+      "paraphrase_group": "evoke-mood-contentment"
+    },
+    {
+      "id": "evoke-mood-excitement",
+      "text": "Music with a restless feeling of excitement.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "excitement"
+      ],
+      "paraphrase_group": "evoke-mood-excitement"
+    },
+    {
+      "id": "evoke-mood-loneliness",
+      "text": "Music that evokes solitude and loneliness.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "loneliness"
+      ],
+      "paraphrase_group": "evoke-mood-loneliness"
+    },
+    {
+      "id": "evoke-mood-resolve",
+      "text": "Music with a feeling of steady resolve and perseverance.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "resolve"
+      ],
+      "paraphrase_group": "evoke-mood-resolve"
+    },
+    {
+      "id": "evoke-mood-awe",
+      "text": "Music that evokes awe and a sense of vastness.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "awe"
+      ],
+      "paraphrase_group": "evoke-mood-awe"
+    },
+    {
+      "id": "evoke-mood-suspense",
+      "text": "Music that creates suspense, as if something is about to happen.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "suspense"
+      ],
+      "paraphrase_group": "evoke-mood-suspense"
+    },
+    {
+      "id": "evoke-mood-serenity",
+      "text": "Music with a feeling of deep serenity.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "serenity"
+      ],
+      "paraphrase_group": "evoke-mood-serenity"
+    },
+    {
+      "id": "evoke-mood-frustration",
+      "text": "Music that feels frustrated and impatient.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "frustration"
+      ],
+      "paraphrase_group": "evoke-mood-frustration"
+    },
+    {
+      "id": "evoke-mood-resignation",
+      "text": "Music with a weary feeling of resignation.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "resignation"
+      ],
+      "paraphrase_group": "evoke-mood-resignation"
+    },
+    {
+      "id": "evoke-mood-relief",
+      "text": "Music with a feeling of relief after tension.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "relief"
+      ],
+      "paraphrase_group": "evoke-mood-relief"
+    },
+    {
+      "id": "evoke-mood-wonder",
+      "text": "Music with a feeling of innocent wonder.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "wonder"
+      ],
+      "paraphrase_group": "evoke-mood-wonder"
+    },
+    {
+      "id": "evoke-mood-remembering",
+      "text": "Music that evokes a hazy, half-remembered past.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "remembering"
+      ],
+      "paraphrase_group": "evoke-mood-remembering"
+    },
+    {
+      "id": "evoke-mood-unease",
+      "text": "Music with an unsettling feeling that something is not quite right.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "unease"
+      ],
+      "paraphrase_group": "evoke-mood-unease"
+    },
+    {
+      "id": "evoke-mood-mischief",
+      "text": "Music with a mischievous, teasing sense of humor.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "mischief"
+      ],
+      "paraphrase_group": "evoke-mood-mischief"
+    },
+    {
+      "id": "evoke-mood-reverence",
+      "text": "Music that feels solemn and reverent.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "reverence"
+      ],
+      "paraphrase_group": "evoke-mood-reverence"
+    },
+    {
+      "id": "evoke-mood-catharsis",
+      "text": "Music that feels cathartic, building toward an emotional outpouring.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "catharsis"
+      ],
+      "paraphrase_group": "evoke-mood-catharsis"
+    },
+    {
+      "id": "evoke-mood-curiosity",
+      "text": "Music with a feeling of curiosity and discovery.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "curiosity"
+      ],
+      "paraphrase_group": "evoke-mood-curiosity"
+    },
+    {
+      "id": "evoke-mood-introspection",
+      "text": "Music that invites quiet introspection.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "introspection"
+      ],
+      "paraphrase_group": "evoke-mood-introspection"
+    },
+    {
+      "id": "evoke-mood-tenderness",
+      "text": "Music with a feeling of tenderness and care.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "tenderness"
+      ],
+      "paraphrase_group": "evoke-mood-tenderness"
+    },
+    {
+      "id": "evoke-mood-resilience",
+      "text": "Music with a hopeful feeling of recovering and starting again.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "resilience"
+      ],
+      "paraphrase_group": "evoke-mood-resilience"
+    },
+    {
+      "id": "evoke-mood-gratitude",
+      "text": "Music with a warm feeling of gratitude.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "gratitude"
+      ],
+      "paraphrase_group": "evoke-mood-gratitude"
+    },
+    {
+      "id": "evoke-mood-farewell",
+      "text": "Music that feels like a bittersweet farewell.",
+      "category": "mood",
+      "facets": [
+        "mood",
+        "farewell"
+      ],
+      "paraphrase_group": "evoke-mood-farewell"
+    },
+    {
+      "id": "evoke-atmosphere-night-alone",
+      "text": "Music for a quiet evening alone.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "night-alone"
+      ],
+      "paraphrase_group": "evoke-atmosphere-night-alone"
+    },
+    {
+      "id": "evoke-atmosphere-empty-road",
+      "text": "Music that evokes a long drive along an empty road.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "empty-road"
+      ],
+      "paraphrase_group": "evoke-atmosphere-empty-road"
+    },
+    {
+      "id": "evoke-atmosphere-rain-window",
+      "text": "Music that evokes watching rain through a window.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "rain-window"
+      ],
+      "paraphrase_group": "evoke-atmosphere-rain-window"
+    },
+    {
+      "id": "evoke-atmosphere-after-storm",
+      "text": "Music that evokes a clear morning after a storm.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "after-storm"
+      ],
+      "paraphrase_group": "evoke-atmosphere-after-storm"
+    },
+    {
+      "id": "evoke-atmosphere-empty-hall",
+      "text": "Music that evokes an empty, echoing hall.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "empty-hall"
+      ],
+      "paraphrase_group": "evoke-atmosphere-empty-hall"
+    },
+    {
+      "id": "evoke-atmosphere-small-room",
+      "text": "Music that feels like a private performance in a small room.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "small-room"
+      ],
+      "paraphrase_group": "evoke-atmosphere-small-room"
+    },
+    {
+      "id": "evoke-atmosphere-crowd",
+      "text": "Music that evokes being surrounded by a moving crowd.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "crowd"
+      ],
+      "paraphrase_group": "evoke-atmosphere-crowd"
+    },
+    {
+      "id": "evoke-atmosphere-outdoor-party",
+      "text": "Music that evokes a relaxed outdoor celebration.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "outdoor-party"
+      ],
+      "paraphrase_group": "evoke-atmosphere-outdoor-party"
+    },
+    {
+      "id": "evoke-atmosphere-dreamscape",
+      "text": "Music that evokes drifting through a dream.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "dreamscape"
+      ],
+      "paraphrase_group": "evoke-atmosphere-dreamscape"
+    },
+    {
+      "id": "evoke-atmosphere-science-fiction",
+      "text": "Music that evokes exploring an unfamiliar science-fiction world.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "science-fiction"
+      ],
+      "paraphrase_group": "evoke-atmosphere-science-fiction"
+    },
+    {
+      "id": "evoke-atmosphere-abandoned-place",
+      "text": "Music that evokes an eerie, abandoned place.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "abandoned-place"
+      ],
+      "paraphrase_group": "evoke-atmosphere-abandoned-place"
+    },
+    {
+      "id": "evoke-atmosphere-open-landscape",
+      "text": "Music that evokes a wide, open landscape.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "open-landscape"
+      ],
+      "paraphrase_group": "evoke-atmosphere-open-landscape"
+    },
+    {
+      "id": "evoke-atmosphere-ocean-horizon",
+      "text": "Music that evokes watching the ocean stretch toward the horizon.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "ocean-horizon"
+      ],
+      "paraphrase_group": "evoke-atmosphere-ocean-horizon"
+    },
+    {
+      "id": "evoke-atmosphere-snowfall",
+      "text": "Music that evokes a quiet landscape covered in falling snow.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "snowfall"
+      ],
+      "paraphrase_group": "evoke-atmosphere-snowfall"
+    },
+    {
+      "id": "evoke-atmosphere-candlelight",
+      "text": "Music that evokes a warm, candlelit room.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "candlelight"
+      ],
+      "paraphrase_group": "evoke-atmosphere-candlelight"
+    },
+    {
+      "id": "evoke-atmosphere-night-streets",
+      "text": "Music that evokes walking through city streets late at night.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "night-streets"
+      ],
+      "paraphrase_group": "evoke-atmosphere-night-streets"
+    },
+    {
+      "id": "evoke-atmosphere-before-event",
+      "text": "Music that evokes the moments just before an important event.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "before-event"
+      ],
+      "paraphrase_group": "evoke-atmosphere-before-event"
+    },
+    {
+      "id": "evoke-atmosphere-train-window",
+      "text": "Music that evokes watching scenery pass from a train window.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "train-window"
+      ],
+      "paraphrase_group": "evoke-atmosphere-train-window"
+    },
+    {
+      "id": "evoke-atmosphere-desert-sunset",
+      "text": "Music that evokes a desert landscape at sunset.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "desert-sunset"
+      ],
+      "paraphrase_group": "evoke-atmosphere-desert-sunset"
+    },
+    {
+      "id": "evoke-atmosphere-deep-forest",
+      "text": "Music that evokes wandering through a deep, shadowy forest.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "deep-forest"
+      ],
+      "paraphrase_group": "evoke-atmosphere-deep-forest"
+    },
+    {
+      "id": "evoke-atmosphere-underwater",
+      "text": "Music that evokes floating slowly underwater.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "underwater"
+      ],
+      "paraphrase_group": "evoke-atmosphere-underwater"
+    },
+    {
+      "id": "evoke-atmosphere-city-rush",
+      "text": "Music that evokes the bustle and motion of a busy city.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "city-rush"
+      ],
+      "paraphrase_group": "evoke-atmosphere-city-rush"
+    },
+    {
+      "id": "evoke-atmosphere-old-film",
+      "text": "Music that evokes a scene from a faded old film.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "old-film"
+      ],
+      "paraphrase_group": "evoke-atmosphere-old-film"
+    },
+    {
+      "id": "evoke-atmosphere-ceremony",
+      "text": "Music that evokes a solemn gathering or ceremony.",
+      "category": "atmosphere",
+      "facets": [
+        "atmosphere",
+        "ceremony"
+      ],
+      "paraphrase_group": "evoke-atmosphere-ceremony"
     }
-  ]
+  ],
+  "retired_prompts": [
+    {
+      "id": "rhy-002",
+      "text": "syncopated funk groove with off-beat guitar",
+      "category": "rhythm",
+      "facets": [
+        "rhythm",
+        "groove"
+      ],
+      "paraphrase_group": "syncopated-funk",
+      "retired_on": "2026-10-24",
+      "last_active_version": "prompts-v2",
+      "reason": "Ranked first for 801 of 1500 songs (53.4%) and appeared in the top eight for 1400 songs (93.3%). Its broad dominance made it insufficiently discriminating for this workshop. Removal is an editorial choice, not evidence that embeddings were corrupt or a fix for CLAP prompt bias.",
+      "observed_first_place_count": 801,
+      "observed_catalogue_count": 1500,
+      "observed_top8_count": 1400
+    }
+  ],
+  "updated": "2026-10-24"
 }

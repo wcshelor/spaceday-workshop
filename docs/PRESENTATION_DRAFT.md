@@ -2,6 +2,8 @@
 
 *A presentation draft and intuition-building study guide. Prepared 24 October 2026.*
 
+For the short opening, use the [seven-slide introduction with numbered research and data citations](INTRO_SLIDES.md). Its references resolve to the [running numbered bibliography](WORKS_CITED_AND_METHODS.md#numbered-bibliography-for-presentations).
+
 ## How to use this guide
 
 Read the speaker notes straight through for preparation. Each numbered section can become a slide, with **On screen** as the short slide copy and **Speaker notes** as the explanation. All invented song names, vectors and listener tables are teaching examples, not results from the actual catalogue. Actual project counts and formulas follow [Works Cited and Methods](WORKS_CITED_AND_METHODS.md), which contains provenance and paper references.
@@ -10,7 +12,7 @@ For a 45-minute workshop, use this pacing as a menu rather than reading every no
 
 | Minutes | Topic |
 | --- | --- |
-| 0–5 | Sections 1–2: similarity and the pipeline |
+| 0–5 | Industry context, then sections 1–2: similarity and the pipeline |
 | 5–12 | Sections 3–5: rhythm and texture |
 | 12–19 | Sections 6–7: CLAP and language |
 | 19–26 | Sections 8–9: listener patterns |
@@ -23,6 +25,30 @@ The full notes and quiz bank support a longer preparation session. The mathemati
 ## Learning goals
 
 After reading, you should be able to explain what information each method sees, how it turns that information into a ranking, why methods disagree, and what a score can establish. You should also be able to distinguish model training from recommendation-time scoring and identify an unfair comparison.
+
+## Industry context: how Spotify and Apple Music recommend music
+
+**On screen**
+
+- Spotify combines listener behaviour, patterns across listeners, content information, context and editorial curation.
+- Apple Music uses listening history, play duration, library additions, favourites and other activity to personalise recommendations.
+- Large services combine many signals. Our workshop separates a few building blocks so we can understand them.
+
+**Speaker notes**
+
+Start with a familiar question: “How does your music app decide what to play next?” Spotify and Apple Music have substantial data and engineering resources, allowing them to build personalised experiences around individual listeners. Their public descriptions provide useful clues, but neither source below gives a complete recipe for its current recommendation systems.
+
+Spotify describes recommendations informed by a listener's behaviour, the behaviour of other listeners, information about the content and listening context. Human editors also shape recommendations. Different surfaces, such as Home, Search and playlists, can involve different approaches. This is broader than finding a song with a similar tempo. See [Spotify: Understanding recommendations](https://www.spotify.com/uk/safetyandprivacy/understanding-recommendations).
+
+Apple confirms that it uses information including what you play, how long you play it, what you add to your library or playlists, and what you favourite or share to customise your experience. Its engineering description also confirms large-scale offline pipelines, model training and real-time personalised services. These sources establish the signals and engineering involved, but do not identify the exact recommendation algorithms or their weights. See [Apple Music & Privacy](https://www.apple.com/legal/privacy/data/en/apple-music/) and [Apple: Music Recommendation Engine engineering role](https://jobs.apple.com/en-il/details/200656273-2114/senior-machine-learning-engineer-music-recommendation-engine?team=SFTWR).
+
+The teaching connection is that a useful recommendation can draw on several kinds of evidence: what a listener has enjoyed, what other listeners associate with it, and information about the music. Our rhythm, texture, CLAP and listener-pattern methods let us explore distinct kinds of evidence separately. They illustrate recommendation building blocks; they do not reproduce Spotify or Apple Music, and these public sources do not establish that either company uses our particular formulas or CLAP model.
+
+**Opening prompt:** “If your app recommends a song you enjoy, what clues might have helped it choose?”
+
+**Transition:** “The large services combine many clues. Let's explore some simpler methods one at a time: what does each notice, and what does it miss?”
+
+*Source descriptions checked 24 October 2026; deployed systems can change.*
 
 ## 1. Musical similarity has several meanings
 
@@ -165,19 +191,17 @@ A high CLAP score supports the statement “these audio representations are clos
 
 **On screen**
 
-A paired text encoder could locate a written description in the audio space.
+CLAP's paired text encoder places descriptions in the audio representation space.
 
-**Current repository status:** the prepared language artifact contains synthetic placeholder vectors.
+The workshop uses 200 real prepared text vectors; live free-form text search is retired.
 
 **Speaker notes**
 
-A query such as “gentle acoustic guitar with sparse vocals” could become a text vector. Comparing it with song audio vectors would retrieve candidates that align with that description. This works only when the text encoder matches the audio representation pipeline. Equal vector lengths do not establish compatibility. Two maps can both have latitude-like and longitude-like coordinates while describing unrelated places.
+We curated 200 candidate descriptions and encoded them offline with the paired CLAP text branch. At runtime, the app compares these stored text vectors with stored audio vectors. Participants can judge Fits/Partly/Misses and explore categories without running or training an encoder. Current metadata records `placeholder: false` and the text checkpoint revision. Descriptions are editorial candidates, not verified annotations of songs.
 
-For our checked-in edition, language metadata explicitly marks the prepared vectors as placeholders. The builder can generate deterministic random vectors from text hashes for interface development. Deterministic means repeating the same input reproduces the same output. It says nothing about whether the output captures meaning.
+The shared pipeline identifies a model family; it does not independently establish the exact checkpoint hash used for upstream audio vectors. Compatible dimensions alone do not prove compatible representations. Real embeddings can also produce biased or misleading matches, so plausible results need listening-based scrutiny. See [description-matching and curation notes](DESCRIPTION_MATCHING.md), and numbered sources [8], [9], [12] and [17] in the [works cited](WORKS_CITED_AND_METHODS.md#numbered-bibliography-for-presentations).
 
-Therefore, teach real text retrieval as an intended extension and explain its current status. A working interface or plausible-looking result is insufficient evidence that a semantic encoder produced it. Provisioning and verifying the paired encoder and rebuilding the bank are prerequisites for a real demonstration.
-
-**Check:** “If a placeholder recommends something plausible by chance, does that validate the model?” No. The computation and repeated evidence matter.
+**Check:** “Does a high-ranked description prove the recording contains that instrument?” No: a similarity score is evidence of representation alignment, not verified instrumentation.
 
 ## 8. Listener patterns: connections through people
 
@@ -458,7 +482,7 @@ Design a comparison for either “closest audible rhythm” or “most enjoyable
 
 **5.** Coordinates form a learned representation. Meaning can spread across combinations of dimensions, and individual dimensions need not have stable everyday labels. A high similarity score does not identify a causal musical attribute.
 
-**6. No.** Deterministic synthetic vectors can reproduce rankings. Inspect language metadata, encoder/tokenizer identity, verification results and whether the bank contains real encoded prompts. Current metadata marks placeholders. Plausible anecdotes cannot substitute for checking the pipeline.
+**6. No.** Deterministic synthetic vectors can reproduce rankings. Inspect language metadata, encoder/tokenizer identity, verification results and whether the bank contains real encoded prompts. Current metadata records real prepared vectors; deterministic placeholders remain a useful hypothetical counterexample. Plausible anecdotes cannot substitute for checking the pipeline.
 
 **7.** The vectors come from different signals and training procedures: upstream audio/text learning versus local listener feedback factorization. Their supported candidate pools also differ unless controlled. Equal dimensionality or the same comparison function would not equate their geometries.
 
@@ -484,7 +508,7 @@ Design a comparison for either “closest audible rhythm” or “most enjoyable
 
 **18.** “I hear a guitar resemblance, and these recordings are close in CLAP space. The score alone does not show that guitars caused the ranking.” This separates the listening observation from the model evidence.
 
-**19.** Changing a seed changes the query. Recording enjoyment stores a reaction without retraining. Fitting SVD changes the learned factor model. Running the text encoder performs inference with fixed parameters, assuming a real encoder is provisioned. Upstream CLAP pretraining changes parameters, but our workshop does not perform it.
+**19.** Changing a seed changes the query. Recording enjoyment stores a reaction without retraining. Fitting SVD changes the learned factor model. Running the text encoder performs inference with fixed parameters, when performed offline to build the prepared bank. Upstream CLAP pretraining changes parameters, but our workshop does not perform it.
 
 **20.** A strong answer defines a relevant rating, such as perceived rhythmic resemblance or enjoyment of an unfamiliar recommendation. It holds seed and candidate eligibility fixed, controls preferences and listening conditions, and gathers several trials across songs and participants. Method order can be varied to reduce order effects. One example can illustrate a mechanism but is too sensitive to song choice for a broad ranking of methods.
 

@@ -1,0 +1,855 @@
+{
+  "encoder_checks": {
+    "reference_max_abs_vs_stored": 2.9802322387695312e-08,
+    "reference_min_cos_vs_stored": 0.9999997615814209,
+    "padding77_vs_dynamic_max_abs": 3.762543201446533e-07,
+    "single_vs_batch_max_abs": 1.6391277313232422e-07,
+    "shuffled_vs_original_max_abs": 0.0,
+    "max_bank_token_length": 15,
+    "stored_vs_reference_top1_disagreements": 0,
+    "upstream_tokenizer_ids_match_all_short_prompts": true
+  },
+  "controlled_prompts": [
+    {
+      "text": "syncopated funk groove with off-beat guitar",
+      "mean_score": 0.47690033809511534,
+      "std_score": 0.0962564123321554,
+      "beats_original_funk_count": 0,
+      "top1_in_expanded_bank": 157,
+      "cosine_to_original_funk": 1.000000238418579
+    },
+    {
+      "text": "syncopated funk groove",
+      "mean_score": 0.36368171330421745,
+      "std_score": 0.09455148517698098,
+      "beats_original_funk_count": 121,
+      "top1_in_expanded_bank": 11,
+      "cosine_to_original_funk": 0.8060838580131531
+    },
+    {
+      "text": "funk groove with off-beat guitar",
+      "mean_score": 0.37471921231526084,
+      "std_score": 0.10488018228533845,
+      "beats_original_funk_count": 33,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.8616392016410828
+    },
+    {
+      "text": "syncopated groove with off-beat guitar",
+      "mean_score": 0.4472446962483433,
+      "std_score": 0.08785241481157935,
+      "beats_original_funk_count": 394,
+      "top1_in_expanded_bank": 22,
+      "cosine_to_original_funk": 0.9079997539520264
+    },
+    {
+      "text": "syncopated funk groove with guitar",
+      "mean_score": 0.41448927410676334,
+      "std_score": 0.09477354400321947,
+      "beats_original_funk_count": 29,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.9579881429672241
+    },
+    {
+      "text": "off-beat guitar",
+      "mean_score": 0.15960856092604964,
+      "std_score": 0.07550893935411426,
+      "beats_original_funk_count": 3,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.4346778690814972
+    },
+    {
+      "text": "syncopated",
+      "mean_score": 0.20887916548512098,
+      "std_score": 0.07591658645947974,
+      "beats_original_funk_count": 62,
+      "top1_in_expanded_bank": 7,
+      "cosine_to_original_funk": 0.25260430574417114
+    },
+    {
+      "text": "funk",
+      "mean_score": 0.14208509534394997,
+      "std_score": 0.09828278471487657,
+      "beats_original_funk_count": 9,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.4671856760978699
+    },
+    {
+      "text": "groove",
+      "mean_score": 0.25530290496043867,
+      "std_score": 0.10291630988203347,
+      "beats_original_funk_count": 37,
+      "top1_in_expanded_bank": 2,
+      "cosine_to_original_funk": 0.48359382152557373
+    },
+    {
+      "text": "guitar",
+      "mean_score": 0.16317381679697612,
+      "std_score": 0.08421368226563096,
+      "beats_original_funk_count": 7,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3792478144168854
+    },
+    {
+      "text": "syncopated guitar music",
+      "mean_score": 0.4176421227299584,
+      "std_score": 0.08354798631215203,
+      "beats_original_funk_count": 336,
+      "top1_in_expanded_bank": 29,
+      "cosine_to_original_funk": 0.7214367389678955
+    },
+    {
+      "text": "funk music",
+      "mean_score": 0.30446650576844386,
+      "std_score": 0.09121455718799922,
+      "beats_original_funk_count": 32,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.6466208696365356
+    },
+    {
+      "text": "guitar music",
+      "mean_score": 0.27777822179044864,
+      "std_score": 0.0806854454769735,
+      "beats_original_funk_count": 47,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.5980532169342041
+    },
+    {
+      "text": "A recording of music with a syncopated funk groove and off-beat guitar.",
+      "mean_score": 0.37579477251818283,
+      "std_score": 0.1016620000090889,
+      "beats_original_funk_count": 57,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.7830086946487427
+    },
+    {
+      "text": "Music with a syncopated rhythm and guitar.",
+      "mean_score": 0.440667133414733,
+      "std_score": 0.08301062072878627,
+      "beats_original_funk_count": 325,
+      "top1_in_expanded_bank": 7,
+      "cosine_to_original_funk": 0.751811146736145
+    },
+    {
+      "text": "Funky music with syncopated guitar playing.",
+      "mean_score": 0.46359431853281186,
+      "std_score": 0.10248764421790722,
+      "beats_original_funk_count": 590,
+      "top1_in_expanded_bank": 184,
+      "cosine_to_original_funk": 0.8156232833862305
+    },
+    {
+      "text": "A syncopated groove featuring offbeat guitar.",
+      "mean_score": 0.4153417222341818,
+      "std_score": 0.10294529588080818,
+      "beats_original_funk_count": 159,
+      "top1_in_expanded_bank": 2,
+      "cosine_to_original_funk": 0.7488886117935181
+    },
+    {
+      "text": "music",
+      "mean_score": 0.38612914783937025,
+      "std_score": 0.07662333342253315,
+      "beats_original_funk_count": 278,
+      "top1_in_expanded_bank": 16,
+      "cosine_to_original_funk": 0.4251822233200073
+    },
+    {
+      "text": "A recording of music.",
+      "mean_score": 0.4517252552122577,
+      "std_score": 0.07361382943763485,
+      "beats_original_funk_count": 534,
+      "top1_in_expanded_bank": 94,
+      "cosine_to_original_funk": 0.3969125747680664
+    },
+    {
+      "text": "a song",
+      "mean_score": 0.4218001102454661,
+      "std_score": 0.08018796944109735,
+      "beats_original_funk_count": 427,
+      "top1_in_expanded_bank": 47,
+      "cosine_to_original_funk": 0.5584347248077393
+    },
+    {
+      "text": "music with instruments",
+      "mean_score": 0.22115758861284887,
+      "std_score": 0.08476356061031491,
+      "beats_original_funk_count": 89,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3591754734516144
+    },
+    {
+      "text": "a band playing music",
+      "mean_score": 0.1369530197968913,
+      "std_score": 0.07206781550550734,
+      "beats_original_funk_count": 26,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3057025671005249
+    },
+    {
+      "text": "a pop song",
+      "mean_score": 0.4099172271866969,
+      "std_score": 0.08064214941790802,
+      "beats_original_funk_count": 309,
+      "top1_in_expanded_bank": 10,
+      "cosine_to_original_funk": 0.6172687411308289
+    },
+    {
+      "text": "a rock song",
+      "mean_score": 0.41985611439321613,
+      "std_score": 0.11005441498214166,
+      "beats_original_funk_count": 350,
+      "top1_in_expanded_bank": 23,
+      "cosine_to_original_funk": 0.6951693296432495
+    },
+    {
+      "text": "a funk song",
+      "mean_score": 0.44416879874190107,
+      "std_score": 0.08424760238014264,
+      "beats_original_funk_count": 422,
+      "top1_in_expanded_bank": 48,
+      "cosine_to_original_funk": 0.7681589126586914
+    },
+    {
+      "text": "music with guitar",
+      "mean_score": 0.23708967496446096,
+      "std_score": 0.08133763757037633,
+      "beats_original_funk_count": 26,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.5646129846572876
+    },
+    {
+      "text": "music without guitar",
+      "mean_score": 0.17190319874648333,
+      "std_score": 0.07236768007121337,
+      "beats_original_funk_count": 22,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.4549240469932556
+    },
+    {
+      "text": "instrumental music",
+      "mean_score": 0.35285779914671717,
+      "std_score": 0.08561044190486784,
+      "beats_original_funk_count": 185,
+      "top1_in_expanded_bank": 6,
+      "cosine_to_original_funk": 0.5680253505706787
+    },
+    {
+      "text": "music with singing",
+      "mean_score": 0.2553359970381353,
+      "std_score": 0.08025293520227729,
+      "beats_original_funk_count": 78,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3722965717315674
+    },
+    {
+      "text": "music without singing",
+      "mean_score": 0.11459413321346446,
+      "std_score": 0.06555720916350588,
+      "beats_original_funk_count": 19,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.29135382175445557
+    },
+    {
+      "text": "slow music",
+      "mean_score": 0.34295558631684314,
+      "std_score": 0.092810773600906,
+      "beats_original_funk_count": 190,
+      "top1_in_expanded_bank": 3,
+      "cosine_to_original_funk": 0.5535454750061035
+    },
+    {
+      "text": "fast music",
+      "mean_score": 0.44082436543048575,
+      "std_score": 0.09333096387335728,
+      "beats_original_funk_count": 457,
+      "top1_in_expanded_bank": 84,
+      "cosine_to_original_funk": 0.745830237865448
+    },
+    {
+      "text": "acoustic music",
+      "mean_score": 0.2770710820838362,
+      "std_score": 0.09180232525112918,
+      "beats_original_funk_count": 123,
+      "top1_in_expanded_bank": 1,
+      "cosine_to_original_funk": 0.5593373775482178
+    },
+    {
+      "text": "electronic music",
+      "mean_score": 0.34489501220273966,
+      "std_score": 0.0979981881653606,
+      "beats_original_funk_count": 238,
+      "top1_in_expanded_bank": 36,
+      "cosine_to_original_funk": 0.3831399083137512
+    },
+    {
+      "text": "a dog barking",
+      "mean_score": -0.03451373367584094,
+      "std_score": 0.055245758478490524,
+      "beats_original_funk_count": 0,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.20295178890228271
+    },
+    {
+      "text": "a person speaking",
+      "mean_score": -0.11224031805547513,
+      "std_score": 0.05955522006520179,
+      "beats_original_funk_count": 3,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.077716164290905
+    },
+    {
+      "text": "rain falling",
+      "mean_score": -0.02081309619472817,
+      "std_score": 0.06105319947364462,
+      "beats_original_funk_count": 0,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.18548569083213806
+    },
+    {
+      "text": "silence",
+      "mean_score": -0.07059868991049471,
+      "std_score": 0.07326889326743191,
+      "beats_original_funk_count": 1,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.20959293842315674
+    },
+    {
+      "text": "qzxv blorf trel",
+      "mean_score": 0.0519295256302323,
+      "std_score": 0.0709750515377874,
+      "beats_original_funk_count": 21,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": -0.0016861483454704285
+    },
+    {
+      "text": "piano music",
+      "mean_score": 0.2394167272757253,
+      "std_score": 0.10726917810665716,
+      "beats_original_funk_count": 135,
+      "top1_in_expanded_bank": 4,
+      "cosine_to_original_funk": 0.3614557683467865
+    },
+    {
+      "text": "A recording of piano music.",
+      "mean_score": 0.17814714126531056,
+      "std_score": 0.11020971012583557,
+      "beats_original_funk_count": 70,
+      "top1_in_expanded_bank": 4,
+      "cosine_to_original_funk": 0.29909271001815796
+    },
+    {
+      "text": "This is piano music.",
+      "mean_score": 0.24606552363613415,
+      "std_score": 0.0950465038032437,
+      "beats_original_funk_count": 90,
+      "top1_in_expanded_bank": 2,
+      "cosine_to_original_funk": 0.3645927309989929
+    },
+    {
+      "text": "The sound of piano music.",
+      "mean_score": 0.20350085535500972,
+      "std_score": 0.09927039114592319,
+      "beats_original_funk_count": 73,
+      "top1_in_expanded_bank": 6,
+      "cosine_to_original_funk": 0.2856374979019165
+    },
+    {
+      "text": "A recording of guitar music.",
+      "mean_score": 0.30473617270944253,
+      "std_score": 0.09871625241558764,
+      "beats_original_funk_count": 123,
+      "top1_in_expanded_bank": 6,
+      "cosine_to_original_funk": 0.5338239073753357
+    },
+    {
+      "text": "This is guitar music.",
+      "mean_score": 0.32545705913801265,
+      "std_score": 0.08224915294014815,
+      "beats_original_funk_count": 109,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.5615540742874146
+    },
+    {
+      "text": "The sound of guitar music.",
+      "mean_score": 0.3030339015466341,
+      "std_score": 0.08633019572931547,
+      "beats_original_funk_count": 102,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.45562052726745605
+    },
+    {
+      "text": "drums music",
+      "mean_score": 0.2208211096538435,
+      "std_score": 0.06236942324312163,
+      "beats_original_funk_count": 19,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.4965546131134033
+    },
+    {
+      "text": "A recording of drums music.",
+      "mean_score": 0.23637643652381496,
+      "std_score": 0.09475742047664863,
+      "beats_original_funk_count": 11,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.37371164560317993
+    },
+    {
+      "text": "This is drums music.",
+      "mean_score": 0.23403123657570812,
+      "std_score": 0.0905721143327043,
+      "beats_original_funk_count": 26,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3533957898616791
+    },
+    {
+      "text": "The sound of drums music.",
+      "mean_score": 0.1983255141237938,
+      "std_score": 0.09810506007912714,
+      "beats_original_funk_count": 15,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.2276080995798111
+    },
+    {
+      "text": "singing music",
+      "mean_score": 0.21293702731617614,
+      "std_score": 0.0755148353089247,
+      "beats_original_funk_count": 53,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.2584647536277771
+    },
+    {
+      "text": "A recording of singing music.",
+      "mean_score": 0.30027094914866315,
+      "std_score": 0.11052045467281732,
+      "beats_original_funk_count": 168,
+      "top1_in_expanded_bank": 7,
+      "cosine_to_original_funk": 0.1719578206539154
+    },
+    {
+      "text": "This is singing music.",
+      "mean_score": 0.33752067853323625,
+      "std_score": 0.09824478685341871,
+      "beats_original_funk_count": 214,
+      "top1_in_expanded_bank": 24,
+      "cosine_to_original_funk": 0.13357973098754883
+    },
+    {
+      "text": "The sound of singing music.",
+      "mean_score": 0.30894685297716157,
+      "std_score": 0.1034471789656944,
+      "beats_original_funk_count": 158,
+      "top1_in_expanded_bank": 1,
+      "cosine_to_original_funk": 0.15198692679405212
+    },
+    {
+      "text": "electronic dance music",
+      "mean_score": 0.34709322692518846,
+      "std_score": 0.11087507412149901,
+      "beats_original_funk_count": 283,
+      "top1_in_expanded_bank": 31,
+      "cosine_to_original_funk": 0.5214262008666992
+    },
+    {
+      "text": "A recording of electronic dance music.",
+      "mean_score": 0.3747348656404826,
+      "std_score": 0.10063608832297273,
+      "beats_original_funk_count": 321,
+      "top1_in_expanded_bank": 63,
+      "cosine_to_original_funk": 0.44165274500846863
+    },
+    {
+      "text": "This is electronic dance music.",
+      "mean_score": 0.33364829076070174,
+      "std_score": 0.11434884044939084,
+      "beats_original_funk_count": 256,
+      "top1_in_expanded_bank": 16,
+      "cosine_to_original_funk": 0.41154664754867554
+    },
+    {
+      "text": "The sound of electronic dance music.",
+      "mean_score": 0.2696688601849142,
+      "std_score": 0.10916675043512555,
+      "beats_original_funk_count": 113,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.29141780734062195
+    },
+    {
+      "text": "orchestral music",
+      "mean_score": 0.24199565652627678,
+      "std_score": 0.10068700250210953,
+      "beats_original_funk_count": 118,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.4506914019584656
+    },
+    {
+      "text": "A recording of orchestral music.",
+      "mean_score": 0.2798797170630309,
+      "std_score": 0.10532523330523179,
+      "beats_original_funk_count": 159,
+      "top1_in_expanded_bank": 9,
+      "cosine_to_original_funk": 0.2831738591194153
+    },
+    {
+      "text": "This is orchestral music.",
+      "mean_score": 0.35781498891032915,
+      "std_score": 0.08457114882687916,
+      "beats_original_funk_count": 230,
+      "top1_in_expanded_bank": 19,
+      "cosine_to_original_funk": 0.3721635043621063
+    },
+    {
+      "text": "The sound of orchestral music.",
+      "mean_score": 0.2827644185554671,
+      "std_score": 0.10220260876137308,
+      "beats_original_funk_count": 152,
+      "top1_in_expanded_bank": 13,
+      "cosine_to_original_funk": 0.24799185991287231
+    },
+    {
+      "text": "A recording of funk music.",
+      "mean_score": 0.3787712129411046,
+      "std_score": 0.09584367140670873,
+      "beats_original_funk_count": 118,
+      "top1_in_expanded_bank": 1,
+      "cosine_to_original_funk": 0.6811758279800415
+    },
+    {
+      "text": "This is funk music.",
+      "mean_score": 0.3447055240441497,
+      "std_score": 0.08785422952690561,
+      "beats_original_funk_count": 77,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.656317949295044
+    },
+    {
+      "text": "The sound of funk music.",
+      "mean_score": 0.3603900251969324,
+      "std_score": 0.09830533356885543,
+      "beats_original_funk_count": 124,
+      "top1_in_expanded_bank": 13,
+      "cosine_to_original_funk": 0.6336957216262817
+    },
+    {
+      "text": "jazz music",
+      "mean_score": 0.3366860862871351,
+      "std_score": 0.08125221000433529,
+      "beats_original_funk_count": 110,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.7035870552062988
+    },
+    {
+      "text": "A recording of jazz music.",
+      "mean_score": 0.33752716953986883,
+      "std_score": 0.10116627711592656,
+      "beats_original_funk_count": 172,
+      "top1_in_expanded_bank": 10,
+      "cosine_to_original_funk": 0.48050743341445923
+    },
+    {
+      "text": "This is jazz music.",
+      "mean_score": 0.388553242132341,
+      "std_score": 0.08730039414280333,
+      "beats_original_funk_count": 201,
+      "top1_in_expanded_bank": 11,
+      "cosine_to_original_funk": 0.5831103324890137
+    },
+    {
+      "text": "The sound of jazz music.",
+      "mean_score": 0.3562460767680952,
+      "std_score": 0.09686339347867205,
+      "beats_original_funk_count": 160,
+      "top1_in_expanded_bank": 18,
+      "cosine_to_original_funk": 0.5008689165115356
+    },
+    {
+      "text": "acoustic folk music",
+      "mean_score": 0.2851381375712704,
+      "std_score": 0.10088125218487128,
+      "beats_original_funk_count": 122,
+      "top1_in_expanded_bank": 2,
+      "cosine_to_original_funk": 0.5802383422851562
+    },
+    {
+      "text": "A recording of acoustic folk music.",
+      "mean_score": 0.2143686487899037,
+      "std_score": 0.10179327260040161,
+      "beats_original_funk_count": 73,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.3188009262084961
+    },
+    {
+      "text": "This is acoustic folk music.",
+      "mean_score": 0.24768690576635838,
+      "std_score": 0.099459141790626,
+      "beats_original_funk_count": 84,
+      "top1_in_expanded_bank": 4,
+      "cosine_to_original_funk": 0.3633386492729187
+    },
+    {
+      "text": "The sound of acoustic folk music.",
+      "mean_score": 0.21438816985928377,
+      "std_score": 0.10283691524173758,
+      "beats_original_funk_count": 63,
+      "top1_in_expanded_bank": 0,
+      "cosine_to_original_funk": 0.2837556004524231
+    },
+    {
+      "text": "heavy metal music",
+      "mean_score": 0.4206285999768311,
+      "std_score": 0.1382817255759276,
+      "beats_original_funk_count": 415,
+      "top1_in_expanded_bank": 52,
+      "cosine_to_original_funk": 0.6210595369338989
+    },
+    {
+      "text": "A recording of heavy metal music.",
+      "mean_score": 0.3740296478050646,
+      "std_score": 0.1607842257571692,
+      "beats_original_funk_count": 309,
+      "top1_in_expanded_bank": 118,
+      "cosine_to_original_funk": 0.4800068140029907
+    },
+    {
+      "text": "This is heavy metal music.",
+      "mean_score": 0.41648562566246966,
+      "std_score": 0.14523235670151619,
+      "beats_original_funk_count": 455,
+      "top1_in_expanded_bank": 135,
+      "cosine_to_original_funk": 0.4734554588794708
+    },
+    {
+      "text": "The sound of heavy metal music.",
+      "mean_score": 0.3820361198221938,
+      "std_score": 0.15441871762755116,
+      "beats_original_funk_count": 339,
+      "top1_in_expanded_bank": 7,
+      "cosine_to_original_funk": 0.4332529902458191
+    }
+  ],
+  "balanced_40_prompt_concept_winners": {
+    "heavy metal": 588,
+    "singing": 122,
+    "electronic dance": 300,
+    "jazz": 131,
+    "piano": 35,
+    "funk": 147,
+    "guitar": 56,
+    "orchestral": 100,
+    "acoustic folk": 18,
+    "drums": 3
+  },
+  "families": [
+    {
+      "concept": "piano",
+      "variant_mean_scores": [
+        0.2394167272757253,
+        0.17814714126531056,
+        0.24606552363613415,
+        0.20350085535500972
+      ],
+      "mean_score_range": 0.0679183823708236,
+      "within_family_cosine_min": 0.6157569289207458
+    },
+    {
+      "concept": "guitar",
+      "variant_mean_scores": [
+        0.27777822179044864,
+        0.30473617270944253,
+        0.32545705913801265,
+        0.3030339015466341
+      ],
+      "mean_score_range": 0.04767883734756401,
+      "within_family_cosine_min": 0.6469178795814514
+    },
+    {
+      "concept": "drums",
+      "variant_mean_scores": [
+        0.2208211096538435,
+        0.23637643652381496,
+        0.23403123657570812,
+        0.1983255141237938
+      ],
+      "mean_score_range": 0.03805092240002117,
+      "within_family_cosine_min": 0.3976251184940338
+    },
+    {
+      "concept": "singing",
+      "variant_mean_scores": [
+        0.21293702731617614,
+        0.30027094914866315,
+        0.33752067853323625,
+        0.30894685297716157
+      ],
+      "mean_score_range": 0.12458365121706011,
+      "within_family_cosine_min": 0.3839508593082428
+    },
+    {
+      "concept": "electronic dance",
+      "variant_mean_scores": [
+        0.34709322692518846,
+        0.3747348656404826,
+        0.33364829076070174,
+        0.2696688601849142
+      ],
+      "mean_score_range": 0.10506600545556838,
+      "within_family_cosine_min": 0.7339886426925659
+    },
+    {
+      "concept": "orchestral",
+      "variant_mean_scores": [
+        0.24199565652627678,
+        0.2798797170630309,
+        0.35781498891032915,
+        0.2827644185554671
+      ],
+      "mean_score_range": 0.11581933238405237,
+      "within_family_cosine_min": 0.6372354030609131
+    },
+    {
+      "concept": "funk",
+      "variant_mean_scores": [
+        0.30446650576844386,
+        0.3787712129411046,
+        0.3447055240441497,
+        0.3603900251969324
+      ],
+      "mean_score_range": 0.07430470717266074,
+      "within_family_cosine_min": 0.6904848217964172
+    },
+    {
+      "concept": "jazz",
+      "variant_mean_scores": [
+        0.3366860862871351,
+        0.33752716953986883,
+        0.388553242132341,
+        0.3562460767680952
+      ],
+      "mean_score_range": 0.0518671558452059,
+      "within_family_cosine_min": 0.6473126411437988
+    },
+    {
+      "concept": "acoustic folk",
+      "variant_mean_scores": [
+        0.2851381375712704,
+        0.2143686487899037,
+        0.24768690576635838,
+        0.21438816985928377
+      ],
+      "mean_score_range": 0.07076948878136669,
+      "within_family_cosine_min": 0.6772428154945374
+    },
+    {
+      "concept": "heavy metal",
+      "variant_mean_scores": [
+        0.4206285999768311,
+        0.3740296478050646,
+        0.41648562566246966,
+        0.3820361198221938
+      ],
+      "mean_score_range": 0.04659895217176652,
+      "within_family_cosine_min": 0.8408220410346985
+    }
+  ],
+  "matched_template_results": [
+    {
+      "template_index": 0,
+      "winners": {
+        "piano": 73,
+        "guitar": 12,
+        "drums": 0,
+        "singing": 12,
+        "electronic dance": 339,
+        "orchestral": 46,
+        "funk": 56,
+        "jazz": 101,
+        "acoustic folk": 107,
+        "heavy metal": 754
+      }
+    },
+    {
+      "template_index": 1,
+      "winners": {
+        "piano": 21,
+        "guitar": 71,
+        "drums": 3,
+        "singing": 100,
+        "electronic dance": 397,
+        "orchestral": 109,
+        "funk": 216,
+        "jazz": 99,
+        "acoustic folk": 3,
+        "heavy metal": 481
+      }
+    },
+    {
+      "template_index": 2,
+      "winners": {
+        "piano": 25,
+        "guitar": 44,
+        "drums": 6,
+        "singing": 188,
+        "electronic dance": 215,
+        "orchestral": 126,
+        "funk": 78,
+        "jazz": 210,
+        "acoustic folk": 23,
+        "heavy metal": 585
+      }
+    },
+    {
+      "template_index": 3,
+      "winners": {
+        "piano": 30,
+        "guitar": 73,
+        "drums": 5,
+        "singing": 143,
+        "electronic dance": 111,
+        "orchestral": 121,
+        "funk": 277,
+        "jazz": 158,
+        "acoustic folk": 8,
+        "heavy metal": 574
+      }
+    }
+  ],
+  "note": "Counterfactual diagnostic banks and alternative scoring are experiments, not production changes or human labels.",
+  "contrast_pairs": [
+    {
+      "texts": [
+        "instrumental music",
+        "music without singing"
+      ],
+      "text_cosine": 0.619329571723938,
+      "audio_score_pearson": 0.45103999556176466,
+      "mean_scores": [
+        0.3528577983379364,
+        0.11459413915872574
+      ]
+    },
+    {
+      "texts": [
+        "music with guitar",
+        "music without guitar"
+      ],
+      "text_cosine": 0.8959654569625854,
+      "audio_score_pearson": 0.8717507505118507,
+      "mean_scores": [
+        0.23708967864513397,
+        0.17190319299697876
+      ]
+    },
+    {
+      "texts": [
+        "slow music",
+        "fast music"
+      ],
+      "text_cosine": 0.6836363077163696,
+      "audio_score_pearson": 0.24379540243688688,
+      "mean_scores": [
+        0.3429555594921112,
+        0.44082438945770264
+      ]
+    }
+  ]
+}

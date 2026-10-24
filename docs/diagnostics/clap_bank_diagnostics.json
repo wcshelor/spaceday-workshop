@@ -1,0 +1,1773 @@
+{
+  "dataset_id": "e755bbd1cc5512d4",
+  "encoder_id": "laion/clap-htsat-unfused@8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+  "bank_sha256": "b1784dcb3af932bc7da18c03d02cfc7084189c6ce68fd89ee25307fee5fca63d",
+  "n_songs": 1500,
+  "n_prompts": 71,
+  "prompts": [
+    {
+      "id": "rhy-002",
+      "text": "syncopated funk groove with off-beat guitar",
+      "category": "rhythm",
+      "top1": 801,
+      "top1_percent": 53.4,
+      "top5": 1357,
+      "top8": 1400,
+      "mean_score": 0.47690033809511534,
+      "std_score": 0.0962564123321554,
+      "centroid_cosine": 0.5898111239679223,
+      "score_quantiles": [
+        -0.02485425197815478,
+        0.36403857512619386,
+        0.48934616979342455,
+        0.5777699465875954,
+        0.6913025839183518
+      ]
+    },
+    {
+      "id": "rhy-005",
+      "text": "laid-back half-time groove, relaxed drums",
+      "category": "rhythm",
+      "top1": 148,
+      "top1_percent": 9.87,
+      "top5": 1225,
+      "top8": 1363,
+      "mean_score": 0.42739993077544447,
+      "std_score": 0.08587049883829831,
+      "centroid_cosine": 0.5285910145532335,
+      "score_quantiles": [
+        0.03268919917415608,
+        0.3304492642838688,
+        0.4300190297213947,
+        0.5284028787077366,
+        0.6389434821073493
+      ]
+    },
+    {
+      "id": "combo-002",
+      "text": "fast energetic drums with bright synths and uplifting mood",
+      "category": "combo",
+      "top1": 143,
+      "top1_percent": 9.53,
+      "top5": 876,
+      "top8": 1167,
+      "mean_score": 0.3811026464117677,
+      "std_score": 0.10635311392357927,
+      "centroid_cosine": 0.471332398557544,
+      "score_quantiles": [
+        -0.08192695978953345,
+        0.24559289980694493,
+        0.3928258412073453,
+        0.5051569131003296,
+        0.5991572097891437
+      ]
+    },
+    {
+      "id": "combo-001",
+      "text": "slow tempo with intimate vocals and sparse piano",
+      "category": "combo",
+      "top1": 101,
+      "top1_percent": 6.73,
+      "top5": 378,
+      "top8": 646,
+      "mean_score": 0.30503982689383174,
+      "std_score": 0.1237258792900053,
+      "centroid_cosine": 0.3772609679285824,
+      "score_quantiles": [
+        -0.10998628897379864,
+        0.1423380552268218,
+        0.30773858958777744,
+        0.465437178878224,
+        0.6395762263086493
+      ]
+    },
+    {
+      "id": "combo-003",
+      "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+      "category": "combo",
+      "top1": 71,
+      "top1_percent": 4.73,
+      "top5": 592,
+      "top8": 946,
+      "mean_score": 0.3511238075322531,
+      "std_score": 0.10687666507121867,
+      "centroid_cosine": 0.4342557784708263,
+      "score_quantiles": [
+        -0.10514205651948945,
+        0.2155993202644705,
+        0.35591817043647594,
+        0.4863502440446905,
+        0.6213207567763361
+      ]
+    },
+    {
+      "id": "combo-006",
+      "text": "dense wall of distorted guitars, loud and powerful",
+      "category": "combo",
+      "top1": 53,
+      "top1_percent": 3.53,
+      "top5": 230,
+      "top8": 374,
+      "mean_score": 0.2583755312070178,
+      "std_score": 0.1107635969889264,
+      "centroid_cosine": 0.31954844711522556,
+      "score_quantiles": [
+        -0.08555313008339513,
+        0.12275643336078187,
+        0.25392478085487424,
+        0.40534931028715787,
+        0.5887566298844
+      ]
+    },
+    {
+      "id": "mood-001",
+      "text": "melancholic and wistful, bittersweet mood",
+      "category": "mood",
+      "top1": 41,
+      "top1_percent": 2.73,
+      "top5": 156,
+      "top8": 237,
+      "mean_score": 0.20043995736854428,
+      "std_score": 0.13678810573661918,
+      "centroid_cosine": 0.24789606360070315,
+      "score_quantiles": [
+        -0.12042605571278464,
+        0.03674480986987231,
+        0.18226688366532628,
+        0.3966216265966942,
+        0.6946787852008169
+      ]
+    },
+    {
+      "id": "ins-007",
+      "text": "bright brass horns, punchy and festive",
+      "category": "instruments",
+      "top1": 28,
+      "top1_percent": 1.87,
+      "top5": 479,
+      "top8": 1023,
+      "mean_score": 0.34956165720827537,
+      "std_score": 0.0773950834487077,
+      "centroid_cosine": 0.432323773888753,
+      "score_quantiles": [
+        -0.0788277489872882,
+        0.2543548002520817,
+        0.35611536642452457,
+        0.4372026828742429,
+        0.6228301580962301
+      ]
+    },
+    {
+      "id": "rhy-001",
+      "text": "steady four-on-the-floor beat, danceable",
+      "category": "rhythm",
+      "top1": 21,
+      "top1_percent": 1.4,
+      "top5": 344,
+      "top8": 684,
+      "mean_score": 0.31645940934005257,
+      "std_score": 0.1001126203066459,
+      "centroid_cosine": 0.39138424740612066,
+      "score_quantiles": [
+        -0.14356485892937776,
+        0.19069999296831577,
+        0.32409738866447213,
+        0.438562138677631,
+        0.5418671709103601
+      ]
+    },
+    {
+      "id": "rhy-012",
+      "text": "breakbeat, chopped drums with vinyl crackle",
+      "category": "rhythm",
+      "top1": 20,
+      "top1_percent": 1.33,
+      "top5": 327,
+      "top8": 607,
+      "mean_score": 0.3010080775250614,
+      "std_score": 0.11484893019176728,
+      "centroid_cosine": 0.37227466274739973,
+      "score_quantiles": [
+        -0.10623108181457801,
+        0.14417905788284974,
+        0.3075527967925932,
+        0.43847576986593706,
+        0.5956247252527083
+      ]
+    },
+    {
+      "id": "mood-006",
+      "text": "dark and brooding, shadowy and intense",
+      "category": "mood",
+      "top1": 15,
+      "top1_percent": 1.0,
+      "top5": 97,
+      "top8": 321,
+      "mean_score": 0.27464207378135713,
+      "std_score": 0.09275914483214648,
+      "centroid_cosine": 0.3396662515964831,
+      "score_quantiles": [
+        -0.1640098399908984,
+        0.16053189362910403,
+        0.27581387649826705,
+        0.3922098776165342,
+        0.5316732761911647
+      ]
+    },
+    {
+      "id": "mood-008",
+      "text": "nostalgic, reminiscent of a past era",
+      "category": "mood",
+      "top1": 9,
+      "top1_percent": 0.6,
+      "top5": 74,
+      "top8": 140,
+      "mean_score": 0.16612134259033845,
+      "std_score": 0.12869970038763817,
+      "centroid_cosine": 0.20545218353090397,
+      "score_quantiles": [
+        -0.18983929321664597,
+        0.010441379034364437,
+        0.15256559006464318,
+        0.3497392715446861,
+        0.5527160205580298
+      ]
+    },
+    {
+      "id": "ins-011",
+      "text": "saxophone solo, smoky and expressive",
+      "category": "instruments",
+      "top1": 8,
+      "top1_percent": 0.53,
+      "top5": 109,
+      "top8": 281,
+      "mean_score": 0.2639851767380578,
+      "std_score": 0.07686830825225288,
+      "centroid_cosine": 0.32648623069688554,
+      "score_quantiles": [
+        0.015927474796968905,
+        0.1612499771498633,
+        0.26740760821980913,
+        0.35351659165152244,
+        0.5518184259552082
+      ]
+    },
+    {
+      "id": "voc-006",
+      "text": "spoken word, rhythmic speech over music",
+      "category": "vocals",
+      "top1": 7,
+      "top1_percent": 0.47,
+      "top5": 118,
+      "top8": 259,
+      "mean_score": 0.23032383614987573,
+      "std_score": 0.08972953928029999,
+      "centroid_cosine": 0.28485524086390496,
+      "score_quantiles": [
+        -0.040559688063774385,
+        0.11640750593360136,
+        0.22851910769779105,
+        0.3539996132510916,
+        0.4619141049333056
+      ]
+    },
+    {
+      "id": "ins-003",
+      "text": "pulsing synthesizer arpeggio, bright and repetitive",
+      "category": "instruments",
+      "top1": 5,
+      "top1_percent": 0.33,
+      "top5": 11,
+      "top8": 25,
+      "mean_score": 0.004077341497202971,
+      "std_score": 0.09949890689287925,
+      "centroid_cosine": 0.0050426916887333,
+      "score_quantiles": [
+        -0.17565693930139403,
+        -0.09541985551993694,
+        -0.020293108212121443,
+        0.14410646252307568,
+        0.5277960650004331
+      ]
+    },
+    {
+      "id": "voc-002",
+      "text": "powerful belting voice, full and soaring",
+      "category": "vocals",
+      "top1": 4,
+      "top1_percent": 0.27,
+      "top5": 17,
+      "top8": 51,
+      "mean_score": 0.17013533726070462,
+      "std_score": 0.08004884713229361,
+      "centroid_cosine": 0.21041653041643238,
+      "score_quantiles": [
+        -0.18662925544534917,
+        0.06589334635988613,
+        0.17750549422459763,
+        0.2624126617088787,
+        0.4119276994443863
+      ]
+    },
+    {
+      "id": "rhy-008",
+      "text": "complex polyrhythms, interlocking percussion",
+      "category": "rhythm",
+      "top1": 3,
+      "top1_percent": 0.2,
+      "top5": 23,
+      "top8": 47,
+      "mean_score": 0.08987160188459867,
+      "std_score": 0.11305024928759964,
+      "centroid_cosine": 0.11114957630787164,
+      "score_quantiles": [
+        -0.13692898073170068,
+        -0.046424905177754036,
+        0.07622249192460548,
+        0.237843931173876,
+        0.5375767751156495
+      ]
+    },
+    {
+      "id": "voc-005",
+      "text": "choir of layered background vocals, lush harmonies",
+      "category": "vocals",
+      "top1": 3,
+      "top1_percent": 0.2,
+      "top5": 45,
+      "top8": 77,
+      "mean_score": 0.11853633325130548,
+      "std_score": 0.12257635798875646,
+      "centroid_cosine": 0.14660096116779162,
+      "score_quantiles": [
+        -0.16939162866158208,
+        -0.028770927788701404,
+        0.10634132561701154,
+        0.27893368852070344,
+        0.5685797284175821
+      ]
+    },
+    {
+      "id": "voc-008",
+      "text": "falsetto vocals, high and airy",
+      "category": "vocals",
+      "top1": 3,
+      "top1_percent": 0.2,
+      "top5": 23,
+      "top8": 55,
+      "mean_score": 0.17582751356259974,
+      "std_score": 0.08023900771491804,
+      "centroid_cosine": 0.21745638473034296,
+      "score_quantiles": [
+        -0.05633754445606114,
+        0.08085063821442512,
+        0.17289451750153184,
+        0.2740859585293198,
+        0.5077451498650771
+      ]
+    },
+    {
+      "id": "mood-003",
+      "text": "tense and anxious, uneasy atmosphere",
+      "category": "mood",
+      "top1": 3,
+      "top1_percent": 0.2,
+      "top5": 17,
+      "top8": 37,
+      "mean_score": 0.08210836044804719,
+      "std_score": 0.11409514560827115,
+      "centroid_cosine": 0.1015483120780829,
+      "score_quantiles": [
+        -0.16870932454609788,
+        -0.046054064651953865,
+        0.06526701174813598,
+        0.23391188847330951,
+        0.5253559014167217
+      ]
+    },
+    {
+      "id": "combo-004",
+      "text": "heavily reverberated vocals over wide stereo pads, dreamy",
+      "category": "combo",
+      "top1": 3,
+      "top1_percent": 0.2,
+      "top5": 19,
+      "top8": 26,
+      "mean_score": 0.058673796432217803,
+      "std_score": 0.11402416653811334,
+      "centroid_cosine": 0.07256538747567289,
+      "score_quantiles": [
+        -0.23437379001436748,
+        -0.0642696010012387,
+        0.040552718993633816,
+        0.20568253032005634,
+        0.618607965091882
+      ]
+    },
+    {
+      "id": "voc-007",
+      "text": "call-and-response vocals, trading lines",
+      "category": "vocals",
+      "top1": 2,
+      "top1_percent": 0.13,
+      "top5": 20,
+      "top8": 86,
+      "mean_score": 0.20227944514419693,
+      "std_score": 0.08176759060940007,
+      "centroid_cosine": 0.2501710679691558,
+      "score_quantiles": [
+        -0.13705885773827453,
+        0.09112354604371775,
+        0.21524410332148994,
+        0.2946811876105336,
+        0.4159531601043708
+      ]
+    },
+    {
+      "id": "ins-004",
+      "text": "lush string section, cinematic violins",
+      "category": "instruments",
+      "top1": 2,
+      "top1_percent": 0.13,
+      "top5": 18,
+      "top8": 36,
+      "mean_score": 0.1968260278056104,
+      "std_score": 0.08847551723547631,
+      "centroid_cosine": 0.24342650112152997,
+      "score_quantiles": [
+        -0.1559215423535268,
+        0.09075742305003687,
+        0.1947523107019633,
+        0.3096026560373648,
+        0.5096500626396936
+      ]
+    },
+    {
+      "id": "tex-003",
+      "text": "dense wall of sound, layered and saturated",
+      "category": "texture",
+      "top1": 2,
+      "top1_percent": 0.13,
+      "top5": 4,
+      "top8": 11,
+      "mean_score": 0.036703165332523886,
+      "std_score": 0.10935112481143022,
+      "centroid_cosine": 0.04539299612247039,
+      "score_quantiles": [
+        -0.2811726993041777,
+        -0.093173075273442,
+        0.026783414313662882,
+        0.18566375753773737,
+        0.5094195587986273
+      ]
+    },
+    {
+      "id": "rhy-007",
+      "text": "bouncy swing rhythm, jazzy timing",
+      "category": "rhythm",
+      "top1": 1,
+      "top1_percent": 0.07,
+      "top5": 665,
+      "top8": 1095,
+      "mean_score": 0.3562802249127183,
+      "std_score": 0.08490614724885494,
+      "centroid_cosine": 0.4406330277362974,
+      "score_quantiles": [
+        -0.2267292240101882,
+        0.24956657560804255,
+        0.3748107817416478,
+        0.4418158032780878,
+        0.5266455345114105
+      ]
+    },
+    {
+      "id": "voc-001",
+      "text": "intimate close-miked vocals, soft and breathy",
+      "category": "vocals",
+      "top1": 1,
+      "top1_percent": 0.07,
+      "top5": 31,
+      "top8": 78,
+      "mean_score": 0.1356105613404151,
+      "std_score": 0.10328810579149793,
+      "centroid_cosine": 0.16771767855228192,
+      "score_quantiles": [
+        -0.15214240675367244,
+        0.009156974484182435,
+        0.1302352500714804,
+        0.269899456725384,
+        0.49228603230326207
+      ]
+    },
+    {
+      "id": "ins-012",
+      "text": "electronic drum machine, crisp and precise",
+      "category": "instruments",
+      "top1": 1,
+      "top1_percent": 0.07,
+      "top5": 18,
+      "top8": 58,
+      "mean_score": 0.0996300482693717,
+      "std_score": 0.0936413450001412,
+      "centroid_cosine": 0.12321842963134264,
+      "score_quantiles": [
+        -0.15979770233982032,
+        -0.002539243903897842,
+        0.08374291286638472,
+        0.22428709786708073,
+        0.6330499401161225
+      ]
+    },
+    {
+      "id": "mood-004",
+      "text": "calm and meditative, peaceful and still",
+      "category": "mood",
+      "top1": 1,
+      "top1_percent": 0.07,
+      "top5": 48,
+      "top8": 108,
+      "mean_score": 0.15105632753683781,
+      "std_score": 0.1255586503327909,
+      "centroid_cosine": 0.18682037987819466,
+      "score_quantiles": [
+        -0.1670659266119695,
+        0.00421717250637514,
+        0.133877302368969,
+        0.32415015813761094,
+        0.6435498272757865
+      ]
+    },
+    {
+      "id": "rhy-003",
+      "text": "slow waltz feel, swaying tempo",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 26,
+      "top8": 190,
+      "mean_score": 0.2673334526353156,
+      "std_score": 0.07548741876463987,
+      "centroid_cosine": 0.33062724342546623,
+      "score_quantiles": [
+        -0.2279140712390369,
+        0.1769452412587445,
+        0.274164886641141,
+        0.35467480358171405,
+        0.47245718406376513
+      ]
+    },
+    {
+      "id": "rhy-004",
+      "text": "fast double-time drums, energetic",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 8,
+      "top8": 54,
+      "mean_score": 0.2061305904450365,
+      "std_score": 0.09035918611886443,
+      "centroid_cosine": 0.25493400931561155,
+      "score_quantiles": [
+        -0.18614957639878782,
+        0.08453844835718485,
+        0.22445308109831644,
+        0.30116180748101945,
+        0.42092758363182425
+      ]
+    },
+    {
+      "id": "rhy-006",
+      "text": "driving motorik beat, repetitive and hypnotic",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 4,
+      "top8": 67,
+      "mean_score": 0.22120273608514845,
+      "std_score": 0.09138672714882994,
+      "centroid_cosine": 0.2735746317905523,
+      "score_quantiles": [
+        -0.25423785371668345,
+        0.0983639890153731,
+        0.23201141664468794,
+        0.32492300635133586,
+        0.46040648682916535
+      ]
+    },
+    {
+      "id": "rhy-009",
+      "text": "minimal beat, sparse clicks and snaps",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.12869286327164606,
+      "std_score": 0.08478436357058114,
+      "centroid_cosine": -0.15916214829304848,
+      "score_quantiles": [
+        -0.35874513218674237,
+        -0.22924891065702124,
+        -0.13747571582028642,
+        -0.01758289733323788,
+        0.20573844394526658
+      ]
+    },
+    {
+      "id": "rhy-010",
+      "text": "shuffle groove, loose and rolling",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 11,
+      "top8": 49,
+      "mean_score": 0.13229867593934666,
+      "std_score": 0.08692504809115996,
+      "centroid_cosine": 0.1636216721232247,
+      "score_quantiles": [
+        -0.09270497323188227,
+        0.023772431984524216,
+        0.1269146344205147,
+        0.25162690382945324,
+        0.4483249394119059
+      ]
+    },
+    {
+      "id": "rhy-011",
+      "text": "steady mid-tempo pulse, walking pace",
+      "category": "rhythm",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.012422049385860043,
+      "std_score": 0.06860539066034636,
+      "centroid_cosine": -0.015363090199357068,
+      "score_quantiles": [
+        -0.31079304333909596,
+        -0.09346263254642223,
+        -0.017891657129062155,
+        0.07627574443089628,
+        0.2852709158523918
+      ]
+    },
+    {
+      "id": "voc-003",
+      "text": "distant and washed-out vocals, heavily reverberated",
+      "category": "vocals",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 1,
+      "mean_score": -0.02035656690150955,
+      "std_score": 0.08793508378427295,
+      "centroid_cosine": -0.025176181783106467,
+      "score_quantiles": [
+        -0.2639888543639511,
+        -0.12168943867757229,
+        -0.02817049117371847,
+        0.08656979069958022,
+        0.40956113556123386
+      ]
+    },
+    {
+      "id": "voc-004",
+      "text": "no vocals, instrumental music",
+      "category": "vocals",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 2,
+      "mean_score": 0.1522655149159252,
+      "std_score": 0.06536222006693977,
+      "centroid_cosine": 0.18831585411081114,
+      "score_quantiles": [
+        -0.11512903644738959,
+        0.06411846888529762,
+        0.15679439967179615,
+        0.2303478842226578,
+        0.3580564296092606
+      ]
+    },
+    {
+      "id": "voc-009",
+      "text": "gritty raspy vocals, raw and unpolished",
+      "category": "vocals",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 35,
+      "top8": 113,
+      "mean_score": 0.21626638938594184,
+      "std_score": 0.07544958035683218,
+      "centroid_cosine": 0.26746955707707265,
+      "score_quantiles": [
+        -0.08741619691466995,
+        0.11334901048753974,
+        0.2262948817907846,
+        0.3051795614545768,
+        0.38475774882765496
+      ]
+    },
+    {
+      "id": "voc-010",
+      "text": "auto-tuned vocal effect, synthetic sheen",
+      "category": "vocals",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 6,
+      "top8": 20,
+      "mean_score": 0.17286447844528052,
+      "std_score": 0.07097215257569922,
+      "centroid_cosine": 0.2137918222771415,
+      "score_quantiles": [
+        -0.2276212351207345,
+        0.08448403021337239,
+        0.17515109918139202,
+        0.2618280820239572,
+        0.41157478497273053
+      ]
+    },
+    {
+      "id": "ins-001",
+      "text": "warm acoustic guitar, fingerpicked",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 2,
+      "top8": 28,
+      "mean_score": 0.17455239440346002,
+      "std_score": 0.08140428266112594,
+      "centroid_cosine": 0.2158793687285317,
+      "score_quantiles": [
+        -0.14215343488736393,
+        0.07213778088831321,
+        0.1779181688176209,
+        0.273469455443336,
+        0.4550607292083883
+      ]
+    },
+    {
+      "id": "ins-002",
+      "text": "distorted electric guitar riffs, crunchy",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 2,
+      "top8": 17,
+      "mean_score": 0.11422116201122594,
+      "std_score": 0.09563749334197817,
+      "centroid_cosine": 0.14126413123516587,
+      "score_quantiles": [
+        -0.13658637565066412,
+        -0.010155294390792475,
+        0.11096317838248683,
+        0.242903111355726,
+        0.4616049174331329
+      ]
+    },
+    {
+      "id": "ins-005",
+      "text": "upright bass, woody and resonant",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.09102204728231536,
+      "std_score": 0.06679353938294236,
+      "centroid_cosine": 0.11257240082462774,
+      "score_quantiles": [
+        -0.15934537373065671,
+        0.006946459869783028,
+        0.09132748391261294,
+        0.172497535029645,
+        0.29657869792535635
+      ]
+    },
+    {
+      "id": "ins-006",
+      "text": "heavy distorted bass synth, rumbling low end",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 1,
+      "top8": 5,
+      "mean_score": 0.08066187340995695,
+      "std_score": 0.09529471432837876,
+      "centroid_cosine": 0.09975935518795194,
+      "score_quantiles": [
+        -0.23965853529997164,
+        -0.04025175549715268,
+        0.080585955612135,
+        0.2049329240735481,
+        0.41445572966156385
+      ]
+    },
+    {
+      "id": "ins-008",
+      "text": "piano, gentle and intimate",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 12,
+      "top8": 19,
+      "mean_score": 0.09351542378659576,
+      "std_score": 0.09702298876244317,
+      "centroid_cosine": 0.11565610842764376,
+      "score_quantiles": [
+        -0.16700971489160668,
+        -0.017120848649109677,
+        0.0796495085071885,
+        0.22731550723998672,
+        0.43586608620705264
+      ]
+    },
+    {
+      "id": "ins-009",
+      "text": "harpsichord or organ, baroque texture",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 3,
+      "mean_score": 0.1618891902967915,
+      "std_score": 0.0743048310849062,
+      "centroid_cosine": 0.2002180280865384,
+      "score_quantiles": [
+        -0.13819621657896622,
+        0.06276084288742477,
+        0.16671761139190938,
+        0.25338045388012154,
+        0.37682378781363046
+      ]
+    },
+    {
+      "id": "ins-010",
+      "text": "hand percussion, congas and shakers",
+      "category": "instruments",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 3,
+      "top8": 12,
+      "mean_score": 0.08064599543472303,
+      "std_score": 0.060280199452959635,
+      "centroid_cosine": 0.09973971794790204,
+      "score_quantiles": [
+        -0.1047775098511321,
+        0.012337798111061936,
+        0.07567218391030886,
+        0.1549714013678014,
+        0.3590263190271286
+      ]
+    },
+    {
+      "id": "tex-001",
+      "text": "warm analog tape hiss, vintage lo-fi texture",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 2,
+      "top8": 6,
+      "mean_score": 0.09329164763633385,
+      "std_score": 0.07772560436405518,
+      "centroid_cosine": 0.11537935110088154,
+      "score_quantiles": [
+        -0.19321136877887202,
+        -0.0029985706556509622,
+        0.08945847313946773,
+        0.19487410392716548,
+        0.3955775499280186
+      ]
+    },
+    {
+      "id": "tex-002",
+      "text": "crisp and clean production, polished studio sound",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 1,
+      "mean_score": 0.18005026587351802,
+      "std_score": 0.0577089709381491,
+      "centroid_cosine": 0.2226789146549163,
+      "score_quantiles": [
+        -0.22348864377079303,
+        0.11037241985876624,
+        0.18453304091145628,
+        0.24496957585195434,
+        0.3711295141488796
+      ]
+    },
+    {
+      "id": "tex-004",
+      "text": "sparse and airy, lots of silence between sounds",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.1407374088552385,
+      "std_score": 0.06438868915893792,
+      "centroid_cosine": -0.1740583569992891,
+      "score_quantiles": [
+        -0.33813646101908384,
+        -0.22819625399138163,
+        -0.1368130266516945,
+        -0.06523246267155748,
+        0.0807158875142199
+      ]
+    },
+    {
+      "id": "tex-005",
+      "text": "grainy distorted texture, overdriven and fuzzy",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 2,
+      "mean_score": 0.008369360105239889,
+      "std_score": 0.095474998193397,
+      "centroid_cosine": 0.01035088737886216,
+      "score_quantiles": [
+        -0.28643356894092636,
+        -0.10422826136989742,
+        -0.0010234749345011953,
+        0.13883160397653338,
+        0.38959521417026877
+      ]
+    },
+    {
+      "id": "tex-006",
+      "text": "shimmering reverb, cavernous and echoing",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 2,
+      "top8": 5,
+      "mean_score": -0.0027004999732404378,
+      "std_score": 0.11545761814551167,
+      "centroid_cosine": -0.003339869564476185,
+      "score_quantiles": [
+        -0.2711766366310595,
+        -0.13508907693638145,
+        -0.017083508607369027,
+        0.14962264359123098,
+        0.42449309354215603
+      ]
+    },
+    {
+      "id": "tex-007",
+      "text": "dry and close, intimate room sound",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.033074362842137384,
+      "std_score": 0.06804474220828491,
+      "centroid_cosine": 0.04090503940585014,
+      "score_quantiles": [
+        -0.22709979505503272,
+        -0.05384573518874726,
+        0.03354173447207259,
+        0.12136202097740667,
+        0.27514024564646844
+      ]
+    },
+    {
+      "id": "tex-008",
+      "text": "glitchy stutter edits, chopped and rearranged",
+      "category": "texture",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 3,
+      "mean_score": -0.10364068081415917,
+      "std_score": 0.09889024888201928,
+      "centroid_cosine": -0.1281786183754144,
+      "score_quantiles": [
+        -0.29350039898691727,
+        -0.21262165637838432,
+        -0.12046973309831355,
+        0.03507970227810798,
+        0.29936035568108577
+      ]
+    },
+    {
+      "id": "dyn-001",
+      "text": "quiet and delicate, barely above a whisper",
+      "category": "dynamics",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.05076950519817482,
+      "std_score": 0.09193773447057339,
+      "centroid_cosine": -0.06278967853920561,
+      "score_quantiles": [
+        -0.3478887273024819,
+        -0.16458099327721704,
+        -0.05552811160634173,
+        0.06855263870679473,
+        0.3050382289250435
+      ]
+    },
+    {
+      "id": "dyn-002",
+      "text": "loud and powerful, full dynamic impact",
+      "category": "dynamics",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 2,
+      "top8": 18,
+      "mean_score": 0.19374292828036005,
+      "std_score": 0.09147926076025949,
+      "centroid_cosine": 0.23961344784596234,
+      "score_quantiles": [
+        -0.16909658594792004,
+        0.0803820693167621,
+        0.19826541525194308,
+        0.30527849235241855,
+        0.40430023694970635
+      ]
+    },
+    {
+      "id": "dyn-003",
+      "text": "gradual build, slowly rising intensity",
+      "category": "dynamics",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 14,
+      "top8": 23,
+      "mean_score": 0.09579265894775665,
+      "std_score": 0.09957857395096378,
+      "centroid_cosine": 0.11847250112576697,
+      "score_quantiles": [
+        -0.17540319032546828,
+        -0.02838115620554452,
+        0.09079373652959731,
+        0.22965235687702387,
+        0.3990674609753115
+      ]
+    },
+    {
+      "id": "dyn-004",
+      "text": "sudden drop, stripped back after a dense section",
+      "category": "dynamics",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.07035887874780017,
+      "std_score": 0.06397681790933078,
+      "centroid_cosine": 0.08701702649471832,
+      "score_quantiles": [
+        -0.19693608064808796,
+        -0.015002150201762968,
+        0.07525062278130745,
+        0.14886299282806847,
+        0.2585326008988548
+      ]
+    },
+    {
+      "id": "dyn-005",
+      "text": "steady consistent level, no large changes",
+      "category": "dynamics",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.06198504757844649,
+      "std_score": 0.07547885519727389,
+      "centroid_cosine": -0.07666060948389822,
+      "score_quantiles": [
+        -0.3174194726269574,
+        -0.1604208044079938,
+        -0.06040178983815479,
+        0.028984663435301195,
+        0.21745116521868088
+      ]
+    },
+    {
+      "id": "prod-001",
+      "text": "heavily compressed, punchy and upfront",
+      "category": "production",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 3,
+      "top8": 20,
+      "mean_score": 0.09891513952803606,
+      "std_score": 0.09287330223102812,
+      "centroid_cosine": 0.12233425930354223,
+      "score_quantiles": [
+        -0.21915993020260502,
+        -0.02185751832173595,
+        0.10218370125375802,
+        0.20969397880980867,
+        0.4343672907341045
+      ]
+    },
+    {
+      "id": "prod-002",
+      "text": "wide stereo image, sounds spread left and right",
+      "category": "production",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.004841547087446147,
+      "std_score": 0.06563157342694112,
+      "centroid_cosine": 0.005987830373105536,
+      "score_quantiles": [
+        -0.22500164865322392,
+        -0.07915038677410777,
+        0.0045850909465644865,
+        0.08943572653563842,
+        0.23463303451586157
+      ]
+    },
+    {
+      "id": "prod-003",
+      "text": "mono and centered, narrow and direct",
+      "category": "production",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.1279725233339089,
+      "std_score": 0.06653934541500309,
+      "centroid_cosine": 0.1582712608803602,
+      "score_quantiles": [
+        -0.2062432371784114,
+        0.04450153204294437,
+        0.13429188973619868,
+        0.20270049564772005,
+        0.3348479917395522
+      ]
+    },
+    {
+      "id": "prod-004",
+      "text": "dub-style echo and delay, spacious repeats",
+      "category": "production",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.07421110442351864,
+      "std_score": 0.08155107797112304,
+      "centroid_cosine": 0.09178130400529634,
+      "score_quantiles": [
+        -0.2764152841619483,
+        -0.022783967829230756,
+        0.0658996566461795,
+        0.18409104870875137,
+        0.31611452619204594
+      ]
+    },
+    {
+      "id": "mood-002",
+      "text": "joyful and uplifting, bright and celebratory",
+      "category": "mood",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.1996209744845008,
+      "std_score": 0.07837399226818641,
+      "centroid_cosine": 0.24688317856632133,
+      "score_quantiles": [
+        -0.18623370891851904,
+        0.10226368950287347,
+        0.20537803728339432,
+        0.29279107384631503,
+        0.4110372710471928
+      ]
+    },
+    {
+      "id": "mood-005",
+      "text": "playful and quirky, lighthearted and whimsical",
+      "category": "mood",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.17800719448520944,
+      "std_score": 0.07650526614982511,
+      "centroid_cosine": 0.22015212627666048,
+      "score_quantiles": [
+        -0.19495487777365156,
+        0.07678731110270273,
+        0.18796441887579457,
+        0.26608308854803353,
+        0.38305771837966784
+      ]
+    },
+    {
+      "id": "mood-007",
+      "text": "romantic and tender, warm and intimate",
+      "category": "mood",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 45,
+      "top8": 102,
+      "mean_score": 0.17042057827038173,
+      "std_score": 0.11796285609393578,
+      "centroid_cosine": 0.21076930500491642,
+      "score_quantiles": [
+        -0.1951639014261483,
+        0.030679070779387606,
+        0.16032473406526676,
+        0.3357893250884503,
+        0.6110027660748277
+      ]
+    },
+    {
+      "id": "atm-001",
+      "text": "late-night city vibe, neon lights and quiet streets",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.06978991963412108,
+      "std_score": 0.07266470463186908,
+      "centroid_cosine": 0.08631336078613183,
+      "score_quantiles": [
+        -0.314687211647897,
+        -0.018404096716958005,
+        0.06946389949771023,
+        0.16349780270098205,
+        0.331047373370855
+      ]
+    },
+    {
+      "id": "atm-002",
+      "text": "summer festival, open air and crowd energy",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.0318458682232202,
+      "std_score": 0.054283750910377106,
+      "centroid_cosine": -0.03938568675689567,
+      "score_quantiles": [
+        -0.2890047678460645,
+        -0.09680988224276105,
+        -0.031479538542877564,
+        0.03208440976257556,
+        0.20524213065931157
+      ]
+    },
+    {
+      "id": "atm-003",
+      "text": "rainy afternoon, cozy indoor listening",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.04358807403433426,
+      "std_score": 0.06718794342326208,
+      "centroid_cosine": 0.0539079738137242,
+      "score_quantiles": [
+        -0.18353285734019853,
+        -0.04127408264073006,
+        0.0421319596068008,
+        0.1311715500168202,
+        0.25992203204773545
+      ]
+    },
+    {
+      "id": "atm-004",
+      "text": "space and cosmos, floating weightless",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": 0.07646983673248246,
+      "std_score": 0.07610882545248196,
+      "centroid_cosine": 0.0945748131212972,
+      "score_quantiles": [
+        -0.20733770948566782,
+        -0.014577046958558364,
+        0.07533872276985502,
+        0.16961862261423133,
+        0.3287464922449768
+      ]
+    },
+    {
+      "id": "atm-005",
+      "text": "underground club, dark room with strobe lights",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 1,
+      "top8": 1,
+      "mean_score": -0.01617068340767662,
+      "std_score": 0.0742408983701424,
+      "centroid_cosine": -0.019999249726069486,
+      "score_quantiles": [
+        -0.24800799665488574,
+        -0.1001391794172916,
+        -0.0256607646104621,
+        0.08462241874403299,
+        0.35520069754481426
+      ]
+    },
+    {
+      "id": "atm-006",
+      "text": "desert road, wide open horizon",
+      "category": "atmosphere",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 0,
+      "mean_score": -0.00188363771140171,
+      "std_score": 0.0751424726574763,
+      "centroid_cosine": -0.0023296072301979024,
+      "score_quantiles": [
+        -0.3007468788083674,
+        -0.09692350858600113,
+        -0.0010575203397315547,
+        0.09015899790471649,
+        0.3375427875678403
+      ]
+    },
+    {
+      "id": "combo-005",
+      "text": "sparse minimal beat with dry close sound and tense atmosphere",
+      "category": "combo",
+      "top1": 0,
+      "top1_percent": 0.0,
+      "top5": 0,
+      "top8": 1,
+      "mean_score": 0.021061271666781824,
+      "std_score": 0.09317872689073546,
+      "centroid_cosine": 0.02604773224442713,
+      "score_quantiles": [
+        -0.26293739807046285,
+        -0.09366202338430225,
+        0.014082832692276469,
+        0.15161914915962632,
+        0.340402383506058
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "n": 1500,
+      "funk_top1": 801,
+      "funk_percent": 53.4,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 801
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 148
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 143
+        }
+      ]
+    },
+    "shared_182": {
+      "n": 182,
+      "funk_top1": 118,
+      "funk_percent": 64.83516483516483,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 118
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 15
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 12
+        }
+      ]
+    },
+    "ambient_instrumental": {
+      "n": 174,
+      "funk_top1": 30,
+      "funk_percent": 17.24137931034483,
+      "top3": [
+        {
+          "text": "melancholic and wistful, bittersweet mood",
+          "count": 31
+        },
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 30
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 24
+        }
+      ]
+    },
+    "classic_rock": {
+      "n": 117,
+      "funk_top1": 91,
+      "funk_percent": 77.77777777777777,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 91
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 7
+        },
+        {
+          "text": "dense wall of distorted guitars, loud and powerful",
+          "count": 5
+        }
+      ]
+    },
+    "country_folk_acoustic": {
+      "n": 96,
+      "funk_top1": 53,
+      "funk_percent": 55.208333333333336,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 53
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 36
+        },
+        {
+          "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+          "count": 2
+        }
+      ]
+    },
+    "electronic_dance": {
+      "n": 185,
+      "funk_top1": 62,
+      "funk_percent": 33.513513513513516,
+      "top3": [
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 72
+        },
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 62
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 22
+        }
+      ]
+    },
+    "electronic_experimental": {
+      "n": 197,
+      "funk_top1": 70,
+      "funk_percent": 35.53299492385787,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 70
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 42
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 33
+        }
+      ]
+    },
+    "funk_soul_rnb": {
+      "n": 89,
+      "funk_top1": 71,
+      "funk_percent": 79.7752808988764,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 71
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 6
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 5
+        }
+      ]
+    },
+    "hiphop_reggae": {
+      "n": 99,
+      "funk_top1": 52,
+      "funk_percent": 52.525252525252526,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 52
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 36
+        },
+        {
+          "text": "breakbeat, chopped drums with vinyl crackle",
+          "count": 5
+        }
+      ]
+    },
+    "indie_alternative": {
+      "n": 219,
+      "funk_top1": 139,
+      "funk_percent": 63.470319634703195,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 139
+        },
+        {
+          "text": "dense wall of distorted guitars, loud and powerful",
+          "count": 33
+        },
+        {
+          "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+          "count": 21
+        }
+      ]
+    },
+    "jazz_blues": {
+      "n": 97,
+      "funk_top1": 61,
+      "funk_percent": 62.88659793814433,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 61
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 11
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 7
+        }
+      ]
+    },
+    "pop_smooth": {
+      "n": 142,
+      "funk_top1": 120,
+      "funk_percent": 84.50704225352112,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 120
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 8
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 5
+        }
+      ]
+    },
+    "psychedelic": {
+      "n": 85,
+      "funk_top1": 52,
+      "funk_percent": 61.1764705882353,
+      "top3": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 52
+        },
+        {
+          "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+          "count": 10
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 7
+        }
+      ]
+    }
+  },
+  "experimental_variants": {
+    "raw": {
+      "funk_top1": 801,
+      "different_top1": 0,
+      "unique_winners": 28,
+      "top_five": [
+        {
+          "text": "syncopated funk groove with off-beat guitar",
+          "count": 801
+        },
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 148
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 143
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 101
+        },
+        {
+          "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+          "count": 71
+        }
+      ]
+    },
+    "subtract_each_prompt_mean": {
+      "funk_top1": 58,
+      "different_top1": 1264,
+      "unique_winners": 64,
+      "top_five": [
+        {
+          "text": "dense wall of distorted guitars, loud and powerful",
+          "count": 117
+        },
+        {
+          "text": "glitchy stutter edits, chopped and rearranged",
+          "count": 81
+        },
+        {
+          "text": "intimate close-miked vocals, soft and breathy",
+          "count": 71
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 70
+        },
+        {
+          "text": "breakbeat, chopped drums with vinyl crackle",
+          "count": 63
+        }
+      ]
+    },
+    "per_prompt_zscore": {
+      "funk_top1": 35,
+      "different_top1": 1357,
+      "unique_winners": 71,
+      "top_five": [
+        {
+          "text": "glitchy stutter edits, chopped and rearranged",
+          "count": 67
+        },
+        {
+          "text": "call-and-response vocals, trading lines",
+          "count": 63
+        },
+        {
+          "text": "pulsing synthesizer arpeggio, bright and repetitive",
+          "count": 62
+        },
+        {
+          "text": "hand percussion, congas and shakers",
+          "count": 57
+        },
+        {
+          "text": "gradual build, slowly rising intensity",
+          "count": 50
+        }
+      ]
+    },
+    "remove_funk_prompt": {
+      "top_five": [
+        {
+          "text": "laid-back half-time groove, relaxed drums",
+          "count": 527
+        },
+        {
+          "text": "fast energetic drums with bright synths and uplifting mood",
+          "count": 238
+        },
+        {
+          "text": "slow tempo with intimate vocals and sparse piano",
+          "count": 137
+        },
+        {
+          "text": "lo-fi tape hiss with warm guitar and nostalgic feeling",
+          "count": 127
+        },
+        {
+          "text": "dense wall of distorted guitars, loud and powerful",
+          "count": 108
+        }
+      ]
+    }
+  },
+  "checks": {
+    "unit_audio_max_error": 7.704140769781986e-09,
+    "unit_text_max_error": 1.7471308066951963e-07,
+    "finite": true,
+    "unique_audio_rows": 1500,
+    "unique_text_rows": 71,
+    "paraphrase_groups": 71,
+    "scalar_dot_max_error": 6.106226635438361e-16,
+    "api_top8_equals_independent_raw_cosine_50_songs": true,
+    "prompt_order_invariant_all_songs": true,
+    "api_top8_equals_independent_raw_cosine_all_1500_songs": true,
+    "api_top8_checked_song_count": 1500
+  },
+  "geometry": {
+    "audio_centroid_norm": 0.8085645026272041,
+    "text_centroid_norm": 0.49705717886320205,
+    "mean_audio_text_cosine": 0.13399074754317888,
+    "raw_first_singular_energy_fraction": 0.6670540675291049,
+    "centered_first_singular_energy_fraction": 0.1812275427085703,
+    "top1_margin_quantiles": {
+      "min": 3.1742703791859395e-05,
+      "p10": 0.006875830209466016,
+      "median": 0.04334120317523288,
+      "p90": 0.10612005909646778,
+      "max": 0.2157480059778487
+    },
+    "margins_below_1e_6": 0,
+    "most_similar_text_pair": {
+      "texts": [
+        "joyful and uplifting, bright and celebratory",
+        "playful and quirky, lighthearted and whimsical"
+      ],
+      "cosine": 0.9620749548375961
+    },
+    "mean_vs_win_count_correlation": 0.46430286589517406
+  },
+  "top1_categories": {
+    "rhythm": 994,
+    "combo": 371,
+    "instruments": 44,
+    "mood": 69,
+    "vocals": 20,
+    "texture": 2
+  },
+  "funk_bootstrap_fixed_catalogue_95pct": [
+    0.5086666666666667,
+    0.5580166666666666
+  ],
+  "random_direction_null": {
+    "replicates": 50,
+    "seed": 20261024,
+    "largest_top1_share_quantiles": {
+      "p10": 0.23186666666666667,
+      "median": 0.37366666666666665,
+      "p90": 0.5940666666666666
+    },
+    "unique_winners_median": 32.0,
+    "note": "Random unit text directions are not semantic prompts. This isolates concentration due to audio geometry; it is not a quality baseline or hypothesis-test p-value."
+  }
+}

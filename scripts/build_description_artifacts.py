@@ -7,6 +7,7 @@ publisher's paired checkpoint, pins its revision, and saves only prepared text v
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,17 +18,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache-dir", type=Path, required=True)
     parser.add_argument("--revision", default="main", help="Use the recorded commit to reproduce a build")
+    parser.add_argument("--local-files-only", action="store_true", help="Rebuild from a cached pinned commit without network access")
     args = parser.parse_args()
+    if args.local_files_only and not re.fullmatch(r"[0-9a-f]{40}", args.revision):
+        parser.error("--local-files-only requires a full checkpoint commit hash")
     import numpy as np
     import torch
     import transformers
     from huggingface_hub import HfApi
     from transformers import AutoTokenizer, ClapTextModelWithProjection
 
-    revision = HfApi().model_info(MODEL, revision=args.revision).sha
-    tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=revision, cache_dir=args.cache_dir)
+    revision = args.revision if args.local_files_only else HfApi().model_info(MODEL, revision=args.revision).sha
+    model_options = dict(revision=revision, cache_dir=args.cache_dir, local_files_only=args.local_files_only)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL, **model_options)
     model, loading = ClapTextModelWithProjection.from_pretrained(
-        MODEL, revision=revision, cache_dir=args.cache_dir, output_loading_info=True
+        MODEL, **model_options, output_loading_info=True
     )
     if loading.get("missing_keys") or loading.get("mismatched_keys") or loading.get("error_msgs"):
         raise RuntimeError(f"Incomplete pretrained text encoder: {loading}")

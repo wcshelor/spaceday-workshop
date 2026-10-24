@@ -2,6 +2,79 @@
 
 *Repository documentation reviewed 24 October 2026. Dataset versions below describe the frozen repository artifacts, not the latest upstream releases.*
 
+## Numbered bibliography for presentations
+
+Use these stable numbers in slide footers. Append new sources without renumbering existing entries. Reviews and handbook chapters provide field context; method papers do not independently document our local formulas or a company's current production systems. Online sources accessed 24 October 2026. Legacy P/D labels below remain valid aliases.
+
+<a id="ref-1"></a>
+**[1]** Deldjoo, Y., Schedl, M., & Knees, P. (2024). Content-driven music recommendation: Evolution, state of the art, and challenges. *Computer Science Review, 51*, 100618. https://doi.org/10.1016/j.cosrev.2024.100618. **Review:** content-based and hybrid music recommendation.
+
+<a id="ref-2"></a>
+**[2]** Schedl, M., Zamani, H., Chen, C.-W., Deldjoo, Y., & Elahi, M. (2018). Current challenges and visions in music recommender systems research. *International Journal of Multimedia Information Retrieval, 7*, 95–116. https://doi.org/10.1007/s13735-018-0154-2. **Review:** listener needs, cold start, playlists and evaluation beyond accuracy.
+
+<a id="ref-3"></a>
+**[3]** Schedl, M., Knees, P., McFee, B., & Bogdanov, D. (2022). Music recommendation systems: Techniques, use cases, and challenges. In *Recommender Systems Handbook* (3rd ed.). Springer. [Author-group publication record](https://hcai.test.cp.jku.at/publications/2022_musicrsbook/). **Handbook review:** music recommendation approaches and listening use cases.
+
+<a id="ref-4"></a>
+**[4]** Spotify Engineering. (2021, November). *The rise (and lessons learned) of ML models to personalize content on Home (Part I).* [Engineering article](https://www.engineering.atspotify.com/2021/11/the-rise-and-lessons-learned-of-ml-models-to-personalize-content-on-home-part-i). **First-party historical architecture:** candidate generation, ranking and multiple recommendation models; not a complete current system specification.
+
+<a id="ref-5"></a>
+**[5]** Apple. (n.d.). *Apple Music & Privacy.* [Privacy documentation](https://www.apple.com/legal/privacy/data/en/apple-music/). **First-party disclosure:** personalisation inputs including listening duration, library additions and favourites; does not specify model architecture.
+
+<a id="ref-6"></a>
+**[6]** Schedl, M. (2019). Deep learning in music recommendation systems. *Frontiers in Applied Mathematics and Statistics, 5*, Article 44. https://doi.org/10.3389/fams.2019.00044. **Mini-review:** audio features, learned representations, hybrid and sequential approaches.
+
+<a id="ref-7"></a>
+**[7]** Koren, Y., Rendle, S., & Bell, R. (2022). Advances in collaborative filtering. In *Recommender Systems Handbook* (3rd ed., pp. 91–142). Springer. https://doi.org/10.1007/978-1-0716-2197-4_3. **Handbook review:** neighbourhood methods, factorisation, implicit feedback and temporal models.
+
+<a id="ref-8"></a>
+**[8]** Li, W., et al. (2024). *A survey of foundation models for music understanding.* arXiv:2409.09601. https://doi.org/10.48550/arXiv.2409.09601. **Survey preprint:** broader music understanding and music–language representations, not specifically recommendation evaluation.
+
+<a id="ref-9"></a>
+**[9]** Wu, Y., Chen, K., Zhang, T., Hui, Y., Berg-Kirkpatrick, T., & Dubnov, S. (2023). Large-scale contrastive language-audio pretraining with feature fusion and keyword-to-caption augmentation. In *Proceedings of ICASSP 2023*. https://doi.org/10.1109/ICASSP49357.2023.10095969. [Open preprint, revised 2024](https://arxiv.org/abs/2211.06687) adds Marianna Nezhurina to the author list. **Method paper; P1:** LAION CLAP and upstream LAION-Audio-630K training data. Our vectors use the unfused pipeline, not every paper variant. We did not download this training corpus.
+
+<a id="ref-10"></a>
+**[10]** Porter, A., Bogdanov, D., Kaye, R., Tsukanov, R., & Serra, X. (2015). AcousticBrainz: A community platform for gathering music information obtained from audio. In *Proceedings of ISMIR 2015* (pp. 786–792). [Author-institution paper](https://www.upf.edu/documents/223346843/0/porter2015acousticbrainz.pdf/b07e89e6-6cf1-89ea-47e0-4dabf81b2978). **Dataset/platform paper; P3.**
+
+<a id="ref-11"></a>
+**[11]** Bogdanov, D., et al. (2013). Essentia: An audio analysis library for music information retrieval. In *Proceedings of ISMIR 2013* (pp. 493–498). [Author-institution publication record](https://mtg.upf.edu/node/2793). **Extractor method; P4:** upstream audio analysis, not extraction performed locally in this workshop.
+
+<a id="ref-12"></a>
+**[12]** Clapback / SeeThroughLab and contributors. (2026, October 18). *CLAP audio embeddings and recording identity claims* [Data export; snapshot 2026-10-18T05:12:18Z]. [Export documentation](https://clapback.seethroughlab.com/export). Pipeline: `laion/clap-htsat-unfused+frontend1+artifact1+pool1+fp32`. CC0. **D1:** exact pinned files and identity-selection rules are documented in §2; local manifest identifies the edition used.
+
+<a id="ref-13"></a>
+**[13]** MusicBrainz contributors / MetaBrainz Foundation. (n.d.). *MusicBrainz recording metadata and community tags* [Database; cached recording-level API responses]. [API](https://musicbrainz.org/doc/MusicBrainz_API); [licenses](https://musicbrainz.org/doc/About/Data_License). Core metadata: CC0; supplementary tags: CC BY-NC-SA 3.0. **D2:** no single snapshot date is established for all cached responses; see §2 and local catalogue manifest.
+
+<a id="ref-14"></a>
+**[14]** AcousticBrainz contributors / MetaBrainz Foundation and Music Technology Group, Universitat Pompeu Fabra. (n.d.). *AcousticBrainz low-level descriptors and high-level predictions* [Database; cached submission-offset-0 responses]. [Project](https://acousticbrainz.org/). CC0. **D3:** our selected descriptor data, distinct from the platform paper [10]; no uniform response-retrieval date is recorded.
+
+<a id="ref-15"></a>
+**[15]** ListenBrainz contributors / MetaBrainz Foundation. (2025, June 10). *ListenBrainz sample dump, 20250610-094311* [Data set; `recording_feedback.parquet` subset]. [Sample archive](https://data.metabrainz.org/pub/musicbrainz/listenbrainz/sample/listenbrainz-sample-20250610-094311-full/listenbrainz-sample-dump-20250610-094311.tar.zst); [dump documentation](https://listenbrainz.readthedocs.io/en/latest/users/listenbrainz-dumps.html). CC0-1.0. Retrieved 23 October 2026 per local source record. **D4:** archive checksum and exact feedback filtering are recorded in §2.
+
+<a id="ref-16"></a>
+**[16]** Music Recommendation Workshop project. (2026). *Curated workshop catalogue and selection audit* [Derived data set; 1,500 recordings]. [Curation audit](../data/CURATION.md); [release manifest](../data/workshop/manifest.json); [attribution](../data/workshop/ATTRIBUTION.md). Derived from [12]–[14], with editorial style/familiarity labels. Preserve source-specific licenses; familiarity is estimated, not measured popularity.
+
+<a id="ref-17"></a>
+**[17]** Music Recommendation Workshop project. (2026, October 24). *Prepared description bank, prompts-v3* [Editorial text data and paired CLAP text embeddings; 200 phrases]. [Bank](../content/prompts-v1.json); [artifact metadata](../artifacts/language-v1/meta.json); [curation and matching notes](DESCRIPTION_MATCHING.md). Local candidate descriptions, not verified song annotations. The retired phrase and curation rationale remain recorded. See [9] for the encoder method.
+
+<a id="ref-18"></a>
+**[18]** Spotify. (2026, October 20). *Understanding recommendations on Spotify.* [Official explanation](https://www.spotify.com/uk/safetyandprivacy/understanding-recommendations). **Current first-party inputs:** taste profile, other listeners' behaviour, content, context and editorial curation. Selected disclosures do not establish the full current pipeline or a blanket claim of secrecy.
+
+<a id="ref-19"></a>
+**[19]** Elizalde, B., Deshmukh, S., Al Ismail, M., & Wang, H. (2022). *CLAP: Learning audio concepts from natural language supervision.* arXiv:2206.04769. https://arxiv.org/abs/2206.04769. **P2:** earlier CLAP background; not the LAION checkpoint identity.
+
+<a id="ref-20"></a>
+**[20]** Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix factorization techniques for recommender systems. *Computer, 42*(8), 30–37. https://doi.org/10.1109/MC.2009.263. **P5:** factorisation background; not the exact weighted truncated SVD implemented here.
+
+<a id="ref-21"></a>
+**[21]** Spotify. (n.d.). *Find playlists on Spotify.* [Official support](https://support.spotify.com/sc-en/article/find-playlists/). Discover Weekly, Release Radar and Spotify Mixes; accessed 24 October 2026.
+
+<a id="ref-22"></a>
+**[22]** Apple. (n.d.). *Find new music with Apple Music on iPhone.* [Official support](https://support.apple.com/en-ie/guide/iphone/iph2c41e6189/27/ios/27). Discovery Station recommends music not previously played using listening history and taste profile; accessed 24 October 2026.
+
+<a id="ref-23"></a>
+**[23]** Apple. (n.d.). *Discover new music on Apple TV 4K.* [Official support](https://support.apple.com/en-gb/guide/tv/atvbc6334c54/tvos). Made for You mixes combine new music with songs the listener loves; accessed 24 October 2026.
+
 ## 1. Presentation overview
 
 The workshop explores three different meanings of musical similarity: **similar measured properties**, **similar learned sound representations**, and **shared listener preferences**. It implements four song-to-song scoring methods. Rhythm and texture are deliberately designed distance formulas; CLAP uses pretrained neural representations; listener patterns uses a factor model fitted locally to real feedback.
@@ -12,7 +85,7 @@ The workshop explores three different meanings of musical similarity: **similar 
 | Texture (`texture-v1`) | Which songs have similar timbre and spectral properties? | 12 MFCC means plus four spectral measurements | 1,500 songs | Explicit contributions from two feature groups | Whole-recording summaries lose musical development |
 | CLAP sound (`clap-v1`) | Which songs are close in an audio–language representation? | 512-dimensional pretrained audio vectors | 1,500 songs | Richer learned representation without local audio processing | Embedding proximity does not explain an audible cause |
 | Listener patterns (`collaborative-v1`) | Which songs occupy similar positions in shared preferences? | 32-dimensional song factors learned from loves | 182 songs (12.1% of catalogue) | Captures associations beyond sound | Sparse, community-specific feedback and cold-start gaps |
-| Text/description extension | Which audio vectors match a written description? | Intended paired CLAP text vectors | **Not validated as real inference in the checked-in artifact** | Offers a language-based way to explore sound | Current language metadata marks the prepared vectors as placeholders |
+| Text/description extension | Which audio vectors match a written description? | Real paired CLAP text vectors | 200 prepared descriptions | Offers a language-based way to explore sound | Descriptions are candidates, not verified annotations; live search is retired |
 
 **Presentation takeaway:** agreement across methods can be informative, and disagreement is a useful discussion prompt. None of these scores establishes musical identity, enjoyment, or a universally correct recommendation. The project is a teaching system, not a reconstruction of a commercial streaming recommender.
 
@@ -56,7 +129,7 @@ Archive SHA256: `509282544c50b324db8dfb4e33a5af4012f514c153da077a0fb07f093956168
 
 ### D5. Locally authored material and research-only sources
 
-The 400 descriptions in [`content/prompts-v1.json`](../content/prompts-v1.json) are labeled as editorial workshop curation, dated 21 October 2026. They are not an externally collected caption dataset. Prompt-bank hashes are recorded in language metadata. Participant seeds, reactions, survey responses and notes are workshop interaction data; they do not train the shipped models.
+The 200 descriptions in [`content/prompts-v1.json`](../content/prompts-v1.json) are labeled as editorial workshop curation, updated 24 October 2026 (prompts-v3). They are not an externally collected caption dataset. Prompt-bank hashes are recorded in language metadata. Participant seeds, reactions, survey responses and notes are workshop interaction data; they do not train the shipped models.
 
 The [post-2000 research report](POST_2000_SONG_RESEARCH.md) and [2015-onward supplement](SONG_RESEARCH_2015_ONWARD.md), with companion CSVs, are **candidate research**, not catalogue imports or retraining results. They use cached MusicBrainz/Clapback evidence, the ListenBrainz sample, live feedback probes, and aggregate popularity API results. The reports state that popularity totals combine ListenBrainz and MLHD counts; these are not globally deduplicated people. One-row feedback probes establish accessibility, not a fully downloaded training dataset. Sample and live counts overlap and must not be added.
 
@@ -70,7 +143,7 @@ Clapback vectors + claims ─┐
 MusicBrainz metadata ─────┘                         │
 AcousticBrainz offset-0 descriptors ────────────────┴─ compact features → rhythm/texture
 ListenBrainz sample → positive-pair support filters → weighted SVD → supported song factors
-Editorial descriptions → paired text encoder intended; current stored bank is placeholder
+Editorial descriptions → paired text encoder offline → 200 prepared text vectors
 ```
 
 The catalogue contains **1,500 recordings, 785 primary artists, years 1960–2022**, with a maximum of six recordings per primary artist. A 2,250-recording candidate pool yielded 2,195 usable AcousticBrainz candidates before final selection. Curation balances decades, style families, familiarity estimates and artist diversity. It removes duplicate primary-artist/normalized-title pairs, preferring earlier eligible recordings, and filters missing dates/durations, unsuitable lengths and explicitly identified live/demo/karaoke/spoken material. These are heuristics, not independent verification of every studio recording. See [`data/CURATION.md`](../data/CURATION.md).
@@ -147,7 +220,7 @@ P5 gives broader recommender-factorization background. This implementation is sp
 
 ### Text retrieval and auxiliary predictions: status matters
 
-Real text retrieval would compare a unit query vector from the **paired** CLAP text branch with the stored audio vectors. However, checked-in language metadata says `placeholder: true` and `encoder_id: fake-placeholder`. The builder can produce deterministic hash-seeded Gaussian unit vectors for UI development. Those are synthetic test assets, not semantic CLAP text embeddings; description rankings from them must not be presented as model findings. A verified encoder, tokenizer, checkpoint identity and real rebuilt bank are still needed. See [`docs/MODEL_SETUP.md`](MODEL_SETUP.md).
+Prepared song-to-description retrieval compares stored unit audio vectors with 200 real unit text vectors encoded offline using the paired CLAP text branch. Current metadata records `placeholder: false` and checkpoint revision `8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a`. Free-form live text search is retired. The upstream audio checkpoint hash is not independently established by its pipeline name, so exact upstream audio/text revision equivalence is not proven. The descriptions are editorial candidates, not ground-truth song captions. See [17] and [description-matching notes](DESCRIPTION_MATCHING.md).
 
 AcousticBrainz high-level classifiers are auxiliary pretrained models, not separately trained workshop recommenders. The compact extract retains predicted values, probabilities and class scores but does not comprehensively pin every classifier's training corpus/model revision. Use P3–P4 for platform/method context; do not claim a complete classifier-training lineage from the compact data alone.
 
@@ -186,9 +259,9 @@ python3 scripts/build_app_artifacts.py
 python3 scripts/build_collaborative_artifacts.py
 ```
 
-These are preparation instructions, not steps performed to author this document. Builders require their documented dependencies and cached/downloaded inputs. Re-running a live API fetch is not guaranteed to reproduce historical metadata. Preserve the entire pinned source snapshot, cached responses, frozen candidates, scripts/configuration, dependency versions and derived artifacts together. Archive a source edition before refreshing; do not combine old weekly-export files with a new manifest. Language-artifact generation is not a completed semantic model build while placeholder metadata remains true.
+These are preparation instructions, not steps performed to author this document. Builders require their documented dependencies and cached/downloaded inputs. Re-running a live API fetch is not guaranteed to reproduce historical metadata. Preserve the entire pinned source snapshot, cached responses, frozen candidates, scripts/configuration, dependency versions and derived artifacts together. Archive a source edition before refreshing; do not combine old weekly-export files with a new manifest. The current prepared text artifact is real; preserve its recorded checkpoint revision and hashes when rebuilding.
 
-For future editions, add raw-file checksums and retrieval timestamps, a pinned CLAP checkpoint revision and preprocessing reference, a named editor/version for manual curation, and encoder/tokenizer hashes for real text inference. The existing final-data validation report supports integrity checks, not listening quality.
+For future editions, add raw-file checksums and retrieval timestamps, a pinned CLAP checkpoint revision and preprocessing reference, a named editor/version for manual curation, and complete encoder/tokenizer hashes alongside the existing text checkpoint revision. The existing final-data validation report supports integrity checks, not listening quality.
 
 ## 7. Works cited
 

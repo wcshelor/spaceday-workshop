@@ -1,0 +1,257 @@
+id,text,category,top1,top1_percent,top5,top8,shared_pool_top1,mean_score,std_score
+spec-combo-country-band,"Country vocals with strummed guitar, pedal steel and a steady rhythm section.",combo,390,26.0,879,1027,66,0.5231987496565559,0.11206881230459219
+spec-combo-rap-sample-beat,"Rapped vocals over a looping sample, bass line and drum-machine beat.",combo,233,15.53,467,593,24,0.464078785499625,0.10788306973120061
+spec-vocals-punk-shout,Raw shouted vocals over fast punk guitars and drums.,vocals,106,7.07,443,565,20,0.42939384324413254,0.14952018796958527
+spec-combo-synthpop-band,Melodic synth-pop vocals over bright keyboard chords and electronic drums.,combo,104,6.93,393,528,9,0.4653561261205921,0.09004340892679992
+spec-vocals-single-lead,A single lead singer clearly in front of the backing instruments.,vocals,91,6.07,410,638,13,0.46691541465907216,0.09728633141680101
+spec-combo-punk-band,"Fast punk music with shouted vocals, distorted guitar and brisk snare drums.",combo,54,3.6,603,726,10,0.4608789921896916,0.14142364969069932
+spec-combo-acoustic-singer,A solo singer accompanied by fingerpicked acoustic guitar.,combo,49,3.27,167,243,4,0.400875887019542,0.11460068487119596
+spec-combo-sax-jazz-band,"A saxophone lead over piano, upright bass and swinging drums.",combo,49,3.27,205,333,2,0.4427030714894401,0.09308043673848132
+spec-dynamics-percussion-dropout,The drum part dropping away while the melody continues.,dynamics,49,3.27,321,493,1,0.4594988675040383,0.07666010276860195
+spec-combo-metal-band,"Heavy metal with distorted guitar riffs, forceful drums and rough vocals.",combo,42,2.8,299,405,12,0.4031146181329957,0.15097339120047656
+evoke-mood-mischief,"Music with a mischievous, teasing sense of humor.",mood,33,2.2,253,442,0,0.4589486974883123,0.08269120490127926
+evoke-mood-release,Music with a feeling of emotional release.,mood,22,1.47,126,225,2,0.41803522737192533,0.09786760526168534
+spec-combo-disco-band,"A disco arrangement with a steady dance beat, bass guitar and sweeping strings.",combo,17,1.13,304,474,3,0.4561456801769855,0.08679390740616977
+evoke-atmosphere-old-film,Music that evokes a scene from a faded old film.,atmosphere,16,1.07,104,185,0,0.4175574684694296,0.09936445785790265
+evoke-mood-defiant,Music that feels defiant and determined.,mood,16,1.07,96,315,0,0.43239549059554916,0.08573152002246129
+spec-combo-reggae-band,"A reggae arrangement with deep bass, light guitar chords and spacious drums.",combo,15,1.0,129,229,1,0.40726078616726835,0.09631277225294889
+rhy-005,"laid-back half-time groove, relaxed drums",rhythm,11,0.73,139,256,4,0.42739993077544447,0.08587049883829831
+evoke-atmosphere-deep-forest,"Music that evokes wandering through a deep, shadowy forest.",atmosphere,9,0.6,34,49,0,0.35402452470077234,0.10007533546044305
+spec-melody-call-response-instruments,Two instruments answering each other with short melodic phrases.,melody,9,0.6,44,83,0,0.38248127415005617,0.08577978508202132
+evoke-atmosphere-outdoor-party,Music that evokes a relaxed outdoor celebration.,atmosphere,8,0.53,80,169,0,0.41155076760494685,0.08608299381920884
+spec-combo-shoegaze-band,Soft vocals partly submerged in layers of hazy distorted guitars.,combo,8,0.53,32,58,0,0.3738403965860804,0.09169212251996477
+spec-vocals-operatic-voice,A resonant operatic singing voice over orchestral accompaniment.,vocals,8,0.53,22,39,0,0.2895821595710776,0.11482379908048658
+spec-vocals-vocal-growl,Deep growled vocals over distorted guitars and forceful drums.,vocals,8,0.53,228,363,1,0.4000504653953344,0.13531884362957647
+spec-dynamics-gentle-piano-accents,Soft piano playing with occasional strongly accented notes.,dynamics,7,0.47,17,19,1,0.1413048769731533,0.13620656387423433
+evoke-atmosphere-before-event,Music that evokes the moments just before an important event.,atmosphere,6,0.4,31,51,0,0.35300694873431104,0.09891343752114483
+evoke-mood-farewell,Music that feels like a bittersweet farewell.,mood,6,0.4,53,112,0,0.4037081380892549,0.09758988746540617
+spec-vocals-whispered-lines,Quiet whispered words over a sparse musical backing.,vocals,6,0.4,20,40,1,0.299638535679278,0.12025106456635598
+combo-001,slow tempo with intimate vocals and sparse piano,combo,5,0.33,25,40,0,0.30503982689383174,0.1237258792900053
+evoke-mood-euphoria,Music with a feeling of overwhelming joy and euphoria.,mood,5,0.33,95,165,0,0.407944912089681,0.09797717436445817
+spec-texture-interlocking-plucks,Several plucked instruments weaving short interlocking phrases.,texture,5,0.33,16,21,0,0.29958053349859864,0.09577599633598495
+ins-007,"bright brass horns, punchy and festive",instruments,4,0.27,11,24,0,0.34956165720827537,0.0773950834487077
+spec-combo-piano-bass-brushes,"A jazz trio with piano, walking upright bass and brushed drums.",combo,4,0.27,38,53,0,0.3418663882998682,0.09453665145382902
+spec-harmony-drone-harmony,A melody unfolding above a single sustained drone note.,harmony,4,0.27,12,14,0,0.15592744817385198,0.11776857859673358
+spec-melody-synth-hook,"A short, bright synthesizer hook repeated over a dance beat.",melody,4,0.27,30,61,0,0.23767662483073113,0.12473233971441543
+spec-vocals-unison-vocals,Several voices singing the same melody together in unison.,vocals,4,0.27,64,103,0,0.35286028824317356,0.0990638486532166
+evoke-atmosphere-crowd,Music that evokes being surrounded by a moving crowd.,atmosphere,3,0.2,16,26,0,0.3700329712724017,0.07982279705814183
+evoke-atmosphere-empty-road,Music that evokes a long drive along an empty road.,atmosphere,3,0.2,11,17,0,0.3578474981800504,0.08920653458532343
+evoke-atmosphere-night-alone,Music for a quiet evening alone.,atmosphere,3,0.2,19,39,0,0.33845353005494,0.10864291314660701
+evoke-mood-excitement,Music with a restless feeling of excitement.,mood,3,0.2,54,103,0,0.4154863709139131,0.08285273531766074
+spec-combo-orchestral-score,"A cinematic orchestral arrangement with swelling strings, brass and timpani.",combo,3,0.2,17,23,0,0.24496412773548346,0.10838024231833049
+spec-dynamics-orchestral-crescendo,An orchestral ensemble gradually swelling from soft to loud.,dynamics,3,0.2,10,12,0,0.1508542799515618,0.12852987834459775
+spec-dynamics-sudden-band-stop,The full band stopping suddenly to leave a single exposed voice.,dynamics,3,0.2,126,250,2,0.41268158641474634,0.09496399160249788
+spec-rhythm-double-kick,Rapid double-kick drums underneath heavy guitar riffs.,rhythm,3,0.2,77,250,0,0.3723019237014893,0.1334654081480559
+spec-rhythm-rubato-piano,Solo piano with flexible timing and pauses between phrases.,rhythm,3,0.2,13,13,0,0.17088754811172646,0.11298922058799785
+spec-vocals-duet-lines,Two singers taking turns singing the lead melody.,vocals,3,0.2,23,54,0,0.3198053720018672,0.10298078969925138
+spec-vocals-rap-flow,Rhythmic rapping with tightly articulated syllables over a beat.,vocals,3,0.2,19,27,1,0.21402897674813054,0.0997568005488301
+combo-003,lo-fi tape hiss with warm guitar and nostalgic feeling,combo,2,0.13,26,55,1,0.3511238075322531,0.10687666507121867
+evoke-atmosphere-ceremony,Music that evokes a solemn gathering or ceremony.,atmosphere,2,0.13,23,35,0,0.33080626718615064,0.1076806459953847
+evoke-mood-grief,Music with a solemn feeling of grief and loss.,mood,2,0.13,15,27,0,0.29559541669014794,0.11559504161394758
+evoke-mood-resignation,Music with a weary feeling of resignation.,mood,2,0.13,27,60,1,0.3694259671775474,0.1093396151990856
+rhy-012,"breakbeat, chopped drums with vinyl crackle",rhythm,2,0.13,26,51,0,0.3010080775250614,0.11484893019176728
+spec-combo-bluegrass-band,"A quick acoustic bluegrass arrangement with banjo, fiddle and mandolin.",combo,2,0.13,17,40,0,0.30888446053755253,0.10051227923310191
+spec-combo-string-quartet,"Two violins, viola and cello playing an intimate chamber arrangement.",combo,2,0.13,10,12,0,0.1580136792020132,0.1133377210389521
+spec-harmony-jazzy-extensions,"Soft keyboard chords with rich, jazz-like harmonic extensions.",harmony,2,0.13,5,5,0,0.0937663040797734,0.13772110508118324
+spec-instruments-flute-melody,A breathy flute melody above a light accompaniment.,instruments,2,0.13,3,4,0,0.22838679661303427,0.11033481102816275
+spec-instruments-harmonica,A bending harmonica melody over a blues accompaniment.,instruments,2,0.13,13,21,0,0.3137796974289003,0.09622486786979624
+spec-instruments-pizzicato-strings,An orchestral string section playing short plucked notes.,instruments,2,0.13,9,13,0,0.1884865478957692,0.1105365539828186
+spec-melody-ornamented-voice,A singing melody decorated with quick runs and turns.,melody,2,0.13,14,34,0,0.33504127050224725,0.09425792469818843
+spec-melody-repeated-piano-motif,A short piano melody repeating with small variations.,melody,2,0.13,11,11,0,0.10719890797340546,0.11383025411989453
+spec-melody-rising-line,A repeated rising melodic line climbing toward higher notes.,melody,2,0.13,3,4,0,0.12353038859321687,0.09017847281884096
+spec-production-sidechain-pump,Synthesizer chords swelling and ducking around each kick drum.,production,2,0.13,4,5,1,0.1392301786117974,0.09063138383950015
+spec-rhythm-irregular-meter,"An uneven, lopsided beat with an irregular repeating meter.",rhythm,2,0.13,8,13,0,0.2579900418532933,0.0893841453064781
+voc-007,"call-and-response vocals, trading lines",vocals,2,0.13,2,2,0,0.20227944514419693,0.08176759060940007
+combo-002,fast energetic drums with bright synths and uplifting mood,combo,1,0.07,81,164,0,0.3811026464117677,0.10635311392357927
+evoke-atmosphere-city-rush,Music that evokes the bustle and motion of a busy city.,atmosphere,1,0.07,5,8,0,0.33749915107830375,0.0726483676553442
+evoke-atmosphere-open-landscape,"Music that evokes a wide, open landscape.",atmosphere,1,0.07,1,10,0,0.3463297445697185,0.08604248871825435
+evoke-atmosphere-rain-window,Music that evokes watching rain through a window.,atmosphere,1,0.07,1,9,0,0.3313275417099161,0.09300379362456215
+evoke-atmosphere-small-room,Music that feels like a private performance in a small room.,atmosphere,1,0.07,20,43,0,0.3656018346022068,0.0974005252545123
+evoke-mood-curiosity,Music with a feeling of curiosity and discovery.,mood,1,0.07,14,42,0,0.3691124775828086,0.10100280341472662
+evoke-mood-remembering,"Music that evokes a hazy, half-remembered past.",mood,1,0.07,9,23,0,0.3590427788422477,0.09277692245695937
+evoke-mood-suspense,"Music that creates suspense, as if something is about to happen.",mood,1,0.07,3,4,0,0.26863099585795164,0.1007128064745138
+ins-012,"electronic drum machine, crisp and precise",instruments,1,0.07,2,3,0,0.0996300482693717,0.0936413450001412
+mood-001,"melancholic and wistful, bittersweet mood",mood,1,0.07,3,6,0,0.20043995736854428,0.13678810573661918
+spec-dynamics-drum-fill-rise,A rising drum fill leading into a louder full-band entrance.,dynamics,1,0.07,10,18,0,0.3311799478961735,0.07454180110256614
+spec-dynamics-layered-build,Instruments entering one by one to build a thicker arrangement.,dynamics,1,0.07,2,5,0,0.22339033962332477,0.08354973202213248
+spec-harmony-major-acoustic,Bright major-key acoustic guitar chords beneath a clear melody.,harmony,1,0.07,6,10,0,0.2489331111165527,0.09805751063315833
+spec-instruments-clarinet,A woody clarinet playing a flowing melodic line.,instruments,1,0.07,1,1,0,0.08643446463583844,0.11425784961503965
+spec-instruments-harp-arpeggio,A harp playing rippling arpeggios with long ringing decays.,instruments,1,0.07,1,1,0,0.11844709491333354,0.10822482206600278
+spec-instruments-pedal-steel,A sustained pedal steel guitar gliding above a country arrangement.,instruments,1,0.07,17,33,0,0.33165615163712997,0.09032022703994386
+spec-melody-guitar-melody,A clear electric guitar melody above rhythm guitar and bass.,melody,1,0.07,39,155,0,0.4015403433910824,0.09605762456600263
+spec-melody-long-vocal-phrases,A singer holding long melodic phrases above a steady accompaniment.,melody,1,0.07,17,45,0,0.3264418879536442,0.09813143990088932
+spec-production-slapback-vocal,A short slapback echo closely following the lead vocal.,production,1,0.07,3,5,0,0.2961706569147808,0.06793309663425925
+spec-production-tape-flutter,A wavering tape-like pitch effect on sustained musical notes.,production,1,0.07,3,4,0,0.13871701729961416,0.06896406436493532
+spec-texture-filtered-noise,A moving layer of filtered noise sweeping behind the music.,texture,1,0.07,5,6,1,0.1938623286581146,0.08043556076510688
+spec-texture-guitar-wash,Layers of distorted guitars merging into a hazy sustained wash.,texture,1,0.07,3,4,0,0.23018283113301483,0.09765596943949936
+spec-vocals-gospel-response,An expressive lead singer answered by a gospel-style choir.,vocals,1,0.07,30,46,0,0.31934690274740024,0.1019252218259325
+spec-vocals-vocal-double,A lead vocal doubled closely by another recording of the same line.,vocals,1,0.07,8,20,0,0.2924427314581755,0.0851835218131426
+spec-vocals-vocal-harmonies,A lead melody accompanied by close vocal harmonies.,vocals,1,0.07,53,142,0,0.41063686590802884,0.07677832644669248
+spec-vocals-vocoder,A robotic vocoder voice blended with sustained synthesizer chords.,vocals,1,0.07,3,3,1,0.13671539103381186,0.11345140650701167
+atm-001,"late-night city vibe, neon lights and quiet streets",atmosphere,0,0.0,0,0,0,0.06978991963412108,0.07266470463186908
+atm-002,"summer festival, open air and crowd energy",atmosphere,0,0.0,0,0,0,-0.0318458682232202,0.054283750910377106
+atm-003,"rainy afternoon, cozy indoor listening",atmosphere,0,0.0,0,0,0,0.04358807403433426,0.06718794342326208
+atm-004,"space and cosmos, floating weightless",atmosphere,0,0.0,0,0,0,0.07646983673248246,0.07610882545248196
+atm-005,"underground club, dark room with strobe lights",atmosphere,0,0.0,0,0,0,-0.01617068340767662,0.0742408983701424
+atm-006,"desert road, wide open horizon",atmosphere,0,0.0,0,0,0,-0.00188363771140171,0.0751424726574763
+combo-004,"heavily reverberated vocals over wide stereo pads, dreamy",combo,0,0.0,1,1,0,0.058673796432217803,0.11402416653811334
+combo-005,sparse minimal beat with dry close sound and tense atmosphere,combo,0,0.0,0,0,0,0.021061271666781824,0.09317872689073546
+combo-006,"dense wall of distorted guitars, loud and powerful",combo,0,0.0,1,33,0,0.2583755312070178,0.1107635969889264
+dyn-001,"quiet and delicate, barely above a whisper",dynamics,0,0.0,0,0,0,-0.05076950519817482,0.09193773447057339
+dyn-002,"loud and powerful, full dynamic impact",dynamics,0,0.0,0,0,0,0.19374292828036005,0.09147926076025949
+dyn-003,"gradual build, slowly rising intensity",dynamics,0,0.0,0,0,0,0.09579265894775665,0.09957857395096378
+dyn-004,"sudden drop, stripped back after a dense section",dynamics,0,0.0,0,0,0,0.07035887874780017,0.06397681790933078
+dyn-005,"steady consistent level, no large changes",dynamics,0,0.0,0,0,0,-0.06198504757844649,0.07547885519727389
+evoke-atmosphere-abandoned-place,"Music that evokes an eerie, abandoned place.",atmosphere,0,0.0,5,13,0,0.3190625153144383,0.0959476596117297
+evoke-atmosphere-after-storm,Music that evokes a clear morning after a storm.,atmosphere,0,0.0,1,3,0,0.2831550574215372,0.09850817762417859
+evoke-atmosphere-candlelight,"Music that evokes a warm, candlelit room.",atmosphere,0,0.0,2,5,0,0.2582203449733081,0.11505805212345903
+evoke-atmosphere-desert-sunset,Music that evokes a desert landscape at sunset.,atmosphere,0,0.0,7,16,0,0.32666570888826724,0.09444698574650759
+evoke-atmosphere-dreamscape,Music that evokes drifting through a dream.,atmosphere,0,0.0,6,17,0,0.329858753560141,0.10522156242640911
+evoke-atmosphere-empty-hall,"Music that evokes an empty, echoing hall.",atmosphere,0,0.0,6,8,0,0.25192256622108417,0.11112365056319769
+evoke-atmosphere-night-streets,Music that evokes walking through city streets late at night.,atmosphere,0,0.0,6,16,0,0.3607431236286084,0.08072055138263332
+evoke-atmosphere-ocean-horizon,Music that evokes watching the ocean stretch toward the horizon.,atmosphere,0,0.0,1,2,0,0.3431803856317175,0.09641573726976047
+evoke-atmosphere-science-fiction,Music that evokes exploring an unfamiliar science-fiction world.,atmosphere,0,0.0,4,8,0,0.2936577083742685,0.08959890621782829
+evoke-atmosphere-snowfall,Music that evokes a quiet landscape covered in falling snow.,atmosphere,0,0.0,5,7,0,0.23548154842467842,0.11898748559711134
+evoke-atmosphere-train-window,Music that evokes watching scenery pass from a train window.,atmosphere,0,0.0,2,13,0,0.37334906855590727,0.0839568210037414
+evoke-atmosphere-underwater,Music that evokes floating slowly underwater.,atmosphere,0,0.0,6,11,0,0.2886623473740897,0.10112861088055643
+evoke-mood-anticipation,Music with a feeling of quiet anticipation.,mood,0,0.0,0,4,0,0.271794152455364,0.11445703534868923
+evoke-mood-awe,Music that evokes awe and a sense of vastness.,mood,0,0.0,10,19,0,0.29945950473274496,0.11033602261452782
+evoke-mood-bittersweet-hope,Music with a bittersweet feeling of hope after sadness.,mood,0,0.0,0,0,0,0.30343190663887404,0.10570192818287306
+evoke-mood-catharsis,"Music that feels cathartic, building toward an emotional outpouring.",mood,0,0.0,1,8,0,0.34369980428014485,0.09914715138984713
+evoke-mood-comforting,Music that feels comforting and reassuring.,mood,0,0.0,0,1,0,0.3610994822558942,0.07870842606799579
+evoke-mood-contentment,Music with a feeling of quiet contentment.,mood,0,0.0,2,4,0,0.2580406247215731,0.12231234170513323
+evoke-mood-detached,Music that feels distant and emotionally detached.,mood,0,0.0,4,12,0,0.3424983447464473,0.09130178750730311
+evoke-mood-frustration,Music that feels frustrated and impatient.,mood,0,0.0,2,7,0,0.3329960172227003,0.06960225349981933
+evoke-mood-gratitude,Music with a warm feeling of gratitude.,mood,0,0.0,13,36,0,0.35424894928198225,0.11039380154126056
+evoke-mood-introspection,Music that invites quiet introspection.,mood,0,0.0,0,5,0,0.24300742126444858,0.10849479496179418
+evoke-mood-loneliness,Music that evokes solitude and loneliness.,mood,0,0.0,0,3,0,0.3454826419920815,0.10140686522669219
+evoke-mood-relief,Music with a feeling of relief after tension.,mood,0,0.0,7,11,0,0.3146578316422603,0.11509762312042401
+evoke-mood-resilience,Music with a hopeful feeling of recovering and starting again.,mood,0,0.0,0,7,0,0.3443789526729702,0.10356926971836068
+evoke-mood-resolve,Music with a feeling of steady resolve and perseverance.,mood,0,0.0,0,0,0,0.2987999529195289,0.09808063426933439
+evoke-mood-reverence,Music that feels solemn and reverent.,mood,0,0.0,0,1,0,0.30918370691892116,0.10039565870800228
+evoke-mood-serenity,Music with a feeling of deep serenity.,mood,0,0.0,0,0,0,0.23164469610537602,0.11971856042018814
+evoke-mood-tenderness,Music with a feeling of tenderness and care.,mood,0,0.0,1,1,0,0.2658919908472458,0.11110347095539053
+evoke-mood-unease,Music with an unsettling feeling that something is not quite right.,mood,0,0.0,4,10,0,0.23842150656919428,0.11542948550433099
+evoke-mood-vulnerable,Music that feels intimate and vulnerable.,mood,0,0.0,0,0,0,0.3499436129675377,0.0815578018510275
+evoke-mood-wonder,Music with a feeling of innocent wonder.,mood,0,0.0,0,0,0,0.3268758413328373,0.09915020048511346
+evoke-mood-yearning,Music with a feeling of yearning for something out of reach.,mood,0,0.0,2,4,0,0.36993449860647826,0.08798015816226099
+ins-001,"warm acoustic guitar, fingerpicked",instruments,0,0.0,0,0,0,0.17455239440346002,0.08140428266112594
+ins-002,"distorted electric guitar riffs, crunchy",instruments,0,0.0,0,0,0,0.11422116201122594,0.09563749334197817
+ins-003,"pulsing synthesizer arpeggio, bright and repetitive",instruments,0,0.0,1,1,0,0.004077341497202971,0.09949890689287925
+ins-004,"lush string section, cinematic violins",instruments,0,0.0,0,0,0,0.1968260278056104,0.08847551723547631
+ins-005,"upright bass, woody and resonant",instruments,0,0.0,0,0,0,0.09102204728231536,0.06679353938294236
+ins-006,"heavy distorted bass synth, rumbling low end",instruments,0,0.0,0,0,0,0.08066187340995695,0.09529471432837876
+ins-008,"piano, gentle and intimate",instruments,0,0.0,0,0,0,0.09351542378659576,0.09702298876244317
+ins-009,"harpsichord or organ, baroque texture",instruments,0,0.0,0,0,0,0.1618891902967915,0.0743048310849062
+ins-010,"hand percussion, congas and shakers",instruments,0,0.0,0,0,0,0.08064599543472303,0.060280199452959635
+ins-011,"saxophone solo, smoky and expressive",instruments,0,0.0,2,4,0,0.2639851767380578,0.07686830825225288
+mood-002,"joyful and uplifting, bright and celebratory",mood,0,0.0,0,0,0,0.1996209744845008,0.07837399226818641
+mood-003,"tense and anxious, uneasy atmosphere",mood,0,0.0,0,0,0,0.08210836044804719,0.11409514560827115
+mood-004,"calm and meditative, peaceful and still",mood,0,0.0,0,0,0,0.15105632753683781,0.1255586503327909
+mood-005,"playful and quirky, lighthearted and whimsical",mood,0,0.0,0,0,0,0.17800719448520944,0.07650526614982511
+mood-006,"dark and brooding, shadowy and intense",mood,0,0.0,0,1,0,0.27464207378135713,0.09275914483214648
+mood-007,"romantic and tender, warm and intimate",mood,0,0.0,0,0,0,0.17042057827038173,0.11796285609393578
+mood-008,"nostalgic, reminiscent of a past era",mood,0,0.0,0,1,0,0.16612134259033845,0.12869970038763817
+prod-001,"heavily compressed, punchy and upfront",production,0,0.0,0,0,0,0.09891513952803606,0.09287330223102812
+prod-002,"wide stereo image, sounds spread left and right",production,0,0.0,0,0,0,0.004841547087446147,0.06563157342694112
+prod-003,"mono and centered, narrow and direct",production,0,0.0,0,0,0,0.1279725233339089,0.06653934541500309
+prod-004,"dub-style echo and delay, spacious repeats",production,0,0.0,0,0,0,0.07421110442351864,0.08155107797112304
+rhy-001,"steady four-on-the-floor beat, danceable",rhythm,0,0.0,12,40,0,0.31645940934005257,0.1001126203066459
+rhy-003,"slow waltz feel, swaying tempo",rhythm,0,0.0,0,0,0,0.2673334526353156,0.07548741876463987
+rhy-004,"fast double-time drums, energetic",rhythm,0,0.0,0,0,0,0.2061305904450365,0.09035918611886443
+rhy-006,"driving motorik beat, repetitive and hypnotic",rhythm,0,0.0,0,0,0,0.22120273608514845,0.09138672714882994
+rhy-007,"bouncy swing rhythm, jazzy timing",rhythm,0,0.0,4,19,0,0.3562802249127183,0.08490614724885494
+rhy-008,"complex polyrhythms, interlocking percussion",rhythm,0,0.0,2,3,0,0.08987160188459867,0.11305024928759964
+rhy-009,"minimal beat, sparse clicks and snaps",rhythm,0,0.0,0,0,0,-0.12869286327164606,0.08478436357058114
+rhy-010,"shuffle groove, loose and rolling",rhythm,0,0.0,0,1,0,0.13229867593934666,0.08692504809115996
+rhy-011,"steady mid-tempo pulse, walking pace",rhythm,0,0.0,0,0,0,-0.012422049385860043,0.06860539066034636
+spec-combo-ambient-piano,"Sparse piano notes floating above long, slowly changing synthesizer pads.",combo,0,0.0,0,2,0,0.06776034093945053,0.12998557654782
+spec-combo-solo-classical-piano,Solo acoustic piano playing a flowing classical melody.,combo,0,0.0,6,10,0,0.1070041479384043,0.1294009240291782
+spec-dynamics-soft-loud-guitars,Quiet guitar verses opening into loud distorted choruses.,dynamics,0,0.0,5,16,0,0.3307530889715133,0.08606686516043009
+spec-dynamics-stop-start,Short full-band bursts separated by abrupt silent pauses.,dynamics,0,0.0,3,3,0,0.24101947474344745,0.08006475858362072
+spec-harmony-choral-harmony,A choir sustaining several distinct harmony parts together.,harmony,0,0.0,1,3,0,0.15390553292340112,0.11026168742452262
+spec-harmony-chromatic-strings,"Orchestral strings moving through tense, closely spaced notes.",harmony,0,0.0,4,6,0,0.1262330188290457,0.11669552913928131
+spec-harmony-gospel-chords,A warm piano and organ accompaniment with gospel-style chord changes.,harmony,0,0.0,0,9,0,0.2421021421565831,0.1211055260535903
+spec-harmony-minor-piano,A piano-led arrangement with dark minor-key chords.,harmony,0,0.0,6,10,0,0.23906613498148552,0.11086074598037142
+spec-harmony-open-fifths,Distorted electric guitars moving through open power chords.,harmony,0,0.0,0,2,0,0.22509096807332143,0.09840526836136287
+spec-harmony-repeating-chords,A repeating cycle of four chords supporting the main melody.,harmony,0,0.0,3,3,0,0.225471545282216,0.10478634221405077
+spec-harmony-suspended-guitar,Ringing suspended guitar chords that delay a sense of resolution.,harmony,0,0.0,0,0,0,0.10635189461548988,0.10172917638462534
+spec-instruments-accordion,An accordion playing sustained chords and a lilting melody.,instruments,0,0.0,1,2,0,0.14460394504797833,0.1103334025950375
+spec-instruments-acoustic-strum,Strummed steel-string acoustic guitar with ringing open chords.,instruments,0,0.0,7,14,0,0.25217394373318847,0.08635090964760403
+spec-instruments-banjo-roll,"A banjo playing quick, rolling fingerpicked patterns.",instruments,0,0.0,5,8,0,0.17245391125589848,0.09643671081880312
+spec-instruments-bowed-bass,A low bowed string bass sustaining long resonant tones.,instruments,0,0.0,0,0,0,0.0007120989946958623,0.08339305142677668
+spec-instruments-cello,A cello playing a warm bowed melody in a low register.,instruments,0,0.0,2,4,0,0.04016195793800966,0.14649693302399733
+spec-instruments-clean-electric,Clean electric guitar notes with a bright ringing tone.,instruments,0,0.0,0,0,0,0.08870766787911136,0.10876926339522731
+spec-instruments-electric-piano,A mellow electric piano with bell-like chords and soft tremolo.,instruments,0,0.0,0,0,0,0.13505515630953271,0.13489458407970276
+spec-instruments-fretless-bass,A smooth fretless electric bass sliding between pitches.,instruments,0,0.0,0,0,0,0.042628050373752516,0.09923966197068913
+spec-instruments-fuzz-guitar,A thick fuzzy electric guitar tone with sustained distorted notes.,instruments,0,0.0,0,0,0,0.11133991708595702,0.10315213889406033
+spec-instruments-guitar-feedback,Sustained electric guitar feedback and squealing high notes.,instruments,0,0.0,0,0,0,0.13735587792349388,0.09865323007905327
+spec-instruments-hammond-organ,A Hammond-style organ with swirling sustained chords.,instruments,0,0.0,2,6,0,0.14704810183764264,0.13108572972318042
+spec-instruments-harpsichord,"A bright harpsichord playing crisp, plucked keyboard notes.",instruments,0,0.0,0,0,0,0.008704421506125009,0.11116804147861543
+spec-instruments-mandolin-tremolo,Bright mandolin notes played with a rapid tremolo.,instruments,0,0.0,0,0,0,0.0741598581486357,0.08816225150557196
+spec-instruments-marimba,A marimba playing rounded wooden percussion notes.,instruments,0,0.0,0,0,0,0.014090970896013995,0.07760395127033043
+spec-instruments-muted-trumpet,"A muted trumpet playing a soft, nasal melodic solo.",instruments,0,0.0,1,1,0,0.10536663587170376,0.07597704718246098
+spec-instruments-nylon-guitar,Soft nylon-string classical guitar with individually plucked notes.,instruments,0,0.0,0,0,0,0.06777197928175673,0.09463083292036074
+spec-instruments-palm-muted,"Palm-muted electric guitar playing short, percussive riffs.",instruments,0,0.0,0,0,0,0.13554414282863284,0.07751526876048073
+spec-instruments-slap-bass,A slap electric bass with sharp plucked and popped notes.,instruments,0,0.0,0,0,0,0.2020833687426854,0.07097449406658458
+spec-instruments-slide-guitar,An electric slide guitar bending smoothly between notes.,instruments,0,0.0,0,0,0,0.1100613787637939,0.11271829820854698
+spec-instruments-sub-bass,Deep sub-bass pulses beneath a sparse electronic drum pattern.,instruments,0,0.0,3,4,0,0.15201877158401123,0.10631423738805973
+spec-instruments-trombone,A low brass trombone melody with sliding notes.,instruments,0,0.0,2,6,0,0.1740229864628916,0.08698456642034777
+spec-instruments-twelve-string,A chiming twelve-string guitar with closely paired ringing notes.,instruments,0,0.0,6,14,0,0.2856765221865944,0.0942645207344612
+spec-instruments-vibraphone,A vibraphone playing soft metallic notes with a wavering sustain.,instruments,0,0.0,0,0,0,-0.042743090390503995,0.09378635965559723
+spec-instruments-walking-bass,An upright bass playing a steady walking bass line.,instruments,0,0.0,0,0,0,0.035149970342543746,0.08097466641843774
+spec-melody-bass-melody,A prominent bass line carrying the main melodic hook.,melody,0,0.0,1,3,0,0.22103553744439242,0.07914637829128868
+spec-melody-blues-solo,An improvised blues guitar solo with bent and sustained notes.,melody,0,0.0,0,2,0,0.23252057516749877,0.11108614219736651
+spec-melody-descending-line,A repeated descending melodic line moving toward lower notes.,melody,0,0.0,3,4,0,0.1502427712354218,0.09083602895998633
+spec-production-bitcrush,Crunchy bitcrushed electronic sounds with audible digital distortion.,production,0,0.0,0,0,0,-0.09538641798312505,0.09023834141394792
+spec-production-gated-snare,A large snare sound with a reverb tail that cuts off abruptly.,production,0,0.0,0,0,0,-0.08661813055381666,0.08585920781252657
+spec-production-phaser-guitar,Electric guitar with a slowly sweeping phaser effect.,production,0,0.0,1,2,0,0.1397609662344633,0.08090890673172765
+spec-production-pingpong-delay,Repeated echo notes alternating between the left and right channels.,production,0,0.0,0,0,0,0.019194073472256625,0.08507940994518175
+spec-production-reverse-swell,Reversed cymbal-like sounds swelling into the next musical hit.,production,0,0.0,0,0,0,0.18353963659453806,0.06073851826408187
+spec-production-spring-reverb,Electric guitar with a splashy spring-reverb tail.,production,0,0.0,0,0,0,0.012264583619571143,0.07564106325282037
+spec-production-vocal-radio-filter,"A lead vocal filtered to a narrow, telephone-like sound.",production,0,0.0,0,0,0,-0.011370261554832409,0.10200864803643572
+spec-rhythm-beatless-drone,A sustained ambient drone with slowly changing tones.,rhythm,0,0.0,1,1,0,0.052171826291153536,0.09240851269730853
+spec-rhythm-boom-bap,A hip-hop boom-bap beat with a heavy kick and sharp snare.,rhythm,0,0.0,9,14,0,0.18708229538139953,0.1159687321411371
+spec-rhythm-bossa-pattern,A gentle bossa nova rhythm with nylon-string guitar and light percussion.,rhythm,0,0.0,55,80,0,0.3379978141157712,0.10382270415389666
+spec-rhythm-brush-drums,Soft brushed snare drums with a gently swinging pulse.,rhythm,0,0.0,0,0,0,0.030196890830741,0.07783430299801077
+spec-rhythm-clap-backbeat,Electronic handclaps marking the backbeat.,rhythm,0,0.0,0,0,0,0.08945502650343058,0.07616102202586233
+spec-rhythm-clave-pattern,A repeating clave pattern with layered Latin percussion.,rhythm,0,0.0,2,2,0,0.09230444871054098,0.1058348238055606
+spec-rhythm-dnb-breaks,Fast drum-and-bass breakbeats with busy hi-hats.,rhythm,0,0.0,3,6,0,0.13106113143081802,0.11182800996851154
+spec-rhythm-kick-snare-backbeat,Acoustic drums with a snare backbeat on beats two and four.,rhythm,0,0.0,0,0,0,0.20377627873565504,0.09481805651053084
+spec-rhythm-open-hihat,A dance beat with an open hi-hat between the kick drums.,rhythm,0,0.0,1,2,0,0.06096822457271768,0.10194590105285964
+spec-rhythm-reggae-one-drop,A relaxed reggae one-drop beat with bass and drums.,rhythm,0,0.0,10,21,0,0.28544354071054534,0.10897534448529873
+spec-rhythm-rim-click,A dry rim-click snare keeping a restrained beat.,rhythm,0,0.0,0,0,0,-0.029392865151327954,0.07071698903623444
+spec-rhythm-ska-upstroke,Quick ska upstrokes on guitar over a brisk drum beat.,rhythm,0,0.0,41,99,0,0.3735823261194076,0.10176215598048251
+spec-rhythm-tambourine-backbeat,Tambourine shakes accenting a steady snare backbeat.,rhythm,0,0.0,0,0,0,0.03570261808219609,0.07385134399248672
+spec-rhythm-toms-pattern,A repeating drum pattern led by deep tom-toms.,rhythm,0,0.0,5,15,0,0.2785284206773449,0.09625380565524208
+spec-rhythm-trap-hihats,"Rapid trap hi-hat rolls above a slow, heavy bass beat.",rhythm,0,0.0,3,5,0,0.1486710449700318,0.1176614377529612
+spec-texture-acoustic-small-ensemble,A small acoustic ensemble with clearly separated instrument sounds.,texture,0,0.0,13,35,0,0.37547533139560013,0.07552673706048331
+spec-texture-breathy-flute-layer,Airy flute and breath sounds blended into a soft texture.,texture,0,0.0,2,3,0,0.11907705014285341,0.12571215949652237
+spec-texture-brittle-highs,"Brittle, sharp high-frequency sounds with a thin, wiry tone.",texture,0,0.0,0,0,0,-0.08442277062913822,0.06469573248200787
+spec-texture-dense-percussion,Many overlapping percussion parts creating a dense rattling texture.,texture,0,0.0,0,0,0,0.04271656293626041,0.08426248582712216
+spec-texture-digital-clicks,Tiny digital clicks and crackles around a sparse electronic melody.,texture,0,0.0,0,0,0,0.06152019642093131,0.10321956247944539
+spec-texture-granular-sound,Tiny chopped sound fragments forming a grainy electronic texture.,texture,0,0.0,1,1,0,-0.0523624596643846,0.10392162565440863
+spec-texture-metallic-percussion,Bright metallic percussion ringing above the rest of the arrangement.,texture,0,0.0,0,1,0,0.04045602214079144,0.10062069639665425
+spec-texture-rounded-low-end,"A rounded, soft-edged low end with gently sustained bass notes.",texture,0,0.0,0,0,0,0.04314901585649339,0.10525364260008607
+spec-texture-sustained-strings,A continuous bed of bowed strings beneath a clear lead melody.,texture,0,0.0,4,9,0,0.24884532333480586,0.10506144418240433
+spec-vocals-a-cappella,Unaccompanied voices forming an a cappella arrangement.,vocals,0,0.0,6,10,0,0.20942715463495362,0.11962995173599644
+spec-vocals-vocal-sample,Short repeated vocal samples chopped into a rhythmic loop.,vocals,0,0.0,23,33,0,0.2487839723137565,0.10741410330345318
+spec-vocals-vocal-vibrato,A sustained singing voice with pronounced vibrato.,vocals,0,0.0,3,5,0,0.19537762076784218,0.092726070468865
+spec-vocals-wordless-vocals,Wordless humming and vowel sounds used as part of the music.,vocals,0,0.0,2,3,0,0.22225449694110214,0.09260950737675736
+tex-001,"warm analog tape hiss, vintage lo-fi texture",texture,0,0.0,0,0,0,0.09329164763633385,0.07772560436405518
+tex-002,"crisp and clean production, polished studio sound",texture,0,0.0,0,0,0,0.18005026587351802,0.0577089709381491
+tex-003,"dense wall of sound, layered and saturated",texture,0,0.0,0,0,0,0.036703165332523886,0.10935112481143022
+tex-004,"sparse and airy, lots of silence between sounds",texture,0,0.0,0,0,0,-0.1407374088552385,0.06438868915893792
+tex-005,"grainy distorted texture, overdriven and fuzzy",texture,0,0.0,0,0,0,0.008369360105239889,0.095474998193397
+tex-006,"shimmering reverb, cavernous and echoing",texture,0,0.0,0,0,0,-0.0027004999732404378,0.11545761814551167
+tex-007,"dry and close, intimate room sound",texture,0,0.0,0,0,0,0.033074362842137384,0.06804474220828491
+tex-008,"glitchy stutter edits, chopped and rearranged",texture,0,0.0,0,0,0,-0.10364068081415917,0.09889024888201928
+voc-001,"intimate close-miked vocals, soft and breathy",vocals,0,0.0,0,1,0,0.1356105613404151,0.10328810579149793
+voc-002,"powerful belting voice, full and soaring",vocals,0,0.0,1,2,0,0.17013533726070462,0.08004884713229361
+voc-003,"distant and washed-out vocals, heavily reverberated",vocals,0,0.0,0,0,0,-0.02035656690150955,0.08793508378427295
+voc-004,"no vocals, instrumental music",vocals,0,0.0,0,0,0,0.1522655149159252,0.06536222006693977
+voc-005,"choir of layered background vocals, lush harmonies",vocals,0,0.0,0,1,0,0.11853633325130548,0.12257635798875646
+voc-006,"spoken word, rhythmic speech over music",vocals,0,0.0,2,3,0,0.23032383614987573,0.08972953928029999
+voc-008,"falsetto vocals, high and airy",vocals,0,0.0,0,1,0,0.17582751356259974,0.08023900771491804
+voc-009,"gritty raspy vocals, raw and unpolished",vocals,0,0.0,0,0,0,0.21626638938594184,0.07544958035683218
+voc-010,"auto-tuned vocal effect, synthetic sheen",vocals,0,0.0,0,0,0,0.17286447844528052,0.07097215257569922

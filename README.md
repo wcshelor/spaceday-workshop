@@ -6,7 +6,7 @@ ListenBrainz song loves; switching to it shows supported songs and enables a
 shared candidate pool for fair comparisons. See
 [model, coverage and evaluation](artifacts/collaborative-v1/README.md).
 
-One hosted browser app for two independent 45-minute workshops (University of Osnabrück, 15–20 adults per cohort). Students browse 1500 curated recordings (1960–2022), pick familiar seeds, compare recommendations, listen externally, reveal supporting information, and discuss reactions. An optional CLAP activity matches songs to 71 curated descriptions using real precomputed text vectors. Live free-form text search is retired from today’s demo; its code is preserved. See [description matching](docs/DESCRIPTION_MATCHING.md).
+One hosted browser app for two independent 45-minute workshops (University of Osnabrück, 15–20 adults per cohort). Students browse 1500 curated recordings (1960–2022), pick familiar seeds, compare recommendations, listen externally, reveal supporting information, and discuss reactions. An optional CLAP activity matches songs to 256 curated descriptions using real precomputed text vectors. Live free-form text search is retired from today’s demo; its code is preserved. See [description matching](docs/DESCRIPTION_MATCHING.md).
 
 - [Product design](DESIGN.md)
 - [Implementation plan](IMPLEMENTATION_PLAN.md)
@@ -128,7 +128,7 @@ curl -s http://127.0.0.1:8000/api/bootstrap | jq
 - `frontend/src/{app,api,state,components}`
 - `data/workshop/` frozen collection (29 MB, excluded from image: `data/sources`, `data/catalogue`)
 - `artifacts/scoring-v1/` versioned scoring + calibration
-- `config/scoring-v1.json` and `content/prompts-v1.json` (71 curated prompts, version `prompts-v2`; real text vectors in `artifacts/language-v1`)
+- `config/scoring-v1.json` and `content/prompts-v1.json` (256 curated prompts, version `prompts-v4`; real text vectors in `artifacts/language-v1`)
 
 ### Licences
 - Clapback vectors: CC0; MusicBrainz core CC0 + tags CC BY-NC-SA 3.0; AcousticBrainz CC0 — see `data/workshop/ATTRIBUTION.md`
